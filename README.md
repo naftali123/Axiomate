@@ -17,6 +17,11 @@ source's historical record to find contradictions, discrepancies and inaccuracie
    proof traces.
 8. **Review and reporting** – human decisions feed back into the context stores.
 
+## First domain
+
+Corporate financial disclosures: earnings releases, annual reports and investor
+statements of public companies.
+
 ## Development method
 
 This project follows Spec-Driven Development:
@@ -30,4 +35,4 @@ Code is written only against an approved spec, plan and task list.
 
 ## Status
 
-Pre-implementation. The constitution is a draft; no feature specs exist yet. See `status.html`.
+Pre-implementation. The constitution is ratified; no feature specs exist yet. See `status.html`.

@@ -1,6 +1,6 @@
 # Axiomate Constitution
 
-Status: draft, version 0.3.0
+Status: ratified 2026-11-11, version 1.0.0
 
 ## Core principles
 
