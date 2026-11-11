@@ -1,6 +1,6 @@
 # Axiomate Constitution
 
-Status: draft, version 0.1.0
+Status: draft, version 0.2.0
 
 ## Core principles
 
@@ -40,6 +40,23 @@ which side is true unless an external ground-truth source is explicitly supplied
 ### VIII. Measured, test-first changes
 Rules and comparison logic are written test-first. Every change is run against a
 hand-labeled evaluation set, and precision and coverage are reported.
+
+### IX. Living status page (blocking rule)
+The repository must contain exactly one Hebrew HTML status page, `status.html`, at
+the repository root. It gives a highly summarized, high-level picture of the
+project and must contain at least:
+
+- a simple diagram of the architecture;
+- a brief of the current work;
+- the planned work;
+- the open issues;
+- the date of its last update.
+
+Keeping the page up to date is the most important part of this rule. Any change
+that alters the project's state, architecture, plans or open issues must update
+`status.html` in the same change. A change that leaves the page stale must not be
+merged. The page stays short: it summarizes and links to specs, it does not
+duplicate them.
 
 ## Governance
 

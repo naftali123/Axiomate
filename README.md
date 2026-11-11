@@ -22,6 +22,7 @@ source's historical record to find contradictions, discrepancies and inaccuracie
 This project follows Spec-Driven Development:
 
 - `.specify/memory/constitution.md` – the project's governing principles.
+- `status.html` – a one-page Hebrew summary of the project state, kept current.
 - `specs/NNN-feature-name/` – one folder per feature, holding `spec.md`
   (what and why), `plan.md` (how) and `tasks.md` (work breakdown).
 
@@ -29,4 +30,4 @@ Code is written only against an approved spec, plan and task list.
 
 ## Status
 
-Pre-implementation. The constitution is a draft; no feature specs exist yet.
+Pre-implementation. The constitution is a draft; no feature specs exist yet. See `status.html`.
