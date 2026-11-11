@@ -30,4 +30,4 @@ Code is written only against an approved spec, plan and task list.
 
 ## Status
 
-Pre-implementation. The constitution is a draft; no feature specs exist yet. See `status.html`.
+Pre-implementation. The constitution is ratified; no feature specs exist yet. See `status.html`.
