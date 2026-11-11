@@ -1,6 +1,6 @@
 # Axiomate Constitution
 
-Status: draft, version 0.2.0
+Status: draft, version 0.3.0
 
 ## Core principles
 
@@ -46,10 +46,16 @@ The repository must contain exactly one Hebrew HTML status page, `status.html`, 
 the repository root. It gives a highly summarized, high-level picture of the
 project and must contain at least:
 
-- a simple diagram of the architecture;
+- a simple diagram of the architecture, with the status of each pipeline stage
+  (not started, specified, built or tested);
 - a brief of the current work;
 - the planned work;
 - the open issues;
+- the accuracy numbers (precision and coverage) from the latest evaluation run,
+  or a statement that none exist yet;
+- the most recent key decisions, each with a one-line reason;
+- a table of feature specs with their phase (spec, plan, tasks, done) and a link;
+- the top risks;
 - the date of its last update.
 
 Keeping the page up to date is the most important part of this rule. Any change
@@ -57,6 +63,11 @@ that alters the project's state, architecture, plans or open issues must update
 `status.html` in the same change. A change that leaves the page stale must not be
 merged. The page stays short: it summarizes and links to specs, it does not
 duplicate them.
+
+Enforcement: `CLAUDE.md` instructs every AI session to follow this rule, and the
+`status-page` check on pull requests fails when specs, code or this constitution
+change without `status.html` changing. The label `status-not-affected` skips the
+check for changes that truly do not alter the project's state.
 
 ## Governance
 

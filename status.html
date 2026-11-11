@@ -32,6 +32,13 @@
   .llm { background:var(--llm); border-color:var(--llm-b); }
   .hum { background:var(--hum); border-color:var(--hum-b); }
   .arrow { color:var(--muted); font-size:1.2rem; line-height:1.3; }
+  .badge { display:inline-block; font-size:.75rem; padding:0 8px; border-radius:10px;
+           border:1px solid var(--line); background:var(--card); color:var(--muted); margin-inline-start:6px; }
+  table { width:100%; border-collapse:collapse; }
+  th, td { text-align:start; padding:6px 8px; border-bottom:1px solid var(--line); }
+  th { color:var(--muted); font-weight:600; font-size:.9rem; }
+  .none { color:var(--muted); margin:0; }
+  .why { color:var(--muted); }
   .side { margin-top:14px; width:min(100%,420px); border:2px dashed var(--line); border-radius:8px;
           padding:8px 12px; text-align:center; color:var(--muted); }
   .legend { display:flex; flex-wrap:wrap; gap:14px; margin-top:14px; font-size:.9rem; justify-content:center; }
@@ -51,21 +58,21 @@
   <section>
     <h2>ארכיטקטורה</h2>
     <div class="flow">
-      <div class="box det">1. קליטה<small>שמירת מסמך עם מקור, תאריך וחתימת תוכן</small></div>
+      <div class="box det">1. קליטה<span class="badge">טרם התחיל</span><small>שמירת מסמך עם מקור, תאריך וחתימת תוכן</small></div>
       <div class="arrow">↓</div>
-      <div class="box llm">2. פרשנות<small>מודל שפה מציע טענות מועמדות</small></div>
+      <div class="box llm">2. פרשנות<span class="badge">טרם התחיל</span><small>מודל שפה מציע טענות מועמדות</small></div>
       <div class="arrow">↓</div>
-      <div class="box det">3. שער אימות<small>בדיקות דטרמיניסטיות; כשל הופך לדגל</small></div>
+      <div class="box det">3. שער אימות<span class="badge">טרם התחיל</span><small>בדיקות דטרמיניסטיות; כשל הופך לדגל</small></div>
       <div class="arrow">↓</div>
-      <div class="box det">4. השלמת הקשר<small>פתרון דגלים; כל השלמה נרשמת כהנחה</small></div>
+      <div class="box det">4. השלמת הקשר<span class="badge">טרם התחיל</span><small>פתרון דגלים; כל השלמה נרשמת כהנחה</small></div>
       <div class="arrow">↓</div>
-      <div class="box det">5. מאגר טענות<small>טענות קבועות עם סטטוס פורמליזציה</small></div>
+      <div class="box det">5. מאגר טענות<span class="badge">טרם התחיל</span><small>טענות קבועות עם סטטוס פורמליזציה</small></div>
       <div class="arrow">↓</div>
-      <div class="box det">6. התאמה<small>לפי ישות, יחס וחפיפת זמן</small></div>
+      <div class="box det">6. התאמה<span class="badge">טרם התחיל</span><small>לפי ישות, יחס וחפיפת זמן</small></div>
       <div class="arrow">↓</div>
-      <div class="box det">7. מנוע השוואה<small>כללים ופותר; פסיקה עם מסלול הוכחה</small></div>
+      <div class="box det">7. מנוע השוואה<span class="badge">טרם התחיל</span><small>כללים ופותר; פסיקה עם מסלול הוכחה</small></div>
       <div class="arrow">↓</div>
-      <div class="box hum">8. סקירה ודיווח<small>החלטות אנושיות חוזרות למאגרי ההקשר</small></div>
+      <div class="box hum">8. סקירה ודיווח<span class="badge">טרם התחיל</span><small>החלטות אנושיות חוזרות למאגרי ההקשר</small></div>
       <div class="side">מאגרי הקשר (ישויות, אונטולוגיה, פרופילי מקור, אקסיומות) – מזינים את שלבים 3–4 ומתעדכנים משלב 8</div>
     </div>
     <div class="legend">
@@ -73,6 +80,7 @@
       <span class="l-llm">מודל שפה</span>
       <span class="l-hum">סקירה אנושית</span>
     </div>
+    <p class="none" style="text-align:center;margin-top:8px;font-size:.9rem">סטטוס שלב: טרם התחיל ← הוגדר במפרט ← נבנה ← נבדק</p>
   </section>
 
   <div class="grid">
@@ -80,7 +88,8 @@
       <h2>עבודה נוכחית</h2>
       <ul>
         <li>הקמת המאגר ומבנה הפיתוח מונחה־המפרט.</li>
-        <li>טיוטת חוקה (גרסה 0.2.0) – ממתינה לאישור.</li>
+        <li>דף מצב חי ומנגנוני אכיפה לעדכונו.</li>
+        <li>טיוטת חוקה (גרסה 0.3.0) – ממתינה לאישור.</li>
       </ul>
     </section>
     <section>
@@ -102,6 +111,38 @@
       </ul>
     </section>
   </div>
+  <div class="grid" style="margin-top:16px">
+    <section>
+      <h2>מדדי דיוק</h2>
+      <p class="none">אין נתונים עדיין – דיוק וכיסוי יוצגו כאן לאחר הרצת ההערכה הראשונה.</p>
+    </section>
+    <section>
+      <h2>סיכונים מרכזיים</h2>
+      <ul>
+        <li>שיעור מעבר נמוך בשער האימות יוביל לכיסוי נמוך.</li>
+        <li>בניית מאגרי ההקשר יקרה ותלויה בתחום.</li>
+        <li>פרשנות שגויה של מודל השפה שעוברת את השער למרות שהציטוט תקין.</li>
+      </ul>
+    </section>
+  </div>
+
+  <section style="margin-top:16px">
+    <h2>החלטות אחרונות</h2>
+    <ul>
+      <li>גישה משולבת: מודל שפה מפרש, קוד דטרמיניסטי מכריע. <span class="why">הסיבה: כיסוי רחב בלי לוותר על דיוק ועל מסלול הוכחה.</span></li>
+      <li>דיוק קודם לכיסוי. <span class="why">הסיבה: האשמה שגויה חמורה מסתירה שהוחמצה.</span></li>
+      <li>פיתוח מונחה־מפרט עם חוקה מחייבת. <span class="why">הסיבה: קוד נכתב רק מול מפרט מאושר.</span></li>
+      <li>דף מצב חי בעברית עם אכיפה אוטומטית. <span class="why">הסיבה: תמונה עדכנית של הפרויקט בכל רגע.</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>מפרטים</h2>
+    <table>
+      <thead><tr><th>מפרט</th><th>שלב</th><th>קישור</th></tr></thead>
+      <tbody><tr><td colspan="3" class="none">אין מפרטים עדיין.</td></tr></tbody>
+    </table>
+  </section>
 </main>
 </body>
 </html>

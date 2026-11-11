@@ -1,0 +1,40 @@
+name: status-page
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, labeled, unlabeled]
+
+permissions:
+  contents: read
+
+jobs:
+  status-page:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Status page exists and is Hebrew
+        run: |
+          test -f status.html || { echo "::error::status.html is missing"; exit 1; }
+          grep -q '<html lang="he" dir="rtl">' status.html \
+            || { echo "::error::status.html must declare lang=\"he\" dir=\"rtl\""; exit 1; }
+          count=$(git ls-files '*.html' | wc -l)
+          [ "$count" -eq 1 ] \
+            || { echo "::error::Expected exactly one HTML file, found $count"; exit 1; }
+
+      - name: Status page updated with relevant changes
+        if: ${{ !contains(github.event.pull_request.labels.*.name, 'status-not-affected') }}
+        env:
+          BASE: ${{ github.event.pull_request.base.sha }}
+          HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          changed=$(git diff --name-only "$BASE...$HEAD")
+          echo "$changed"
+          if echo "$changed" | grep -Eq '^(specs/|src/|tests/|\.specify/)'; then
+            if ! echo "$changed" | grep -qx 'status.html'; then
+              echo "::error::Specs, code or the constitution changed but status.html did not. Update it, or add the label status-not-affected."
+              exit 1
+            fi
+          fi
