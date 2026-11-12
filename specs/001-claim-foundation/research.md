@@ -55,6 +55,17 @@ Each entry records a decision, the reason, and what was rejected.
   gives a human a way to test each story independently, as the spec requires.
 - **Rejected**: a web service (nothing needs it yet).
 
+## Test data source: an open dataset on Hugging Face
+
+- **Decision**: take filings from `kapilrao/SEC-EDGAR` (Apache-2.0, no account)
+  and read the expected figures from the structured tags embedded in each filing.
+- **Reason**: one openly licensed source provides both the text and the correct
+  figures, with no identification required and nothing personal sent.
+- **Rejected**: the SEC's own site (requires automated requests to carry a
+  contact address); other Hugging Face collections that are gated, licensed for
+  non-commercial use only, or contain processed text rather than the original
+  filing.
+
 ## Open points deferred to later features
 
 - The registry of companies and its handling of mergers and renames.

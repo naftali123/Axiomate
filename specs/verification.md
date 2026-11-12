@@ -35,21 +35,39 @@ built (principle VIII).
 
 ## Data sources
 
-1. **Real filings** from the SEC's public filings database (EDGAR): earnings
-   releases and quarterly and annual reports of US-listed companies.
-2. **Structured figures** that companies file alongside the text (XBRL). They
-   give the correct values of the four first-version metrics per company and
-   period, so extracted claims can be checked without hand labelling. They do
-   not cover adjusted figures or hedged statements. The SEC's "company facts" service on `data.sec.gov` was
-   confirmed on 2026-11-12 to return all four metrics for one test company;
-   coverage across the chosen companies is checked when they are selected.
-3. **Known real discrepancies**: restated results and missed guidance, which are
-   publicly documented.
+1. **Real filings** from the open dataset `kapilrao/SEC-EDGAR` on Hugging Face
+   (Apache-2.0 licence, no account needed). It holds the original content of
+   about 8 million filings with their accession number, filing date, period and
+   filer. Quarterly (10-Q) and annual (10-K) reports are used. Older filings are
+   plain text and recent ones are HTML, which covers both input formats.
+2. **Structured figures embedded in the filings.** Recent HTML filings carry
+   machine-readable tags around their financial figures (inline XBRL), naming
+   the metric, period, unit and scale. They give the correct values of the four
+   first-version metrics from the same file as the text, so extracted claims
+   can be checked without hand labelling and without a second source. They do
+   not cover adjusted figures or hedged statements.
+3. **Known real discrepancies**: restated results, found by comparing a
+   company's later filings with its earlier ones in the same dataset.
 4. **Deliberate corruption**: a real document or claim with one element changed
    (a number, a period, a direction), produced by a deterministic generator so
    the correct answer is known exactly. Unchanged copies are the controls.
 5. **Hand labels**: a small set (about 100–200 sentences) for what the sources
    above cannot provide: sentence boundaries, hedges, what should be flagged.
+
+Checked on 2026-11-12 by downloading sample files: quarterly reports up to 2025
+are present, the content is the original HTML, and filings from about 2020
+onward carry embedded figures for the four metrics.
+
+**Limits of this source**
+
+- Earnings press releases are not included: each current-report (8-K) record
+  holds only the cover document, not the attached release. The first version
+  therefore works on quarterly and annual reports.
+- Files are not organized by company, so companies are chosen from what a few
+  files contain rather than picked by name.
+- A single filing is 1–5 MB, so the sample is kept to ten filings.
+- The SEC's own site is not used: it requires automated requests to identify
+  their sender with a contact address.
 
 ## Rules for the data
 
@@ -78,8 +96,4 @@ eval/
 
 ## Known constraints
 
-- The structured figures on `data.sec.gov` are reachable from the development
-  environment. The filings themselves on `www.sec.gov` are refused by the SEC
-  unless the request identifies its sender with a contact address, which is
-  the SEC's stated policy for automated access.
 - Hand labelling needs a person's time; the first batch is sized to stay small.

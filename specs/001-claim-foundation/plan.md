@@ -80,7 +80,9 @@ specs/001-claim-foundation/
    same bytes again returns the existing record. Ingesting the same bytes with
    different provenance is rejected as a conflict rather than silently merged.
 2. **Canonical text.** Plain text is normalized (Unicode NFC, `\n` line endings).
-   HTML is reduced to visible text by fixed rules. The canonical text is stored
+   HTML is reduced to visible text by fixed rules: hidden blocks are skipped and
+   embedded structured-data tags are removed while the figures they wrap are
+   kept. The canonical text is stored
    and is what all offsets refer to; the original bytes are kept alongside it.
 3. **Segments.** Canonical text is split into sentences by rule. Block elements
    end a segment, and each table row is one segment, so a figure in a table is
