@@ -23,5 +23,7 @@ up to date is mandatory.
 - Never add a second HTML status file.
 - The page describes the product only. Do not list project tooling on it, such
   as GitHub Pages, branch protection, CI checks or the status page itself.
+- The page follows `specs/status-page.md`. When the design or implementation of
+  a pipeline component changes, update that component's detail panel too.
 - Before finishing any task, check whether the page is still accurate and say so
   in your final message.

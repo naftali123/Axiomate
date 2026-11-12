@@ -1,6 +1,6 @@
 # Axiomate Constitution
 
-Status: ratified 2026-11-11, version 1.1.0
+Status: ratified 2026-11-11, version 1.2.0
 
 ## Core principles
 
@@ -69,7 +69,8 @@ Keeping the page up to date is the most important part of this rule. Any change
 that alters the project's state, architecture, plans or open issues must update
 `status.html` in the same change. A change that leaves the page stale must not be
 merged. The page stays short: it summarizes and links to specs, it does not
-duplicate them.
+duplicate them. Its detailed requirements, including the detail panel behind
+each diagram component, are in `specs/status-page.md`.
 
 Enforcement: `CLAUDE.md` instructs every AI session to follow this rule, and the
 `status-page` check on pull requests fails when specs, code or this constitution
@@ -87,3 +88,6 @@ documented rationale and a version bump.
   method, data source and threshold before any stage is built. Rationale: the
   first feature's plan had tests but did not say where test data came from or
   how each stage would be shown to work.
+- **1.2.0 (2026-11-12)**: principle IX now refers to `specs/status-page.md`
+  for the status page's detailed requirements. Rationale: the page gained
+  per-component detail panels and needed its own focused specification.

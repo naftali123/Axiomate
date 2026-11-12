@@ -28,6 +28,7 @@ This project follows Spec-Driven Development:
 
 - `.specify/memory/constitution.md` – the project's governing principles.
 - `status.html` – a one-page Hebrew summary of the project state, kept current.
+- `specs/status-page.md` – the specification of the status page.
 - `specs/verification.md` – how each pipeline stage is shown to work, and on what data.
 - `specs/NNN-feature-name/` – one folder per feature, holding `spec.md`
   (what and why), `plan.md` (how) and `tasks.md` (work breakdown).
@@ -37,3 +38,8 @@ Code is written only against an approved spec, plan and task list.
 ## Status
 
 Pre-implementation. The constitution is ratified. Spec `001-claim-foundation` has its spec, plan and tasks written, awaiting approval. See `status.html`.
+
+## Licence
+
+Proprietary, all rights reserved. See [LICENSE](LICENSE). No use, copying,
+modification or distribution is permitted without written permission.
