@@ -2,7 +2,7 @@
 
 **Feature**: `001-claim-foundation`
 **Created**: 2026-11-11
-**Status**: Draft – awaiting approval
+**Status**: Draft – clarifications resolved, awaiting approval
 **Domain**: Corporate financial disclosures
 
 ## Purpose
@@ -38,6 +38,8 @@ sentences by address and confirm the text is identical to the original.
    ingested, **then** it is rejected with a message naming the missing field.
 4. **Given** a stored document, **when** anyone attempts to alter its text,
    **then** the attempt is refused.
+5. **Given** an HTML disclosure, **when** it is ingested, **then** its visible
+   text is stored and addressable, and the original file is retrievable.
 
 ### Story 2 – Record a claim grounded in the text (Priority: P2)
 
@@ -111,6 +113,13 @@ source sentence.
   publication date.
 - **FR-006**: The system MUST accept a claim only if it conforms to the claim
   schema below.
+- **FR-014**: The system MUST accept documents as plain text or HTML. For HTML,
+  the stored text is the visible text, extracted by a deterministic method, and
+  the original file is kept alongside it.
+- **FR-015**: The system MUST accept documents in English only and reject a
+  document declared to be in another language.
+- **FR-016**: The system MUST accept a claim only if its metric is one of:
+  revenue, net income, earnings per share, operating cash flow.
 - **FR-007**: The system MUST accept a claim only if its quoted span appears
   verbatim at the stated address in the stored document.
 - **FR-008**: Every claim MUST record both the date it was said (the document's
@@ -130,7 +139,7 @@ source sentence.
 | Field | Meaning | Required |
 |---|---|---|
 | Company | The entity the claim is about, by canonical identifier | Yes |
-| Metric | What is measured (for example revenue, net income) | Yes |
+| Metric | One of: revenue, net income, earnings per share, operating cash flow | Yes |
 | Value | A number, a range, or a bound | Yes |
 | Unit and scale | Currency, percent, count; thousands, millions, billions | Yes |
 | Precision | Exact, approximate, at least, at most, range | Yes |
@@ -155,6 +164,8 @@ source sentence.
 
 ## Out of scope
 
+- PDF input, non-English documents and companies not listed in the US.
+- Metrics beyond the fixed list of four.
 - Extracting claims from text automatically (stage 2).
 - Checks beyond schema and span grounding (rest of stage 3).
 - Context resolution, matching, comparison, review (stages 4, 6, 7, 8).
@@ -175,16 +186,14 @@ source sentence.
   identical stores.
 - **SC-006**: For any stored claim, the source sentence can be shown in one lookup.
 
-## Open questions
+## Clarifications
 
-- **[NEEDS CLARIFICATION 1]** Which input formats must ingestion accept first:
-  plain text only, or also HTML and PDF?
-- **[NEEDS CLARIFICATION 2]** Which language and market first: English-language
-  filings of US-listed companies, or something else (for example Hebrew filings
-  of Israeli companies)?
-- **[NEEDS CLARIFICATION 3]** Which metrics are in the first version: a short
-  fixed list (for example revenue, net income, earnings per share, operating
-  cash flow), or open-ended?
+Resolved on 2026-11-12:
+
+- **Input formats**: plain text and HTML. PDF is out of scope for this feature.
+- **Language and market**: English-language filings of US-listed companies.
+- **Metrics**: a fixed list for the first version – revenue, net income,
+  earnings per share, operating cash flow. Other metrics are rejected.
 
 ## Constitution check
 
