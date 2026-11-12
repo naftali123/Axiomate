@@ -37,7 +37,27 @@ Code is written only against an approved spec, plan and task list.
 
 ## Status
 
-Pre-implementation. The constitution is ratified. Spec `001-claim-foundation` is approved and in progress: the verification data is collected; the code is not yet written. See `status.html`.
+Spec `001-claim-foundation` is in progress: the store foundation and document
+ingestion (stage 1) are built; claim submission and query are not yet written.
+See `status.html`.
+
+## Trying it
+
+```bash
+pip install -e ".[dev]"
+```
+
+```bash
+pytest
+```
+
+```bash
+axiomate ingest tests/fixtures/documents/everi_2024q1_10q.html --publisher-cik 0001318568 --type quarterly_report --published-on 2024-05-08 --fiscal-year 2024 --fiscal-period Q1 --format html
+```
+
+```bash
+axiomate document show <document_id> --segment 3
+```
 
 ## Licence
 

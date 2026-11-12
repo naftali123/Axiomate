@@ -4,6 +4,9 @@ Every command reads and writes JSON, exits 0 on success and non-zero on
 rejection, and on rejection prints `{"error": <code>, "field": <name or null>,
 "message": <text>}`. The library exposes the same operations as functions.
 
+The global option `--db <path>` (before the command) names the store file;
+the default is `axiomate.db` in the current directory.
+
 ## `axiomate ingest <file>`
 
 Options: `--publisher-cik`, `--type`, `--published-on`, `--fiscal-year`,
@@ -11,12 +14,17 @@ Options: `--publisher-cik`, `--type`, `--published-on`, `--fiscal-year`,
 
 - Success: `{"document_id", "segments": <count>, "created": true|false}`.
   `created` is false when the identical document already existed.
-- Errors: `missing_provenance`, `unsupported_format`, `unsupported_language`,
-  `provenance_conflict`.
+- Errors: `missing_provenance` (publisher, publication date or type absent),
+  `invalid_provenance` (a provenance value is malformed; the field is named),
+  `unsupported_format` (also when the bytes are not UTF-8 text),
+  `unsupported_language`, `provenance_conflict`, `empty_document`,
+  `unreadable_file`.
+- A publisher key shorter than ten digits is stored zero-padded to ten.
 
 ## `axiomate document show <document_id> [--segment N]`
 
-- Success: provenance and canonical text, or one segment with its offsets.
+- Success: provenance, canonical text and segment count; or, with `--segment`,
+  `{"document_id", "index", "start", "end", "kind", "text"}`.
 - Errors: `not_found`.
 
 ## `axiomate claim add <claim.json>`
