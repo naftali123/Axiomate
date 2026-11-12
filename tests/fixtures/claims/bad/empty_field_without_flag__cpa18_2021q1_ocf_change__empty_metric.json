@@ -1,0 +1,13 @@
+{
+  "name": "empty_field_without_flag__cpa18_2021q1_ocf_change__empty_metric",
+  "base": "cpa18_2021q1_ocf_change",
+  "expected_error": "empty_field_without_flag",
+  "expected_field": "metric",
+  "operations": [
+    {
+      "op": "set",
+      "path": "claim.metric",
+      "value": null
+    }
+  ]
+}

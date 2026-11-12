@@ -1,0 +1,12 @@
+{
+  "name": "status_mismatch__cpa18_2021q1_ocf_change__status_formal_with_assumptions",
+  "base": "cpa18_2021q1_ocf_change",
+  "expected_error": "status_mismatch",
+  "expected_field": "status",
+  "operations": [
+    {
+      "op": "set_status",
+      "value": "formal-with-assumptions"
+    }
+  ]
+}

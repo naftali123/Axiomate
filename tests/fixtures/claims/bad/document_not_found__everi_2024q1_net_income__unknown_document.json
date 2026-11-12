@@ -1,0 +1,12 @@
+{
+  "name": "document_not_found__everi_2024q1_net_income__unknown_document",
+  "base": "everi_2024q1_net_income",
+  "expected_error": "document_not_found",
+  "expected_field": "document_id",
+  "operations": [
+    {
+      "op": "set_document_id",
+      "value": "0000000000000000000000000000000000000000000000000000000000000005"
+    }
+  ]
+}

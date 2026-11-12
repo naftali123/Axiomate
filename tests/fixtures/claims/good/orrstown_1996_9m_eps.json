@@ -1,0 +1,44 @@
+{
+  "name": "orrstown_1996_9m_eps",
+  "document": "orrstown_1996q3_10q.txt",
+  "quote": "Net income on an \nadjusted per share basis for the first nine months was $ 1.72",
+  "quote_occurrence": 1,
+  "claim": {
+    "company_cik": "0000826154",
+    "metric": "earnings_per_share",
+    "value_kind": "exact",
+    "value_low": "1.72",
+    "value_high": "1.72",
+    "stated_value": "1.72",
+    "stated_scale": "units",
+    "unit": "currency_per_share",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 1996,
+    "fiscal_period": "9M",
+    "period_start": "1996-01-01",
+    "period_end": "1996-09-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "said_on": "1996-11-26"
+  },
+  "flags": [],
+  "assumptions": [
+    {
+      "statement": "\"Adjusted per share basis\" refers to an adjusted share count, not to adjusted earnings",
+      "field": "basis",
+      "origin": "human"
+    },
+    {
+      "statement": "\"The first nine months\" is of 1996, the year of the report",
+      "field": "period_start",
+      "origin": "human"
+    }
+  ],
+  "expected_status": "formal-with-assumptions",
+  "checked_against": "hand"
+}

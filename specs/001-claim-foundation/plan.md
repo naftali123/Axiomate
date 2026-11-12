@@ -99,8 +99,9 @@ specs/001-claim-foundation/
    any assumption gives `formal-with-assumptions`; otherwise `formal`. A
    submitted status that disagrees is rejected.
 9. **Companies** are identified by their SEC Central Index Key.
-10. **Periods** are stored as fiscal year, fiscal quarter (or full year) and
-    explicit start and end dates, so non-calendar fiscal years are unambiguous.
+10. **Periods** are stored as fiscal year, fiscal period (a quarter, the first
+    six or nine months, or the full year) and explicit start and end dates, so
+    non-calendar fiscal years are unambiguous.
 11. **Values** keep both the figure as stated (with its scale) and the
     normalized figure in base units, both as decimals.
 12. **Stable ordering.** Query results are ordered by period end, publication
@@ -114,6 +115,21 @@ The spec required every schema field on every claim. A claim that cannot be
 formalized (for example "revenue grew significantly") has no value to record.
 Added **FR-017**: on a `not-formalizable` claim, a field may be empty if a flag
 on the claim names that field as the reason.
+
+## Changes found while collecting the data
+
+- **Year-to-date periods.** Quarterly reports state six-month and nine-month
+  figures as often as quarterly ones. The period field is now `fiscal_period`
+  with the added values `H1` and `9M`.
+- **Negative values.** A loss or a decrease is stored as a negative value.
+- **Claim fixtures carry the quote, not offsets.** Character offsets depend on
+  the stored text, which does not exist until the document is ingested. Each
+  fixture names its filing and quote; the test locates the quote after
+  ingestion and fills in the offsets before submitting the claim.
+- **HTML whitespace.** In text extracted from HTML, non-breaking spaces become
+  ordinary spaces and runs of whitespace inside a block collapse to one space.
+- **Sample composition.** The ten filings are all quarterly reports; annual
+  reports are several megabytes each and are left for a later addition.
 
 ## Risks
 

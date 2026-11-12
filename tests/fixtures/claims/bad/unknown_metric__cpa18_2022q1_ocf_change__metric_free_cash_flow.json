@@ -1,0 +1,13 @@
+{
+  "name": "unknown_metric__cpa18_2022q1_ocf_change__metric_free_cash_flow",
+  "base": "cpa18_2022q1_ocf_change",
+  "expected_error": "unknown_metric",
+  "expected_field": "metric",
+  "operations": [
+    {
+      "op": "set",
+      "path": "claim.metric",
+      "value": "free_cash_flow"
+    }
+  ]
+}

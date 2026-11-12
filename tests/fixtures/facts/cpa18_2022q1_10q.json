@@ -1,0 +1,150 @@
+{
+  "document": "cpa18_2022q1_10q.html",
+  "facts": [
+    {
+      "id": "id3VybDovL2RvY3MudjEvZG9jOjBiNzUyNjNjMzVkMjRmZDE5ZTc2ODQ1Mzc5ZmJjYTY0L3NlYzowYjc1MjYzYzM1ZDI0ZmQxOWU3Njg0NTM3OWZiY2E2NF82Ny9mcmFnOjYwYzExYThhYTRiNjRlYzVhOGRkNDljMjc2MWY3MjQzL3RhYmxlOmMyMjI1ZjQ0YzU0ZTQ1ZDFiZDY1ZmExZjdjMjM2NWRkL3RhYmxlcmFuZ2U6YzIyMjVmNDRjNTRlNDVkMWJkNjVmYTFmN2MyMzY1ZGRfNS05LTEtMS01MDA5MA_8afbc947-978e-4cb8-a9aa-51a3465f38a8",
+      "metric": "net_income",
+      "tag": "us-gaap:NetIncomeLoss",
+      "shown": "511",
+      "stated_scale": "thousands",
+      "value": "511000",
+      "unit": "usd",
+      "period_kind": "duration",
+      "period_start": "2021-01-01",
+      "period_end": "2021-03-31"
+    },
+    {
+      "id": "id3VybDovL2RvY3MudjEvZG9jOjBiNzUyNjNjMzVkMjRmZDE5ZTc2ODQ1Mzc5ZmJjYTY0L3NlYzowYjc1MjYzYzM1ZDI0ZmQxOWU3Njg0NTM3OWZiY2E2NF83My9mcmFnOjJkM2Q1NWJjZTk0NDQ3YzdhNzNiZjI0MjhiNjk4MjZjL3RhYmxlOjNjNTgzNTU1OWJhZDQ5M2Y5NDAyNGJhNWJkNGNhNWE0L3RhYmxlcmFuZ2U6M2M1ODM1NTU5YmFkNDkzZjk0MDI0YmE1YmQ0Y2E1YTRfNTMtMy0xLTEtNTAwOTA_87f90597-70bb-4e21-aab8-ee611efbf68e",
+      "metric": "net_income",
+      "tag": "us-gaap:NetIncomeLoss",
+      "shown": "511",
+      "stated_scale": "thousands",
+      "value": "511000",
+      "unit": "usd",
+      "period_kind": "duration",
+      "period_start": "2021-01-01",
+      "period_end": "2021-03-31"
+    },
+    {
+      "id": "id3VybDovL2RvY3MudjEvZG9jOjBiNzUyNjNjMzVkMjRmZDE5ZTc2ODQ1Mzc5ZmJjYTY0L3NlYzowYjc1MjYzYzM1ZDI0ZmQxOWU3Njg0NTM3OWZiY2E2NF8yMi9mcmFnOjMxMTZmODAxMmZlNzRhOTU4ZTZmMzI0ZmM0Mzk4MDYyL3RhYmxlOjMwMmY2YjFjZDM4YTRmOWRhMGQ2MmI5ZGRmM2FiZWYyL3RhYmxlcmFuZ2U6MzAyZjZiMWNkMzhhNGY5ZGEwZDYyYjlkZGYzYWJlZjJfMjUtMy0xLTEtNTAwOTA_50ef9fbd-69b2-41df-9334-c4d7e434ba4b",
+      "metric": "net_income",
+      "tag": "us-gaap:NetIncomeLoss",
+      "shown": "511",
+      "stated_scale": "thousands",
+      "value": "511000",
+      "unit": "usd",
+      "period_kind": "duration",
+      "period_start": "2021-01-01",
+      "period_end": "2021-03-31"
+    },
+    {
+      "id": "id3VybDovL2RvY3MudjEvZG9jOjBiNzUyNjNjMzVkMjRmZDE5ZTc2ODQ1Mzc5ZmJjYTY0L3NlYzowYjc1MjYzYzM1ZDI0ZmQxOWU3Njg0NTM3OWZiY2E2NF82Ny9mcmFnOjYwYzExYThhYTRiNjRlYzVhOGRkNDljMjc2MWY3MjQzL3RhYmxlOmMyMjI1ZjQ0YzU0ZTQ1ZDFiZDY1ZmExZjdjMjM2NWRkL3RhYmxlcmFuZ2U6YzIyMjVmNDRjNTRlNDVkMWJkNjVmYTFmN2MyMzY1ZGRfNS0zLTEtMS01MDA5MA_f0060da0-24b4-4dde-a5f4-4e5b6f30e2b5",
+      "metric": "net_income",
+      "tag": "us-gaap:NetIncomeLoss",
+      "shown": "68,968",
+      "stated_scale": "thousands",
+      "value": "68968000",
+      "unit": "usd",
+      "period_kind": "duration",
+      "period_start": "2022-01-01",
+      "period_end": "2022-03-31"
+    },
+    {
+      "id": "id3VybDovL2RvY3MudjEvZG9jOjBiNzUyNjNjMzVkMjRmZDE5ZTc2ODQ1Mzc5ZmJjYTY0L3NlYzowYjc1MjYzYzM1ZDI0ZmQxOWU3Njg0NTM3OWZiY2E2NF83My9mcmFnOjJkM2Q1NWJjZTk0NDQ3YzdhNzNiZjI0MjhiNjk4MjZjL3RhYmxlOjNjNTgzNTU1OWJhZDQ5M2Y5NDAyNGJhNWJkNGNhNWE0L3RhYmxlcmFuZ2U6M2M1ODM1NTU5YmFkNDkzZjk0MDI0YmE1YmQ0Y2E1YTRfNTMtMS0xLTEtNTAwOTA_1b0ee781-6430-4941-acae-4a6062390d2c",
+      "metric": "net_income",
+      "tag": "us-gaap:NetIncomeLoss",
+      "shown": "68,968",
+      "stated_scale": "thousands",
+      "value": "68968000",
+      "unit": "usd",
+      "period_kind": "duration",
+      "period_start": "2022-01-01",
+      "period_end": "2022-03-31"
+    },
+    {
+      "id": "id3VybDovL2RvY3MudjEvZG9jOjBiNzUyNjNjMzVkMjRmZDE5ZTc2ODQ1Mzc5ZmJjYTY0L3NlYzowYjc1MjYzYzM1ZDI0ZmQxOWU3Njg0NTM3OWZiY2E2NF8yMi9mcmFnOjMxMTZmODAxMmZlNzRhOTU4ZTZmMzI0ZmM0Mzk4MDYyL3RhYmxlOjMwMmY2YjFjZDM4YTRmOWRhMGQ2MmI5ZGRmM2FiZWYyL3RhYmxlcmFuZ2U6MzAyZjZiMWNkMzhhNGY5ZGEwZDYyYjlkZGYzYWJlZjJfMjUtMS0xLTEtNTAwOTA_8439933b-a705-4e51-8d7d-dc6b81aa8673",
+      "metric": "net_income",
+      "tag": "us-gaap:NetIncomeLoss",
+      "shown": "68,968",
+      "stated_scale": "thousands",
+      "value": "68968000",
+      "unit": "usd",
+      "period_kind": "duration",
+      "period_start": "2022-01-01",
+      "period_end": "2022-03-31"
+    },
+    {
+      "id": "id3VybDovL2RvY3MudjEvZG9jOjBiNzUyNjNjMzVkMjRmZDE5ZTc2ODQ1Mzc5ZmJjYTY0L3NlYzowYjc1MjYzYzM1ZDI0ZmQxOWU3Njg0NTM3OWZiY2E2NF8zMS9mcmFnOmE1YzJjNzJmZjI4ODQ2NDRiMzBmYWI3Mzk5YTQ3ZjIxL3RhYmxlOjNkNmJmYTA2MTYxMTQ0NDQ4NDgwZDAzMTFmZjU1YTVlL3RhYmxlcmFuZ2U6M2Q2YmZhMDYxNjExNDQ0NDg0ODBkMDMxMWZmNTVhNWVfMTEtMy0xLTEtNTAwOTA_2fe1bb10-17dc-4219-be31-a0ea3dcc8338",
+      "metric": "operating_cash_flow",
+      "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+      "shown": "16,652",
+      "stated_scale": "thousands",
+      "value": "16652000",
+      "unit": "usd",
+      "period_kind": "duration",
+      "period_start": "2021-01-01",
+      "period_end": "2021-03-31"
+    },
+    {
+      "id": "id3VybDovL2RvY3MudjEvZG9jOjBiNzUyNjNjMzVkMjRmZDE5ZTc2ODQ1Mzc5ZmJjYTY0L3NlYzowYjc1MjYzYzM1ZDI0ZmQxOWU3Njg0NTM3OWZiY2E2NF8zMS9mcmFnOmE1YzJjNzJmZjI4ODQ2NDRiMzBmYWI3Mzk5YTQ3ZjIxL3RhYmxlOjNkNmJmYTA2MTYxMTQ0NDQ4NDgwZDAzMTFmZjU1YTVlL3RhYmxlcmFuZ2U6M2Q2YmZhMDYxNjExNDQ0NDg0ODBkMDMxMWZmNTVhNWVfMTEtMS0xLTEtNTAwOTA_4cbee462-c8d0-4387-850b-fb5858682aaa",
+      "metric": "operating_cash_flow",
+      "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+      "shown": "30,047",
+      "stated_scale": "thousands",
+      "value": "30047000",
+      "unit": "usd",
+      "period_kind": "duration",
+      "period_start": "2022-01-01",
+      "period_end": "2022-03-31"
+    },
+    {
+      "id": "id3VybDovL2RvY3MudjEvZG9jOjBiNzUyNjNjMzVkMjRmZDE5ZTc2ODQ1Mzc5ZmJjYTY0L3NlYzowYjc1MjYzYzM1ZDI0ZmQxOWU3Njg0NTM3OWZiY2E2NF83My9mcmFnOjJkM2Q1NWJjZTk0NDQ3YzdhNzNiZjI0MjhiNjk4MjZjL3RhYmxlOjNjNTgzNTU1OWJhZDQ5M2Y5NDAyNGJhNWJkNGNhNWE0L3RhYmxlcmFuZ2U6M2M1ODM1NTU5YmFkNDkzZjk0MDI0YmE1YmQ0Y2E1YTRfNDYtMy0xLTEtNTAwOTA_f978c25c-5c89-4882-aeaf-28f463f5d69e",
+      "metric": "revenue",
+      "tag": "us-gaap:Revenues",
+      "shown": "48,369",
+      "stated_scale": "thousands",
+      "value": "48369000",
+      "unit": "usd",
+      "period_kind": "duration",
+      "period_start": "2021-01-01",
+      "period_end": "2021-03-31"
+    },
+    {
+      "id": "id3VybDovL2RvY3MudjEvZG9jOjBiNzUyNjNjMzVkMjRmZDE5ZTc2ODQ1Mzc5ZmJjYTY0L3NlYzowYjc1MjYzYzM1ZDI0ZmQxOWU3Njg0NTM3OWZiY2E2NF8yMi9mcmFnOjMxMTZmODAxMmZlNzRhOTU4ZTZmMzI0ZmM0Mzk4MDYyL3RhYmxlOjMwMmY2YjFjZDM4YTRmOWRhMGQ2MmI5ZGRmM2FiZWYyL3RhYmxlcmFuZ2U6MzAyZjZiMWNkMzhhNGY5ZGEwZDYyYjlkZGYzYWJlZjJfNi0zLTEtMS01MDA5MA_8d85530c-3caf-41a0-abaa-d6626d911f10",
+      "metric": "revenue",
+      "tag": "us-gaap:Revenues",
+      "shown": "48,369",
+      "stated_scale": "thousands",
+      "value": "48369000",
+      "unit": "usd",
+      "period_kind": "duration",
+      "period_start": "2021-01-01",
+      "period_end": "2021-03-31"
+    },
+    {
+      "id": "id3VybDovL2RvY3MudjEvZG9jOjBiNzUyNjNjMzVkMjRmZDE5ZTc2ODQ1Mzc5ZmJjYTY0L3NlYzowYjc1MjYzYzM1ZDI0ZmQxOWU3Njg0NTM3OWZiY2E2NF83My9mcmFnOjJkM2Q1NWJjZTk0NDQ3YzdhNzNiZjI0MjhiNjk4MjZjL3RhYmxlOjNjNTgzNTU1OWJhZDQ5M2Y5NDAyNGJhNWJkNGNhNWE0L3RhYmxlcmFuZ2U6M2M1ODM1NTU5YmFkNDkzZjk0MDI0YmE1YmQ0Y2E1YTRfNDYtMS0xLTEtNTAwOTA_fba5ba7d-6968-40ba-95e1-a6096387d7e7",
+      "metric": "revenue",
+      "tag": "us-gaap:Revenues",
+      "shown": "52,698",
+      "stated_scale": "thousands",
+      "value": "52698000",
+      "unit": "usd",
+      "period_kind": "duration",
+      "period_start": "2022-01-01",
+      "period_end": "2022-03-31"
+    },
+    {
+      "id": "id3VybDovL2RvY3MudjEvZG9jOjBiNzUyNjNjMzVkMjRmZDE5ZTc2ODQ1Mzc5ZmJjYTY0L3NlYzowYjc1MjYzYzM1ZDI0ZmQxOWU3Njg0NTM3OWZiY2E2NF8yMi9mcmFnOjMxMTZmODAxMmZlNzRhOTU4ZTZmMzI0ZmM0Mzk4MDYyL3RhYmxlOjMwMmY2YjFjZDM4YTRmOWRhMGQ2MmI5ZGRmM2FiZWYyL3RhYmxlcmFuZ2U6MzAyZjZiMWNkMzhhNGY5ZGEwZDYyYjlkZGYzYWJlZjJfNi0xLTEtMS01MDA5MA_cf606e86-b16e-42d6-a7b9-bb223893b39c",
+      "metric": "revenue",
+      "tag": "us-gaap:Revenues",
+      "shown": "52,698",
+      "stated_scale": "thousands",
+      "value": "52698000",
+      "unit": "usd",
+      "period_kind": "duration",
+      "period_start": "2022-01-01",
+      "period_end": "2022-03-31"
+    }
+  ],
+  "skipped": []
+}

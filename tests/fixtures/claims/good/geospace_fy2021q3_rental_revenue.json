@@ -1,0 +1,51 @@
+{
+  "name": "geospace_fy2021q3_rental_revenue",
+  "document": "geospace_fy2021q3_10q.html",
+  "quote": "Rental revenue for the three and nine months ended June 30, 2021 was $5.4 million",
+  "quote_occurrence": 1,
+  "claim": {
+    "company_cik": "0001001115",
+    "metric": null,
+    "value_kind": "exact",
+    "value_low": "5400000",
+    "value_high": "5400000",
+    "stated_value": "5.4",
+    "stated_scale": "millions",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "Q3",
+    "period_start": "2021-04-01",
+    "period_end": "2021-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "said_on": "2021-08-06"
+  },
+  "flags": [
+    {
+      "reason": "unmapped_metric",
+      "field": "metric",
+      "resolved": false,
+      "note": "Rental revenue is a component of revenue, not one of the four first-version metrics."
+    }
+  ],
+  "assumptions": [
+    {
+      "statement": "Of the two periods named, the first figure belongs to the three months ended June 30, 2021 (\"respectively\")",
+      "field": "period_start",
+      "origin": "human"
+    },
+    {
+      "statement": "The fiscal year ends on September 30, so the quarter ended June 30, 2021 is the third quarter of fiscal 2021",
+      "field": "fiscal_period",
+      "origin": "context_store"
+    }
+  ],
+  "expected_status": "not-formalizable",
+  "checked_against": "hand"
+}

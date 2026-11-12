@@ -1,0 +1,13 @@
+{
+  "name": "unknown_metric__cpa18_2021h1_ocf_change__metric_ebitda",
+  "base": "cpa18_2021h1_ocf_change",
+  "expected_error": "unknown_metric",
+  "expected_field": "metric",
+  "operations": [
+    {
+      "op": "set",
+      "path": "claim.metric",
+      "value": "ebitda"
+    }
+  ]
+}

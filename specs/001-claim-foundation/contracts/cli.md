@@ -7,7 +7,7 @@ rejection, and on rejection prints `{"error": <code>, "field": <name or null>,
 ## `axiomate ingest <file>`
 
 Options: `--publisher-cik`, `--type`, `--published-on`, `--fiscal-year`,
-`--fiscal-quarter`, `--format text|html`, `--language` (default `en`).
+`--fiscal-period`, `--format text|html`, `--language` (default `en`).
 
 - Success: `{"document_id", "segments": <count>, "created": true|false}`.
   `created` is false when the identical document already existed.
@@ -29,7 +29,7 @@ Input: one claim as defined in the data model, with optional `flags` and
   `document_not_found`, `span_mismatch`, `span_outside_segment`,
   `said_on_mismatch`, `status_mismatch`, `empty_field_without_flag`.
 
-## `axiomate claim list --company-cik --metric --fiscal-year [--fiscal-quarter]`
+## `axiomate claim list --company-cik --metric --fiscal-year [--fiscal-period]`
 
 Options: `--all-versions` (default returns only the latest version of each claim).
 

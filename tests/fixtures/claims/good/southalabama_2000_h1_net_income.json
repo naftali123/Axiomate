@@ -1,0 +1,44 @@
+{
+  "name": "southalabama_2000_h1_net_income",
+  "document": "southalabama_2000q2_10q.txt",
+  "quote": "Net Income                                  $3,692",
+  "quote_occurrence": 1,
+  "claim": {
+    "company_cik": "0000783739",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "3692000",
+    "value_high": "3692000",
+    "stated_value": "3692",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2000,
+    "fiscal_period": "H1",
+    "period_start": "2000-01-01",
+    "period_end": "2000-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "said_on": "2000-08-14"
+  },
+  "flags": [],
+  "assumptions": [
+    {
+      "statement": "The first figure column of the table is the six months ended June 30, 2000, per the table heading",
+      "field": "period_start",
+      "origin": "human"
+    },
+    {
+      "statement": "Figures are in thousands of dollars, per the table heading",
+      "field": "stated_scale",
+      "origin": "human"
+    }
+  ],
+  "expected_status": "formal-with-assumptions",
+  "checked_against": "hand"
+}

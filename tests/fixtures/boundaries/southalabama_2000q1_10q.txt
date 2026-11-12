@@ -1,0 +1,19 @@
+NOTE A: The accompanying unaudited consolidated financial statements have been prepared in accordance with generally accepted accounting principles for interim financial information and with the instructions to Form 10-Q and Rule 10-01 of Regulation S-X. Accordingly, they do not include all of the information and footnotes required by generally accepted accounting principles for complete financial statements.
+The information furnished reflects all adjustments, consisting of normal and recurring accruals, which in the opinion of management are necessary for a fair presentation of the results of the interim periods.
+Results for interim periods may not necessarily be indicative of results to be expected for the year.
+
+NOTE D: The American Institute of Certified Public Accountants has issued Statement of Position (SOP) 98-5, "Reporting on the Costs of Start-up Activities."
+This SOP provides guidance on the financial reporting of start-up costs and organization costs.
+It requires costs of start-up activities and organization activities to be expensed as incurred, and the initial application of this SOP should be reported as the cumulative effect of a change in accounting principle.
+This SOP is effective for financial statements for fiscal years beginning after December 15, 1998.
+Earlier application is encouraged for fiscal years for which annual financial statements previously have not been issued.
+The adoption of this SOP did not have a material impact on the presentation of the Company's financial condition or results of operations.
+
+NOTE H: In June 1999, the FASB issued SFAS No. 137 "Accounting for Derivative Instruments and Hedging Activities - Deferral of the Effective Date of FASB Statement No. 133."
+This statement delays the effective date of Statement 133 from fiscal quarters of all fiscal years beginning after June 15, 1999, with earlier application encouraged, to fiscal quarters of all fiscal years beginning after June 15, 2000.
+
+Non-performing assets include accruing loans 90 days or more past due, loans on non-accrual, renegotiated loans and other real estate owned.
+Commercial, business and installment loans are classified as non-accrual by Management upon the earlier of: (i) a determination that collection of interest is doubtful, or (ii) the time at which such loans become 90 days past due, unless collateral or other circumstances reasonably assure full collection of principal and interest.
+
+The Year 2000 ("Y2K") issue is a result of some computer software programs and hardware systems using only two digits to indicate a year and assuming that the first two digits of any year are "19."
+Through this date, the Company has suffered no material disruptions related to Y2K and expects none.

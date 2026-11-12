@@ -1,0 +1,39 @@
+{
+  "name": "orrstown_1995_9m_net_income",
+  "document": "orrstown_1996q3_10q.txt",
+  "quote": "compared to $1,504,000 for the same period in 1995",
+  "quote_occurrence": 1,
+  "claim": {
+    "company_cik": "0000826154",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "1504000",
+    "value_high": "1504000",
+    "stated_value": "1504000",
+    "stated_scale": "units",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 1995,
+    "fiscal_period": "9M",
+    "period_start": "1995-01-01",
+    "period_end": "1995-09-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "said_on": "1996-11-26"
+  },
+  "flags": [],
+  "assumptions": [
+    {
+      "statement": "The metric is net after tax income, named at the start of the same sentence",
+      "field": "metric",
+      "origin": "human"
+    }
+  ],
+  "expected_status": "formal-with-assumptions",
+  "checked_against": "hand"
+}

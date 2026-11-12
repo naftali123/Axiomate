@@ -1,0 +1,39 @@
+{
+  "name": "orrstown_1996_9m_eps_restated",
+  "document": "orrstown_1997q3_10q.txt",
+  "quote": "the 1.64 per share realized during the nine months\nended September 30, 1996",
+  "quote_occurrence": 1,
+  "claim": {
+    "company_cik": "0000826154",
+    "metric": "earnings_per_share",
+    "value_kind": "exact",
+    "value_low": "1.64",
+    "value_high": "1.64",
+    "stated_value": "1.64",
+    "stated_scale": "units",
+    "unit": "currency_per_share",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 1996,
+    "fiscal_period": "9M",
+    "period_start": "1996-01-01",
+    "period_end": "1996-09-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "said_on": "1997-11-14"
+  },
+  "flags": [],
+  "assumptions": [
+    {
+      "statement": "The figure is net income per share in US dollars; the currency sign is missing in the text",
+      "field": "unit",
+      "origin": "human"
+    }
+  ],
+  "expected_status": "formal-with-assumptions",
+  "checked_against": "hand"
+}

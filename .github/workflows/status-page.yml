@@ -20,9 +20,9 @@ jobs:
           test -f status.html || { echo "::error::status.html is missing"; exit 1; }
           grep -q '<html lang="he" dir="rtl">' status.html \
             || { echo "::error::status.html must declare lang=\"he\" dir=\"rtl\""; exit 1; }
-          count=$(git ls-files '*.html' | wc -l)
+          count=$(git ls-files '*.html' ':!tests/fixtures' ':!eval' | wc -l)
           [ "$count" -eq 1 ] \
-            || { echo "::error::Expected exactly one HTML file, found $count"; exit 1; }
+            || { echo "::error::Expected exactly one HTML page outside test data, found $count"; exit 1; }
 
       - name: Status page updated with relevant changes
         if: ${{ !contains(github.event.pull_request.labels.*.name, 'status-not-affected') }}

@@ -1,0 +1,66 @@
+{
+  "dataset": "kapilrao/SEC-EDGAR",
+  "dataset_revision": "aa4a2334027e6b2f8c132dd698544478f61ad26a",
+  "filings": [
+    {
+      "accession": "0001318568-24-000079",
+      "file": "everi_2024q1_10q.html",
+      "format": "html",
+      "dataset_file": "10-Q/a063d8a1-3f75-4223-9dab-24ec86f96bbd-0.parquet"
+    },
+    {
+      "accession": "0001564590-21-042009",
+      "file": "geospace_fy2021q3_10q.html",
+      "format": "html",
+      "dataset_file": "10-Q/3f3535d3-85e6-4ffe-b707-3a3928b405d5-1154.parquet"
+    },
+    {
+      "accession": "0001558235-21-000013",
+      "file": "cpa18_2021q1_10q.html",
+      "format": "html",
+      "dataset_file": "10-Q/3f3535d3-85e6-4ffe-b707-3a3928b405d5-1154.parquet"
+    },
+    {
+      "accession": "0001558235-21-000027",
+      "file": "cpa18_2021q2_10q.html",
+      "format": "html",
+      "dataset_file": "10-Q/3f3535d3-85e6-4ffe-b707-3a3928b405d5-1154.parquet"
+    },
+    {
+      "accession": "0001558235-22-000020",
+      "file": "cpa18_2022q1_10q.html",
+      "format": "html",
+      "dataset_file": "10-Q/3f3535d3-85e6-4ffe-b707-3a3928b405d5-1154.parquet"
+    },
+    {
+      "accession": "0000783739-00-000005",
+      "file": "southalabama_2000q1_10q.txt",
+      "format": "text",
+      "dataset_file": "10-Q/10ca2c0b-4c9c-48b5-a4c9-36e7911bf788-773.parquet"
+    },
+    {
+      "accession": "0000783739-00-000007",
+      "file": "southalabama_2000q2_10q.txt",
+      "format": "text",
+      "dataset_file": "10-Q/10ca2c0b-4c9c-48b5-a4c9-36e7911bf788-773.parquet"
+    },
+    {
+      "accession": "0000783739-00-000009",
+      "file": "southalabama_2000q3_10q.txt",
+      "format": "text",
+      "dataset_file": "10-Q/10ca2c0b-4c9c-48b5-a4c9-36e7911bf788-773.parquet"
+    },
+    {
+      "accession": "0000826154-96-000008",
+      "file": "orrstown_1996q3_10q.txt",
+      "format": "text",
+      "dataset_file": "10-Q/a063d8a1-3f75-4223-9dab-24ec86f96bbd-0.parquet"
+    },
+    {
+      "accession": "0000826154-97-000016",
+      "file": "orrstown_1997q3_10q.txt",
+      "format": "text",
+      "dataset_file": "10-Q/a063d8a1-3f75-4223-9dab-24ec86f96bbd-0.parquet"
+    }
+  ]
+}

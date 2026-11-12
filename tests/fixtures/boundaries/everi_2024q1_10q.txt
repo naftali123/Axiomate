@@ -1,0 +1,40 @@
+Indicate by check mark whether the registrant is a large accelerated filer, an accelerated filer, a non-accelerated filer, a smaller reporting company, or an emerging growth company.
+See the definitions of “large accelerated filer,” “accelerated filer,” “smaller reporting company,” and “emerging growth company” in Rule 12b-2 of the Exchange Act.
+
+Our products and services include electronic gaming devices, such as Native American Class II offerings and other electronic bingo products, Class III slot machine offerings, HHR offerings, integrated electronic bingo gaming tablets, VLTs installed in the State of New York and similar technology in certain tribal jurisdictions, B2B digital online gaming activities, accounting and central determinant systems, and other back-office systems.
+We conduct our Games segment business based on results generated from the following major revenue streams: (i) Gaming Operations; and (ii) Gaming Equipment and Systems.
+
+The fair value of the contingent consideration was based on Level 3 inputs utilizing a discounted cash flow methodology.
+The estimates and assumptions included projected future revenues of the acquired business and a discount rate of approximately 5%.
+Contingent consideration to be paid is comprised of a short-term component that is recorded in accounts payable and accrued expenses in our Balance Sheets.
+The change in fair value of the contingent consideration during the period ended March 31, 2024 was not material.
+
+Trade and other receivables represent short-term credit granted to customers and long-term loans receivable in connection with our Games and FinTech equipment and software, and compliance products.
+Trade and loans receivable generally do not require collateral.
+
+The interest rate per annum applicable to the Credit Facilities will be, at the Company’s option, either the SOFR rate with a 0.50% floor plus a margin of 2.50%, or the base rate plus a margin of 1.50%.
+In addition, we pay a SOFR adjustment recorded as interest expense that varies for the applicable interest period, with an adjustment of 0.1% for interest periods of one month, an adjustment of 0.3% for interest periods of two months and an adjustment of 0.4% for interest periods of three months.
+Our Revolver remained fully undrawn as of March 31, 2024.
+
+Operating segments are components of an enterprise about which separate financial information is available that is evaluated regularly by the chief operating decision-making group (the “CODM”).
+Our CODM consists of the Chief Executive Officer and the Chief Financial Officer.
+Our CODM determined that our operating segments for conducting business are: (i) Games and (ii) FinTech.
+Our CODM allocates resources and measures profitability based on our operating segments, which are managed and reviewed separately, as each represents products and services that can be sold separately to our customers.
+Our segments are monitored by management for performance against our internal forecasts.
+We have reported our financial performance based on our segments in both the current and prior periods.
+Refer to “Note 1 — Business” for additional information regarding our operating segments.
+
+Total revenues decreased by approximately $11.1 million, or 6%, to approximately $189.3 million for the three months ended March 31, 2024, as compared to the same period in the prior year.
+This was primarily due to the decline in Games revenues described below.
+
+Research and development expense increased by approximately $3.2 million, or 20%, to approximately $19.3 million for the three months ended March 31, 2024, as compared to the same period in the prior year.
+This change was primarily due to growth in our operations and continued investment in new products in our Games and FinTech segments.
+
+As of March 31, 2024, our cash balance, cash flows, and line of credit are expected to be sufficient to meet our recurring operating commitments and to fund our planned capital expenditures on both a short- and long-term basis.
+Cash and cash equivalents included cash in non-U.S. jurisdictions of approximately $19.9 million as of March 31, 2024.
+Generally, these funds are available for operating and investment purposes within the jurisdiction in which they reside, and we may from time to time consider repatriating these foreign funds to the United States, subject to potential withholding tax obligations, based on operating requirements.
+
+Our primary commercial arrangement, the Contract Cash Solutions Agreement, as amended, is with Wells Fargo, N.A. (“Wells Fargo”).
+Wells Fargo provides us with cash up to $450 million with the ability to increase the amount permitted by the vault cash provider.
+The term of the agreement expires on December 1, 2026 and will automatically renew for additional one-year periods unless either party provides a ninety-day written notice of its intent not to renew.
+The outstanding balances of funds provided in connection with the agreement were approximately $319.3 million and $388.5 million as of March 31, 2024 and December 31, 2023, respectively.

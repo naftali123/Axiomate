@@ -1,0 +1,38 @@
+Indicate by check mark whether the registrant is a large accelerated filer, an accelerated filer, a non-accelerated filer, a smaller reporting company, or an emerging growth company.
+See the definitions of “large accelerated filer,” “accelerated filer,” “smaller reporting company,” and “emerging growth company” in Rule 12b-2 of the Exchange Act.
+
+The preparation of financial statements in conformity with GAAP requires management to make estimates and assumptions that affect the reported amounts and the disclosure of contingent amounts in our condensed consolidated financial statements and the accompanying notes.
+Actual results could differ from those estimates.
+
+Our Advisor receives acquisition fees, a portion of which is payable upon acquisition, while the remaining portion is subordinated to a preferred return of a non-compounded cumulative distribution of 5.0% per annum (based initially on our invested capital).
+The preferred return was achieved as of the periods ended March 31, 2021 and December 31, 2020.
+Unpaid installments of deferred acquisition fees are included in Due to affiliates in the condensed consolidated financial statements and bear interest at an annual rate of 2.0%.
+
+We generally invest in facilities that we believe are critical to a tenant’s business and therefore have a lower risk of tenant default.
+As of both March 31, 2021 and December 31, 2020, we had no significant finance receivable balances that were past due; however, we have an allowance for credit losses.
+Additionally, there were no material modifications of finance receivables during the three months ended March 31, 2021.
+
+There have been no significant changes in our derivative financial instrument policies from what was disclosed in the 2020 Annual Report.
+At both March 31, 2021 and December 31, 2020, no cash collateral had been posted or received for any of our derivative positions.
+
+Our non-recourse mortgage loan agreements include customary financial maintenance covenants that require us to maintain certain ratios and benchmarks at the end of each quarter.
+Our compliance with such covenants depends on many factors that could be impacted by current or future economic conditions, including the adverse impact of the COVID-19 pandemic.
+Other than the breaches discussed below, we were in compliance with our covenants at March 31, 2021.
+
+Management’s Discussion and Analysis of Financial Condition and Results of Operations is intended to provide the reader with information that will assist in understanding our financial statements and the reasons for changes in certain key components of our financial statements from period to period.
+Management’s Discussion and Analysis of Financial Condition and Results of Operations also provides the reader with our perspective on our financial position and liquidity, as well as certain other factors that may affect our future results.
+Our Management’s Discussion and Analysis of Financial Condition and Results of Operations should be read in conjunction with the 2020 Annual Report and subsequent reports filed under the Securities Exchange Act of 1934, as amended (“the Exchange Act”).
+Refer to Item 1 of the 2020 Annual Report for a description of our business.
+
+Stabilized NOI — We use Stabilized NOI, a non-GAAP measure, as a metric to evaluate the performance of our entire portfolio of properties.
+Stabilized NOI for development projects and newly acquired operating properties that are not yet substantially leased up are not included in our portfolio information until one year after the project has been substantially completed and placed into service, or the property has been substantially leased up (and the project or property has not been disposed of during or prior to the current period).
+In addition, any newly acquired stabilized operating property is included in our portfolio of Stabilized NOI information upon acquisition.
+Stabilized NOI for a net-leased property is included in our portfolio information upon acquisition or in the period when it is placed into service (as the property will already have a lease in place).
+
+Recently opened operating properties are student housing operating properties that were placed into service subsequent to December 31, 2019, or remain under construction as a development project (and are not subject to net leases upon completion of construction).
+For the periods presented, we had two recent student housing operating properties, comprised of a student housing operating property placed into service during the third quarter of 2020 and an ongoing student housing development project.
+
+In the real estate industry, analysts and investors employ certain non-GAAP supplemental financial measures in order to facilitate meaningful comparisons between periods and among peer companies.
+Additionally, in the formulation of our goals and in the evaluation of the effectiveness of our strategies, we use FFO, MFFO, and Adjusted MFFO, which are non-GAAP measures.
+We believe that these measures are useful to investors to consider because they may assist them to better understand and measure the performance of our business over time and against similar companies.
+A description of FFO, MFFO, and Adjusted MFFO and reconciliations of these non-GAAP measures to the most directly comparable GAAP measures are provided below.

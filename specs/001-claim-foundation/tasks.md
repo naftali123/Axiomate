@@ -9,13 +9,13 @@ implementation is written (constitution principle VIII).
 
 ## Phase 1 – Setup
 
-- [ ] T001 Create `pyproject.toml`, the `src/axiomate` package and the pytest configuration.
-- [ ] T002 Choose five US-listed companies from the `kapilrao/SEC-EDGAR` dataset and list them with their identifiers and the ten filings to use in `tests/fixtures/documents/SOURCES.md`.
-- [ ] T003 Extract the ten filings (quarterly and annual reports; at least three plain text and at least five HTML with embedded figures) and store them unchanged, each with accession number, dataset file, retrieval date and SHA-256 hash.
-- [ ] T004 [P] Write `tools/read_embedded_figures.py` and use it to extract the embedded structured figures for the four metrics from the HTML filings into `tests/fixtures/facts/`.
-- [ ] T005 [P] Hand-check sentence boundaries for at least 200 segments across the filings; save under `tests/fixtures/boundaries/`. Needs a person to confirm.
-- [ ] T006 [P] Write at least 20 well-formed claims by hand from the filings under `tests/fixtures/claims/good/`, each checked against the structured figures where available.
-- [ ] T007 Write `tools/corrupt_claims.py`, a deterministic generator that produces at least five malformed claims per rejection code from the good claims, into `tests/fixtures/claims/bad/`.
+- [x] T001 Create `pyproject.toml`, the `src/axiomate` package and the pytest configuration.
+- [x] T002 Choose five US-listed companies from the `kapilrao/SEC-EDGAR` dataset and list them with their identifiers and the ten filings to use in `tests/fixtures/documents/SOURCES.md`.
+- [x] T003 Extract the ten filings (quarterly and annual reports; at least three plain text and at least five HTML with embedded figures) and store them unchanged, each with accession number, dataset file, retrieval date and SHA-256 hash.
+- [x] T004 [P] Write `tools/read_embedded_figures.py` and use it to extract the embedded structured figures for the four metrics from the HTML filings into `tests/fixtures/facts/`.
+- [ ] T005 [P] Hand-check sentence boundaries for at least 200 segments across the filings; save under `tests/fixtures/boundaries/`. Needs a person to confirm. *Proposed: 238 segments are in place and await confirmation.*
+- [x] T006 [P] Write at least 20 well-formed claims by hand from the filings under `tests/fixtures/claims/good/`, each checked against the structured figures where available. *Done: 21 claims; 7 checked against embedded figures, 14 by reading the text.*
+- [x] T007 Write `tools/corrupt_claims.py`, a deterministic generator that produces at least five malformed claims per rejection code from the good claims, into `tests/fixtures/claims/bad/`.
 
 **Checkpoint**: the verification data in the spec's Verification section exists and is recorded with its provenance.
 

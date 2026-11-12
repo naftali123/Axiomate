@@ -1,0 +1,12 @@
+NOTE A: The accompanying unaudited consolidated financial statements have been prepared in accordance with generally accepted accounting principles for interim financial information and with the instructions to Form 10-Q and Rule 10-01 of Regulation S-X. Accordingly, they do not include all of the information and footnotes required by generally accepted accounting principles for complete financial statements.
+The information furnished reflects all adjustments, consisting of normal and recurring accruals, which in the opinion of management are necessary for a fair presentation of the results of the interim periods.
+Results for interim periods may not necessarily be indicative of results to be expected for the year.
+
+NOTE D: The Company has classified the majority of its securities as available for sale in accordance with Statement of Financial Accounting Standards ("SFAS") Statement No. 115.
+For the nine month period ended September 30, 2000, the net unrealized loss on these securities decreased by $1.8 million.
+For the nine month period ended September 30, 1999, the net unrealized (loss) on these securities increased by $5.1 million.
+Pursuant to SFAS No. 115, any unrealized gain or loss activity of available for sale securities is to be recorded as an adjustment to a separate component of shareholders' equity, net of income tax effect.
+Accordingly, for the nine month periods ended September 30, 2000 and 1999, the Company recognized an increase of $1.2 million and a decrease of $3.3 million, respectively, in the net unrealized gain (loss) component of equity.
+
+Non-performing assets include accruing loans 90 days or more past due, loans on non-accrual, renegotiated loans and other real estate owned.
+Commercial, business and installment loans are classified as non-accrual by Management upon the earlier of: (i) a determination that collection of interest is doubtful, or (ii) the time at which such loans become 90 days past due, unless collateral or other circumstances reasonably assure full collection of principal and interest.

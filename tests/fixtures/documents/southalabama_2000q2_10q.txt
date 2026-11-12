@@ -1,0 +1,966 @@
+SECURITIES AND EXCHANGE COMMISSION
+                      WASHINGTON, D.C. 20549
+                            FORM 10-Q
+    (Mark One)
+ X   Quarterly Report pursuant to Section 13 or 15 (d) of the
+Securities Exchange Act of 1934
+
+           For the quarterly period ended June 30, 2000 or
+
+    Transition report pursuant to Section 13 or 15 (d) of the
+Securities Exchange Act of 1934
+
+    For the transition period from       to
+
+    Commission file number 0-15423
+
+                SOUTH ALABAMA BANCORPORATION, INC.
+      (Exact name of registrant as specified in its charter)
+
+     Alabama                                 63-0909434
+(State or other jurisdiction of           (I.R.S. employer
+ incorporation or organization)             Identification Number)
+
+ 100 St. Joseph Street, Mobile, Alabama         36602
+(Address of principal executive offices)      (Zip Code)
+
+                          (334) 431-7800
+       (Registrant's telephone number, including area code)
+
+N/A
+Former Name, Former Address and Former Fiscal Year, if
+changed since last report
+
+     Indicate by check mark whether the registrant (1) has filed
+all reports required to be filed by Section 13 or 15(d) of the
+Securities Exchange Act of 1934 during the preceding 12 months (or
+for such shorter period that the registrant was required to file
+such reports), and (2) has been subject to such filing requirements
+for the past 90 days.  Yes    X   .   No       .
+
+
+     Shares of common stock ($0.01 Par) outstanding at August 10,
+2000: 8,587,055
+                           Page 1 of 24
+
+
+       SOUTH ALABAMA BANCORPORATION, INC. AND SUBSIDIARIES
+
+                       INDEX TO FORM 10 - Q
+
+
+PART  I.  Financial Information                     Page Number
+
+          Consolidated Statements of Condition
+          June 30, 2000 and December 31, 1999            3
+
+          Consolidated Statements of Operations
+          Six Months Ended June 30, 2000 and 1999        4
+
+          Consolidated Statements of Operations
+          Three Months Ended June 30, 2000 and 1999      5
+
+          Consolidated Statements of Cash Flows
+          Six Months Ended June 30, 2000 and 1999        6
+
+          Notes to Consolidated Financial Statements
+          June 30, 2000                                  7-13
+
+          Management's Discussion and Analysis of
+          Financial Condition and Results of
+          Operations                                     14-22
+
+PART II.  Other Information                              23
+
+                   PART I. FINANCIAL INFORMATION
+<TABLE>
+       SOUTH ALABAMA BANCORPORATION, INC. AND SUBSIDIARIES
+               CONSOLIDATED STATEMENTS OF CONDITION (Unaudited)
+<CAPTION>
+                                           June 30,  December 31,
+                                            2000           1999
+                                           (Dollars in thousands)
+ASSETS
+<S>                                       <C>          <C>
+Cash and Due from Banks                   $ 21,643     $ 21,208
+Federal Funds Sold                           2,588        9,022
+
+       Total Cash and Cash Equivalents      24,231       30,230
+Interest Bearing Deposits                      621          599
+Securities Available for Sale (at
+ Market Value)                             130,994      134,563
+Securities Held to Maturity
+ (Market value of $9,331 and $10,106,
+  respectively)                              9,301       10,046
+
+Loans                                      369,797      359,470
+Less: Unearned Loan Income                  <1,377>      <1,546>
+      Allowance for Loan Losses             <4,391>      <4,128>
+      Loans, Net                           364,029      353,796
+
+Premises and Equipment, Net                 12,732       12,889
+Accrued Income Receivable                    5,854        5,635
+Intangible Assets                            4,279        4,378
+Other Assets                                 4,304        4,722
+     Total                                $556,345     $556,858
+
+LIABILITIES
+Non-interest Bearing Demand Deposits      $ 77,526     $ 81,997
+Interest Bearing Demand Deposits           126,184      134,505
+Savings Deposits                            35,841       33,482
+Large Denomination Time Deposits
+ (of $100 or more)                          90,980       89,776
+Time Deposits                              135,084      127,692
+     Total Deposits                        465,615      467,452
+Short-Term Borrowings                       13,960       14,999
+Long-Term Debt                               7,000        7,000
+Other Liabilities                            3,594        3,325
+     Total Liabilities                     490,169      492,776
+
+SHAREHOLDERS' EQUITY
+Common Stock
+  Par Value          $0.01
+  Shares Authorized  20,000,000
+  Shares Outstanding 2000-8,587,055
+                     1999-8,585,555             86           86
+Capital Surplus                             37,792       37,786
+Retained Earnings                           31,096       29,121
+Accumulated Other Comprehensive Loss        <2,798>      <2,911>
+     Total Shareholders' Equity             66,176       64,082
+
+     Total                                $556,345     $556,858
+(See accompanying notes to consolidated financial statements.)
+</TABLE>
+
+<TABLE>
+       SOUTH ALABAMA BANCORPORATION, INC. AND SUBSIDIARIES
+         CONSOLIDATED STATEMENTS OF OPERATIONS(Unaudited)
+
+<CAPTION>
+                                        Six Months Ended June 30,
+                                            2000        1999
+                                     (Dollars in thousands except
+                                        per share amounts)
+<S>                                        <C>          <C>
+Interest Revenue:
+  Loans                                    $16,684      $14,595
+  Investments: Taxable                       3,012        3,410
+               Non-Taxable                   1,348        1,365
+  Other                                        203          412
+          Total Interest Revenue            21,247       19,782
+
+Interest Expense:
+  Deposits                                   8,764        8,571
+  Short-Term Borrowings                        364          173
+  Long-Term Debt                               193          169
+          Total Interest Expense             9,321        8,913
+
+Net Interest Revenue                        11,926       10,869
+Provision for Loan Losses                      535          323
+Net Interest Revenue After Provision
+  for Loan Losses                           11,391       10,546
+
+Non-Interest Revenue:
+  Trust Income                                 799          671
+  Service Charges on Deposit Accounts        1,407        1,158
+  Securities Gains and (Losses), net             0           16
+  Other Income, Charges and Fees               397          332
+          Total Non-Interest Revenue         2,603        2,177
+
+Non-Interest Expense:
+  Salaries                                   3,926        3,813
+  Pensions and Employee Benefits             1,074          993
+  Net Occupancy Expense                        573          528
+  Furniture and Equipment Expense              674          722
+  Intangible Amortization                       99           99
+  Other Expense                              2,410        2,148
+          Total Non-Interest Expense         8,756        8,303
+
+Income Before Income Taxes                   5,238        4,420
+Income Tax Expense                           1,546        1,215
+Net Income                                  $3,692      $ 3,205
+
+Basic Earnings Per Common Share             $ 0.43      $   .37
+
+Diluted Earnings Per Common Share           $ 0.43      $   .37
+
+
+  (See accompanying notes to consolidated financial statements.)
+</TABLE>
+<TABLE>
+       SOUTH ALABAMA BANCORPORATION, INC. AND SUBSIDIARIES
+         CONSOLIDATED STATEMENTS OF OPERATIONS(Unaudited)
+<CAPTION>
+                                      Three Months Ended June 30,
+                                            2000        1999
+                                     (Dollars in thousands except
+                                        per share amounts)
+<S>                                        <C>          <C>
+Interest Revenue:
+  Loans                                    $ 8,564      $ 7,431
+  Investments: Taxable                       1,485        1,711
+               Non-Taxable                     673          691
+  Other                                        117          137
+          Total Interest Revenue            10,839        9,970
+
+Interest Expense:
+  Deposits                                   4,492        4,245
+  Short-Term Borrowings                        196          103
+  Long-Term Debt                                95           85
+          Total Interest Expense             4,783        4,433
+
+Net Interest Revenue                         6,056        5,537
+Provision for Loan Losses                      305          172
+Net Interest Revenue After Provision
+  for Loan Losses                            5,751        5,365
+
+Non-Interest Revenue:
+  Trust Income                                 400          358
+  Service Charges on Deposit Accounts          710          592
+  Securities Gains and (Losses), net             0           (3)
+  Other Income, Charges and Fees               197          159
+          Total Non-Interest Revenue         1,307        1,106
+
+Non-Interest Expense:
+  Salaries                                   1,948        1,943
+  Pensions and Employee Benefits               560          472
+  Net Occupancy Expense                        291          272
+  Furniture and Equipment Expense              336          375
+  Intangible Amortization                       49           49
+  Other Expense                              1,232        1,087
+          Total Non-Interest Expense         4,416        4,198
+
+Income Before Income Taxes                   2,642        2,273
+Income Tax Expense                             783          619
+Net Income                                  $1,859      $ 1,654
+
+Basic Earnings Per Common Share             $ 0.22      $   .19
+
+Diluted Earnings Per Common Share           $ 0.22      $   .19
+
+  (See accompanying notes to consolidated financial statements.)
+</TABLE>
+<TABLE>
+       SOUTH ALABAMA BANCORPORATION, INC. AND SUBSIDIARIES
+         CONSOLIDATED STATEMENTS OF CASH FLOWS (Unaudited)
+
+<CAPTION>
+                                        Six Months Ended June 30,
+                                             2000      1999
+                                         (Dollars in thousands)
+<S>                                        <C>          <C>
+CASH FLOWS FROM OPERATING ACTIVITIES
+Net Income                                 $ 3,692      $ 3,205
+  Adjustments to reconcile net income
+    to net cash provided by operating
+    activities:
+  Depreciation and amortization                792          813
+  Provision for loan losses                    535          323
+  Securities (gains) and losses,net              0          <16>
+  (Increase) decrease in:
+    Income receivable                         <219>        <311>
+    Other assets                                54          176
+  Increase (decrease) in other liabilities     269         <611>
+Net cash provided by operating activities    5,123        3,579
+CASH FLOWS FROM INVESTING ACTIVITIES
+  Net increase in interest bearing
+    deposits                                   <22>        <124>
+  Net (increase) decrease in loans         <10,768>     <32,220>
+  Proceeds from the sale of other real
+   estate owned                                299            0
+  Purchase of premises and equipment          <476>      <2,612>
+  Proceeds from sale of securities
+   available for sale                            0       10,434
+  Proceeds from maturities of investments   11,500       36,852
+  Purchase of investments                   <7,068>     <48,676>
+Net cash provided by (used in) investing
+  activities                                <6,535>     <36,346>
+CASH FLOWS FROM FINANCING ACTIVITIES
+  Net increase (decrease) in deposits       <1,837>     <10,041>
+  Net increase (decrease) in short-
+    term borrowing                          <1,039>       1,151
+  Net increase in long-term debt                 0            0
+  Proceeds from issuance of stock                6           98
+  Dividends paid                            <1,717>      <1,465>
+Net cash provided by (used in) financing
+ activities                                 <4,587>     <10,257>
+NET INCREASE <DECREASE> IN CASH
+ AND CASH EQUIVALENTS                       <5,999>     <43,024>
+Cash and cash equivalents at beginning
+  of period                                 30,230       64,807
+Cash and cash equivalents at end of
+  period                                   $24,231      $21,783
+Supplemental disclosures of cash flow
+  information:
+  Interest paid in cash                    $ 9,194      $ 9,139
+  Income taxes paid in cash                  1,472          978
+(See accompanying notes to consolidated financial statements.)
+</TABLE>
+
+
+          SOUTH ALABAMA BANCORPORATION, INC. AND SUBSIDIARIES
+
+              Notes to Consolidated Financial Statements
+
+          NOTE A:   The accompanying unaudited consolidated financial statements
+          have been prepared in accordance with generally accepted
+          accounting principles for interim financial information and
+          with the instructions to Form 10-Q and Rule 10-01 of
+          Regulation S-X.  Accordingly, they do not include all of the
+          information and footnotes required by generally accepted
+          accounting principles for complete financial statements.  The
+          information furnished reflects all adjustments, consisting of
+          normal and recurring accruals, which in the opinion of
+          management are necessary for a fair presentation of the
+          results of the interim periods.  Results for interim periods
+          may not necessarily be indicative of results to be expected
+          for the year.
+
+          For further information, refer to the consolidated financial
+          statements and footnotes thereto included in the Company's
+          report on Form 10-K for the year ended December 31, 1999.
+
+
+          NOTE B:   The allowance for losses on loans for the six month periods
+          ended June  30, 2000 and 1999 are summarized as follows (in
+          thousands):
+<TABLE>
+<CAPTION>
+                                                 2000         1999
+          <S>                                   <C>          <C>
+          Allowance for loan losses:
+          Balance at beginning of period        $ 4,128      $ 3,664
+            Provision charged to
+              operating expense                     535          323
+            Losses charged off                     <533>        <364>
+            Recoveries                              261          245
+
+           Balance at end of period             $ 4,391      $ 3,868
+</TABLE>
+
+NOTE C:   Basic earnings per share were computed by dividing
+          net income by the weighted average number of shares of common
+          stock outstanding during the six month periods ended June 30,
+          2000 and 1999.
+
+          Diluted earnings per share for the six month periods ended
+          June 30, 2000 and 1999 were computed by dividing net
+          income by the weighted average number of shares of common
+          stock and the dilutive effects of the shares awarded under the
+          Stock Option plans, based on the treasury stock method using
+          an average fair market value of the stock during the
+          respective periods.
+
+          The following tables represent the earnings per share
+          calculations for the six month and three month periods ended
+          June 30, 2000 and 1999 (in thousands except per share
+          amounts):
+
+<TABLE>
+<CAPTION>
+
+
+
+Six Months Ended                 Income   Shares    Earnings per share
+June 30, 2000
+
+<S>                              <C>      <C>       <C>
+Net income                       $3,692
+Basic earnings per share:
+  Income available to common
+   shareholders                  $3,692   8,586     $0.43
+Dilutive securities
+  Stock option plan shares                   35
+Dilutive earnings per share:
+  Income available to common
+   shareholders plus assumed
+   conversions                   $3,692   8,621     $0.43
+
+
+Six Months Ended                 Income   Shares    Earnings per share
+June 30, 1999
+
+Net income                       $3,205
+Basic earnings per share:
+  Income available to common
+   shareholders                  $3,205   8,580     $0.37
+Dilutive securities
+  Stock option plan shares                   81
+Dilutive earnings per share:
+  Income available to common
+   shareholders plus assumed
+   conversions                   $3,205   8,661     $0.37
+</TABLE>
+
+<TABLE>
+<CAPTION>
+Three Months Ended               Income   Shares    Earnings per share
+June 30, 2000
+
+<S>                              <C>      <C>       <C>
+Net income                       $1,859
+Basic earnings per share:
+  Income available to common
+   shareholders                  $1,859   8,587     $0.22
+Dilutive securities
+  Stock option plan shares                   27
+Dilutive earnings per share:
+  Income available to common
+   shareholders plus assumed
+   conversions                   $1,859   8,614     $0.22
+
+
+
+
+Three Months Ended               Income   Shares    Earnings per share
+June 30, 1999
+
+Net income                       $1,654
+Basic earnings per share:
+  Income available to common
+   shareholders                  $1,654   8,583     $0.19
+Dilutive securities
+  Stock option plan shares                  118
+Dilutive earnings per share:
+  Income available to common
+   shareholders plus assumed
+   conversions                   $1,654   8,701     $0.19
+</TABLE>
+
+
+
+     NOTE D:   The Company has classified the majority of its securities as
+               available for sale in accordance with FASB Statement No. 115.
+               For the six month period ended June 30, 2000, the net
+               unrealized (loss) on these securities decreased by $180
+               thousand. For the six month period ended June 30, 1999, the
+               net unrealized (loss) on these securities increased by $4.3
+               million.  Pursuant to Statement No. 115, any unrealized gain
+               or loss activity of available for sale securities is to be
+               recorded as an adjustment to a separate component of
+               shareholders' equity, net of income tax effect.  Accordingly,
+               for the six month periods ended June 30, 2000 and 1999, the
+               Company recognized an increase of $113 thousand and a decrease
+               of $2.7 million, respectively, in the net unrealized gain
+               (loss) component of equity.
+
+          Since comprehensive income is a measure of all changes in
+          equity of an enterprise that result from transactions and
+          other economic events of the period, this change in unrealized
+          gain(loss) serves to increase or decrease comprehensive
+          income.
+
+          The following table represents comprehensive income for the
+          six month periods ended June 30, 2000 and 1999 (in thousands):
+<TABLE>
+<CAPTION>
+                                                 2000           1999
+     <S>                                        <C>            <C>
+     Net Income                                 $3,692         $3,205
+     Other comprehensive income (loss),
+      net of tax
+       Unrealized gain (loss) on securities        113         (2,739)
+      Comprehensive income                      $3,805         $  466
+</TABLE>
+
+
+
+
+
+NOTE E:    There have been no material changes in reported market risk
+           since year-end.
+
+NOTE F:  Segment Reporting
+          Under Statement of Financial Accounting Standard ("SFAS") No.
+          131, "Disclosure about Segments of an Enterprise and Related
+          Information," certain information is disclosed for the five
+          reportable operating segments of the Company.  The reportable
+          segments were determined using the internal management
+          reporting system.  They are composed of the Company's
+          significant subsidiaries.  The accounting policies for each
+          segment are the same as those used by the Company.  The
+          segment results include certain overhead allocations and
+          intercompany transactions that were recorded at current market
+          prices.  All intercompany transactions have been eliminated to
+          determine the consolidated balances.
+          The results for the five reportable segments of the company
+          are included in the following tables (in thousands):
+<TABLE>
+                                                                   Six Months Ended
+                                                                   June 30, 2000
+<CAPTION>
+                                                  Monroe-              Sweet
+                              Mobile    Brewton   ville     Demopolis  Water
+                              Bank      Bank      Bank      Bank       Bank        Other  Eliminations Consolidated
+<S>                           <C>       <C>       <C>       <C>        <C>         <C>     <C>          <C>
+Total interest income         $ 7,791   $ 4,409   $ 3,833   $ 2,915    $ 2,365     $   10  $   <76>     $21,247
+Total interest expense          3,515     1,780     1,557     1,480      1,065          0      <76>       9,321
+Net interest income             4,276     2,629     2,276     1,435      1,300         10        0       11,926
+Provision for loan losses         265        20        88        58        104          0        0          535
+Net interest income after
+ provision                      4,011     2,609     2,188     1,377      1,196         10        0       11,391
+Total noninterest income          633       361       291       258        262        803       <5>       2,603
+Total noninterest expense       2,834     1,557     1,360       996        923      1,091       <5>       8,756
+Income before taxes             1,810     1,413     1,119       639        535       <278>       0        5,238
+Provision for income taxes        647       352       326       166        144       < 89>       0        1,546
+Net income                    $ 1,163   $ 1,061   $   793   $   473    $   391     $ <189> $     0      $ 3,692
+
+Other significant items:
+Total assets                  $202,406 $110,175   $111,045  $74,449    $57,768     $70,732 $<70,230>    $556,345
+Total investment securities     33,445   34,103     42,699   16,330     13,718           0        0      140,295
+Total loans                    152,052   68,470     55,436   52,971     39,491           0        0      368,420
+Investment in subsidiaries          49       71          0        0                 64,706  <64,826>           0
+Total interest income from
+ external customers              7,790    4,384      3,783    2,915      2,365          10        0       21,247
+Total interest income from
+ affiliates                          1       25         50        0                      0     <76>            0
+</TABLE>
+
+
+
+<TABLE>
+                                                                       Six Months Ended
+                                                                       June 30, 1999
+<CAPTION>
+                                                  Monroe-              Sweet
+                              Mobile    Brewton   ville     Demopolis  Water
+                              Bank      Bank      Bank      Bank       Bank        Other  Eliminations Consolidated
+<S>                           <C>       <C>       <C>       <C>        <C>         <C>     <C>          <C>
+Total interest income         $ 7,139   $ 4,156   $ 3,594   $ 2,733    $ 2,164     $   13  $   <17>     $19,782
+Total interest expense          3,173     1,696     1,562     1,374      1,125          0      <17>       8,913
+Net interest income             3,966     2,460     2,032     1,359      1,039         13        0       10,869
+Provision for loan losses         201        14         0        90         18          0        0          323
+Net interest income after
+ provision                      3,765     2,446     2,032     1,269      1,021         13        0       10,546
+Total noninterest income          469       291       260       263        223        676       <5>       2,177
+Total noninterest expense       2,649     1,541     1,332     1,007        892        887       <5>       8,303
+Income before taxes             1,585     1,196       960       525        352       <198>       0        4,420
+Provision for income taxes        558       279       262       124         65       < 73>       0        1,215
+Net income                    $ 1,027   $   917   $   698   $   401    $   287     $ <125> $     0      $ 3,205
+
+Other significant items:
+Total assets                  $187,267 $112,037   $115,556  $72,461    $57,074     $66,182 $<63,621>    $546,956
+Total investment securities     34,049   35,289     54,398   17,735     15,865           0        0      157,336
+Total loans                    139,220   69,401     50,400   50,150     35,961           0        0      345,132
+Investment in subsidiaries           7       67          0        0                 63,927  <64,001>           0
+Total interest income from
+ external customers              7,139    4,147      3,586    2,733      2,164          13        0       19,782
+Total interest income from
+ affiliates                          0        9          8        0          0           0      <17>            0
+</TABLE>
+
+
+
+
+<TABLE>
+                                                         Three Months Ended
+                                                         June 30, 2000
+<CAPTION>
+                                                  Monroe-              Sweet
+                              Mobile    Brewton   ville     Demopolis  Water
+                              Bank      Bank      Bank      Bank       Bank        Other  Eliminations Consolidated
+<S>                           <C>       <C>       <C>       <C>        <C>         <C>     <C>          <C>
+Total interest income         $ 4,070   $ 2,238   $ 1,924   $ 1,457    $ 1,191     $    6  $   <47>     $10,839
+Total interest expense          1,837       921       782       747        543          0      <47>       4,783
+Net interest income             2,233     1,317     1,142       710        648          6        0        6,056
+Provision for loan losses         145        20        44        34         62          0        0          305
+Net interest income after
+ provision                      2,088     1,297     1,098       676        586          6        0        5,751
+Total noninterest income          327       182       144       120        132        404       <2>       1,307
+Total noninterest expense       1,451       783       670       498        472        544       <2>       4,416
+Income before taxes               964       696       572       298        246       <134>       0        2,642
+Provision for income taxes        346       170       170        75         65       < 43>       0          783
+Net income                    $   618   $   526   $   402   $   223    $   181     $ < 91> $     0      $ 1,859
+
+Other significant items:
+Total assets                  $202,406 $110,175   $111,045  $74,449    $57,768     $70,732 $<70,230>    $556,345
+Total investment securities     33,445   34,103     42,699   16,330     13,718           0        0      140,295
+Total loans                    152,052   68,470     55,436   52,971     39,491           0        0      368,420
+Investment in subsidiaries          49       71          0        0                 64,706  <64,826>           0
+Total interest income from
+ external customers              4,070    2,214      1,901    1,457      1,191           6        0       10,839
+Total interest income from
+ affiliates                          0       24         23        0                      0     <47>            0
+</TABLE>
+
+
+
+<TABLE>
+                                                                       Three Months Ended
+                                                                       June 30, 1999
+<CAPTION>
+                                                  Monroe-              Sweet
+                              Mobile    Brewton   ville     Demopolis  Water
+                              Bank      Bank      Bank      Bank       Bank        Other  Eliminations Consolidated
+<S>                           <C>       <C>       <C>       <C>        <C>         <C>     <C>          <C>
+Total interest income         $ 3,631   $ 2,089   $ 1,824   $ 1,369    $ 1,070     $    3  $   <16>     $ 9,970
+Total interest expense          1,571       840       778       684        576          0      <16>       4,433
+Net interest income             2,060     1,249     1,046       685        494          3        0        5,537
+Provision for loan losses         118         0         0        45          9          0        0          172
+Net interest income after
+ provision                      1,942     1,249     1,046       640        485          3        0        5,365
+Total noninterest income          225       169       124       123        108        359       <2>       1,106
+Total noninterest expense       1,357       783       669       506        446        439       <2>       4,198
+Income before taxes               810       635       501       257        147       < 77>       0        2,273
+Provision for income taxes        288       142       138        63         13       < 25>       0          619
+Net income                    $   522   $   493   $   363   $   194    $   134     $ < 52> $     0      $ 1,654
+
+Other significant items:
+Total assets                  $187,267 $112,037   $115,556  $72,461    $57,074     $66,182 $<63,621>    $546,956
+Total investment securities     34,049   35,289     54,398   17,735     15,865           0        0      157,336
+Total loans                    139,220   69,401     50,400   50,150     35,961           0        0      345,132
+Investment in subsidiaries           7       67          0        0                 63,927  <64,001>           0
+Total interest income from
+ external customers              3,631    2,081      1,816    1,369      1,070           3        0        9,970
+Total interest income from
+ affiliates                          0        8          8        0          0           0      <16>            0
+</TABLE>
+
+
+
+
+NOTE G:     In June 1999, the Financial Accounting Standards Board
+          ("FASB") issued SFAS No. 137 "Accounting for Derivative
+          Instruments and Hedging Activities - Deferral of the
+          Effective Date of FASB Statement No. 133."  This statement
+          delays the effective date of Statement 133.  Management will
+          adopt the statement as of January 1, 2001, as allowed, but
+          has not yet quantified the impact of implementation.
+
+
+              Management's Discussion and Analysis
+           of Financial Condition and Results of Operations
+
+     Presented below is an analysis of the consolidated financial
+condition and results of operations of South Alabama Bancorporation,
+Inc. (the "Company") and its wholly owned subsidiaries, South Alabama
+Bank, First National Bank, Brewton, The Monroe County Bank, The
+Commercial Bank of Demopolis, Sweet Water State Bank and South Alabama
+Trust Company, Inc.  This analysis focuses upon significant changes in
+financial condition between December 31, 1999 and June 30, 2000, and
+significant changes for the three month periods ended June 30, 2000 and
+1999, as well as significant changes for the six month periods ended
+June 30, 2000 and 1999.
+     On September 10, 1999, Sweet Water State Bancshares, Inc., the
+parent company of Sweet Water State Bank, was merged into the Company.
+This merger has been accounted for as a pooling-of-interests, and,
+accordingly, the results of operations of Sweet Water State Bank have
+been included in the consolidated results for all periods presented.
+     This report on Form 10-Q contains certain forward looking
+statements with respect to financial condition, liquidity, non-
+performing assets and results of operations, including the Notes to
+Consolidated Financial Statements and statements in the following
+discussion.  These statements can be identified by the use of words like
+"expect," "may," "could," "should," "intend," "project," "estimate," or
+"anticipate."  The Company cautions readers that forward looking
+statements are subject to risks and uncertainties that could cause
+actual results to differ materially from those indicated in the forward
+looking statements.  Factors that may cause actual results to differ
+materially from those contemplated include, among others, the stability
+of interest rates, the rate of growth of the economy in the Company's
+market area, the success of the Company's marketing efforts, the ability
+to expand into new segments of the market area, competition, changes in
+technology, the strength of the consumer and commercial credit sectors,
+levels of consumer confidence, the impact of regulation applicable to
+the Company, and the performance of stock and bond markets.
+
+Financial Condition
+
+     Total assets at June 30, 2000 were $556.3 million, a slight
+decrease of $513 thousand from $556.9 million at December 31, 1999.
+Federal funds sold decreased $6.4 million and investment securities
+decreased $4.3 million from December 31, 1999.  These decreases in
+federal funds sold and investment securities were used in part to fund
+the increase in loans of $10.3 million, or 2.9 percent, from $359.5
+million at December 31, 1999 to $369.8 million at June 30, 2000.  The
+decrease in total deposits of $1.8 million, or 0.4 percent, from $467.5
+million at December 31, 1999 to $465.6 million at June 30, 2000 was also
+a factor in the decrease in federal funds sold and investment
+securities. Short term borrowings decreased from $15.0 million at
+December 31, 1999 to $14.0 million at June 30, 2000, a decrease of $1.0
+million, or 6.9 percent.
+     Time deposits, consisting of certificates of deposit, increased
+$7.4 million, or 5.8 percent.  Large denomination time deposits
+increased $1.2 million, or 1.3 percent.  The Company does not actively
+seek large denomination time deposits as a source of funding.  Non-
+interest bearing demand deposits decreased $4.5 million, or 5.5 percent,
+while interest bearing demand deposits decreased $8.3 million, or 6.2
+percent.  Core deposits, defined as total deposits less time deposits of
+$100 thousand or more, decreased by $3.0 million, or 0.8 percent.  Long-
+term debt was unchanged at $7.0 million.
+     The Company's equity as a percent of total assets at June 30, 2000
+was 11.9 percent, compared to 11.5 percent at December 31, 1999.  The
+primary capital ratio (defined as the sum of common and preferred stock,
+capital surplus, retained earnings, allowance for loan losses and
+contingency and capital reserves divided by total assets) was 13.2
+percent, compared to 12.8 at year-end 1999.
+     The Company and its subsidiary banks are required by the various
+depository institutions' regulatory agencies to maintain certain
+capital-to-asset ratios.  Risk-based capital guidelines consider risk
+factors associated with various components of assets, both on and off
+the Statement of Condition.  Under these guidelines capital is measured
+in two tiers.  These capital tiers are used in conjunction with "risk-
+weighted" assets in determining "risk-weighted" capital ratios.  The
+Company's Tier I capital, which is shareholders' equity less goodwill
+and accumulated other comprehensive income, was $62.6 million at
+December 31, 1999 and $64.7 million at June 30, 2000.  Tier I capital
+plus Tier II capital, which is the allowable portion of the allowance
+for loan losses, was $66.7 million at December 31, 1999 and $69.1
+million at June 30, 2000.  The  ratios, expressed as a percent of total
+risk-weighted assets for Tier I and Tier II capital, were 15.95 percent
+and 17.00 percent, respectively, at December 31, 1999, and 16.18 percent
+and 17.27 percent, respectively, at June 30, 2000.  Both the December
+1999 and the June 2000 ratios exceed the minimum ratios of four percent
+and eight percent for Tier I and Tier II capital, respectively.
+
+       The components of the Company's risk-based capital calculations
+for June 30, 2000 are shown below (dollars in thousands):
+<TABLE>
+<CAPTION>
+                                                 June 30,
+                                                   2000
+
+           <S>                                  <C>
+           Tier I capital--
+            Tangible Common shareholders'
+             equity                             $64,695
+
+           Tier II capital--
+            Allowable portion of the allowance
+              for loan losses                     4,391
+
+                Total capital (Tiers I and II)  $69,086
+
+          Risk-weighted assets                 $399,945
+          Quarterly average assets              557,532
+          Risk-based capital ratios:
+            Tier I capital                        16.18%
+            Total capital (Tiers I and II)        17.27%
+</TABLE>
+
+     During the second quarter of 2000 the Company declared a regular
+quarterly dividend of $0.10 per share, payable July 3, 2000, to
+shareholders of record June 13, 2000.
+
+Liquidity
+
+     Liquidity management involves the ability to meet the day-to-day
+cash flow requirements of customers, primarily depositors' withdrawals
+and borrowers' requirements for funds.  This is achieved by carefully
+monitoring the amount of liquid assets available to meet these needs.
+Liquid assets (cash and cash items, deposits with other banks, federal
+funds sold and securities available for sale excluding pledged
+securities) totaled $61.8 million at June 30, 2000.  These assets
+represented 11.1 percent of total assets at quarter end as compared to
+16.4 percent at December 31, 1999, as Federal Funds Sold were used to
+fund loan growth.  The net change in cash and cash equivalents for the
+six month period ended June 30, 2000 was a decrease of $6.0 million, or
+19.8 percent.  Cash includes currency on hand and demand deposits with
+other financial institutions. Cash equivalents are defined as short-term
+and highly liquid investments, which are readily convertible to known
+amounts of cash and so near maturity that there is no significant risk
+of changes in value because of changes in interest rates.  The Company
+has available, if needed, federal fund lines of credit, Federal Reserve
+discount window operations, Federal Home Loan Bank lines of credit, and
+an operating line of credit from a correspondent bank.
+     Management is not aware of any trends, events or uncertainties that
+will have or that are reasonably likely to have a material effect on the
+liquidity, capital resources or operations of the Company.  Management
+is not aware of any current recommendations by regulatory authorities
+which, if they were implemented, would have such an effect.
+
+Non-Performing Assets
+
+     Non-performing assets include accruing loans 90 days or more past
+due, loans on non-accrual, renegotiated loans and other real estate
+owned.  Commercial, business and installment loans are classified as
+non-accrual by Management upon the earlier of: (i) a determination that
+collection of interest is doubtful, or (ii) the time at which such loans
+become 90 days past due, unless collateral or other circumstances
+reasonably assure full collection of principal and interest.
+
+
+<TABLE>
+Summary of Non-Performing Assets
+(Dollars in Thousands)
+<CAPTION>
+                                           June 30,       December 31,
+                                              2000             1999
+
+<S>                                         <C>             <C>
+Accruing loans 90 days or more past due     $   58          $   446
+Loans on non-accrual                         1,492            1,352
+Renegotiated loans                               0                0
+     Total non-performing loans              1,550            1,798
+Other real estate owned                         41              466
+     Total non-performing assets            $1,591           $2,264
+Accruing Loans 90 days or more past due
+  as a percent of loans                       0.02%            0.12%
+
+Total non-performing loans as a
+  percent of loans                            0.42%            0.50%
+
+Total non-performing assets as a percent
+  of loans and other real estate owned        0.43%            0.63%
+</TABLE>
+
+     Non-performing assets decreased by $673 thousand from year-end
+1999.  Of this decrease, $425 thousand resulted from the sale of
+property classified as other real estate owned.  Accruing loans 90 days
+or more past due decreased by $388 thousand.  Loans on non-accrual
+increased $140 thousand.
+     The amount of impaired loans determined under SFAS No. 114 and 118
+was not material.  These credits were considered in determining the
+adequacy of the allowance for loan losses and, while current, are
+regularly monitored for changes within a particular industry or general
+economic trends which could cause the borrowers severe financial
+difficulties.
+     Any loans classified for regulatory purposes as loss, doubtful,
+substandard or special mention, and not included above as non-performing
+assets, do not (i) represent or result from trends or uncertainties
+which management reasonably expects will materially impact future
+operating results, or (ii) represent material credits about which
+management is aware of any information which causes management to have
+serious doubts as to the ability of such borrower to comply with the
+loan repayment terms.
+
+Results of Operations
+THE SECOND QUARTER
+
+    The Company recorded net income of $1.9 million, or $0.22 per share,
+during the second quarter of 2000, compared to net income in the second
+quarter of 1999 of $1.7 million, or $0.19 per share.  A shift to loans
+from investment securities and federal funds sold and the general
+increase in interest rate in the economy enabled the Company to increase
+total interest revenue by $869 thousand, or 8.7 percent. Interest
+expense increased by $350 thousand. The net interest margin increased to
+4.68 percent in the second quarter of 2000 compared to 4.30 percent in
+the second quarter of 1999.
+     Management provided $305 thousand for loan losses during the second
+quarter of 2000, compared to a $172 thousand provision for the second
+quarter of 1999.  The increase in the provision was in response to the
+Company's loan portfolio growth, as well as a higher level of net charge
+offs in the first six months of 2000 compared to 1999.  The allowance
+for loan losses at June 30, 2000 and December 31, 1999 as a percent of
+loans net of unearned income  was 1.19 percent and 1.15 percent
+respectively.  The allowance for loan losses represented 2.83 times non-
+performing loans at June 30, 2000 and 2.30 times non-performing loans at
+December 31, 1999.  Management reviews the adequacy of the allowance for
+loan losses on a continuous basis by assessing the quality of the loan
+portfolio, including non-performing loans, and adjusting the allowance
+when appropriate.  The allowance for loan losses was considered adequate
+at June 30, 2000.
+     Non-interest revenue was $1.3 million for the second quarter of
+2000, compared to $1.1 million for the same period in 1999, an increase
+of 18.2 percent, due primarily to the increase in deposit account
+service charges of $118 thousand and an increase in Trust Company
+revenue of $42 thousand.  Several of the Company's subsidiary banks have
+introduced new fee schedules and these new fee schedules are having a
+positive impact on this category.
+     Salary and employee benefit expense increased $93 thousand, or 3.9
+percent, from second quarter of 1999 to the second quarter of 2000,
+caused primarily by merit increases.  Net occupancy expense was $291
+thousand in the second quarter of 2000, an increase of $19 thousand, or
+7.0 percent, from the same period of 1999.  This increase was caused
+primarily by the opening in December 1999 of a branch in Gulf Shores.
+Furniture and equipment expense decreased $39 thousand.
+     Other expenses include data processing fees for the Trust Company,
+FDIC insurance, insurance costs, accounting and legal fees, stationery
+and supplies, credit card service fees, loan collection fees and
+advertising.  Other expense in first quarter 2000 increased by $145
+thousand, or 13.3 percent from first quarter 1999.
+     Income tax expense was $783 thousand for the second quarter of
+2000, compared to $619 thousand for the same period in 1999.  The
+increase in income tax expense in 2000 compared to 1999 resulted
+primarily from an increase in taxable income.
+
+THE SIX MONTH PERIOD
+
+   The Company recorded net income of $3.7 million, or $0.43 per share,
+during the first six months of 2000 compared to net income in the first
+six months of 1999 of $3.2 million, or $0.37 per share.  Total interest
+revenue increased by $1.5 million, or 7.4 percent, due in part to the
+increased volume in loans.  Interest expense increased $408 thousand, or
+4.6 percent.  The increases in total interest revenue and total interest
+expense were due in part to the general rise in interest rates in the
+economy.  Management provided $535 thousand for loan losses during the
+first six months of 2000 compared to $323 thousand for the first six
+months of 1999, with the increase necessitated by loan growth as well as
+a higher level of net charge offs.
+     Non-interest revenue was $2.6 million for the first six months of
+2000, compared to $2.2 million for the same period in 1999, an increase
+of 19.6 percent.
+     Non-interest expense in the six month period was $8.8 million in
+2000, an increase of $453 thousand, or 5.5 percent from 1999.  Salary
+and employee benefits increased $194 thousand, or 4.0 percent, a result
+of merit increases.
+     Income tax expense was $1.5 million for the first six months of
+2000, compared to $1.2 million for the same period in 1999.  The
+increase in income tax expense in 2000 compared to 1999 resulted
+primarily from higher levels of taxable income.
+
+
+
+
+                     PART II. OTHER INFORMATION
+Item 4. Submission of Matters to a Vote of Security Holders
+The stockholders approved, during the annual meeting on May 11, 2000,
+the Election of the Directors.  A total of 7,139,603 shares of Common
+Stock, or 83.16 percent of the total outstanding, were represented
+either in person or by proxy at the meeting.  The Election of the Board
+of Directors was approved as to each nominee, as follows:
+
+<TABLE>
+
+<CAPTION>
+                        Votes in    Votes                Broker
+Nominee                 Favor       Against  Abstaining  Non-Votes
+<S>                     <C>         <C>      <C>         <C>
+John B. Barnett, III    7,139,353       0       250      41,294
+Stephen G. Crawford     7,139,353       0       250      41,294
+Haniel F. Croft         7,139,353       0       250      41,294
+David C. DeLaney        7,139,353       0       250      41,294
+Broox G. Garrett, Jr.   7,139,353       0       250      41,294
+W. Dwight Harrigan      7,139,353       0       250      41,294
+James P. Hayes, Jr.     7,139,353       0       250      41,294
+Clifton C. Inge         7,139,353       0       250      41,294
+W. Bibb Lamar, Jr.      7,139,203     150       250      41,294
+Stratton F. Lewis, Jr.  7,139,353       0       250      41,294
+Richard S. Manley       7,137,945   1,408       250      41,294
+Kenneth R. McCartha     7,139,353       0       250      41,294
+Thomas E. McMillan, Jr. 7,139,353       0       250      41,294
+J. Richard Miller, III  7,139,353       0       250      41,294
+Harris V. Morrissette   7,139,353       0       250      41,294
+J. Stephen Nelson       7,139,353       0       250      41,294
+Paul D. Owens, Jr.      7,139,353       0       250      41,294
+Earl H. Weaver          7,139,353       0       250      41,294
+</TABLE>
+
+
+Item 6. Exhibits and Reports on Form 8-K
+(a)     Exhibits
+        (27) Financial Data Schedule
+(b)     Reports on Form 8-K
+          There were no reports filed of Form 8-K for the three month
+period ended June 30, 2000.
+
+
+
+Pursuant to the requirement of the Securities and Exchange Act of 1934, the
+registrant has duly caused this report to be signed on its behalf by the
+undersigned thereunto duly authorized.
+                              SOUTH ALABAMA BANCORPORATION
+
+08/14/2000                    /s/W. Bibb Lamar, Jr.
+Date                          W. Bibb Lamar, Jr.
+                              President
+
+
+08/14/2000                    /s/F. Michael Johnson
+Date                          F. Michael Johnson
+                              Chief Financial Officer
+
+
+Exhibit Index
+The following is a list of exhibits filed herewith.
+     27   Financial Data Schedule

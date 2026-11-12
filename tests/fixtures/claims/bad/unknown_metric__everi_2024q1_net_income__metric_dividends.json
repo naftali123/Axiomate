@@ -1,0 +1,13 @@
+{
+  "name": "unknown_metric__everi_2024q1_net_income__metric_dividends",
+  "base": "everi_2024q1_net_income",
+  "expected_error": "unknown_metric",
+  "expected_field": "metric",
+  "operations": [
+    {
+      "op": "set",
+      "path": "claim.metric",
+      "value": "dividends"
+    }
+  ]
+}

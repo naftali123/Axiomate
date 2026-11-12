@@ -12,7 +12,7 @@ never random and never time-based.
 | document_type | enum | `earnings_release`, `annual_report`, `quarterly_report`, `investor_statement`, `other` |
 | published_on | date | Required |
 | fiscal_year | integer | Optional; the period the document covers |
-| fiscal_quarter | enum | `Q1`–`Q4`, `FY`; optional |
+| fiscal_period | enum | `Q1`–`Q4`, `H1`, `9M`, `FY`; optional |
 | format | enum | `text`, `html` |
 | language | text | Must be `en` |
 | original | bytes | Exactly as ingested |
@@ -45,12 +45,12 @@ Rules: segments do not overlap and are ordered by offset.
 | company_cik | text | The company the claim is about |
 | metric | enum | `revenue`, `net_income`, `earnings_per_share`, `operating_cash_flow` |
 | value_kind | enum | `exact`, `approximate`, `at_least`, `at_most`, `range` |
-| value_low, value_high | decimal | Normalized to base units; equal unless a range |
+| value_low, value_high | decimal | Normalized to base units; equal unless a range; negative for a loss or a decrease |
 | stated_value, stated_scale | decimal, enum | As written: `units`, `thousands`, `millions`, `billions` |
 | unit | enum | `currency`, `currency_per_share`, `percent` |
 | currency | text | ISO 4217 code; required unless unit is `percent` |
 | period_kind | enum | `duration`, `instant` |
-| fiscal_year, fiscal_quarter | integer, enum | |
+| fiscal_year, fiscal_period | integer, enum | `Q1`–`Q4`, `H1` (first six months), `9M` (first nine months), `FY` |
 | period_start, period_end | date | Explicit dates |
 | basis | enum | `reported`, `adjusted` |
 | nature | enum | `actual`, `guidance`, `forecast` |

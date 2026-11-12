@@ -1,0 +1,44 @@
+{
+  "name": "everi_2024q1_revenue_change",
+  "document": "everi_2024q1_10q.html",
+  "quote": "Total revenues decreased by approximately $11.1 million",
+  "quote_occurrence": 1,
+  "claim": {
+    "company_cik": "0001318568",
+    "metric": "revenue",
+    "value_kind": "approximate",
+    "value_low": "-11100000",
+    "value_high": "-11100000",
+    "stated_value": "11.1",
+    "stated_scale": "millions",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2024,
+    "fiscal_period": "Q1",
+    "period_start": "2024-01-01",
+    "period_end": "2024-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "change_vs_period",
+    "baseline_start": "2023-01-01",
+    "baseline_end": "2023-03-31",
+    "polarity": "affirmed",
+    "said_on": "2024-05-08"
+  },
+  "flags": [],
+  "assumptions": [
+    {
+      "statement": "\"the same period in the prior year\" is the three months ended March 31, 2023",
+      "field": "baseline_start",
+      "origin": "human"
+    },
+    {
+      "statement": "The period of the change is stated later in the same sentence: the three months ended March 31, 2024",
+      "field": "period_start",
+      "origin": "human"
+    }
+  ],
+  "expected_status": "formal-with-assumptions",
+  "checked_against": "facts: 189346000 - 200472000 = -11126000"
+}

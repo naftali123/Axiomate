@@ -1,0 +1,12 @@
+{
+  "name": "span_mismatch__everi_2023q1_net_income__span_shifted",
+  "base": "everi_2023q1_net_income",
+  "expected_error": "span_mismatch",
+  "expected_field": "quote",
+  "operations": [
+    {
+      "op": "shift_span",
+      "by": 6
+    }
+  ]
+}

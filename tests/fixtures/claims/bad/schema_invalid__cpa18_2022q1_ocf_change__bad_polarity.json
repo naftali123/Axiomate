@@ -1,0 +1,13 @@
+{
+  "name": "schema_invalid__cpa18_2022q1_ocf_change__bad_polarity",
+  "base": "cpa18_2022q1_ocf_change",
+  "expected_error": "schema_invalid",
+  "expected_field": "polarity",
+  "operations": [
+    {
+      "op": "set",
+      "path": "claim.polarity",
+      "value": "maybe"
+    }
+  ]
+}

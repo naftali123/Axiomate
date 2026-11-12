@@ -1,0 +1,13 @@
+{
+  "name": "schema_invalid__everi_2024q1_net_income__range_reversed",
+  "base": "everi_2024q1_net_income",
+  "expected_error": "schema_invalid",
+  "expected_field": "value_high",
+  "operations": [
+    {
+      "op": "set",
+      "path": "claim.value_high",
+      "value": "-999999999999"
+    }
+  ]
+}

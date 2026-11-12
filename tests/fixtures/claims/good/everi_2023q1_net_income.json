@@ -1,0 +1,39 @@
+{
+  "name": "everi_2023q1_net_income",
+  "document": "everi_2024q1_10q.html",
+  "quote": "net income of approximately $28.1 million for the same period in the prior year",
+  "quote_occurrence": 1,
+  "claim": {
+    "company_cik": "0001318568",
+    "metric": "net_income",
+    "value_kind": "approximate",
+    "value_low": "28100000",
+    "value_high": "28100000",
+    "stated_value": "28.1",
+    "stated_scale": "millions",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2023,
+    "fiscal_period": "Q1",
+    "period_start": "2023-01-01",
+    "period_end": "2023-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "said_on": "2024-05-08"
+  },
+  "flags": [],
+  "assumptions": [
+    {
+      "statement": "\"the same period in the prior year\" is the three months ended March 31, 2023",
+      "field": "period_start",
+      "origin": "human"
+    }
+  ],
+  "expected_status": "formal-with-assumptions",
+  "checked_against": "facts: net_income 2023-01-01..2023-03-31 = 28066000"
+}

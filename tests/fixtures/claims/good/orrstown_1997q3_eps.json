@@ -1,0 +1,33 @@
+{
+  "name": "orrstown_1997q3_eps",
+  "document": "orrstown_1997q3_10q.txt",
+  "quote": "Net income per share was\n$ .71 during 1997's third quarter",
+  "quote_occurrence": 1,
+  "claim": {
+    "company_cik": "0000826154",
+    "metric": "earnings_per_share",
+    "value_kind": "exact",
+    "value_low": "0.71",
+    "value_high": "0.71",
+    "stated_value": "0.71",
+    "stated_scale": "units",
+    "unit": "currency_per_share",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 1997,
+    "fiscal_period": "Q3",
+    "period_start": "1997-07-01",
+    "period_end": "1997-09-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "said_on": "1997-11-14"
+  },
+  "flags": [],
+  "assumptions": [],
+  "expected_status": "formal",
+  "checked_against": "hand"
+}

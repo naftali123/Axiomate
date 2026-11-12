@@ -1,0 +1,33 @@
+{
+  "name": "everi_2024q1_net_income",
+  "document": "everi_2024q1_10q.html",
+  "quote": "we had net income of approximately $4.6 million for the three months ended March 31, 2024",
+  "quote_occurrence": 1,
+  "claim": {
+    "company_cik": "0001318568",
+    "metric": "net_income",
+    "value_kind": "approximate",
+    "value_low": "4600000",
+    "value_high": "4600000",
+    "stated_value": "4.6",
+    "stated_scale": "millions",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2024,
+    "fiscal_period": "Q1",
+    "period_start": "2024-01-01",
+    "period_end": "2024-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "said_on": "2024-05-08"
+  },
+  "flags": [],
+  "assumptions": [],
+  "expected_status": "formal",
+  "checked_against": "facts: net_income 2024-01-01..2024-03-31 = 4554000"
+}

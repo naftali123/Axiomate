@@ -1,0 +1,12 @@
+{
+  "name": "span_outside_segment__cpa18_2022q1_ocf_change__span_crosses_segment",
+  "base": "cpa18_2022q1_ocf_change",
+  "expected_error": "span_outside_segment",
+  "expected_field": "span_end",
+  "operations": [
+    {
+      "op": "extend_past_segment",
+      "by": 7
+    }
+  ]
+}
