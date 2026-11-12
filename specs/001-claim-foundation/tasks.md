@@ -21,10 +21,10 @@ implementation is written (constitution principle VIII).
 
 ## Phase 2 – Foundation (blocks all stories)
 
-- [ ] T008 Write tests that updates and deletes are refused on every table.
-- [ ] T009 Write `store/schema.sql` with the tables from the data model and the immutability triggers.
-- [ ] T010 Write `store/db.py`: connection, transactions and the canonical export.
-- [ ] T011 Write the error type carrying code, field and message, shared by library and command line.
+- [x] T008 Write tests that updates and deletes are refused on every table.
+- [x] T009 Write `store/schema.sql` with the tables from the data model and the immutability triggers.
+- [x] T010 Write `store/db.py`: connection, transactions and the canonical export.
+- [x] T011 Write the error type carrying code, field and message, shared by library and command line.
 
 **Checkpoint**: an empty store can be created and exported.
 

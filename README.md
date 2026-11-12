@@ -37,7 +37,7 @@ Code is written only against an approved spec, plan and task list.
 
 ## Status
 
-Pre-implementation. The constitution is ratified. Spec `001-claim-foundation` is approved and in progress: the verification data is collected; the code is not yet written. See `status.html`.
+Pre-implementation. The constitution is ratified. Spec `001-claim-foundation` is approved and in progress: the verification data is collected and the store foundation is built; ingestion, claim submission and query are not yet written. See `status.html`.
 
 ## Licence
 
