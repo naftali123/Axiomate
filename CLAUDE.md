@@ -18,5 +18,7 @@ up to date is mandatory.
 - Always update the "עודכן לאחרונה" date when you edit it.
 - Keep it in Hebrew, right-to-left, short, and self-contained (no external assets).
 - Never add a second HTML status file.
+- The page describes the product only. Do not list project tooling on it, such
+  as GitHub Pages, branch protection, CI checks or the status page itself.
 - Before finishing any task, check whether the page is still accurate and say so
   in your final message.
