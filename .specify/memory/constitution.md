@@ -1,6 +1,6 @@
 # Axiomate Constitution
 
-Status: ratified 2026-11-11, version 1.0.0
+Status: ratified 2026-11-11, version 1.2.0
 
 ## Core principles
 
@@ -37,9 +37,16 @@ over time is not a contradiction.
 Axiomate reports disagreement between a text and a record. It does not assert
 which side is true unless an external ground-truth source is explicitly supplied.
 
-### VIII. Measured, test-first changes
+### VIII. Verified, test-first changes
 Rules and comparison logic are written test-first. Every change is run against a
 hand-labeled evaluation set, and precision and coverage are reported.
+
+No pipeline stage may be built until three things are written down: how the
+stage will be verified, where the data for that verification comes from, and the
+threshold it must meet. The project-wide strategy lives in
+`specs/verification.md`; each feature spec has a Verification section for the
+stages it covers. Evaluation data is split into a development set, used to write
+and tune rules, and a held-out set, used only to report results.
 
 ### IX. Living status page (blocking rule)
 The repository must contain exactly one Hebrew HTML status page, `status.html`, at
@@ -62,7 +69,8 @@ Keeping the page up to date is the most important part of this rule. Any change
 that alters the project's state, architecture, plans or open issues must update
 `status.html` in the same change. A change that leaves the page stale must not be
 merged. The page stays short: it summarizes and links to specs, it does not
-duplicate them.
+duplicate them. Its detailed requirements, including the detail panel behind
+each diagram component, are in `specs/status-page.md`.
 
 Enforcement: `CLAUDE.md` instructs every AI session to follow this rule, and the
 `status-page` check on pull requests fails when specs, code or this constitution
@@ -73,3 +81,13 @@ check for changes that truly do not alter the project's state.
 
 Specs, plans and tasks must comply with this constitution. Amending it requires a
 documented rationale and a version bump.
+
+## Amendments
+
+- **1.1.0 (2026-11-12)**: principle VIII extended to require a verification
+  method, data source and threshold before any stage is built. Rationale: the
+  first feature's plan had tests but did not say where test data came from or
+  how each stage would be shown to work.
+- **1.2.0 (2026-11-12)**: principle IX now refers to `specs/status-page.md`
+  for the status page's detailed requirements. Rationale: the page gained
+  per-component detail panels and needed its own focused specification.
