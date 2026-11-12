@@ -120,6 +120,9 @@ source sentence.
   document declared to be in another language.
 - **FR-016**: The system MUST accept a claim only if its metric is one of:
   revenue, net income, earnings per share, operating cash flow.
+- **FR-017**: On a `not-formalizable` claim, a schema field MAY be empty if a
+  flag on the claim names that field as the reason. On any other claim every
+  required field MUST be present.
 - **FR-007**: The system MUST accept a claim only if its quoted span appears
   verbatim at the stated address in the stored document.
 - **FR-008**: Every claim MUST record both the date it was said (the document's
@@ -190,6 +193,7 @@ source sentence.
 
 Resolved on 2026-11-12:
 
+- **Unformalizable claims** (found during planning): see FR-017.
 - **Input formats**: plain text and HTML. PDF is out of scope for this feature.
 - **Language and market**: English-language filings of US-listed companies.
 - **Metrics**: a fixed list for the first version – revenue, net income,
