@@ -40,8 +40,9 @@ built (principle VIII).
 2. **Structured figures** that companies file alongside the text (XBRL). They
    give the correct values of the four first-version metrics per company and
    period, so extracted claims can be checked without hand labelling. They do
-   not cover adjusted figures or hedged statements. *The exact data service and
-   its coverage are still to be confirmed.*
+   not cover adjusted figures or hedged statements. The SEC's "company facts" service on `data.sec.gov` was
+   confirmed on 2026-11-12 to return all four metrics for one test company;
+   coverage across the chosen companies is checked when they are selected.
 3. **Known real discrepancies**: restated results and missed guidance, which are
    publicly documented.
 4. **Deliberate corruption**: a real document or claim with one element changed
@@ -77,7 +78,8 @@ eval/
 
 ## Known constraints
 
-- The development environment currently cannot reach the SEC's servers. Sample
-  filings must be downloaded by a person, or the hosts must be allowed in the
-  environment's network settings.
+- The structured figures on `data.sec.gov` are reachable from the development
+  environment. The filings themselves on `www.sec.gov` are refused by the SEC
+  unless the request identifies its sender with a contact address, which is
+  the SEC's stated policy for automated access.
 - Hand labelling needs a person's time; the first batch is sized to stay small.
