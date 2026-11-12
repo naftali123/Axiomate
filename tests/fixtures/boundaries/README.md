@@ -6,9 +6,21 @@ line is one expected sentence, with runs of whitespace collapsed to one space.
 The segmenter passes a passage when it produces exactly these sentences, in
 this order, for that stretch of text.
 
-**Status: proposed, awaiting confirmation by a person.** The 241 segments
-were proposed by a script and reviewed once by the assistant. Under
-`specs/verification.md`, a label counts only after a person confirms it.
+**Status: confirmed by independent cross-check (2026-11-12).** The 241 labels
+were proposed by a script. Under `specs/verification.md`, a sentence-boundary
+label counts when an independent tool agrees with it, and a person decides the
+cases where the tool disagrees.
+
+- Tool: pySBD 0.3.4, a rule-based splitter written by others (MIT licence),
+  run by `tools/cross_check_boundaries.py`. Result in `cross_check.json`.
+- The tool agrees with 236 of the 241 labels.
+- The other 5 are all one kind of case: a list numbered inside a sentence,
+  such as "... are: (i) Games and (ii) FinTech." The tool cuts at each item;
+  the labels keep one sentence. The repository owner decided that the labels
+  stand.
+
+`cross_check.json` records the hash of every label file, and a test fails if
+a label file changes afterwards. After editing a label, run the tool again.
 To correct a boundary, move the line break; to reject a passage, delete it.
 
 ## Corrections made while building the segmenter
@@ -27,5 +39,7 @@ disagreement was read against the filing:
 - 1 label lacked the bullet that opens the sentence in the stored text
   (Geospace, "• Reservoir Product Revenue – ..."); the bullet was added.
 
-Because the same process, with no person involved, proposed the labels and wrote the rules,
-the present 241 of 241 agreement is not independent evidence.
+The 241 of 241 agreement between the segmenter and the labels was therefore
+not independent evidence on its own; the cross-check above supplies it. It is
+still weaker than a person reading every label, since two tools can share a
+blind spot.

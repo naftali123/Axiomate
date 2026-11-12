@@ -69,3 +69,18 @@ def test_boundary_labels_cover_every_filing_with_at_least_200_segments():
         labels = FIXTURES / "boundaries" / (Path(entry["file"]).stem + ".txt")
         total += sum(1 for line in labels.read_text(encoding="utf-8").splitlines() if line.strip())
     assert total >= 200
+
+
+def test_every_boundary_label_is_confirmed_by_the_cross_check_or_by_a_person():
+    """specs/verification.md: a label counts once an independent tool agrees, or a person decides."""
+    boundaries = FIXTURES / "boundaries"
+    check = json.loads((boundaries / "cross_check.json").read_text(encoding="utf-8"))
+    files = sorted(boundaries.glob("*.txt"))
+    assert [entry["file"] for entry in check["files"]] == [p.name for p in files]
+    for entry, path in zip(check["files"], files):
+        assert hashlib.sha256(path.read_bytes()).hexdigest() == entry["sha256"], f"{path.name} changed after the cross-check"
+    assert check["labels"] >= 200
+    disputed_labels = sum(len(d["labelled"]) for d in check["disputed"])
+    assert check["tool_agrees"] + disputed_labels == check["labels"]
+    for dispute in check["disputed"]:
+        assert dispute["decision"] and dispute["decision"]["label_stands"] is True, dispute["file"]

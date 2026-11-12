@@ -1,0 +1,160 @@
+{
+ "tool": "pysbd",
+ "tool_version": "0.3.4",
+ "labels": 241,
+ "tool_agrees": 236,
+ "files": [
+  {
+   "file": "cpa18_2021q1_10q.txt",
+   "sha256": "da537f3e9c38b260010580fde881972a3374dd6f86c4701562172af0fe8f8e3b",
+   "labels": 29,
+   "tool_agrees": 29
+  },
+  {
+   "file": "cpa18_2021q2_10q.txt",
+   "sha256": "f2bc0f462deebf2d6e30b03b1428d1937e63eb2d69681fa36706fc1505fa7144",
+   "labels": 27,
+   "tool_agrees": 27
+  },
+  {
+   "file": "cpa18_2022q1_10q.txt",
+   "sha256": "36ddda7b8ae24184f7aca3e90064ac226061b8294a87fb3504889f9891a9a738",
+   "labels": 24,
+   "tool_agrees": 24
+  },
+  {
+   "file": "everi_2024q1_10q.txt",
+   "sha256": "70a3bf6edb93ce8ba56f49d81cb507c9d2565347d88035882172a25100ae3da5",
+   "labels": 31,
+   "tool_agrees": 29
+  },
+  {
+   "file": "geospace_fy2021q3_10q.txt",
+   "sha256": "78e7321cfbd502a1a3b0fc8ad06e6c16e3ac84d2e5477c51dee4db64615b3dc4",
+   "labels": 36,
+   "tool_agrees": 36
+  },
+  {
+   "file": "orrstown_1996q3_10q.txt",
+   "sha256": "b2e39793f73019d47eb674fa8584851af22c2c7b71ad2db39d40e24debba6fb7",
+   "labels": 25,
+   "tool_agrees": 25
+  },
+  {
+   "file": "orrstown_1997q3_10q.txt",
+   "sha256": "4ce0c885a40f6341f311375ad995024ccd37466d5e5a3b76fd8e7108c1b19f62",
+   "labels": 28,
+   "tool_agrees": 28
+  },
+  {
+   "file": "southalabama_2000q1_10q.txt",
+   "sha256": "bfc422b320661346aa648f997b477aa254e614b934ccdef3625065884eec3587",
+   "labels": 16,
+   "tool_agrees": 15
+  },
+  {
+   "file": "southalabama_2000q2_10q.txt",
+   "sha256": "e5328f9e28d3581663ce80027434b8012d04e3927849f52e8536803872f1ee31",
+   "labels": 14,
+   "tool_agrees": 13
+  },
+  {
+   "file": "southalabama_2000q3_10q.txt",
+   "sha256": "1de6eb41c25d78fc56a68d7fbb694e424fe1238411c99c7913a2d7cbfb80b4c1",
+   "labels": 11,
+   "tool_agrees": 10
+  }
+ ],
+ "disputed": [
+  {
+   "file": "everi_2024q1_10q.txt",
+   "passage": 1,
+   "labelled": [
+    "We conduct our Games segment business based on results generated from the following major revenue streams: (i) Gaming Operations; and (ii) Gaming Equipment and Systems."
+   ],
+   "tool": [
+    "We conduct our Games segment business based on results generated from the following major revenue streams:",
+    "(i) Gaming Operations; and",
+    "(ii) Gaming Equipment and Systems."
+   ],
+   "decision": {
+    "label_stands": true,
+    "decided_by": "repository owner",
+    "decided_on": "2026-11-12",
+    "reason": "A list numbered (i), (ii) inside a sentence does not end the sentence; the whole sentence is one segment."
+   }
+  },
+  {
+   "file": "everi_2024q1_10q.txt",
+   "passage": 5,
+   "labelled": [
+    "Our CODM determined that our operating segments for conducting business are: (i) Games and (ii) FinTech."
+   ],
+   "tool": [
+    "Our CODM determined that our operating segments for conducting business are:",
+    "(i) Games and",
+    "(ii) FinTech."
+   ],
+   "decision": {
+    "label_stands": true,
+    "decided_by": "repository owner",
+    "decided_on": "2026-11-12",
+    "reason": "A list numbered (i), (ii) inside a sentence does not end the sentence; the whole sentence is one segment."
+   }
+  },
+  {
+   "file": "southalabama_2000q1_10q.txt",
+   "passage": 3,
+   "labelled": [
+    "Commercial, business and installment loans are classified as non-accrual by Management upon the earlier of: (i) a determination that collection of interest is doubtful, or (ii) the time at which such loans become 90 days past due, unless collateral or other circumstances reasonably assure full collection of principal and interest."
+   ],
+   "tool": [
+    "Commercial, business and installment loans are classified as non-accrual by Management upon the earlier of:",
+    "(i) a determination that collection of interest is doubtful, or",
+    "(ii) the time at which such loans become 90 days past due, unless collateral or other circumstances reasonably assure full collection of principal and interest."
+   ],
+   "decision": {
+    "label_stands": true,
+    "decided_by": "repository owner",
+    "decided_on": "2026-11-12",
+    "reason": "A list numbered (i), (ii) inside a sentence does not end the sentence; the whole sentence is one segment."
+   }
+  },
+  {
+   "file": "southalabama_2000q2_10q.txt",
+   "passage": 3,
+   "labelled": [
+    "Commercial, business and installment loans are classified as non-accrual by Management upon the earlier of: (i) a determination that collection of interest is doubtful, or (ii) the time at which such loans become 90 days past due, unless collateral or other circumstances reasonably assure full collection of principal and interest."
+   ],
+   "tool": [
+    "Commercial, business and installment loans are classified as non-accrual by Management upon the earlier of:",
+    "(i) a determination that collection of interest is doubtful, or",
+    "(ii) the time at which such loans become 90 days past due, unless collateral or other circumstances reasonably assure full collection of principal and interest."
+   ],
+   "decision": {
+    "label_stands": true,
+    "decided_by": "repository owner",
+    "decided_on": "2026-11-12",
+    "reason": "A list numbered (i), (ii) inside a sentence does not end the sentence; the whole sentence is one segment."
+   }
+  },
+  {
+   "file": "southalabama_2000q3_10q.txt",
+   "passage": 2,
+   "labelled": [
+    "Commercial, business and installment loans are classified as non-accrual by Management upon the earlier of: (i) a determination that collection of interest is doubtful, or (ii) the time at which such loans become 90 days past due, unless collateral or other circumstances reasonably assure full collection of principal and interest."
+   ],
+   "tool": [
+    "Commercial, business and installment loans are classified as non-accrual by Management upon the earlier of:",
+    "(i) a determination that collection of interest is doubtful, or",
+    "(ii) the time at which such loans become 90 days past due, unless collateral or other circumstances reasonably assure full collection of principal and interest."
+   ],
+   "decision": {
+    "label_stands": true,
+    "decided_by": "repository owner",
+    "decided_on": "2026-11-12",
+    "reason": "A list numbered (i), (ii) inside a sentence does not end the sentence; the whole sentence is one segment."
+   }
+  }
+ ]
+}

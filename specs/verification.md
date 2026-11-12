@@ -20,7 +20,7 @@ covers its own stages and refers back here.
 
 | Stage | "Working" means | Method | Data | Threshold |
 |---|---|---|---|---|
-| 1. Ingestion | Text is returned unchanged; segments are split correctly; figures visible in the filing are present in the stored text | Round-trip test; comparison with hand-checked boundaries; figure-presence check | Real filings; boundary labels; structured figures | Round trip 100%; boundaries ≥ 98%; figure presence 100% |
+| 1. Ingestion | Text is returned unchanged; segments are split correctly; figures visible in the filing are present in the stored text | Round-trip test; comparison with confirmed boundary labels; figure-presence check | Real filings; boundary labels; structured figures | Round trip 100%; boundaries ≥ 98%; figure presence 100% |
 | 2. Interpretation | Extracted claims match the true figures | Compare extracted claims with structured figures and hand labels | Filings with known figures; hand labels | Set in the stage's spec |
 | 3. Validation gate | Corrupted claims are caught; correct claims pass | Submit correct claims and corrupted copies | Correct claims; corruption generator | Set in the stage's spec |
 | 4. Context resolution | Flags resolve to the right answer, each as a recorded assumption | Compare with known resolutions | Flagged cases with labelled resolutions | Set in the stage's spec |
@@ -73,8 +73,17 @@ onward carry embedded figures for the four metrics.
 
 - **Provenance**: every file records where it came from, when it was retrieved
   and its SHA-256 hash, in a manifest next to it. Files are stored unchanged.
-- **Human-confirmed labels**: a label suggested by a model or a script counts
-  only after a person has confirmed it.
+- **Confirmed labels**: a label suggested by a model or a script counts only
+  after it is confirmed. There are two ways:
+  - *By a person.* Required for every label that takes judgment: what a claim
+    says, whether a statement is hedged, what should be flagged.
+  - *By independent cross-check* (amended 2026-11-12). Allowed only for
+    mechanical labels for which an established tool written by others exists;
+    at present this means sentence boundaries. The label counts when the tool
+    agrees with it. Where the tool disagrees, a person decides, and the
+    decision is recorded with its reason. The tool is used only for checking,
+    never by the product. This is weaker than a person reading every label:
+    two tools can share a blind spot, so numbers that rest on it say so.
 - **Development and held-out sets**: the evaluation data is split in two. Rules
   are written and tuned against the development set only; the held-out set is
   used to report numbers and is never used to tune.

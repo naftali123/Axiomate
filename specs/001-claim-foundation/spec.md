@@ -198,7 +198,7 @@ This feature covers stages 1 and 5. The project-wide strategy is in
 |---|---|---|---|
 | Stored text is unchanged (SC-001) | Ingest, retrieve, compare bytes | Ten real filings | 100% |
 | Duplicates are not stored (SC-002) | Ingest each filing three times | Ten real filings | One record each |
-| Sentences are split correctly | Compare with hand-checked boundaries | At least 200 hand-checked segments from the filings | ≥ 98% of boundaries |
+| Sentences are split correctly | Compare with confirmed boundary labels | At least 200 labelled segments from the filings, confirmed by independent cross-check, with a person deciding the disputed ones | ≥ 98% of boundaries |
 | Figures survive HTML extraction | Each figure tagged in the filing for the four metrics must appear in the stored text | HTML filings and the structured figures embedded in them | 100% |
 | Good claims are accepted | Submit hand-written claims | At least 20 claims, each checked against the structured figures embedded in the filing where available | 100% |
 | Bad claims are rejected (SC-004) | Submit corrupted copies of the good claims | At least 5 corrupted claims per rejection code, from a deterministic generator | 100%, each with the expected code |
@@ -214,7 +214,9 @@ This feature covers stages 1 and 5. The project-wide strategy is in
   accession number, dataset file, retrieval date and hash.
 - Earnings press releases are not in that dataset, so they are not part of this
   feature's test data. The document type remains in the schema for later.
-- Sentence boundaries on the sample are checked by a person.
+- Sentence boundaries on the sample are confirmed by an independent splitter;
+  a person decides the cases where it disagrees (amended 2026-11-12, see
+  `../verification.md`).
 - Good claims are written by hand; bad claims are generated from them.
 
 All of this is development data. Held-out data is not needed until a stage
