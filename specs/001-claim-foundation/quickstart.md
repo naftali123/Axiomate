@@ -5,9 +5,9 @@ This walk-through doubles as the manual acceptance test for the feature.
 ## 1. Ingest a disclosure (Story 1)
 
 ```bash
-axiomate ingest tests/fixtures/documents/acme_q3_2025.html \
-  --publisher-cik 0000000001 --type earnings_release \
-  --published-on 2025-10-28 --fiscal-year 2025 --fiscal-period Q3 --format html
+axiomate ingest tests/fixtures/documents/everi_2024q1_10q.html \
+  --publisher-cik 0001318568 --type quarterly_report \
+  --published-on 2024-05-08 --fiscal-year 2024 --fiscal-period Q1 --format html
 ```
 
 Expect a document id and `"created": true`. Run it again and expect the same id

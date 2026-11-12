@@ -131,6 +131,25 @@ on the claim names that field as the reason.
 - **Sample composition.** The ten filings are all quarterly reports; annual
   reports are several megabytes each and are left for a later addition.
 
+## Changes found while building ingestion
+
+- **Table cells.** In text extracted from HTML, the non-empty cells of a table
+  row are joined by a tab, so a row can be told from prose by the stored text
+  alone and segmentation is a pure function of canonical text and format.
+- **Lists laid out as tables.** A row made of a list marker and one cell of
+  text is stored as ordinary text, so its sentences are split.
+- **Plain-text tables.** A line is a table row when it lies between `<TABLE>`
+  markers or looks like columns (rule in `documents/segment.py`). A table the
+  source wrapped across lines is stored as separate rows; rejoining them is
+  left for later.
+- **Bias towards not splitting.** After an abbreviation, initials or a heading
+  number the segmenter does not split, even though a sentence can end there.
+- **Headings.** A short unsplit block without closing punctuation is a heading.
+- **Three more rejection codes** in the contract: `invalid_provenance`,
+  `empty_document`, `unreadable_file`. Documents must be UTF-8 (ASCII included).
+- **Pinned output.** The hash of each sample filing's canonical text is
+  recorded, so a change in extraction output cannot pass unnoticed.
+
 ## Risks
 
 | Risk | Mitigation |
