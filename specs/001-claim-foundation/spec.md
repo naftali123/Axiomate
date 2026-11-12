@@ -189,6 +189,34 @@ source sentence.
   identical stores.
 - **SC-006**: For any stored claim, the source sentence can be shown in one lookup.
 
+## Verification
+
+This feature covers stages 1 and 5. The project-wide strategy is in
+[../verification.md](../verification.md).
+
+| What is verified | Method | Data | Threshold |
+|---|---|---|---|
+| Stored text is unchanged (SC-001) | Ingest, retrieve, compare bytes | Ten real filings | 100% |
+| Duplicates are not stored (SC-002) | Ingest each filing three times | Ten real filings | One record each |
+| Sentences are split correctly | Compare with hand-checked boundaries | At least 200 hand-checked segments from the filings | ≥ 98% of boundaries |
+| Figures survive HTML extraction | Each filed figure for the four metrics must appear in the stored text | HTML filings and their structured figures | 100% |
+| Good claims are accepted | Submit hand-written claims | At least 20 claims, each checked against the company's structured figures where available | 100% |
+| Bad claims are rejected (SC-004) | Submit corrupted copies of the good claims | At least 5 corrupted claims per rejection code, from a deterministic generator | 100%, each with the expected code |
+| Nothing can be altered | Attempt updates and deletes on every table | Any stored data | 100% refused |
+| Runs are reproducible (SC-005) | Two fresh runs, compare exports | All of the above | Identical |
+
+**Data collection**
+
+- Five US-listed companies are chosen and recorded with their identifiers.
+- Ten of their real filings are obtained from the SEC's public database: earnings
+  releases and quarterly reports, in text and HTML, at least one with tables.
+  Each is stored unchanged with its source address, retrieval date and hash.
+- Sentence boundaries on the sample are checked by a person.
+- Good claims are written by hand; bad claims are generated from them.
+
+All of this is development data. Held-out data is not needed until a stage
+produces precision and coverage numbers.
+
 ## Clarifications
 
 Resolved on 2026-11-12:
@@ -206,4 +234,6 @@ Resolved on 2026-11-12:
 - IV (flag rather than guess): FR-009, FR-010.
 - V (reproducibility): FR-003, FR-004, FR-013, SC-005.
 - VI (time-indexed claims): FR-008.
+- VIII (verification): the Verification section above; method, data and
+  thresholds are fixed before any code is written.
 - IX (status page): `status.html` updated in the same change.

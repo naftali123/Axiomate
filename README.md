@@ -28,6 +28,7 @@ This project follows Spec-Driven Development:
 
 - `.specify/memory/constitution.md` – the project's governing principles.
 - `status.html` – a one-page Hebrew summary of the project state, kept current.
+- `specs/verification.md` – how each pipeline stage is shown to work, and on what data.
 - `specs/NNN-feature-name/` – one folder per feature, holding `spec.md`
   (what and why), `plan.md` (how) and `tasks.md` (work breakdown).
 

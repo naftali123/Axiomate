@@ -4,6 +4,9 @@
 
 - Read `.specify/memory/constitution.md` before making changes. Every spec, plan,
   task and code change must comply with it.
+- Read `specs/verification.md` before specifying or building a pipeline stage.
+  No stage is built until its verification method, data source and threshold
+  are written down.
 - This project follows Spec-Driven Development: write code only against an
   approved `spec.md`, `plan.md` and `tasks.md` under `specs/NNN-feature-name/`.
 

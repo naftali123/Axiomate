@@ -38,7 +38,7 @@ Reasons for each choice are in [research.md](research.md).
 | V. Reproducibility | Identity is a content hash. No wall-clock time or random identifier is stored. Extractor and segmenter versions are recorded on each document. |
 | VI. Time-indexed claims | `said_on` and the fiscal period are both mandatory and stored separately. |
 | VII. Inconsistency is not falsehood | Not applicable; no verdicts in this feature. |
-| VIII. Test-first, measured | Tests precede code in every task group. The malformed-claim fixture set measures the rejection rate (SC-004). |
+| VIII. Verified, test-first | Tests precede code in every task group. The spec's Verification section fixes the method, data and threshold for stages 1 and 5 before any code is written; the data is collected in the setup phase. |
 | IX. Status page | Each task group that changes project state updates `status.html`. |
 
 No violations; no complexity exceptions are needed.
@@ -64,8 +64,11 @@ tests/
   unit/
   integration/
   fixtures/
-    documents/       # sample text and HTML disclosures
-    claims/          # well-formed and malformed claim sets
+    documents/       # real filings, unchanged, with SOURCES.md and hashes
+    boundaries/      # hand-checked sentence boundaries
+    claims/          # hand-written good claims; generated bad claims
+tools/
+  corrupt_claims.py  # deterministic generator of malformed claims
 specs/001-claim-foundation/
   spec.md  plan.md  research.md  data-model.md  quickstart.md  tasks.md
   contracts/cli.md
@@ -120,7 +123,7 @@ on the claim names that field as the reason.
 
 ## Phases
 
-1. Setup: packaging, test runner, fixtures.
+1. Setup: packaging, test runner, and collection of the verification data.
 2. Foundation: database schema with immutability triggers, canonical export.
 3. Story 1: ingestion.
 4. Story 2: claim submission.
