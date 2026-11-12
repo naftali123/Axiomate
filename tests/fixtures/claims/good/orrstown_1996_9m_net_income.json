@@ -1,0 +1,33 @@
+{
+  "name": "orrstown_1996_9m_net_income",
+  "document": "orrstown_1996q3_10q.txt",
+  "quote": "Net after tax income for the first nine months of 1996 was \n$1,680,000",
+  "quote_occurrence": 1,
+  "claim": {
+    "company_cik": "0000826154",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "1680000",
+    "value_high": "1680000",
+    "stated_value": "1680000",
+    "stated_scale": "units",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 1996,
+    "fiscal_period": "9M",
+    "period_start": "1996-01-01",
+    "period_end": "1996-09-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "said_on": "1996-11-26"
+  },
+  "flags": [],
+  "assumptions": [],
+  "expected_status": "formal",
+  "checked_against": "hand"
+}

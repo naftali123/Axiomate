@@ -1,0 +1,13 @@
+{
+  "name": "empty_field_without_flag__cpa18_2021h1_ocf_change__empty_value_low",
+  "base": "cpa18_2021h1_ocf_change",
+  "expected_error": "empty_field_without_flag",
+  "expected_field": "value_low",
+  "operations": [
+    {
+      "op": "set",
+      "path": "claim.value_low",
+      "value": null
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "status_mismatch__everi_2024q1_net_income__status_formal_with_assumptions",
+  "base": "everi_2024q1_net_income",
+  "expected_error": "status_mismatch",
+  "expected_field": "status",
+  "operations": [
+    {
+      "op": "set_status",
+      "value": "formal-with-assumptions"
+    }
+  ]
+}

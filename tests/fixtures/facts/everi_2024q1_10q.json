@@ -1,0 +1,126 @@
+{
+  "document": "everi_2024q1_10q.html",
+  "facts": [
+    {
+      "id": "f-90",
+      "metric": "earnings_per_share",
+      "tag": "us-gaap:EarningsPerShareDiluted",
+      "shown": "0.30",
+      "stated_scale": "units",
+      "value": "0.3",
+      "unit": "usdPerShare",
+      "period_kind": "duration",
+      "period_start": "2023-01-01",
+      "period_end": "2023-03-31"
+    },
+    {
+      "id": "f-89",
+      "metric": "earnings_per_share",
+      "tag": "us-gaap:EarningsPerShareDiluted",
+      "shown": "0.05",
+      "stated_scale": "units",
+      "value": "0.05",
+      "unit": "usdPerShare",
+      "period_kind": "duration",
+      "period_start": "2024-01-01",
+      "period_end": "2024-03-31"
+    },
+    {
+      "id": "f-279",
+      "metric": "net_income",
+      "tag": "us-gaap:NetIncomeLoss",
+      "shown": "28,066",
+      "stated_scale": "thousands",
+      "value": "28066000",
+      "unit": "usd",
+      "period_kind": "duration",
+      "period_start": "2023-01-01",
+      "period_end": "2023-03-31"
+    },
+    {
+      "id": "f-82",
+      "metric": "net_income",
+      "tag": "us-gaap:NetIncomeLoss",
+      "shown": "28,066",
+      "stated_scale": "thousands",
+      "value": "28066000",
+      "unit": "usd",
+      "period_kind": "duration",
+      "period_start": "2023-01-01",
+      "period_end": "2023-03-31"
+    },
+    {
+      "id": "f-253",
+      "metric": "net_income",
+      "tag": "us-gaap:NetIncomeLoss",
+      "shown": "4,554",
+      "stated_scale": "thousands",
+      "value": "4554000",
+      "unit": "usd",
+      "period_kind": "duration",
+      "period_start": "2024-01-01",
+      "period_end": "2024-03-31"
+    },
+    {
+      "id": "f-81",
+      "metric": "net_income",
+      "tag": "us-gaap:NetIncomeLoss",
+      "shown": "4,554",
+      "stated_scale": "thousands",
+      "value": "4554000",
+      "unit": "usd",
+      "period_kind": "duration",
+      "period_start": "2024-01-01",
+      "period_end": "2024-03-31"
+    },
+    {
+      "id": "f-212",
+      "metric": "operating_cash_flow",
+      "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+      "shown": "31,708",
+      "stated_scale": "thousands",
+      "value": "31708000",
+      "unit": "usd",
+      "period_kind": "duration",
+      "period_start": "2023-01-01",
+      "period_end": "2023-03-31"
+    },
+    {
+      "id": "f-211",
+      "metric": "operating_cash_flow",
+      "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+      "shown": "55,126",
+      "stated_scale": "thousands",
+      "value": "55126000",
+      "unit": "usd",
+      "period_kind": "duration",
+      "period_start": "2024-01-01",
+      "period_end": "2024-03-31"
+    },
+    {
+      "id": "f-46",
+      "metric": "revenue",
+      "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "shown": "200,472",
+      "stated_scale": "thousands",
+      "value": "200472000",
+      "unit": "usd",
+      "period_kind": "duration",
+      "period_start": "2023-01-01",
+      "period_end": "2023-03-31"
+    },
+    {
+      "id": "f-45",
+      "metric": "revenue",
+      "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "shown": "189,346",
+      "stated_scale": "thousands",
+      "value": "189346000",
+      "unit": "usd",
+      "period_kind": "duration",
+      "period_start": "2024-01-01",
+      "period_end": "2024-03-31"
+    }
+  ],
+  "skipped": []
+}

@@ -7,7 +7,7 @@ This walk-through doubles as the manual acceptance test for the feature.
 ```bash
 axiomate ingest tests/fixtures/documents/acme_q3_2025.html \
   --publisher-cik 0000000001 --type earnings_release \
-  --published-on 2025-10-28 --fiscal-year 2025 --fiscal-quarter Q3 --format html
+  --published-on 2025-10-28 --fiscal-year 2025 --fiscal-period Q3 --format html
 ```
 
 Expect a document id and `"created": true`. Run it again and expect the same id
@@ -34,7 +34,7 @@ Expect a claim id, version 1 and status `formal`. Then submit
 
 ```bash
 axiomate claim list --company-cik 0000000001 --metric revenue \
-  --fiscal-year 2025 --fiscal-quarter Q3
+  --fiscal-year 2025 --fiscal-period Q3
 ```
 
 ```bash

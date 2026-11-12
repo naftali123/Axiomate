@@ -1,0 +1,46 @@
+{
+  "name": "everi_2024q1_revenue_reason",
+  "document": "everi_2024q1_10q.html",
+  "quote": "This was primarily due to the decline in Games revenues described below.",
+  "quote_occurrence": 1,
+  "claim": {
+    "company_cik": "0001318568",
+    "metric": "revenue",
+    "value_kind": null,
+    "value_low": null,
+    "value_high": null,
+    "stated_value": null,
+    "stated_scale": null,
+    "unit": null,
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2024,
+    "fiscal_period": "Q1",
+    "period_start": "2024-01-01",
+    "period_end": "2024-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "said_on": "2024-05-08"
+  },
+  "flags": [
+    {
+      "reason": "vague_quantity",
+      "field": "value_low",
+      "resolved": false,
+      "note": "A decline is stated without an amount."
+    }
+  ],
+  "assumptions": [
+    {
+      "statement": "\"This\" refers to the decrease in total revenues for the three months ended March 31, 2024, stated in the previous sentence",
+      "field": "period_start",
+      "origin": "human"
+    }
+  ],
+  "expected_status": "not-formalizable",
+  "checked_against": "hand"
+}

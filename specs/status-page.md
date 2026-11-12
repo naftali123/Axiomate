@@ -18,7 +18,9 @@ read code or full specs to know where things stand.
 
 ### Form
 
-- **SP-001**: There is exactly one status page, `status.html`, at the repository root.
+- **SP-001**: There is exactly one status page, `status.html`, at the repository
+  root. HTML filings kept as test data under `tests/fixtures/` or `eval/` are
+  not pages and do not count.
 - **SP-002**: The page is in Hebrew and laid out right to left.
 - **SP-003**: The page is a single self-contained file: no external scripts,
   styles, fonts or images, so it opens from disk and from any host.

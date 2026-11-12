@@ -1,0 +1,12 @@
+{
+  "name": "span_mismatch__everi_2024q1_net_income__quote_digit_changed",
+  "base": "everi_2024q1_net_income",
+  "expected_error": "span_mismatch",
+  "expected_field": "quote",
+  "operations": [
+    {
+      "op": "set_quote",
+      "value": "we had net income of approximately $5.6 million for the three months ended March 31, 2024"
+    }
+  ]
+}

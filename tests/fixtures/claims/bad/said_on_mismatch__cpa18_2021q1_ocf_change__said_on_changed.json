@@ -1,0 +1,13 @@
+{
+  "name": "said_on_mismatch__cpa18_2021q1_ocf_change__said_on_changed",
+  "base": "cpa18_2021q1_ocf_change",
+  "expected_error": "said_on_mismatch",
+  "expected_field": "said_on",
+  "operations": [
+    {
+      "op": "set",
+      "path": "claim.said_on",
+      "value": "2023-05-10"
+    }
+  ]
+}

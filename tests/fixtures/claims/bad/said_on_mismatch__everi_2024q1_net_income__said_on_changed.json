@@ -1,0 +1,13 @@
+{
+  "name": "said_on_mismatch__everi_2024q1_net_income__said_on_changed",
+  "base": "everi_2024q1_net_income",
+  "expected_error": "said_on_mismatch",
+  "expected_field": "said_on",
+  "operations": [
+    {
+      "op": "set",
+      "path": "claim.said_on",
+      "value": "2026-05-08"
+    }
+  ]
+}

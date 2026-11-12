@@ -1,0 +1,36 @@
+Indicate by check mark whether the registrant is a large accelerated filer, an accelerated filer, a non-accelerated filer, a smaller reporting company, or an emerging growth company.
+See the definitions of “large accelerated filer,” “accelerated filer,” “smaller reporting company,” and “emerging growth company” in Rule 12b-2 of the Exchange Act.
+
+The preparation of financial statements in conformity with GAAP requires management to make estimates and assumptions that affect the reported amounts and the disclosure of contingent amounts in our condensed consolidated financial statements and the accompanying notes.
+Actual results could differ from those estimates.
+
+Effective January 1, 2020, the Advisor has waived its right to disposition fees with respect to sales and dispositions of single investments and portfolios of investments.
+The Advisor may still be entitled to disposition fees in connection with a transaction or series of transactions related to a merger, liquidation, or other event, at the discretion of our board of directors.
+
+We evaluate the credit quality of our finance receivables utilizing an internal five-point credit rating scale, with one representing the highest credit quality and five representing the lowest.
+A credit quality of one through three indicates a range of investment grade to stable.
+A credit quality of four through five indicates inclusion on the watch list to risk of default.
+The credit quality evaluation of our finance receivables is updated quarterly.
+
+Amounts reported in Other comprehensive income (loss) related to our interest derivative contracts will be reclassified to Interest expense as interest is incurred on our variable-rate debt.
+Amounts reported in Other comprehensive income (loss) related to foreign currency derivative contracts will be reclassified to Other gains and (losses) when the hedged foreign currency contracts are settled.
+As of June 30, 2021, we estimated that an additional $1.0 million and $0.4 million will be reclassified as Interest expense and Other gains and (losses), respectively, during the next 12 months.
+
+On April 30, 2021, we obtained a non-recourse mortgage loan of $18.1 million (based on the exchange rate of the euro on the date of the transaction) in connection with a net lease student housing property in Porto, Portugal, which is scheduled to mature on April 30, 2025.
+At closing, we drew down the first tranche of the loan of $16.4 million, which bears a fixed interest rate of 2.8%.
+The second tranche of $1.7 million is undrawn as of June 30, 2021, and would bear a variable interest rate equal to EURIBOR plus 2.5% when drawn.
+
+On March 31, 2021, we obtained a non-recourse mortgage loan of $27.3 million in connection with a net lease student housing property in Malaga, Spain.
+The loan bears a variable interest rate equal to EURIBOR plus 2.5% and is scheduled to mature on December 31, 2023 (Note 9).
+
+Stabilized NOI — We use Stabilized NOI, a non-GAAP measure, as a metric to evaluate the performance of our entire portfolio of properties.
+Stabilized NOI for development projects and newly acquired operating properties that are not yet substantially leased up are not included in our portfolio information until one year after the project has been substantially completed and placed into service, or the property has been substantially leased up (and the project or property has not been disposed of during or prior to the current period).
+In addition, any newly acquired stabilized operating property is included in our portfolio of Stabilized NOI information upon acquisition.
+Stabilized NOI for a net-leased property is included in our portfolio information upon acquisition or in the period when it is placed into service (as the property will already have a lease in place).
+
+We maintain a quarterly redemption program pursuant to which we may, at the discretion of our board of directors, redeem shares of our common stock from stockholders seeking liquidity.
+On August 31, 2020, our board of directors approved, effective as of that date, limiting the amount of cash available for our redemption program to the amount reinvested by stockholders in our DRIP (as further detailed in the Form 8-K filed with the SEC on September 1, 2020).
+
+Market risk is the exposure to loss resulting from changes in interest rates, foreign currency exchange rates, and equity prices.
+We are exposed to interest rate risk and foreign currency exchange risk, however, we generally do not use derivative instruments to hedge credit/market risks or for speculative purposes.
+From time to time, we may enter into foreign currency forward contracts and collars to hedge our foreign currency cash flow exposures.

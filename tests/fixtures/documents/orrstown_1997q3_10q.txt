@@ -1,0 +1,1374 @@
+FORM 10 - Q
+
+
+
+                             SECURITIES AND EXCHANGE COMMISSION
+                                          WASHINGTON, D.C.  20549
+
+
+
+                             QUARTERLY REPORT UNDER SECTION 13 OR 15 (d)
+                                     OF THE SECURITIES EXCHANGE ACT OF 1934
+
+
+
+
+For the quarter ended        September 30, 1997                     
+Commission file number:       33-18888
+
+
+
+                                          ORRSTOWN FINANCIAL SERVICES, INC.
+                     (Exact name of registrant as specified in its charter)
+
+
+
+
+Commonwealth of Pennsylvania                                     23-2530374
+(State or other jurisdiction of                    (I.R.S. Employer
+ incorporation or organization)                     Identification No.)
+
+
+
+ 77 East King Street                                              17257
+ P.O. Box 250, Shippensburg, Pennsylvania                    (Zip Code)
+(Address of principal executive offices)
+
+
+  Registrant's telephone number, including area code:        (717) 532-6114
+
+
+
+Indicate by check mark whether the registrant (1) has filed all reports
+required
+to be filed by Section 13 or 15 (d) of the Securities Exchange Act of 1934
+during the preceding 12 months (or for shorter period
+that the registrant was required to file such reports), and (2) has been
+subject to such filing requirements
+for the past 90 days.
+
+
+                       X
+        YES      ---------------                           N--------------
+
+
+Indicate the number of shares outstanding of each of the issuer's classes
+ of common stock,
+as of the latest practicable date.
+
+
+                Class                         Outstanding at October 31, 1997
+      (Common stock, no par value)                      1,025,094
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  ORRSTOWN FINANCIAL SERVICES, INC.
+
+                               INDEX
+
+
+
+                                                                        Page
+Part I - FINANCIAL INFORMATION
+Item 1.            Financial statements ( unaudited )
+         Condensed consolidated balance sheets - September 30, 1997
+               and December 31, 1996                                        3
+         Condensed consolidated statements ofThree months
+               ended September 30, 1997 and 1996                            4
+         Condensed consolidated statements of income - Nine months
+               ended September 30, 1997 and 1996                            5
+         Condensed consolidated statements of cash flows - Nine months
+               ended September 30, 1997 and 1996                            6
+         Notes to condensed consolidated financial statements          7 - 8
+Item 2.  Management's discussion and analysis of financial condition
+               and results of operations                               9 -12
+
+PART II - OTHER INFORMATION                                                13
+
+Signatures                                                                 14
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                           PART I - FINANCIAL INFORMATION
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                               PART I - FINANCIAL INFORMATION
+                               Item 1. Financial Statments
+
+                               ORRSTOWN FINANCIAL SERVICES, INC.
+                  AND ITS WHOLLY -  OWNED SUBSIDIARY, ORRSTOWN BANK
+
+
+                           CONDENSED CONSOLIDATED BALANCE SHEETS
+                                              (UNAUDITED)
+
+
+                                                  September 30,   December 31,
+                                                     1997           1996*
+                                                 (Unaudited)
+ASSETS                                                  (000 Omitted)
+Cash and due from banks                             4,876           5,236
+Interest - bearing deposits with banks                 22           1,554
+Federal funds sold                                      4           2,936
+Securities available for sale                      43,239          33,421
+Federal Home Loan Bank, Federal Reserve and
+  Atlantic Central Bankers Bank Stock, at cost
+  which approximates market value                     983             934
+Loans                                              122,782        108,926
+Allowance for loan losses                           (1,691)        (1,620)
+                                               -----------     -----------
+                      Net Loans                    121,091         107,306
+Bank premises and equipment, net                     4,721           3,916
+Other assets                                         2,383           2,253
+                                               -----------     -----------
+           Total assets                            177,319         157,556
+                                               ===========     ===========
+
+    LIABILITIES AND STOCKHOLDERS' EQUITY
+
+LIABILITIES
+      Deposits:
+            Noninterest - bearing                 17,489            16,322
+            Interest - bearing                    134,348          120,937
+                                              -----------      -----------
+                     Total deposits              151,837           137,259
+Federal funds purchased and other borrowed money   5,334             2,339
+Other liabilities                                  2,468             2,102
+                                              -----------      -----------
+                   Total liabilities              159,639          141,700
+                                              -----------      -----------
+
+STOCKHOLDERS' EQUITY
+ Common stock, no par value - $ .2083 stated
+  value per share at September 30, 1997 and
+  December 31, 1996,  2, 000, 000 shares authorized
+  with 1, 025,094 shares issued at September 30, 1997
+  and 976, 863 issued at December 31, 1996           214             204
+Additional paid - in capital                      12,351          10,625
+Retained earnings                                  4,449           4,786
+Unrealized holding gain, net of tax
+       $ 343 and $ 124 at September 30, 1997 and
+       December 31, 1996, respectively               666             241
+                                             -----------     -----------
+              Total stockholders' equity         17,680           15,856
+                                             -----------     -----------
+              Total liabilities and stockholders'
+                 equity                         177,319          157,556
+                                            ===========      ===========
+
+*  Condensed from audited financial statements
+
+The accompanying notes are an integral part of these condensed
+ financial statements.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                              ORRSTOWN FINANCIAL SERVICES, INC.
+                      AND ITS WHOLLY - OWNED SUBSIDIARY, ORRSTOWN BANK
+
+                  CONDENSED CONSOLIDATED STATEMENTS OF INCOME
+                         Three Months Ended September 30, 1997 and 1996
+                                       (UNAUDITED)
+
+
+                                                  1997                1996
+                                               (Unaudited)        (Unaudited)
+                                                       (000 Omitted)
+
+Interest Income
+  Interest and fees on loans                      2,764               2450
+  Interest on federal funds sold                     44                104
+  Interest and dividends on investment securities   666                479
+  Interest income on deposits with banks              0                 21
+                                              ---------          ---------
+         Total interest income                    3,474              3,054
+
+Interest Expense
+    Interest on deposits                          1,421              1,251
+    Interest on borrowed money                       83                 46
+                                              ---------          ---------
+        Total interest expense                    1,504              1,297
+                                              ---------          ---------
+
+       Net interest income                        1,970              1,757
+                                              ---------          ---------
+
+ Provision for loan losses                           45                 60
+                                              ---------          ---------
+
+Net interest income after provision for loan
+  losses                                          1,925              1,697
+                                              ---------          ---------
+
+Other Income
+     Service charges on deposits                    155                119
+     Other service charges                           81                 67
+     Other income                                   115                131
+     Net gains on available  for  sale
+      securities                                      5                  1
+                                               ---------          ---------
+             Total other income                      356                318
+                                               ---------          ---------
+
+Other Expenses
+       Salaries and employee benefits                707                602
+       Net occupancy and equipment expense           170                153
+       Other operating expense                       420                379
+                                                ---------          ---------
+
+          Total other expense                      1,297              1,134
+                                                ---------          ---------
+
+          Income before income taxes                 984                881
+
+Income tax expense                                   256                273
+                                                ---------          ---------
+
+             Net income                              728                608
+                                                =========          =========
+
+Weighted average number of shares outstanding   *********          *********
+
+Net income per share                                 .71                .60
+
+Cash dividends declared per share                    .20                .17
+
+
+The accompanying notes are an integral part of these condensed financial
+ statements.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                              ORRSTOWN FINANCIAL SERVICES, INC.
+                      AND ITS WHOLLY - OWNED SUBSIDIARY, ORRSTOWN BANK
+
+                  CONDENSED CONSOLIDATED STATEMENTS OF INCOME
+                          Nine Months Ended September 30, 1997 and 1996
+                                             (UNAUDITED)
+
+
+                                                  1997                  1996
+                                             (Unaudited)          (Unaudited)
+                                                      (000 Omitted)
+
+Interest Income
+  Interest and fees on loans                     7,879                 7,219
+  Interest on federal funds sold                   163                   259
+  Interest and dividends on investment securities 1,847                 1,407
+  Interest income on deposits with banks             4                    69
+                                             -----------          ------------
+         Total interest income                   9,893                 8,954
+
+Interest Expense
+    Interest on deposits                         4,020                 3,723
+    Interest on borrowed money                     202                   120
+                                             -----------          ------------
+        Total interest expense                   4,222                 3,843
+                                             -----------          ------------
+
+       Net interest income                       5,671                 5,111
+
+
+ Provision for loan losses                         135                   180
+                                              -----------          ------------
+
+Net interest income after provision for loan
+  losses                                         5,536                 4,931
+                                              -----------          ------------
+
+Other Income
+     Service charges on deposits                   449                   324
+     Other service charges                         225                   176
+     Other income                                  407                   374
+     Net gains on available for sale securities      5                     1
+                                              -----------          ------------
+             Total other income                  1,086                   875
+
+
+Other Expenses
+       Salaries and employee benefits            2,103                 1,877
+       Net occupancy and equipment expense         523                   445
+       Other operating expense                   1,232                 1,097
+                                              -----------          ------------
+          Total other expense                    3,858                 3,419
+                                              -----------          ------------
+
+          Income before income taxes             2,764                 2,387
+
+Income tax expense                                 758                   707
+                                              -----------          ------------
+
+             Net income                           2,006                 1,680
+                                              ===========          ============
+
+Weighted average number of shares outstanding 1,025,398             1,025,706
+
+Net income per share                               1.96                  1.64
+
+Cash dividends declared per share                  0.57                  0.49
+
+
+The accompanying notes are an integral part of these condensed financial
+ statements.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                         ORRSTOWN FINANCIAL SERVICES, INC.
+                           AND ITS WHOLLY - OWNED SUBSIDIARY, ORRSTOWN BANK
+
+                             CONDENSED CONSOLIDATED STATEMENTS OF CASH FLOWS
+                               Nine Months Ended September 30, 1997 and 1996
+                                                   (UNAUDITED)
+
+
+
+                                                  1997                  1996
+                                             (Unaudited)          (Unaudited)
+                                                    (000 Omitted)
+Cash flows from operating activities:
+   Net income                                    2,006               1,680
+    Adjustments to reconcile net income to net
+            cash provided by operating activities:
+         Depreciation and amortization             252                 185
+         Provision for loan losses                 135                 180
+         Other, net                                (14)                308
+                                            ----------           ---------
+Net cash provided by operating activities        2,379               2,353
+
+Cash flows from investing activities:
+     Net (increase) decrease in interest bearing
+          deposits with banks                    1,532                 988
+    Purchase of available for sale securities  (11,818)             (5,577)
+    Maturities of available for sale  securities  2,583               2,560
+    Sales of available for  sale securities         12               2,397
+    Net (increase) in loans                    (13,920)             (4,478)
+    Purchases of bank premises and equipment    (1,026)               (909)
+                                            ----------           ---------
+Net cash (used) by investing activities        (22,637)             (5,019)
+                                            ----------           ---------
+
+Cash flows from financing activities:
+     Net increase in deposits                   14,578               8,514
+     Cash dividends paid                          (585)               (508)
+     Cash paid in lieu of fractional dividends     (22)                  0
+     Proceeds from long - term debt              3,000                   0
+     Payments on debt                               (5)                 (5)
+                                            ----------           ---------
+Net cash provided by financing activities       16,966               8,001
+                                            ----------           ---------
+
+Net increase (decrease) in cash and cash
+ equivalents                                   (3,292)              5,335
+
+Cash and cash equivalents at beginning of
+ period                                         8,172               6,647
+                                            ----------           ---------
+Cash and cash equivalents at beginning of
+ period                                         4,880              11,982
+                                            ==========           =========
+
+Supplemental disclosure of cash flows information:
+       Cash paid during the period for:
+               Interest                         3,860               3,713
+               Income Taxes                       724                 652
+
+Supplemental schedule of noncash investing and financing activities:
+    Unrealized gain (loss) on investments available for
+     sale (net of deferred taxes of $ 219 and $ [ 295 ]
+     at September 30, 1997 and 1996,
+     respectively)                                425                (572)
+        5 % stock dividend issued May,  1997    1,736                   0
+
+
+The accompanying notes are an integral part of these condensed financial
+ statements.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  NOTES TO CONDENSED CONSOLIDATED FINANCIAL STATEMENTS
+                                        SEPTEMBER 30, 1997
+                                     (UNAUDITED)
+
+
+
+NOTE 1.  Basis of Presentation
+
+         The financial information presented at and for the three months
+         ended and nine months September 30, 1997 and 1996 is unaudited.
+         Information presented at December 31, 1996 is condensed from audited
+         year - end financial statements.  However, unaudited information
+         reflects all adjustments ( consisting solely of normal recurring
+         adjustments) that are, in the opinion of management, necessary for
+         a fair presentation of the financial position, results of
+         operations and cash flows for the interim period.
+
+
+NOTE 2.  Principles of Consolidation
+
+         The consolidated financial statements include the accounts of the
+         corporation and its wholly - owned subsidiary, Orrstown Bank.  All
+         significant intercompany transactions and accounts have been
+         eliminated.
+
+NOTE 3.  Cash Flows
+
+         For purposes of the statements of cash flows, the corporation has
+         defined cash and cash equivalents as those amounts included in the
+         balance sheet captions " cash and due from  banks " and " federal
+         funds sold ".  As permitted by Statement of Financial 
+         Accounting Standards No. 104, the corporation has elected to
+         present the net increase or decrease in deposits  in banks, loans
+         and time deposits in the statement of cash flows.
+
+NOTE 4.  Federal Income Taxes
+
+         For financial reporting purposes the provision for loan losses
+         charged to operating expense is based on management's judgment,
+         whereas for federal income  tax purposes, the amount allowable
+         under present tax law is deducted.  Additionally, certain expenses
+         are charged to operating expense in the period the liability is
+         incurred for financial reporting purposes, whereas for federal
+         income tax purposes, these expenses are deducted when paid.  As a
+         result of these timing differences, deferred income taxes are
+         provided in the financial statements.  Income tax expense is less
+         than the amount calculated using the statutory tax rate primarily
+         as a result of tax exempt income earned from state and political
+         subdivision obligations.
+
+NOTE 5.  Other Commitments
+
+         In the normal course of business, the bank makes various
+         commitments and incurs certain contingent liabilities which are
+         not reflected in the accompanying financial statements.  These
+         commitments include various guarantees and commitments
+         to extend credit and the bank does not anticipate any losses as a
+         result of these transactions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Note 6.  Changes in Common Stock
+
+         On March 20, 1997 the Board of Directors of Orrstown Financial
+         Services, Inc. declared a 5 % stock dividend payable May 15, 1997
+         to shareholders of record May 1, 1997. 
+         Earnings per share, dividends per share and weighted average shares
+         outstanding references have been restated to reflect the 5 % stock
+         dividend for all periods presented.
+
+Note 7.  Investment Securities
+
+         Management determines the appropriate classification of securities
+         at the time of purchase.  If management has the intent and the
+         corporation has the ability at the time of purchase to hold
+         securities until maturity or on a long - term basis, they are
+         classified as securities held to maturity and carried at amortized
+         historical cost.  Securities to be held for indefinite periods of
+         time and not intended to be held to maturity or on a long - term
+         basis are classified as available for sale and carried at fair value.
+         Securities held for indefinite periods of time include securities that
+         management intends to use as part of its asset
+         and liability management strategy and that may be sold in response to
+         changes in interest rates,  resultant prepayment risk and other
+         factors related to interest rate and resultant
+         prepayment risk changes.
+
+         Realized gains and losses on dispositions are based on the net
+         proceeds and the adjusted book value of the securities sold, using
+         the specific indentification method.  Unrealized
+         gains and losses on investment securities available for sale are
+         based on the difference between book value and fair value of each
+         security.  These gains and losses are credited or charged to
+         shareholders' equity, whereas realized gains and losses flow
+         through the corporation's operations.
+
+         Management has classified all investments securities as "available for
+         sale".  At September 30, 1997 fair value exceeded amortized  cost
+         by $1,009,000.  This resulted in an increase in stockholders'
+         equity of $666,000 after recognizing the tax effects of the
+         unrealized gains.  At December 31, 1996, fair market value exceeded
+         amortized cost by $ 365,000 resulting in an increase in stockholders'
+         equity of $ 241,000 after recognizing the tax effects of the
+         unrealized gains.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                              ORRSTOWN FINANCIAL SERVICES, INC.
+
+Item 2.        MANAGEMENT'S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION
+                 AND RESULTS OF OPERATIONS
+
+
+
+RESULTS OF OPERATIONS
+
+
+       Summary
+
+Orrstown Financial Services, Inc. recorded net income of $ 728,000 for the
+third quarter of 1997 compared to $ 608,000 for the same period in 1996,
+representing an increase of $ 120,000 or 19.7 %.  Net income per share was
+$ .71 during 1997's third quarter up $ .11 from the $ .60 earned during
+1996's third quarter.
+
+
+Net income for the first nine months of 1997 was $ 2,006,000 compared to
+$ 1,680,000 for the same period in 1996, representing an increase of
+$ 326,000 or 19.4 %.  Net income per share for the first nine months
+was $ 1.96 up $ .32 from the 1.64 per share realized during the nine months
+ended September 30, 1996.
+
+
+
+The following statistics compare 1997's year to date performance to that
+of 1996:
+
+                               Third Quarter         Nine Months Year to Date
+                                    1997      1996         1997      1996
+
+Return on average assets            1.65 %    1.56 %       1.59 %     1.47 %
+Return on average equity           16.89 %   16.14 %      16.22 %    15.16 %
+Average equity / Average assets     9.75 %    9.59 %       9.83 %     9.71 %
+
+
+A more detailed discussion of the elements having the greatest impact on net
+income follows.
+
+
+Net Interest Income
+
+Third Quarter 1997 vs. Third Quarter 1996
+
+Net interest income for the third quarter of 1997 was $ 1,970,000
+representing a growth of $ 213,000, or 12.1 % , over the $ 1,757,000
+realized during 1996's third quarter.  Loan demand has been adequate to
+enable the loan portfolio to grow at a slightly higher rate than the total
+balance sheet.  This loan growth coupled with liability pricing and product
+offerings have enabled a 14 basis point increase in net interest spread.  In
+addition,  a growth in free funds of $ 1,785,000, or 7.3 %, has enabled a
+12 basis point increase in net interest margin.
+
+
+Nine Months 1997 vs. Nine Months 1996
+
+
+Net interest income for the first nine months of 1997 was $ 5,671,000
+representing an increase of $ 560,000, or 11.0 %, over the $ 5,111,000
+generated during the first nine months of 1996. Loan growth and liability
+pricing have contributed to a 15 basis point increase
+in net interest spread over the prior year's results.  Free funds growth of
+$ 560,000, or 11.5 %, has contributed to a similar 15 basis point increase
+in net interest margin.
+
+
+The table that follows states rates on a fully taxable equivalent basis,
+( F.T.E. ) and demonstrates the aforementioned effects:
+
+<TABLE>
+<S>
+<C>                     <C>                 <C>      <C>              <C>
+            
+                                     THIRD QUARTER
+                                    1997                         1996
+( in thousands )         Avg. Balances       Rates    Avg. Balances    Rates
+
+
+Interest earning assets     165,358           8.55       146,538      8.33 %
+Interest bearing
+ liabilities                138,978           4.27 %     121,943      4.19 %
+                          ---------      ---------    ----------    --------
+
+Free Funds                   26,380                       24,595
+                          =========                   ==========
+
+Net interest income           1,970                        1,757
+                          =========                   ==========
+Net interest spread
+ ( F.T.E. )                   4.28 %                        4.14 %
+                          =========                    ========
+
+Free funds ratio             15.95 %                       16.78 %
+                          =========                   ==========
+Net interest margin
+ ( F.T.E )                   4.96 %                        4.84 %
+                          =========                   =========
+
+                                 Nine Months Year to Date
+                                  1997                          1996
+<C>                    <C>               <C>        <C>               <C>
+(in thousands)         Avg. Balances      Rates      Avg. Balances     Rates
+
+Interest earning assets    158,002        8.57%         142,619        8.44%
+Interest bearing
+ liabilities               132,441        4.25%         119,686        4.27%
+                         _________      ______          _______        _____
+
+Free Funds                 25,561                        22,933
+                         =========                      ========
+
+Net interest income         5,671                         5,111
+                         =========                      ========
+
+Net interest spread
+  (F.T.E.)                                4.32%                        4.17%
+                                        =======                       ======
+
+Free funds ratio           16.18%                        16.08%
+                         ========                       =======
+
+Net interest margin
+ (F.T.E.)                                5.01%                         4.86%
+                                        ======                        ======
+</TABLE>
+
+
+
+
+Other Income and Other Expenses
+
+Third Quarter 1997 vs. Third Quarter 1996
+
+
+Other income increased $ 38,000, or 11.9 %, from $ 318,000 during the third
+quarter of 1996 to $ 356,000 during the third quarter of 1997.  Increases in
+service charges on deposit accounts accounted for $ 36,000 of the increase
+generated by a revised service fee schedule and growth in the deposit base.
+
+Other expense rose $ 163,000, or 14.47 %, from $ 1,134,000 for third quarter
+1996 to $ 1,297,000 for 1997's third quarter.  Salary and benefit increases
+contributed $ 105,000 of the growth.  All expense categories grew due to
+general growth of the bank plus the opening of a sixth branch office
+during January 1997 in Carlisle, Pennsylvania and preliminary planning and
+staffing for the opening of a seventh branch office during November,  1997
+in Chambersburg, Pennsylvania.  Robust loan and deposit growth plus the
+addition of these two banking facilities have contributed to increases in all
+noninterest expense categories.
+
+
+
+Nine Months 1997 vs. Nine Months 1996
+
+Other income increased $ 211,000, or 24.1 %, to $ 1,086,000 from $ 875,000 a
+year ago.  A $ 125,000, or 14.3 %, increase in service charges on deposit
+account plus a $ 75,000, or 26.5 %, increase in trust department income were
+the primarily contributors to this growth.  Other expenses rose $ 439,000,
+or 12.8 %, from $ 3,419,000 during the first nine months of 1996 to
+$ 3,858,000 for the same period of 1997.  All categories of noninterest
+expense rose due to the aforementioned growth plus the addition
+of two new branch locations during 1997.  Staff increases contributed to
+growth in salaries and benefits of $ 226,000, the largest single component
+of increase.
+
+Income Tax Expense 
+
+Income tax expense decreased $ 17,000, or 6.2 %, during 1997's third quarter
+versus third quarter 1996.  Income tax expense rose $ 51,000, or 7.2 % for
+the first nine months of 1997 versus the same period a year ago.  The
+primary factor driving the change in income tax expense is a 97 % increase in
+the municipal bond portfolio from $ 8,933,000 at September 30, 1996 to
+$ 17,609,000 at September 30,1997.  This increase in tax exempt investing
+has reduced effective federal income tax rates as follows:
+                              Third Quarter          Nine Months Year to Date
+                             1997      1996            1997             1996
+Effective income tax rate   26.0 %     31.0 %          27.9 %          29.6 %
+
+The margined federal income tax bracket is 34 % for all periods presented.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PROVISION AND ALLOWANCE FOR LOAN LOSSES
+
+
+The provision for loan losses and the other changes in the
+allowance for loan losses are shown below ( in thousands) : 
+
+
+                              Quarter Ended                Nine Months Ended
+                              September 30                   September 30
+                         1997            1996            1997          1996
+
+Balance, beginning of
+  period                 1,684           1,519           1,620         1,433
+Recoveries                   0               3               1            14
+Provision for loan loss
+  charged to income         45              60             135           180
+                     ---------        --------        --------     ---------
+    Total                1,729           1,582           1,756         1,627
+Losses                      38               9              65            54
+                     ---------        --------        --------     ---------
+Balance, end of
+ period                  1,691           1,573           1,691         1,573
+                    =========        ========        ========        =========
+                                
+In the opinion of management, the allowance, when taken as a whole, is
+adequate to absorb reasonably estimated loan losses inherent in the Bank's
+loan portfolio. The unallocated portion of the allowance for loan losses
+exceeds 70 % at September 30, 1997.
+
+Loans  90 days or more past due (still accruing interest) and those on
+nonaccrual status were as follows at September 30 ( in thousands) :
+
+
+                             90 Days or More
+                                 Past Due                 Nonaccrual Status
+                           1997            1996            1997         1996
+
+Real estate mortgages         463              18             405          0
+Installment loans              42              63              15          0
+Demand and time loans          12               0               0         16
+Credit card                     5              14               0          0
+                        ---------        --------        --------  ---------
+   Total                      522              95             420         16
+                        =========        ========        ========  =========
+
+There were no restructured loans for any of the time periods set forth above.
+
+Any loans classified for regulatory purposes as loss, doubtful, substandard
+or special mention that have not been disclosed under Item III of Industry
+Guide 3 do not represent or result from trends or uncertainties which
+management reasonably expects will materially impact future operating
+results, liquidity or capital resources.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CAPITAL RESOURCES AND BALANCE SHEET FLUCTUATIONS
+
+A comparison of Orrstown Financial Services' capital ratios to regulatory
+minimum requirements at September 30, 1997 is as follows:
+
+                                   Orrstown Financial     Regulatory Minimum
+                                        Services            Requirements
+
+
+Leverage ratio                            9.32 %                 4 %
+
+
+Risk based capital ratios:
+  Tier I  (core capital)                  12.83 %                4 %
+  Combined tier I and tier II
+   (core capital plus allowance
+   for loan losses)                       14.08 %                8 %
+
+
+The robust growth experienced during 1997 has been supported by capital
+growth in the form of retained earnings.  Equity represented 9.97 % of
+assets at September 30, 1997 which is down just slightly from
+10.06 % at December 31, 1997.
+
+All balance sheet fluctuations exceeding 5 % have been created by either
+the robust growth that has been experienced during 1997 or single day
+fluctuations.
+
+Management is not aware of any current recommendations by regulatory
+authorities which, if implemented, would have a material effect on the
+corporation's liquidity, capital resources or operations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                           PART II - OTHER INFORMATION
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                              PART II - OTHER INFORMATION
+
+
+
+
+Item 1 - Legal Proceedings
+
+              None
+
+
+Item 2 - Changes in Securities
+
+             None
+
+
+Item 3 - Defaults Upon Senior Securities
+
+             Not applicable
+
+
+Item 4 - Submission of Matters to a Vote of Security Holders
+
+              None
+
+
+Item 5 - Other Information
+
+             None
+
+
+Item 6 - Exhibits and Reports on Form 8 - K
+
+       (a)  Exhibits - None
+
+      (b)  Reports on Form 8 - K - None
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                SIGNATURES
+Pursuant to the requirements of the Securities Exchange Act of 1934, the
+registrant has duly caused this report to be signed on its behalf by the
+undersigned thereunto duly authorized.
+
+
+
+
+                                           /s/
+                                          ------------------------------------
+                                          (Kenneth R. Shoemaker, President)
+                                          (Duly Authorized Officer)
+
+
+Date ______________________               /s/
+                                          ____________________________________
+                                          (Robert B. Russell, Controller)
+                                          (Chief Accounting Officer)

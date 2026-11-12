@@ -1,0 +1,12 @@
+{
+  "name": "span_mismatch__cpa18_2022q1_ocf_change__quote_digit_changed",
+  "base": "cpa18_2022q1_ocf_change",
+  "expected_error": "span_mismatch",
+  "expected_field": "quote",
+  "operations": [
+    {
+      "op": "set_quote",
+      "value": "Net cash provided by operating activities increased by $23.4 million during the three months ended March 31, 2022 as compared to the same period in 2021"
+    }
+  ]
+}

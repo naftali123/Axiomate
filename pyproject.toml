@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "axiomate"
+version = "0.1.0"
+description = "Formalizes text into checkable claims and compares them against a source's record."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { file = "LICENSE" }
+dependencies = ["pydantic>=2.7,<3"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+data = ["pyarrow>=15"]
+
+[project.scripts]
+axiomate = "axiomate.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/axiomate"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

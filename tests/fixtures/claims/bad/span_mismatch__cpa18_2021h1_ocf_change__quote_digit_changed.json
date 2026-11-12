@@ -1,0 +1,12 @@
+{
+  "name": "span_mismatch__cpa18_2021h1_ocf_change__quote_digit_changed",
+  "base": "cpa18_2021h1_ocf_change",
+  "expected_error": "span_mismatch",
+  "expected_field": "quote",
+  "operations": [
+    {
+      "op": "set_quote",
+      "value": "Net cash provided by operating activities decreased by $2.8 million during the six months ended June 30, 2021 as compared to the same period in 2020"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "schema_invalid__everi_2023q1_net_income__period_reversed",
+  "base": "everi_2023q1_net_income",
+  "expected_error": "schema_invalid",
+  "expected_field": "period_end",
+  "operations": [
+    {
+      "op": "set",
+      "path": "claim.period_end",
+      "value": "1900-01-01"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "span_outside_segment__everi_2023q1_net_income__span_crosses_segment",
+  "base": "everi_2023q1_net_income",
+  "expected_error": "span_outside_segment",
+  "expected_field": "span_end",
+  "operations": [
+    {
+      "op": "extend_past_segment",
+      "by": 8
+    }
+  ]
+}

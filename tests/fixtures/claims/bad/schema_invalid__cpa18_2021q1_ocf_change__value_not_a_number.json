@@ -1,0 +1,13 @@
+{
+  "name": "schema_invalid__cpa18_2021q1_ocf_change__value_not_a_number",
+  "base": "cpa18_2021q1_ocf_change",
+  "expected_error": "schema_invalid",
+  "expected_field": "value_low",
+  "operations": [
+    {
+      "op": "set",
+      "path": "claim.value_low",
+      "value": "abc"
+    }
+  ]
+}

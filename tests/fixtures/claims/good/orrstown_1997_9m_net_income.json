@@ -1,0 +1,33 @@
+{
+  "name": "orrstown_1997_9m_net_income",
+  "document": "orrstown_1997q3_10q.txt",
+  "quote": "Net income for the first nine months of 1997 was $ 2,006,000",
+  "quote_occurrence": 1,
+  "claim": {
+    "company_cik": "0000826154",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "2006000",
+    "value_high": "2006000",
+    "stated_value": "2006000",
+    "stated_scale": "units",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 1997,
+    "fiscal_period": "9M",
+    "period_start": "1997-01-01",
+    "period_end": "1997-09-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "said_on": "1997-11-14"
+  },
+  "flags": [],
+  "assumptions": [],
+  "expected_status": "formal",
+  "checked_against": "hand"
+}

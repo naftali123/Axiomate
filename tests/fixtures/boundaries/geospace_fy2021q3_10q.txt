@@ -1,0 +1,45 @@
+Indicate by check mark whether the registrant is a large accelerated filer, an accelerated filer, a non-accelerated filer, smaller reporting company, or an emerging growth company.
+See the definitions of “large accelerated filer,” “accelerated filer,” “smaller reporting company,” and “emerging growth company” in Rule 12b-2 of the Exchange Act.
+
+The Company has elected to treat shipping and handling activities in a sales transaction after the customer obtains control of the goods as a fulfillment cost and not as a promised service.
+Accordingly, fulfillment costs related to the shipping and handling of goods are accrued at the time of shipment.
+Amounts billed to a customer in a sales transaction related to reimbursable shipping and handling costs are included in revenue and the associated costs incurred by the Company for reimbursable shipping and handling expenses are reported in cost of revenue.
+
+In January 2021, the Company transferred the security pursuant to a purchase agreement (the “Agreement”) entered with a third party (the “Buyer”).
+Pursuant to the Agreement, the Company received non-refundable consideration of $0.3 million and will receive additional cash compensation of $2.4 million from the Buyer if certain terms and conditions between the Buyer and the Company’s customer are met by December 31, 2021.
+In the event these terms and conditions are not met, the Company has the option to reacquire the bond from the Buyer for one dollar US ($1.00).
+The Company recognized a gain on investment of $0.3 million during the three months ended March 31, 2021 in connection with the transfer of the bond.
+
+During the third quarter of fiscal year 2021, the Company entered into a sales-type lease with a customer on land-based wireless seismic equipment from its rental fleet.
+The lease has a term of six months.
+Future minimum payments required under the lease at June 30, 2021 were $3.0 million, including $31,000 of unearned income.
+The future minimum leases payments of $2.0 million and $1.0 million are due in fiscal year 2021 and 2022, respectively.
+Interest income related to the lease of $12,000 was recognized for the three and nine months ended June 30, 2021.
+The ownership of the equipment will transfer to the customer at the end of the lease term.
+
+The Company’s goodwill is entirely associated with its Emerging Markets reporting unit.
+At June 30, 2021, the Company determined there were no triggering events requiring an impairment assessment of its goodwill and other intangible assets.
+The Company performs its annual goodwill impairment test in the fourth quarter.
+If the Company determines that the future cash flows anticipated to be generated from its Emerging Markets reporting unit will not be sufficient to recover the carrying amount of the reporting unit, it will need to recognize an impairment charge equal to the difference between the carrying amount of the reporting unit and its fair value, not to exceed the carrying amount of the goodwill.
+
+As of June 30, 2021, the Company had combined trade accounts, financing receivables and unbilled receivables from three customers of $5.5 million, $6.1 million and $1.6 million, respectively.
+During the three months ended June 30, 2021, the revenue recognized from these three customers was $4.5 million, $0.4 million and $1.0 million, respectively.
+During the nine months ended June 30, 2021, revenue recognized from these three customers was $17.3 million, $13.2 million and $9.9 million, respectively.
+
+We have developed multiple versions of a land-based wireless (or nodal) seismic data acquisition system.
+Rather than utilizing interconnecting cables as required by most traditional land data acquisition systems, each of our wireless stations operate as an independent data collection system, allowing for virtually unlimited channel configurations.
+As a result, our wireless systems require less maintenance, which we believe allows our customers to operate more effectively and efficiently because of its reduced environmental impact, lower weight and ease of operation.
+Each wireless station is available in a single-channel or three-channel configuration.
+Since its introduction in 2008 and through June 30, 2021, we have sold 484,000 wireless channels and we currently have 74,000 wireless channels in our rental fleet.
+
+The ongoing COVID-19 pandemic has spread across the globe and has negatively impacted worldwide economic activity, including the global demand for oil and natural gas, and continues to create challenges in our markets.
+While we continue to support our customers, there remain uncertainties regarding the duration and the extent to which the COVID-19 pandemic will ultimately have a negative impact on the demand for our products and services or on our supply chain.
+We continue to closely monitor the situation as information becomes readily available.
+
+Reservoir Product Revenue – For the three months ended June 30, 2021, revenue from our reservoir products was $1.1 million, an increase of $0.8 million from the corresponding period of the prior fiscal year.
+For the nine months ended June 30, 2021, revenue from our reservoir products was $1.7 million, an increase of $0.8 million from the corresponding period of the prior fiscal year.
+The increase for both periods was primarily due to higher reservoir monitoring service revenue.
+
+For the nine months ended June 30, 2021, we used $3.6 million from financing activities for the purchase of treasury stock pursuant to a stock buy-back program authorized by our board of directors.
+The program authorizes us to repurchase up to $5 million of our common stock in open market transactions.
+At June 30, 2021, approximately $1.4 million of our common stock remains available for repurchases under the program.

@@ -1,0 +1,33 @@
+{
+  "name": "everi_2024q1_revenue",
+  "document": "everi_2024q1_10q.html",
+  "quote": "to approximately $189.3 million for the three months ended March 31, 2024",
+  "quote_occurrence": 1,
+  "claim": {
+    "company_cik": "0001318568",
+    "metric": "revenue",
+    "value_kind": "approximate",
+    "value_low": "189300000",
+    "value_high": "189300000",
+    "stated_value": "189.3",
+    "stated_scale": "millions",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2024,
+    "fiscal_period": "Q1",
+    "period_start": "2024-01-01",
+    "period_end": "2024-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "said_on": "2024-05-08"
+  },
+  "flags": [],
+  "assumptions": [],
+  "expected_status": "formal",
+  "checked_against": "facts: revenue 2024-01-01..2024-03-31 = 189346000"
+}

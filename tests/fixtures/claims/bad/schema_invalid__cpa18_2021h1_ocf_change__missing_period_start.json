@@ -1,0 +1,12 @@
+{
+  "name": "schema_invalid__cpa18_2021h1_ocf_change__missing_period_start",
+  "base": "cpa18_2021h1_ocf_change",
+  "expected_error": "schema_invalid",
+  "expected_field": "period_start",
+  "operations": [
+    {
+      "op": "delete",
+      "path": "claim.period_start"
+    }
+  ]
+}

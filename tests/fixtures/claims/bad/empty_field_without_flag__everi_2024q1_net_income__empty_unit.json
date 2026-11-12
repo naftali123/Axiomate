@@ -1,0 +1,13 @@
+{
+  "name": "empty_field_without_flag__everi_2024q1_net_income__empty_unit",
+  "base": "everi_2024q1_net_income",
+  "expected_error": "empty_field_without_flag",
+  "expected_field": "unit",
+  "operations": [
+    {
+      "op": "set",
+      "path": "claim.unit",
+      "value": null
+    }
+  ]
+}

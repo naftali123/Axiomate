@@ -1,0 +1,33 @@
+{
+  "name": "cpa18_2022q1_ocf_change",
+  "document": "cpa18_2022q1_10q.html",
+  "quote": "Net cash provided by operating activities increased by $13.4 million during the three months ended March 31, 2022 as compared to the same period in 2021",
+  "quote_occurrence": 1,
+  "claim": {
+    "company_cik": "0001558235",
+    "metric": "operating_cash_flow",
+    "value_kind": "exact",
+    "value_low": "13400000",
+    "value_high": "13400000",
+    "stated_value": "13.4",
+    "stated_scale": "millions",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2022,
+    "fiscal_period": "Q1",
+    "period_start": "2022-01-01",
+    "period_end": "2022-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "change_vs_period",
+    "baseline_start": "2021-01-01",
+    "baseline_end": "2021-03-31",
+    "polarity": "affirmed",
+    "said_on": "2022-05-09"
+  },
+  "flags": [],
+  "assumptions": [],
+  "expected_status": "formal",
+  "checked_against": "facts: 30047000 - 16652000 = 13395000"
+}

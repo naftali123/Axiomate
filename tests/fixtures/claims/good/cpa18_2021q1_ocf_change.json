@@ -1,0 +1,33 @@
+{
+  "name": "cpa18_2021q1_ocf_change",
+  "document": "cpa18_2021q1_10q.html",
+  "quote": "Net cash provided by operating activities decreased by $6.2 million during the three months ended March 31, 2021 as compared to the same period in 2020",
+  "quote_occurrence": 1,
+  "claim": {
+    "company_cik": "0001558235",
+    "metric": "operating_cash_flow",
+    "value_kind": "exact",
+    "value_low": "-6200000",
+    "value_high": "-6200000",
+    "stated_value": "6.2",
+    "stated_scale": "millions",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "Q1",
+    "period_start": "2021-01-01",
+    "period_end": "2021-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "change_vs_period",
+    "baseline_start": "2020-01-01",
+    "baseline_end": "2020-03-31",
+    "polarity": "affirmed",
+    "said_on": "2021-05-10"
+  },
+  "flags": [],
+  "assumptions": [],
+  "expected_status": "formal",
+  "checked_against": "facts: 16652000 - 22808000 = -6156000"
+}

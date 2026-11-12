@@ -1,0 +1,13 @@
+{
+  "name": "empty_field_without_flag__cpa18_2022q1_ocf_change__empty_period_start",
+  "base": "cpa18_2022q1_ocf_change",
+  "expected_error": "empty_field_without_flag",
+  "expected_field": "period_start",
+  "operations": [
+    {
+      "op": "set",
+      "path": "claim.period_start",
+      "value": null
+    }
+  ]
+}

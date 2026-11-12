@@ -1,0 +1,12 @@
+{
+  "name": "document_not_found__cpa18_2022q1_ocf_change__unknown_document",
+  "base": "cpa18_2022q1_ocf_change",
+  "expected_error": "document_not_found",
+  "expected_field": "document_id",
+  "operations": [
+    {
+      "op": "set_document_id",
+      "value": "0000000000000000000000000000000000000000000000000000000000000003"
+    }
+  ]
+}

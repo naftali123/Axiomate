@@ -1,0 +1,39 @@
+{
+  "name": "orrstown_1996q3_net_income_restated",
+  "document": "orrstown_1997q3_10q.txt",
+  "quote": "compared to $ 608,000 for the same period in 1996",
+  "quote_occurrence": 1,
+  "claim": {
+    "company_cik": "0000826154",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "608000",
+    "value_high": "608000",
+    "stated_value": "608000",
+    "stated_scale": "units",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 1996,
+    "fiscal_period": "Q3",
+    "period_start": "1996-07-01",
+    "period_end": "1996-09-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "said_on": "1997-11-14"
+  },
+  "flags": [],
+  "assumptions": [
+    {
+      "statement": "The metric is net income, named earlier in the same sentence",
+      "field": "metric",
+      "origin": "human"
+    }
+  ],
+  "expected_status": "formal-with-assumptions",
+  "checked_against": "hand"
+}

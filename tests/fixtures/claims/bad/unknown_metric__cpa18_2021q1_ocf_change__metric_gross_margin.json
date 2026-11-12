@@ -1,0 +1,13 @@
+{
+  "name": "unknown_metric__cpa18_2021q1_ocf_change__metric_gross_margin",
+  "base": "cpa18_2021q1_ocf_change",
+  "expected_error": "unknown_metric",
+  "expected_field": "metric",
+  "operations": [
+    {
+      "op": "set",
+      "path": "claim.metric",
+      "value": "gross_margin"
+    }
+  ]
+}

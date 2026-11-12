@@ -1,0 +1,33 @@
+{
+  "name": "cpa18_2021h1_ocf_change",
+  "document": "cpa18_2021q2_10q.html",
+  "quote": "Net cash provided by operating activities decreased by $1.8 million during the six months ended June 30, 2021 as compared to the same period in 2020",
+  "quote_occurrence": 1,
+  "claim": {
+    "company_cik": "0001558235",
+    "metric": "operating_cash_flow",
+    "value_kind": "exact",
+    "value_low": "-1800000",
+    "value_high": "-1800000",
+    "stated_value": "1.8",
+    "stated_scale": "millions",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "H1",
+    "period_start": "2021-01-01",
+    "period_end": "2021-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "change_vs_period",
+    "baseline_start": "2020-01-01",
+    "baseline_end": "2020-06-30",
+    "polarity": "affirmed",
+    "said_on": "2021-08-09"
+  },
+  "flags": [],
+  "assumptions": [],
+  "expected_status": "formal",
+  "checked_against": "facts: 37104000 - 38924000 = -1820000"
+}
