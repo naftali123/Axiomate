@@ -105,224 +105,179 @@ td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
 .tw{overflow-x:auto}
 ul.plain{margin:0;padding-inline-start:20px}
 @media(prefers-reduced-motion:no-preference){.cl,.stage{transition:box-shadow .12s}}
+
+/* v2 additions */
+a.row-link{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1.2fr) minmax(0,1.4fr) auto;gap:14px;align-items:center;text-decoration:none;color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+a.row-link:hover{box-shadow:0 0 0 2px var(--claim)}
+a.row-link:focus-visible{outline:2px solid var(--claim);outline-offset:2px}
+@media(max-width:700px){a.row-link{grid-template-columns:minmax(0,1fr) auto}a.row-link .hide-s{display:none}}
+.list{display:grid;gap:8px}
+.nm{font-weight:700;font-size:1.05rem}.meta{color:var(--muted);font-size:.85rem}
+.meter{height:8px;border-radius:99px;background:var(--off-bg);overflow:hidden;min-width:80px}
+.meter i{display:block;height:100%;background:var(--claim)}
+.meter.low i{background:var(--diff)}.meter.few i{background:var(--off)}
+.rt{display:grid;gap:3px}.rt b{font-variant-numeric:tabular-nums}
+.types{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 14px}
+.types button{font:inherit;font-size:.85rem;border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:99px;padding:3px 12px;cursor:pointer}
+.types button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
+.types button:disabled{color:var(--off);border-style:dashed;cursor:not-allowed}
+.crumb{font-size:.88rem;color:var(--muted);margin:14px 0 0}.crumb a{color:var(--claim)}
+.stl{display:grid;gap:8px}
+a.st{display:grid;gap:6px;text-decoration:none;color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+a.st:hover{box-shadow:0 0 0 2px var(--claim)}a.st:focus-visible{outline:2px solid var(--claim);outline-offset:2px}
+.tags{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.tag{font-size:.78rem;border:1px solid var(--line);border-radius:6px;padding:1px 8px;color:var(--muted);background:var(--bg)}
+.hd{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:flex-start}
+.verdict{font-size:1.1rem;margin:10px 0}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin:6px 0}
+@media(max-width:640px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stp{border:1px solid var(--line);border-radius:8px;padding:8px;font-size:.88rem;background:var(--bg)}
+.stp b{display:block}.stp.y{border-color:var(--ok)}.stp.n{border-style:dashed;color:var(--off)}
+details{margin-top:10px}summary{cursor:pointer;color:var(--claim);font-weight:500}
+select{font:inherit;background:var(--surface);color:var(--fg);border:1px solid var(--line);border-radius:6px;padding:4px 8px}
+.bar2{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:10px}
 </style>
 </head>
 <body>
+<div dir="rtl" lang="he">
 <div class="wrap">
 <header class="bar">
   <span class="brand">Axiomate</span>
   <nav aria-label="תצוגות">
-    <a href="#document" data-v="document">מסמך</a>
-    <a href="#finding" data-v="finding">ממצא</a>
-    <a href="#trust" data-v="trust">אמון</a>
+    <a href="#list" data-v="list">גופים</a>
+    <a href="#about" data-v="about">על הדירוג והאמון</a>
   </nav>
   <span class="sp"></span>
   <button class="t" id="theme" type="button">ערכת נושא</button>
 </header>
-<div class="example"><b>מודל להמחשה.</b> החברה «Example Corp» והמספרים כאן בדויים, כדי להראות את המראה והתחושה. הם אינם דוח אמיתי ואינם תוצאה של המערכת.</div>
-
-<!-- ============ DOCUMENT ============ -->
-<div class="view" id="v-document">
-  <h1>Example Corp · דוח רבעוני 10-Q · Q3 2025</h1>
-  <p class="sub">פורסם ב־28.10.2025 · מה המערכת עשתה עם הטקסט הזה?</p>
-
-  <section class="card">
-    <h2>מסלול העיבוד של המסמך</h2>
-    <div class="strip" id="strip"></div>
-    <div id="stagepanel" hidden></div>
-  </section>
-
-  <section class="card">
-    <h2>לאן הלך הטקסט</h2>
-    <div class="funnel" id="funnel"></div>
-    <p class="sub" style="margin:10px 0 0">כל פס לחיץ ומציג את המשפטים שבו. משפט שאינו בתוצאות נמצא באחד הפסים או נפל בשלב עם סיבה כתובה.</p>
-  </section>
-
-  <section class="card">
-    <h2>קורא המקור</h2>
-    <div class="filters" id="filters" role="group" aria-label="סינון">
-      <button type="button" aria-pressed="true" data-f="all">הכול</button>
-      <button type="button" aria-pressed="false" data-f="ok">עברו</button>
-      <button type="button" aria-pressed="false" data-f="assume">נשענים על הנחה</button>
-      <button type="button" aria-pressed="false" data-f="err">נדחו</button>
-      <button type="button" aria-pressed="false" data-f="off">לא ניתנים להערכה</button>
-    </div>
-    <div class="reader">
-      <div class="ev" lang="en" id="ev">
-        <p><mark data-c="c1">Total revenues were $4.2 billion for the third quarter of 2025</mark>, compared with <mark data-c="c2" class="flag">$4.0 billion in the same quarter last year</mark>.</p>
-        <p><span class="quiet" data-c="c3">Net income decreased due to weaker demand in our consumer segment.</span></p>
-        <p><mark data-c="c4">Net cash provided by operating activities was $610 million</mark> in the quarter.</p>
-        <p>Diluted earnings per share was <mark data-c="c5" class="err">$1.35</mark>.</p>
-      </div>
-      <div class="cls" id="cls">
-        <button class="cl" data-c="c1" data-k="ok" type="button">
-          <span class="t"><span class="m">הכנסות · Q3 2025</span><span class="chip ok">עבר</span></span>
-          <span class="v big">$4.2 מיליארד</span>
-          <span class="why">הציטוט תומך בערך, בסדר הגודל ובתקופה.</span>
-        </button>
-        <button class="cl" data-c="c2" data-k="ok assume" type="button">
-          <span class="t"><span class="m">הכנסות · Q3 2024</span><span class="chip flag">⚑ נשען על הנחה</span></span>
-          <span class="v big">$4.0 מיליארד</span>
-          <span class="why">הנחה: «אותו רבעון אשתקד» = Q3 2024 (נקבעה מתאריך הדוח).</span>
-        </button>
-        <button class="cl" data-c="c3" data-k="off" type="button">
-          <span class="t"><span class="m">רווח נקי</span><span class="chip off">לא ניתן להערכה</span></span>
-          <span class="why">המשפט מתאר כיוון בלי מספר, ולכן לא נוצרה טענה. אין כאן ניחוש.</span>
-        </button>
-        <button class="cl" data-c="c4" data-k="ok" type="button">
-          <span class="t"><span class="m">תזרים מפעילות שוטפת · Q3 2025</span><span class="chip ok">עבר</span></span>
-          <span class="v big">$610 מיליון</span>
-          <span class="why">הציטוט תומך בערך, בסדר הגודל ובתקופה.</span>
-        </button>
-        <button class="cl" data-c="c5" data-k="err" type="button">
-          <span class="t"><span class="m">רווח למניה (מדולל)</span><span class="chip err">מועמדת נדחתה</span></span>
-          <span class="why">המודל הציע 13.5; הציטוט אומר 1.35. אי־התאמה בערך, ולכן הטענה לא נשמרה. הקוד: <code>value_mismatch</code></span>
-        </button>
-      </div>
-    </div>
-    <p class="sub" style="margin:10px 0 0">מועמדות שהוצעו על ידי מודל מסומנות ככאלה ועברו בדיקה דטרמיניסטית. הציטוטים מוצגים באותיות המקור ובכיוון המקור.</p>
-  </section>
-</div>
-
-<!-- ============ FINDING ============ -->
-<div class="view" id="v-finding">
-  <h1>אי־התאמה · הכנסות · Q3 2025</h1>
-  <p class="sub">שלוש רמות פירוט. ברירת המחדל היא הראשונה.</p>
-  <div class="depth" role="group" aria-label="רמת פירוט">
-    <button type="button" aria-pressed="true" data-l="1">1 · במילים פשוטות</button>
-    <button type="button" aria-pressed="false" data-l="2">2 · הטענה המובנית</button>
-    <button type="button" aria-pressed="false" data-l="3">3 · עקבות ההוכחה</button>
-  </div>
-
-  <section class="card">
-    <div class="row"><span><span class="chip diff">◆ אי־התאמה</span> <span class="chip flag">מותנית</span></span><span class="sub" style="margin:0">הכנסות · Q3 2025</span></div>
-    <div class="two" style="margin-top:12px">
-      <div><h2>נאמר ב־10-Q · 28.10.2025</h2><div class="q">Total revenues were $4.2 billion for the third quarter of 2025</div></div>
-      <div><h2>בתיעוד הקודם · הודעת תוצאות · 23.10.2025</h2><div class="q">Revenues for the quarter totaled $4.1 billion</div></div>
-    </div>
-
-    <div class="layer on" id="l1">
-      <p class="big">ב־Q3 2025 החברה אמרה שההכנסות היו 4.2 מיליארד דולר. בהודעה הקודמת שלה על אותו רבעון נאמר 4.1 מיליארד דולר. ההפרש: 0.1 מיליארד (2.4%).</p>
-      <p>התוצאה <b>מותנית</b> כי היא נשענת על הנחה אחת: «הכנסות» פירושו «סך ההכנסות». המערכת מדווחת על אי־התאמה בין שני טקסטים. היא לא קובעת איזה מהם נכון.</p>
-    </div>
-    <div class="layer" id="l2">
-      <dl class="kv">
-        <dt>מדד</dt><dd>הכנסות (revenue)</dd>
-        <dt>ערך שנאמר</dt><dd>4.2 מיליארד USD</dd>
-        <dt>ערך בתיעוד</dt><dd>4.1 מיליארד USD</dd>
-        <dt>התקופה שהטענה עוסקת בה</dt><dd>Q3 2025 (1.7.2025 – 30.9.2025)</dd>
-        <dt>מתי נאמר</dt><dd>28.10.2025 (נאמר) · 23.10.2025 (תיעוד)</dd>
-        <dt>בסיס · אופי</dt><dd>מדווח · בפועל</dd>
-        <dt>הנחה</dt><dd><span class="chip flag">⚑</span> «הכנסות» = «סך ההכנסות» · מקור: מאגר הקשר</dd>
-      </dl>
-    </div>
-    <div class="layer" id="l3">
-      <pre>{
-  "finding": "disagreement",
-  "grade": "conditional",
-  "rests_on": [
-    {"claim": "c-8f2a…", "quote": "Total revenues were $4.2 billion…"},
-    {"claim": "c-31bd…", "quote": "Revenues for the quarter totaled $4.1 billion"}
-  ],
-  "rules": ["same-metric", "same-period", "values-differ"],
-  "assumptions": [{"statement": "revenue means total revenues", "origin": "context store"}]
-}</pre>
-      <p class="sub" style="margin-top:8px">נתוני הדוגמה מייצגים את המבנה בלבד.</p>
-    </div>
-  </section>
-</div>
-
-<!-- ============ TRUST ============ -->
-<div class="view" id="v-trust">
-  <h1>עד כמה אפשר לסמוך על המערכת</h1>
-  <p class="sub">המספרים כאן נקראים מדוחות ההערכה, כך שהם זהים לעמוד הסטטוס. הערכים בטבלה לקוחים מהמדידות שכבר בוצעו על נתוני הפיתוח.</p>
-  <section class="card">
-    <div class="tw"><table>
-      <thead><tr><th>שלב</th><th>מה נמדד</th><th>תוצאה</th><th>סף</th><th>על מה</th></tr></thead>
-      <tbody>
-        <tr><td>קליטה</td><td>גבולות משפטים</td><td class="num">241 / 241</td><td class="num">≥ 98%</td><td>דוחות פיתוח</td></tr>
-        <tr><td>שער אימות</td><td>טענות מושחתות שנתפסו</td><td class="num">84 / 84</td><td class="num">100%</td><td>נתוני פיתוח</td></tr>
-        <tr><td>שער אימות</td><td>טענות נכונות שעברו</td><td class="num">115 / 115</td><td class="num">≥ 98%</td><td>נתוני פיתוח</td></tr>
-        <tr><td>פרשנות</td><td>דיוק וכיסוי</td><td><span class="chip off">טרם נמדד</span></td><td class="num">98% · 70%</td><td>דוחות נפרדים (טרם הורצו)</td></tr>
-      </tbody>
-    </table></div>
-  </section>
-  <section class="card">
-    <h2>מה זה לא מכסה</h2>
-    <ul class="plain">
-      <li>כל המדידות עד כה הן על נתוני הפיתוח. הדוחות הנפרדים טרם נמדדו.</li>
-      <li>הנחות שאינן בציטוט נבדקות רק בהערכה, לא בשער.</li>
-      <li>משפטים בלי מספר אינם הופכים לטענות.</li>
-      <li>דיוק על טקסט רציף יימדד על מדגם של כ־30 טענות בלבד.</li>
-    </ul>
-  </section>
+<div class="example"><b>מודל להמחשה.</b> כל הגופים, ההצהרות והמספרים כאן בדויים, כדי להראות את המראה והתחושה. הם אינם דוחות אמיתיים ואינם תוצאה של המערכת.</div>
+<main id="app"></main>
 </div>
 </div>
-
 <script>
-var STAGES=[
- {n:'קליטה',c:'412',u:'משפטים',s:'done',t:'שומר את המסמך, מפיק את הטקסט הנראה ומחלק למשפטים.',i:'קובץ HTML של הדוח',o:'412 משפטים עם מיקום מדויק בטקסט'},
- {n:'פרשנות',c:'38',u:'מועמדות',s:'done',t:'מודל שפה מציע טענות מובנות. הוא מציע בלבד ואינו קובע דבר.',i:'52 משפטים שיש בהם מספר',o:'38 מועמדות, כל אחת עם ציטוט'},
- {n:'שער',c:'27',u:'עברו',s:'done',t:'קוד דטרמיניסטי קורא את הציטוט שוב ומשווה לטענה: ערך, סדר גודל, סימן, תקופה, מדד.',i:'38 מועמדות',o:'27 עברו · 4 סומנו בדגל · 7 נדחו עם סיבה'},
- {n:'הקשר',c:'·',u:'טרם נבנה',s:'nb',t:'משלים הנחות מתוך מאגרי הקשר (כינויים, ברירות מחדל).',i:'—',o:'—'},
- {n:'מאגר',c:'27',u:'טענות',s:'done',t:'שומר טענות כגרסאות שאינן ניתנות לשינוי, כל אחת מעוגנת לציטוט.',i:'27 טענות',o:'27 טענות שניתן לשלוף לפי חברה, מדד ותקופה'},
- {n:'התאמה',c:'·',u:'טרם נבנה',s:'nb',t:'מצמיד טענות על אותו מדד ואותה תקופה.',i:'—',o:'—'},
- {n:'השוואה',c:'·',u:'טרם נבנה',s:'nb',t:'משווה טענות מותאמות ומפיק פסיקות עם עקבות הוכחה.',i:'—',o:'—'},
- {n:'סקירה',c:'4',u:'פתוחים',s:'attn',t:'מציג לאדם דגלים פתוחים ואוסף את החלטותיו.',i:'4 דגלים',o:'החלטות שנשמרות כנתונים'}
+var ENT=[
+ {id:'example-corp',name:'Example Corp',type:'חברה ציבורית',tk:'EXC',total:29,ev:18,ok:16,last:'28.10.2025'},
+ {id:'northwind-demo',name:'Northwind Demo Ltd',type:'חברה ציבורית',tk:'NWD',total:41,ev:30,ok:30,last:'30.10.2025'},
+ {id:'harbor-analytics',name:'Harbor Analytics Inc',type:'חברה ציבורית',tk:'HBA',total:22,ev:7,ok:6,last:'05.11.2025'},
+ {id:'meridian-foods',name:'Meridian Demo Foods',type:'חברה ציבורית',tk:'MDF',total:35,ev:21,ok:15,last:'29.10.2025'}
 ];
-var FUN=[['412 משפטים בדוח',412,''],['52 מכילים מספר',52,''],['38 מועמדות',38,''],['27 טענות שנשמרו',27,'ok'],['4 סומנו בדגל',4,'flag'],['7 נדחו',7,'err']];
-var strip=document.getElementById('strip'),sp=document.getElementById('stagepanel');
-STAGES.forEach(function(s,k){
-  var b=document.createElement('button');b.type='button';b.className='stage '+s.s;b.setAttribute('aria-expanded','false');
-  b.innerHTML='<b>'+(k+1)+'. '+s.n+'</b><span class="n">'+s.c+'</span><small>'+s.u+'</small>';
-  b.onclick=function(){
-    var open=b.getAttribute('aria-expanded')==='true';
-    strip.querySelectorAll('.stage').forEach(function(x){x.setAttribute('aria-expanded','false')});
-    if(open){sp.hidden=true;return}
-    b.setAttribute('aria-expanded','true');sp.hidden=false;
-    sp.innerHTML='<b>'+(k+1)+'. '+s.n+'</b>'+(s.s==='nb'?' <span class="chip off">טרם נבנה</span>':'')+'<p style="margin:6px 0">'+s.t+'</p><dl class="kv"><dt>נכנס</dt><dd>'+s.i+'</dd><dt>יצא</dt><dd>'+s.o+'</dd></dl>';
-  };
-  strip.appendChild(b);
-});
-var fn=document.getElementById('funnel');
-FUN.forEach(function(f){
-  var b=document.createElement('button');b.type='button';b.className='bar-f';
-  b.innerHTML='<span class="fill '+f[2]+'" style="width:'+Math.max(f[1]/412*60,1.5)+'%"></span><span class="lbl">'+f[0]+'</span>';
-  fn.appendChild(b);
-});
-/* reader linking + filters */
-var ev=document.getElementById('ev'),cl=document.getElementById('cls');
-function hot(id,on){
-  ev.querySelectorAll('[data-c="'+id+'"]').forEach(function(e){e.classList.toggle('hot',on)});
-  cl.querySelectorAll('[data-c="'+id+'"]').forEach(function(e){e.classList.toggle('hot',on)});
+var ST={ok:['עקבית','ok'],diff:['אי־התאמה','diff'],off:['לא ניתנת להערכה','off']};
+var STS=[
+ {id:'s1',date:'28.10.2025',src:'דוח רבעוני 10-Q',m:'הכנסות',p:'Q3 2025',k:'diff',as:true,
+  q:'Total revenues were $4.2 billion for the third quarter of 2025',
+  read:'ההכנסות ברבעון השלישי של 2025 היו 4.2 מיליארד דולר.',
+  verdict:'בהודעה הקודמת של החברה על אותו רבעון נאמר 4.1 מיליארד דולר. ההפרש הוא 0.1 מיליארד (2.4%).',
+  rec:{q:'Revenues for the quarter totaled $4.1 billion',d:'23.10.2025',s:'הודעת תוצאות',link:'s5'},
+  note:'התוצאה מותנית: היא נשענת על ההנחה ש«הכנסות» פירושו «סך ההכנסות». המערכת מדווחת על אי־התאמה בין שני טקסטים ואינה קובעת איזה מהם נכון.',
+  steps:[1,1,1,1],
+  det:[['מדד','הכנסות'],['ערך','4.2 מיליארד USD'],['תקופה','Q3 2025 (1.7.2025 – 30.9.2025)'],['נאמר ב','28.10.2025'],['הנחה','«הכנסות» = «סך ההכנסות» · מקור: מאגר הקשר']]},
+ {id:'s5',date:'23.10.2025',src:'הודעת תוצאות',m:'הכנסות',p:'Q3 2025',k:'diff',as:true,
+  q:'Revenues for the quarter totaled $4.1 billion',
+  read:'ההכנסות ברבעון השלישי של 2025 היו 4.1 מיליארד דולר.',
+  verdict:'הדוח הרבעוני שפורסם אחר כך אומר 4.2 מיליארד דולר על אותו רבעון.',
+  rec:{q:'Total revenues were $4.2 billion for the third quarter of 2025',d:'28.10.2025',s:'דוח רבעוני 10-Q',link:'s1'},
+  note:'התוצאה מותנית באותה הנחה על «סך ההכנסות».',steps:[1,1,1,1],
+  det:[['מדד','הכנסות'],['ערך','4.1 מיליארד USD'],['תקופה','Q3 2025'],['נאמר ב','23.10.2025']]},
+ {id:'s2',date:'28.10.2025',src:'דוח רבעוני 10-Q',m:'תזרים מזומנים תפעולי',p:'Q3 2025',k:'ok',as:false,
+  q:'Net cash provided by operating activities was $610 million',
+  read:'התזרים מפעילות שוטפת ברבעון היה 610 מיליון דולר.',
+  verdict:'ההצהרה עקבית עם מה שהחברה אמרה קודם על אותה תקופה.',
+  rec:{q:'Operating cash flow was $610 million in the third quarter',d:'23.10.2025',s:'הודעת תוצאות'},
+  note:'',steps:[1,1,1,1],
+  det:[['מדד','תזרים מזומנים תפעולי'],['ערך','610 מיליון USD'],['תקופה','Q3 2025']]},
+ {id:'s4',date:'28.10.2025',src:'דוח רבעוני 10-Q',m:'רווח למניה',p:'Q3 2025',k:'ok',as:false,
+  q:'Diluted earnings per share was $1.35',
+  read:'הרווח למניה (מדולל) ברבעון היה 1.35 דולר.',
+  verdict:'ההצהרה עקבית עם מה שהחברה אמרה קודם על אותה תקופה.',
+  rec:{q:'$1.35 per diluted share',d:'23.10.2025',s:'הודעת תוצאות'},
+  note:'',steps:[1,1,1,1],
+  det:[['מדד','רווח למניה (מדולל)'],['ערך','1.35 USD'],['תקופה','Q3 2025']]},
+ {id:'s3',date:'28.10.2025',src:'דוח רבעוני 10-Q',m:'רווח נקי',p:'Q3 2025',k:'off',as:false,
+  q:'Net income decreased due to weaker demand in our consumer segment.',
+  read:'הרווח הנקי ירד בגלל ביקוש חלש במגזר הצרכנים.',
+  verdict:'לא ניתן להעריך: במשפט אין מספר, ולכן אין מה להשוות. לא נוצרה טענה והמערכת לא ניחשה.',
+  rec:null,note:'',steps:[1,0,0,0],det:[['סיבה','אין ערך מספרי בציטוט'],['קוד','no_figure']]},
+ {id:'s6',date:'15.07.2025',src:'דיווח מיידי 8-K',m:'הכנסות',p:'שנת 2025',k:'off',as:false,
+  q:'We expect full-year revenue of $16.5 billion to $17.0 billion',
+  read:'החברה מצפה להכנסות שנתיות של 16.5–17.0 מיליארד דולר.',
+  verdict:'לא ניתן להעריך עדיין: זו תחזית (טווח). היא תושווה לדוח השנתי כשייקלט.',
+  rec:null,note:'',steps:[1,1,1,0],det:[['מדד','הכנסות'],['טווח','16.5–17.0 מיליארד USD'],['אופי','תחזית']]}
+];
+function B(x){return x.replace(/(10-Q|8-K)/,'<bdi>$1</bdi>')}
+function pct(a,b){return Math.round(a/b*100)}
+function rating(e){
+  if(e.ev<10)return {lab:'אין די נתונים',cls:'few',c:pct(e.ok,e.ev)};
+  var c=pct(e.ok,e.ev);
+  return {lab:c>=95?'עקביות גבוהה':c>=80?'עקביות בינונית':'עקביות נמוכה',cls:c>=80?'':'low',c:c};
 }
-document.querySelectorAll('[data-c]').forEach(function(e){
-  var id=e.getAttribute('data-c');
-  e.addEventListener('mouseenter',function(){hot(id,true)});e.addEventListener('mouseleave',function(){hot(id,false)});
-  e.addEventListener('focus',function(){hot(id,true)});e.addEventListener('blur',function(){hot(id,false)});
-  e.addEventListener('click',function(){var o=e.tagName==='BUTTON'?ev.querySelector('[data-c="'+id+'"]'):cl.querySelector('[data-c="'+id+'"]');if(o&&o.scrollIntoView)o.scrollIntoView({block:'nearest'})});
-});
-document.getElementById('filters').addEventListener('click',function(e){
-  var b=e.target.closest('button');if(!b)return;
-  this.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-  var f=b.getAttribute('data-f');
-  cl.querySelectorAll('.cl').forEach(function(c){c.hidden=!(f==='all'||c.getAttribute('data-k').split(' ').indexOf(f)>-1)});
-});
-/* depth */
-document.querySelector('.depth').addEventListener('click',function(e){
-  var b=e.target.closest('button');if(!b)return;
-  this.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-  [1,2,3].forEach(function(n){document.getElementById('l'+n).classList.toggle('on',String(n)===b.getAttribute('data-l'))});
-});
-/* routing */
-var VIEWS=['document','finding','trust'];
+function chip(k){var s=ST[k];return '<span class="chip '+s[1]+'">'+s[0]+'</span>'}
+function H(h){document.getElementById('app').innerHTML=h}
+function vList(){
+  var rows=ENT.map(function(e){var r=rating(e);
+    return '<a class="row-link" href="#entity-'+e.id+'"><span><span class="nm">'+e.name+'</span><br><span class="meta">'+e.type+' · '+e.tk+' · עדכון אחרון '+e.last+'</span></span>'+
+     '<span class="rt hide-s"><span><b>'+r.lab+'</b>'+(r.cls==='few'?'':' · '+r.c+'%')+'</span><span class="meter '+r.cls+'" role="img" aria-label="עקביות '+r.c+' אחוז"><i style="width:'+r.c+'%"></i></span></span>'+
+     '<span class="meta hide-s">נבדקו '+e.ev+' מתוך '+e.total+' הצהרות ('+pct(e.ev,e.total)+'%)</span><span class="meta">פתיחה ‹</span></a>'}).join('');
+  H('<h1>גופים</h1><p class="sub">כל גוף מקבל דירוג עקביות: כמה מההצהרות שניתן היה לבדוק עקביות עם התיעוד שלו. זה לא דירוג יושרה. <a href="#about" style="color:var(--claim)">איך מחושב?</a></p>'+
+   '<div class="types" role="group" aria-label="סוג גוף"><button type="button" aria-pressed="true">חברות ציבוריות</button><button type="button" disabled>ארגונים ללא מטרת רווח · בקרוב</button><button type="button" disabled>ארגונים אחרים · בקרוב</button><button type="button" disabled>אישי ציבור · בקרוב</button></div>'+
+   '<div class="bar2"><label for="sort" class="meta">מיון</label><select id="sort"><option value="name">לפי שם</option><option value="rate">לפי עקביות</option><option value="cov">לפי כיסוי</option></select></div><div class="list" id="rows">'+rows+'</div>');
+  document.getElementById('sort').onchange=function(){
+    var v=this.value,s=ENT.slice().sort(function(a,b){return v==='name'?a.name.localeCompare(b.name):v==='rate'?rating(b).c-rating(a).c:pct(b.ev,b.total)-pct(a.ev,a.total)});
+    var h=document.getElementById('rows');ENT=s;vList();document.getElementById('sort').value=v;};
+}
+function vEntity(id){
+  var e=ENT.filter(function(x){return x.id===id})[0];if(!e)return vList();
+  var r=rating(e),isEx=id==='example-corp';
+  var items=isEx?STS:[];
+  var head='<p class="crumb"><a href="#list">גופים</a> › '+e.name+'</p><div class="hd"><div><h1 style="margin-bottom:2px">'+e.name+'</h1><div class="meta">'+e.type+' · '+e.tk+'</div></div>'+
+   '<div class="rt" style="min-width:220px"><span><b>'+r.lab+'</b>'+(r.cls==='few'?'':' · '+r.c+'%')+'</span><span class="meter '+r.cls+'"><i style="width:'+r.c+'%"></i></span><span class="meta">נבדקו '+e.ev+' מתוך '+e.total+' הצהרות</span></div></div>';
+  if(!isEx){H(head+'<section class="card"><p class="sub" style="margin:0">במודל הזה רק «Example Corp» מלא בהצהרות לדוגמה.</p></section>');return}
+  var ms=[];items.forEach(function(s){if(ms.indexOf(s.m)<0)ms.push(s.m)});
+  H(head+'<h2 style="margin-top:18px">הצהרות אחרונות</h2><div class="filters" id="sf" role="group" aria-label="סינון לפי תוצאה"><button type="button" aria-pressed="true" data-f="all">הכול</button><button type="button" aria-pressed="false" data-f="diff">אי־התאמה</button><button type="button" aria-pressed="false" data-f="ok">עקביות</button><button type="button" aria-pressed="false" data-f="off">לא ניתנות להערכה</button></div>'+
+   '<div class="bar2"><label for="mf" class="meta">מדד</label><select id="mf"><option value="">כל המדדים</option>'+ms.map(function(m){return '<option>'+m+'</option>'}).join('')+'</select></div><div class="stl" id="stl"></div>');
+  var f='all',mm='';
+  function draw(){
+    document.getElementById('stl').innerHTML=items.filter(function(s){return (f==='all'||s.k===f)&&(!mm||s.m===mm)}).map(function(s){
+      return '<a class="st" href="#statement-'+s.id+'"><span class="hd"><span class="meta">'+s.date+' · '+B(s.src)+'</span><span class="tags">'+chip(s.k)+(s.as?'<span class="chip flag">⚑ נשענת על הנחה</span>':'')+'</span></span>'+
+       '<span class="q" lang="en">'+s.q+'</span><span class="tags"><span class="tag">'+s.m+'</span><span class="tag">'+s.p+'</span><span class="tag">'+B(s.src)+'</span></span></a>'}).join('')||'<p class="sub">אין הצהרות בסינון הזה.</p>';
+  }
+  draw();
+  document.getElementById('sf').onclick=function(ev){var b=ev.target.closest('button');if(!b)return;f=b.getAttribute('data-f');this.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});draw()};
+  document.getElementById('mf').onchange=function(){mm=this.value;draw()};
+}
+function vStatement(id){
+  var s=STS.filter(function(x){return x.id===id})[0];if(!s)return vList();
+  var rec=s.rec?'<h2 style="margin-top:16px">מול מה השוואנו</h2><div class="q" lang="en">'+s.rec.q+'</div><div class="meta">'+s.rec.s+' · '+s.rec.d+(s.rec.link?' · <a href="#statement-'+s.rec.link+'" style="color:var(--claim)">פתיחת ההצהרה ההיא</a>':'')+'</div>':'';
+  var names=['נקרא מהטקסט','הוצע כטענה','עבר בדיקה','הושווה לתיעוד'];
+  var steps='<div class="steps">'+names.map(function(n,i){return '<div class="stp '+(s.steps[i]?'y':'n')+'"><b>'+(s.steps[i]?'✓ ':'· ')+n+'</b>'+(s.steps[i]?'':'לא בוצע')+'</div>'}).join('')+'</div>';
+  H('<p class="crumb"><a href="#list">גופים</a> › <a href="#entity-example-corp">Example Corp</a> › הצהרה</p>'+
+   '<section class="card"><div class="hd"><span class="meta">'+s.date+' · '+B(s.src)+'</span><span class="tags">'+chip(s.k)+(s.as?'<span class="chip flag">⚑ מותנית</span>':'')+'</span></div>'+
+   '<div class="q" lang="en" style="font-size:1.1rem">'+s.q+'</div>'+
+   '<div class="tags"><span class="tag">'+s.m+'</span><span class="tag">'+s.p+'</span></div>'+
+   '<p class="big" style="margin:14px 0 4px">'+s.read+'</p><p class="verdict">'+s.verdict+'</p>'+(s.note?'<p class="sub">'+s.note+'</p>':'')+rec+
+   '<h2 style="margin-top:16px">איך הגענו לזה</h2>'+steps+
+   '<details><summary>פרטים מלאים</summary><dl class="kv" style="margin-top:8px">'+s.det.map(function(d){return '<dt>'+d[0]+'</dt><dd>'+d[1]+'</dd>'}).join('')+'</dl><p class="sub" style="margin-top:10px">ההצהרה הוצעה על ידי מודל ונבדקה בקוד דטרמיניסטי. כל ערך נקרא מחדש מהציטוט.</p></details>'+
+   '</section>');
+}
+function vAbout(){
+  H('<h1>על הדירוג והאמון</h1><section class="card"><h2>איך מחושב דירוג העקביות</h2><ul class="plain">'+
+   '<li><b>עקביות</b> = ההצהרות העקביות מתוך ההצהרות שניתן היה לבדוק. הצהרה שלא ניתן לבדוק אינה נספרת לא לטובה ולא לרעה.</li>'+
+   '<li><b>כיסוי</b> = כמה מההצהרות של הגוף ניתנות לבדיקה בכלל. כיסוי נמוך מוצג תמיד ליד הדירוג.</li>'+
+   '<li>פחות מ־10 הצהרות שנבדקו: «אין די נתונים», בלי אחוז.</li>'+
+   '<li>הדירוג מעיד על התאמה בין טקסטים, לא על יושרה, כוונה או אמת. הוא לא קובע איזה טקסט נכון.</li></ul></section>'+
+   '<section class="card"><h2>עד כמה אפשר לסמוך על המערכת</h2><div class="tw"><table><thead><tr><th>שלב</th><th>מה נמדד</th><th>תוצאה</th><th>סף</th><th>על מה</th></tr></thead><tbody>'+
+   '<tr><td>קליטה</td><td>גבולות משפטים</td><td class="num">241 / 241</td><td class="num">≥ 98%</td><td>דוחות פיתוח</td></tr>'+
+   '<tr><td>שער אימות</td><td>טענות מושחתות שנתפסו</td><td class="num">84 / 84</td><td class="num">100%</td><td>נתוני פיתוח</td></tr>'+
+   '<tr><td>שער אימות</td><td>טענות נכונות שעברו</td><td class="num">115 / 115</td><td class="num">≥ 98%</td><td>נתוני פיתוח</td></tr>'+
+   '<tr><td>פרשנות</td><td>דיוק וכיסוי</td><td><span class="chip off">טרם נמדד</span></td><td class="num">98% · 70%</td><td>דוחות נפרדים (טרם הורצו)</td></tr></tbody></table></div></section>'+
+   '<section class="card"><h2>מה זה לא מכסה</h2><ul class="plain"><li>כל המדידות עד כה הן על נתוני הפיתוח. הדוחות הנפרדים טרם נמדדו.</li><li>הנחות שאינן בציטוט נבדקות רק בהערכה, לא בשער.</li><li>משפטים בלי מספר אינם הופכים לטענות.</li></ul></section>');
+}
 function route(){
-  var h=(location.hash||'').slice(1);if(VIEWS.indexOf(h)<0)h='document';
-  VIEWS.forEach(function(v){document.getElementById('v-'+v).classList.toggle('on',v===h)});
-  document.querySelectorAll('nav a').forEach(function(a){if(a.getAttribute('data-v')===h)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
+  var h=(location.hash||'#list').slice(1),p=h.split('-'),k=p[0],rest=p.slice(1).join('-');
+  if(k==='entity')vEntity(rest);else if(k==='statement')vStatement(rest);else if(k==='about')vAbout();else vList();
+  document.querySelectorAll('nav a').forEach(function(a){var on=a.getAttribute('data-v')===(k==='about'?'about':'list');if(on)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
+  window.scrollTo(0,0);
 }
 window.addEventListener('hashchange',route);route();
-/* theme */
 document.getElementById('theme').onclick=function(){
   var r=document.documentElement,dark=r.getAttribute('data-theme')==='dark'||(!r.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme:dark)').matches);
   r.setAttribute('data-theme',dark?'light':'dark');

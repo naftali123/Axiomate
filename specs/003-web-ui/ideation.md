@@ -279,7 +279,41 @@ Each has a recommendation so you can answer "yes" to all of them.
    yes – it is the cheapest way to test the look and feel, and lets you react to
    something concrete.*
 
-## 10. Next step
+## 10. Owner feedback (2026-11-13)
+
+Answers: Q1–Q3 yes (Hebrew first and switchable; single owner; local first). Q4:
+agreed (public corpus only). Q6 yes (mock-up built). **Q5: no manual
+dependency**, so the comprehension check in section 8 is dropped; verification
+of the UI is automated only (stored values equal displayed values, highlighted
+spans equal stored quotes, a wording check that bans verdict-of-truth language,
+browser tests of the main flows, accessibility checks).
+
+Changes to the flow, reflected in `mockup/mockup.html.txt`:
+
+1. **Entities first.** The home screen is a list of entities (companies now;
+   later non-profits, other organizations, public figures), each with an
+   overall rating.
+2. **Entity page.** The latest statements or publications of that entity, each
+   tagged by the system (metric, period, source type, result, "rests on an
+   assumption"), filterable.
+3. **Statement page.** A simpler version of the earlier finding card: the quote,
+   a plain reading, the result, what it was compared with, four-step "how we got
+   here", and details collapsed.
+
+**Rating.** The rating is a *consistency rating*, not an honesty or credibility
+score: consistent statements divided by statements that could be checked,
+always shown with coverage (how many statements could be checked at all), and
+"not enough data" below 10 checked statements. Not-evaluable statements count
+neither for nor against. This keeps to principles IV (flag rather than guess)
+and VII (inconsistency is not falsehood). Open for the spec: whether the rating
+is shown as a number, a band or both, and the rule for the band thresholds.
+
+**Entity types beyond companies** (public figures in particular) change the
+risk: a rating attached to a named person needs its own review of wording,
+sources and privacy before it is built. The first release supports companies
+only; other types appear in the UI as "coming soon".
+
+## 11. Next step
 
 On your answers: write `specs/003-web-ui/spec.md` (stories, requirements,
 verification, thresholds), then plan and tasks, and update `status.html` at each
