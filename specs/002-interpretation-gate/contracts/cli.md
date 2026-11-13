@@ -12,6 +12,9 @@ Runs the gate on one claim without storing it.
 
 ## `axiomate interpret <document_id> --replies <dir> [--allow-calls]`
 
+*Built so far: the path from stored replies. `--allow-calls` and `--max-calls`
+are added in phase 4.*
+
 Proposes claims for a stored document, passes them through the gate and stores
 those that pass or are flagged.
 

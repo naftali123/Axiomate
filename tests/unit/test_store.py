@@ -57,9 +57,10 @@ def conn(tmp_path):
 def test_a_new_store_has_the_five_tables_and_exports_empty(tmp_path):
     connection = db.connect(tmp_path / "empty.sqlite")
     exported = json.loads(db.export(connection))
-    assert set(exported) == {"schema_version", *TABLES}
-    assert exported["schema_version"] == 1
-    assert all(exported[table] == [] for table in TABLES)
+    assert set(exported) == {"schema_version", *db.TABLES}
+    assert set(db.TABLES) >= set(TABLES)
+    assert exported["schema_version"] == db.SCHEMA_VERSION
+    assert all(exported[table] == [] for table in db.TABLES)
 
 
 @pytest.mark.parametrize("table", TABLES)

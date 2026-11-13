@@ -1,0 +1,71 @@
+{
+  "development": [
+    {
+      "file": "cpa18_2021q1_10q.html",
+      "filings": "tests/fixtures/documents",
+      "facts": "tests/fixtures/facts"
+    },
+    {
+      "file": "cpa18_2021q2_10q.html",
+      "filings": "tests/fixtures/documents",
+      "facts": "tests/fixtures/facts"
+    },
+    {
+      "file": "cpa18_2022q1_10q.html",
+      "filings": "tests/fixtures/documents",
+      "facts": "tests/fixtures/facts"
+    },
+    {
+      "file": "everi_2024q1_10q.html",
+      "filings": "tests/fixtures/documents",
+      "facts": "tests/fixtures/facts"
+    },
+    {
+      "file": "geospace_fy2021q3_10q.html",
+      "filings": "tests/fixtures/documents",
+      "facts": "tests/fixtures/facts"
+    }
+  ],
+  "held_out": [
+    {
+      "file": "agile_2023q3_10q.html",
+      "filings": "eval/filings",
+      "facts": "eval/facts"
+    },
+    {
+      "file": "corvel_fy2022q1_10q.html",
+      "filings": "eval/filings",
+      "facts": "eval/facts"
+    },
+    {
+      "file": "doubleverify_2023q3_10q.html",
+      "filings": "eval/filings",
+      "facts": "eval/facts"
+    },
+    {
+      "file": "fennec_2023q3_10q.html",
+      "filings": "eval/filings",
+      "facts": "eval/facts"
+    },
+    {
+      "file": "greenhill_2022_10k.html",
+      "filings": "eval/filings",
+      "facts": "eval/facts"
+    },
+    {
+      "file": "helius_2023q3_10q.html",
+      "filings": "eval/filings",
+      "facts": "eval/facts"
+    },
+    {
+      "file": "legacyhousing_2023q3_10q.html",
+      "filings": "eval/filings",
+      "facts": "eval/facts"
+    },
+    {
+      "file": "sagimet_2023q3_10q.html",
+      "filings": "eval/filings",
+      "facts": "eval/facts"
+    }
+  ]
+}

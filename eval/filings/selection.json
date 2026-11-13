@@ -1,0 +1,63 @@
+{
+  "dataset": "kapilrao/SEC-EDGAR",
+  "dataset_revision": "aa4a2334027e6b2f8c132dd698544478f61ad26a",
+  "rule": "Among the dataset files scanned on 2026-11-13, filings with embedded tags for all four metrics from companies not in the development set. Quarterly: the seven smallest by size, one per company. Annual: the smallest. Chosen from metadata and tag counts only; the text was not read.",
+  "filings": [
+    {
+      "accession": "0001558370-23-018605",
+      "file": "helius_2023q3_10q.html",
+      "format": "html",
+      "form": "10-Q",
+      "dataset_file": "10-Q/8ef041f9-b48b-4d24-b356-e021f4b86492-1.parquet"
+    },
+    {
+      "accession": "0001558370-23-018614",
+      "file": "fennec_2023q3_10q.html",
+      "format": "html",
+      "form": "10-Q",
+      "dataset_file": "10-Q/8ef041f9-b48b-4d24-b356-e021f4b86492-1.parquet"
+    },
+    {
+      "accession": "0001558370-23-018603",
+      "file": "agile_2023q3_10q.html",
+      "format": "html",
+      "form": "10-Q",
+      "dataset_file": "10-Q/8ef041f9-b48b-4d24-b356-e021f4b86492-1.parquet"
+    },
+    {
+      "accession": "0001564590-21-041644",
+      "file": "corvel_fy2022q1_10q.html",
+      "format": "html",
+      "form": "10-Q",
+      "dataset_file": "10-Q/7c00207e-0c04-471b-b46b-54a534340b54-1153.parquet"
+    },
+    {
+      "accession": "0001558370-23-018606",
+      "file": "legacyhousing_2023q3_10q.html",
+      "format": "html",
+      "form": "10-Q",
+      "dataset_file": "10-Q/8ef041f9-b48b-4d24-b356-e021f4b86492-1.parquet"
+    },
+    {
+      "accession": "0001558370-23-018700",
+      "file": "sagimet_2023q3_10q.html",
+      "format": "html",
+      "form": "10-Q",
+      "dataset_file": "10-Q/8ef041f9-b48b-4d24-b356-e021f4b86492-1.parquet"
+    },
+    {
+      "accession": "0001558370-23-018618",
+      "file": "doubleverify_2023q3_10q.html",
+      "format": "html",
+      "form": "10-Q",
+      "dataset_file": "10-Q/8ef041f9-b48b-4d24-b356-e021f4b86492-1.parquet"
+    },
+    {
+      "accession": "0001282977-23-000012",
+      "file": "greenhill_2022_10k.html",
+      "format": "html",
+      "form": "10-K",
+      "dataset_file": "10-K/6988eb4f-1f7f-4ac6-b532-88a57a4ad1dd-116.parquet"
+    }
+  ]
+}

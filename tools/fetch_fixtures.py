@@ -4,7 +4,10 @@ Reads tests/fixtures/documents/selection.json, downloads the dataset files it
 names, writes each selected filing unchanged, and writes manifest.json with the
 provenance and SHA-256 of every file. Needs the optional "data" dependencies.
 
-Usage: python tools/fetch_fixtures.py [--retrieved-on YYYY-MM-DD]
+With --dir another directory holding a selection.json is used, for example the
+held-out evaluation filings in eval/filings.
+
+Usage: python tools/fetch_fixtures.py --retrieved-on YYYY-MM-DD [--dir eval/filings]
 """
 from __future__ import annotations
 
@@ -33,9 +36,11 @@ def main() -> int:
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--retrieved-on", required=True)
+    parser.add_argument("--dir", default=None)
     args = parser.parse_args()
+    docs = (ROOT / args.dir) if args.dir else DOCS
 
-    selection = json.loads((DOCS / "selection.json").read_text(encoding="utf-8"))
+    selection = json.loads((docs / "selection.json").read_text(encoding="utf-8"))
     revision = selection["dataset_revision"]
     wanted = {item["accession"]: item for item in selection["filings"]}
     by_file: dict[str, list[dict]] = {}
@@ -54,7 +59,7 @@ def main() -> int:
                     if item is None or item["dataset_file"] != dataset_file:
                         continue
                     data = row["content"].encode("utf-8")
-                    (DOCS / item["file"]).write_bytes(data)
+                    (docs / item["file"]).write_bytes(data)
                     filer = json.loads(row["metadata_filer"])
                     filer = filer[0] if isinstance(filer, list) else filer
                     company = filer["company-data"]
@@ -65,7 +70,7 @@ def main() -> int:
                             "company": company["conformed-name"],
                             "cik": company["cik"],
                             "fiscal_year_end": company.get("fiscal-year-end"),
-                            "form": "10-Q",
+                            "form": item.get("form", "10-Q"),
                             "accession": row["metadata_accession-number"],
                             "filed_on": row["metadata_filing-date"],
                             "period_end": row["metadata_period"],
@@ -84,7 +89,7 @@ def main() -> int:
         print("not found in dataset:", ", ".join(missing), file=sys.stderr)
         return 1
     manifest.sort(key=lambda entry: entry["file"])
-    (DOCS / "manifest.json").write_text(
+    (docs / "manifest.json").write_text(
         json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
     )
     print(f"wrote {len(manifest)} filings")
