@@ -39,7 +39,8 @@ Code is written only against an approved spec, plan and task list.
 
 Spec `001-claim-foundation` is implemented: document ingestion (stage 1) and
 the claim store (stage 5) are built and verified on the development data.
-The stages that interpret text and compare claims are not yet specified.
+Spec `002-interpretation-gate` (a language model proposes claims; a
+deterministic gate checks them) is a draft awaiting approval.
 See `status.html`.
 
 ## Trying it

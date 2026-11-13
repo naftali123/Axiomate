@@ -2,7 +2,7 @@
 
 **Scope**: the whole pipeline, across all features.
 **Governed by**: constitution principle VIII.
-**Last updated**: 2026-11-12
+**Last updated**: 2026-11-13
 
 This document says, for each pipeline stage, what "working" means, how it is
 measured and on what data. Each feature spec has a Verification section that
@@ -21,8 +21,8 @@ covers its own stages and refers back here.
 | Stage | "Working" means | Method | Data | Threshold |
 |---|---|---|---|---|
 | 1. Ingestion | Text is returned unchanged; segments are split correctly; figures visible in the filing are present in the stored text | Round-trip test; comparison with confirmed boundary labels; figure-presence check | Real filings; boundary labels; structured figures | Round trip 100%; boundaries ≥ 98%; figure presence 100% |
-| 2. Interpretation | Extracted claims match the true figures | Compare extracted claims with structured figures and hand labels | Filings with known figures; hand labels | Set in the stage's spec |
-| 3. Validation gate | Corrupted claims are caught; correct claims pass | Submit correct claims and corrupted copies | Correct claims; corruption generator | Set in the stage's spec |
+| 2. Interpretation | Extracted claims match the true figures | Compare extracted claims with structured figures; a person answers yes or no on a small sample of prose claims | Held-out filings with known figures; about 30 sampled prose claims | Proposed in spec 002 (draft): precision ≥ 98%, coverage ≥ 70%, prose sample ≥ 90% |
+| 3. Validation gate | Corrupted claims are caught; correct claims pass | Submit correct claims and corrupted copies | Correct claims; corruption generator | Proposed in spec 002 (draft): corrupted caught 100%; correct pass ≥ 98% |
 | 4. Context resolution | Flags resolve to the right answer, each as a recorded assumption | Compare with known resolutions | Flagged cases with labelled resolutions | Set in the stage's spec |
 | 5. Claim store | Bad claims are rejected; nothing can be altered; runs are identical | Submit well-formed and malformed claims; attempt changes; compare exports of two runs | Claim fixtures; corruption generator | Rejection 100%; acceptance 100%; exports identical |
 | 6. Matching | The pairs that should be compared are found, and no others | Compare with labelled pairings | Claims with known pairings | Set in the stage's spec |
