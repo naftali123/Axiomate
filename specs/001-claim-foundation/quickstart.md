@@ -24,11 +24,14 @@ Expect the sentence text and its character offsets.
 ## 3. Record a claim (Story 2)
 
 ```bash
-axiomate claim add tests/fixtures/claims/acme_q3_revenue.json
+axiomate claim add my_claim.json
 ```
 
-Expect a claim id, version 1 and status `formal`. Then submit
-`tests/fixtures/claims/bad_span.json` and expect `span_mismatch`.
+`my_claim.json` is a flat JSON object with the fields of the data model, the
+`document_id` from step 1, the offsets of the quoted text and the quote itself
+(the files under `tests/fixtures/claims/good/` show the content; the tests fill
+in the offsets). Expect a claim id, version 1 and status `formal`. Change one
+character of the quote, submit again and expect `span_mismatch`.
 
 ## 4. Find and trace (Story 3)
 

@@ -37,8 +37,9 @@ Code is written only against an approved spec, plan and task list.
 
 ## Status
 
-Spec `001-claim-foundation` is in progress: the store foundation and document
-ingestion (stage 1) are built; claim submission and query are not yet written.
+Spec `001-claim-foundation` is in progress: the store foundation, document
+ingestion (stage 1) and claim submission are built; query and source tracing
+are not yet written.
 See `status.html`.
 
 ## Trying it

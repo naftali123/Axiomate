@@ -29,13 +29,21 @@ Options: `--publisher-cik`, `--type`, `--published-on`, `--fiscal-year`,
 
 ## `axiomate claim add <claim.json>`
 
-Input: one claim as defined in the data model, with optional `flags` and
-`assumptions`. To correct a claim, pass `--supersedes <claim_id>`.
+Input: one claim as a flat JSON object with the fields of the data model, plus
+optional `flags` and `assumptions` arrays. `status` and `segment_index` may be
+left out: the status is derived, and the segment is found from the span. If
+given, each must agree with what the store works out. Numbers may be written
+as JSON numbers or as text; they are read exactly. To correct a claim, pass
+`--supersedes <claim_id>`.
 
-- Success: `{"claim_id", "version", "status"}`.
-- Errors: `schema_invalid` (with the field), `unknown_metric`,
-  `document_not_found`, `span_mismatch`, `span_outside_segment`,
-  `said_on_mismatch`, `status_mismatch`, `empty_field_without_flag`.
+- Success: `{"claim_id", "version", "status", "created"}`. `created` is false
+  when the identical claim was already stored.
+- Errors: `schema_invalid` (with the field; also when the file is not JSON),
+  `unknown_metric`, `document_not_found`, `span_mismatch`,
+  `span_outside_segment`, `said_on_mismatch`, `status_mismatch`,
+  `empty_field_without_flag`, `claim_exists` (a different claim is stored for
+  the same span and metric and `--supersedes` was not given), `not_found` (the
+  claim named by `--supersedes` does not exist), `unreadable_file`.
 
 ## `axiomate claim list --company-cik --metric --fiscal-year [--fiscal-period]`
 

@@ -227,6 +227,9 @@ produces precision and coverage numbers.
 Resolved on 2026-11-12:
 
 - **Unformalizable claims** (found during planning): see FR-017.
+- **What "a flag names that field" means** (found while building claim
+  submission, 2026-11-13): a flag on one field of the value, the period or the
+  baseline covers the other fields of that same group. Details in the data model.
 - **Input formats**: plain text and HTML. PDF is out of scope for this feature.
 - **Language and market**: English-language filings of US-listed companies.
 - **Metrics**: a fixed list for the first version – revenue, net income,

@@ -70,6 +70,27 @@ Rules:
 - `value_low` ≤ `value_high`; `period_start` ≤ `period_end`.
 - Status is derived (see below) and a mismatching submitted status is rejected.
 - On a `not-formalizable` claim a field may be empty only if a flag names it.
+  Precisely: every field must be present in a submission; an unsupported field
+  is given as null and an unresolved flag must cover it. Fields that describe
+  one thing are covered together, so a flag on any one of them covers the
+  group: the value (`value_kind`, `value_low`, `value_high`, `stated_value`,
+  `stated_scale`, `unit`, `currency`), the period (`period_kind`,
+  `fiscal_year`, `fiscal_period`, `period_start`, `period_end`) and the
+  baseline (`baseline_start`, `baseline_end`). A field left out altogether is
+  `schema_invalid`; a null field with no covering flag is
+  `empty_field_without_flag`.
+- `value_low` and `value_high` are equal unless `value_kind` is `range`.
+- `currency` is required when the unit is a currency and empty when it is
+  `percent`. A baseline is given only when `comparison` is `change_vs_period`.
+- Decimals are given as text or whole numbers, never floats, and are stored in
+  one plain form (`1.80` becomes `1.8`, `.71` becomes `0.71`).
+- Identity: the id is the SHA-256 of `document_id:span_start:span_end:metric`
+  at first submission. The identical claim submitted again returns the stored
+  one. A different claim for the same id is refused (`claim_exists`) unless
+  sent as a correction, which adds the next version under the same id even if
+  the correction changes the span or the metric.
+- Checks run in a fixed order: schema, status, document, `said_on`, segment
+  containment, quote. The first failure is the one reported.
 
 ## Flag
 

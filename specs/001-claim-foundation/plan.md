@@ -150,6 +150,23 @@ on the claim names that field as the reason.
 - **Pinned output.** The hash of each sample filing's canonical text is
   recorded, so a change in extraction output cannot pass unnoticed.
 
+## Changes found while building claim submission
+
+- **Field groups for FR-017.** A sentence such as "revenue declined" has no
+  value at all, so kind, amount, scale and unit are all empty. One flag on the
+  value covers them together; the same holds for the period and the baseline.
+- **Absent versus empty.** A field missing from a submission is a malformed
+  claim; a field given as null is an admission that the text does not say,
+  and needs a flag.
+- **Duplicates and corrections.** Two more rejection codes: `claim_exists` and
+  `not_found` (for a correction of an unknown claim). An identical resubmission
+  is not an error and stores nothing new.
+- **Order of checks** is fixed so that the same faulty claim always gets the
+  same code.
+- **Value arithmetic is not checked here.** That the stated value times its
+  scale equals the normalized value is a check for the validation gate
+  (stage 3), not for storage.
+
 ## Risks
 
 | Risk | Mitigation |

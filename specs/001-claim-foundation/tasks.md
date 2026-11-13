@@ -42,16 +42,16 @@ implementation is written (constitution principle VIII).
 
 ## Phase 4 – Story 2: Record a grounded claim (P2)
 
-- [ ] T019 [P] [S2] Unit tests for the claim, flag and assumption models, including decimal handling and FR-017.
-- [ ] T020 [P] [S2] Unit tests for status derivation.
-- [ ] T021 [P] [S2] Integration tests for the five acceptance scenarios of Story 2 and every rejection code.
-- [ ] T022 [S2] Implement `claims/schema.py`.
-- [ ] T023 [S2] Implement `claims/status.py`.
-- [ ] T024 [S2] Implement `claims/submit.py`: schema check, span grounding, segment containment, versioning.
-- [ ] T025 [S2] Implement `axiomate claim add`.
-- [ ] T026 [S2] Measure the rejection rate on the malformed fixture set; it must be 100% (SC-004).
+- [x] T019 [P] [S2] Unit tests for the claim, flag and assumption models, including decimal handling and FR-017.
+- [x] T020 [P] [S2] Unit tests for status derivation.
+- [x] T021 [P] [S2] Integration tests for the five acceptance scenarios of Story 2 and every rejection code.
+- [x] T022 [S2] Implement `claims/schema.py`.
+- [x] T023 [S2] Implement `claims/status.py`.
+- [x] T024 [S2] Implement `claims/submit.py`: schema check, span grounding, segment containment, versioning.
+- [x] T025 [S2] Implement `axiomate claim add`.
+- [x] T026 [S2] Measure the rejection rate on the malformed fixture set; it must be 100% (SC-004).
 
-**Checkpoint**: Story 2 passes its independent test; quickstart step 3 works.
+**Checkpoint**: Story 2 passes its independent test; quickstart step 3 works. *Reached. Measured: 21 of 21 good claims accepted with the expected status; 40 of 40 corrupted claims rejected with the expected code and field, five per code.*
 
 ## Phase 5 – Story 3: Find and trace (P3)
 
