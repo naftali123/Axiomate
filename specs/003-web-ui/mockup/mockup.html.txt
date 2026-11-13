@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="claude:viewport-fit-sides" content="cover">
 <title>Axiomate – מודל ממשק</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&family=Heebo:wght@400;500;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap">
 <style>
 /* Layout: messenger shell. Left = chat list of entities (avatar with rating beneath, latest statement beside). Main = feed of statements as bubbles. Market cues: tickers, tabular numbers, sparkline, deltas. */
 :root{
@@ -112,11 +112,47 @@ th{color:var(--muted);font-weight:500;font-size:.82rem}td.num{font-variant-numer
   .back{display:inline-block}
 }
 @media(prefers-reduced-motion:no-preference){a.bub,.chat{transition:background .12s,border-color .12s}}
+
+.hs b{direction:ltr;text-align:start;unicode-bidi:isolate}.dl{direction:ltr;unicode-bidi:isolate}
+/* v4: tape, hero, rating tile (1 = best), status edges */
+.mono{font-family:'IBM Plex Mono',ui-monospace,monospace;font-variant-numeric:tabular-nums}
+.tape{max-width:1180px;margin:0 auto 8px;background:#0e1a2b;color:#dbe6f3;border-radius:10px;overflow:hidden;direction:ltr;white-space:nowrap}
+.tape .tt{display:inline-flex;gap:28px;padding:7px 14px;animation:tp 40s linear infinite}
+.tape span{font-size:.82rem}.tape b{color:#fff}.tape .u{color:#62d3bf}.tape .d{color:#bba2f0}
+@keyframes tp{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.tape .tt{animation:none}}
+.rk{display:inline-flex;align-items:baseline;gap:1px;font-family:'IBM Plex Mono',ui-monospace,monospace;font-weight:700;border-radius:6px;padding:0 7px;line-height:1.6;border:1px solid var(--claim);color:var(--claim);background:var(--surface)}
+.rk small{font-size:.65rem;font-weight:500;opacity:.8}
+.rk.top{background:var(--badge);color:var(--badgefg);border-color:var(--badge)}
+.rk.low{border-color:var(--diff);color:var(--diff)}
+.rk.few{border-color:var(--line);color:var(--off)}
+.l3{direction:ltr}
+.l3 .chip,.l3 .tag{direction:rtl}
+.chat{grid-template-columns:52px minmax(0,1fr)}
+.chat.act{box-shadow:inset 3px 0 0 var(--claim)}
+.av{box-shadow:0 0 0 2px var(--surface),0 0 0 4px var(--c,transparent)}
+.hero{position:relative;color:#fff;padding:12px 16px 14px;background:linear-gradient(135deg,var(--hc) 0%,#0e1a2b 78%);display:grid;gap:10px}
+.hero .top{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.hero .who{flex:1 1 150px;min-width:0}.hero .who b{font-size:1.2rem;display:block}.hero .tk{color:#c9d6e5}
+.hero .ib{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.3);color:#fff}
+.hero .av{box-shadow:0 0 0 3px rgba(255,255,255,.35)}
+.hstats{display:flex;gap:18px;align-items:center;flex-wrap:wrap;direction:ltr}
+.ring{position:relative;width:66px;height:66px;flex:none}
+.ring svg{display:block}.ring .n{position:absolute;inset:0;display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:1.5rem;color:#fff}
+.hs{display:grid;line-height:1.2;direction:rtl;text-align:start}.hs b{font-family:'IBM Plex Mono',monospace;font-size:1.15rem}.hs small{color:#c9d6e5;font-size:.72rem}
+.hero .dl.up{color:#7ee8d3}.hero .dl.dn{color:#d3c1fb}
+.bub{border-inline-start-width:4px}
+a.bub.k-ok{border-inline-start-color:var(--ok)}a.bub.k-diff{border-inline-start-color:var(--diff)}a.bub.k-off{border-inline-start-color:var(--off)}
+.banner{display:flex;gap:10px;align-items:center;border-radius:10px;padding:10px 12px;margin-bottom:10px;font-weight:700}
+.banner.ok{background:var(--ok-bg);color:var(--ok)}.banner.diff{background:var(--diff-bg);color:var(--diff)}.banner.off{background:var(--off-bg);color:var(--off)}
+.banner .ic{font-size:1.3rem}
+.open{border:1px dashed var(--flag);background:var(--flag-bg);color:var(--flag);border-radius:8px;padding:8px 12px;margin-top:8px;font-size:.9rem}
 </style>
 </head>
 <body>
 <div dir="rtl" lang="he">
 <div class="example"><b>מודל להמחשה.</b> כל הגופים, הסמלים, ההצהרות והמספרים כאן בדויים. הם אינם דוחות אמיתיים ואינם תוצאה של המערכת.</div>
+<div class="tape" aria-label="סרגל גופים"><div class="tt" id="tt"></div></div>
 <div class="app" id="app" data-pane="list"></div>
 </div>
 <script>
@@ -182,54 +218,60 @@ function B(x){return x.replace(/(10-Q|8-K)/,'<bdi>$1</bdi>')}
 function pct(a,b){return Math.round(a/b*100)}
 function ent(id){return ENT.filter(function(x){return x.id===id})[0]}
 function stOf(id){return S.filter(function(x){return x.e===id}).sort(function(a,b){return a.iso<b.iso?-1:a.iso>b.iso?1:0})}
+function rank(c){return Math.min(10,Math.max(1,11-Math.ceil(c/10)))}
 function rate(e){
   var c=pct(e.ok,e.ev);
-  if(e.ev<10)return{c:c,lab:'אין די נתונים',cls:'few',txt:'?'};
-  return{c:c,lab:c>=95?'עקביות גבוהה':c>=80?'עקביות בינונית':'עקביות נמוכה',cls:c>=80?'hi':'lo',txt:c+'%'};
+  if(e.ev<10)return{c:c,n:null,lab:'אין די נתונים',cls:'few'};
+  var n=rank(c);return{c:c,n:n,lab:'דירוג '+n+' מתוך 10 (1 = הגבוה ביותר)',cls:n<=3?'top':n>=7?'low':''};
 }
+function rk(e){var r=rate(e);return r.n?'<span class="rk '+r.cls+'" title="'+r.lab+'" aria-label="'+r.lab+'">'+r.n+'<small>/10</small></span>':'<span class="rk few" title="אין די נתונים" aria-label="אין די נתונים">—</span>'}
 function delta(e){var d=e.sp[e.sp.length-1]-e.sp[e.sp.length-2];return d}
 function dtxt(e){var d=delta(e);return '<span class="dl '+(d>0?'up':d<0?'dn':'')+'">'+(d>0?'▲ +':d<0?'▼ −':'• ')+Math.abs(d)+' נק׳</span>'}
-function spark(a){
-  var w=120,h=36,mn=Math.min.apply(null,a)-3,mx=Math.max.apply(null,a)+3,n=a.length;
+function spark(a,col,w,h){
+  w=w||120;h=h||36;col=col||'var(--claim)';
+  var mn=Math.min.apply(null,a)-3,mx=Math.max.apply(null,a)+3,n=a.length;
   var pts=a.map(function(v,i){return [Math.round(i/(n-1)*(w-8)+4),Math.round(h-4-(v-mn)/(mx-mn)*(h-8))]});
-  var line=pts.map(function(p){return p.join(',')}).join(' ');
-  var last=pts[n-1];
-  return '<svg width="'+w+'" height="'+h+'" viewBox="0 0 '+w+' '+h+'" role="img" aria-label="מגמת עקביות ב־'+n+' רבעונים"><polygon points="'+pts[0][0]+','+h+' '+line+' '+last[0]+','+h+'" fill="var(--claim)" fill-opacity=".14"/><polyline points="'+line+'" fill="none" stroke="var(--claim)" stroke-width="2" stroke-linejoin="round"/><circle cx="'+last[0]+'" cy="'+last[1]+'" r="3.2" fill="var(--claim)"/></svg>';
+  var line=pts.map(function(p){return p.join(',')}).join(' ');var last=pts[n-1];
+  return '<svg width="'+w+'" height="'+h+'" viewBox="0 0 '+w+' '+h+'" role="img" aria-label="מגמת עקביות ב־'+n+' רבעונים"><polygon points="'+pts[0][0]+','+h+' '+line+' '+last[0]+','+h+'" fill="'+col+'" fill-opacity=".18"/><polyline points="'+line+'" fill="none" stroke="'+col+'" stroke-width="2" stroke-linejoin="round"/><circle cx="'+last[0]+'" cy="'+last[1]+'" r="3.4" fill="'+col+'"/></svg>';
 }
 function chip(k){var s=ST[k];return '<span class="chip '+s[1]+'">'+s[0]+'</span>'}
-function av(e,sm){return '<span class="av'+(sm?' sm':'')+'" style="background:'+e.col+'" role="img" aria-label="סמל '+e.name+'">'+e.ini+'</span>'}
+function av(e,sm){return '<span class="av'+(sm?' sm':'')+'" style="background:'+e.col+';--c:'+e.col+'" role="img" aria-label="סמל '+e.name+'">'+e.ini+'</span>'}
 var tab='recent',query='',cur='';
 function rows(){
   var list=ENT.filter(function(e){return !query||(e.name+' '+e.tk).toLowerCase().indexOf(query.toLowerCase())>-1});
   list.sort(function(a,b){
-    if(tab==='rate')return rate(b).c-rate(a).c;
+    if(tab==='rate'){return (rate(a).n||99)-(rate(b).n||99)}
     var la=stOf(a.id).slice(-1)[0].iso,lb=stOf(b.id).slice(-1)[0].iso;return la<lb?1:la>lb?-1:0});
   return list.map(function(e){
-    var l=stOf(e.id).slice(-1)[0],r=rate(e);
-    return '<a class="chat'+(e.id===cur?' act':'')+'" href="#entity-'+e.id+'"><span class="pf">'+av(e)+'<span class="rp '+r.cls+'" title="'+r.lab+'">'+r.txt+'</span></span>'+
+    var l=stOf(e.id).slice(-1)[0];
+    return '<a class="chat'+(e.id===cur?' act':'')+'" href="#entity-'+e.id+'">'+av(e)+
      '<span class="cb"><span class="l1"><span class="nm">'+e.name+'</span><span class="tk">'+e.tk+'</span><span class="dt">'+l.date.slice(0,5)+'</span></span>'+
      '<span class="pv" lang="en">'+l.q+'</span>'+
-     '<span class="l3">'+chip(l.k)+'<span class="tag">'+l.m+'</span>'+(e.news?'<span class="badge" aria-label="'+e.news+' חדשות">'+e.news+'</span>':'')+'</span></span></a>'}).join('')||'<div class="empty">לא נמצאו גופים.</div>';
+     '<span class="l3">'+rk(e)+chip(l.k)+'<span class="tag">'+l.m+'</span>'+(e.news?'<span class="badge" aria-label="'+e.news+' חדשות">'+e.news+'</span>':'')+'</span></span></a>'}).join('')||'<div class="empty">לא נמצאו גופים.</div>';
 }
 function side(){
   return '<aside class="side"><div class="sh"><span class="brand">Axiomate</span><a class="ib" href="#about" style="text-decoration:none">על הדירוג</a><button class="ib" id="theme" type="button">ערכה</button></div>'+
    '<label class="search"><input id="q" type="search" placeholder="חיפוש גוף או סימול" value="'+query+'" aria-label="חיפוש"></label>'+
-   '<div class="tabs" id="tabs"><button type="button" aria-pressed="'+(tab==='recent')+'" data-t="recent">אחרונים</button><button type="button" aria-pressed="'+(tab==='rate')+'" data-t="rate">לפי עקביות</button><button type="button" disabled>ארגונים ללא מטרת רווח · בקרוב</button><button type="button" disabled>אישי ציבור · בקרוב</button></div>'+
+   '<div class="tabs" id="tabs"><button type="button" aria-pressed="'+(tab==='recent')+'" data-t="recent">אחרונים</button><button type="button" aria-pressed="'+(tab==='rate')+'" data-t="rate">לפי דירוג</button><button type="button" disabled>ארגונים ללא מטרת רווח · בקרוב</button><button type="button" disabled>אישי ציבור · בקרוב</button></div>'+
    '<nav class="chats" id="chats" aria-label="גופים">'+rows()+'</nav></aside>';
+}
+function ring(e){
+  var r=rate(e),f=r.n?(11-r.n)/10:0,C=2*Math.PI*28;
+  return '<span class="ring" title="'+r.lab+'"><svg width="66" height="66" viewBox="0 0 66 66"><circle cx="33" cy="33" r="28" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="6"/><circle cx="33" cy="33" r="28" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-dasharray="'+(C*f).toFixed(1)+' '+C.toFixed(1)+'" transform="rotate(-90 33 33)"/></svg><span class="n">'+(r.n||'—')+'</span></span>';
 }
 function feedView(id,f){
   var e=ent(id),r=rate(e),all=stOf(id);
   var items=all.filter(function(s){return f==='all'||s.k===f});
-  var out='',last='';
+  var out='',last='',IC={ok:'✓',diff:'◆',off:'○'};
   items.forEach(function(s){
     if(s.date!==last){out+='<div class="ds">'+s.date+'</div>';last=s.date}
-    out+='<a class="bub" href="#statement-'+s.id+'"><span class="src">'+B(s.src)+'</span><span class="q" lang="en">'+s.q+'</span>'+
-     '<span class="bf">'+chip(s.k)+(s.as?'<span class="chip flag">⚑ נשענת על הנחה</span>':'')+'<span class="tag">'+s.m+'</span><span class="tag">'+s.p+'</span>'+(s.tg||[]).map(function(t){return '<span class="tag">'+t+'</span>'}).join('')+'</span></a>';
+    out+='<a class="bub k-'+s.k+'" href="#statement-'+s.id+'"><span class="src">'+B(s.src)+'</span><span class="q" lang="en">'+s.q+'</span>'+
+     '<span class="bf"><span class="chip '+ST[s.k][1]+'">'+IC[s.k]+' '+ST[s.k][0]+'</span>'+(s.as?'<span class="chip flag">⚑ נשענת על הנחה</span>':'')+'<span class="tag">'+s.m+'</span><span class="tag">'+s.p+'</span>'+(s.tg||[]).map(function(t){return '<span class="tag">'+t+'</span>'}).join('')+'</span></a>';
   });
-  return '<div class="mh"><a class="ib back" href="#list">‹ חזרה</a>'+av(e,true)+'<div class="who"><b>'+e.name+'</b><span class="tk">'+e.tk+' · '+e.type+'</span></div>'+
-   '<div class="mk"><span class="kv1"><b>'+r.txt+'</b><small>'+r.lab+'</small></span><span class="kv1"><b>'+pct(e.ev,e.total)+'%</b><small>כיסוי</small></span>'+spark(e.sp)+dtxt(e).replace('dl','dl')+'</div></div>'+
+  return '<div class="hero" style="--hc:'+e.col+'"><div class="top"><a class="ib back" href="#list">‹ חזרה</a>'+av(e)+'<div class="who"><b>'+e.name+'</b><span class="tk mono">'+e.tk+' · '+e.type+'</span></div></div>'+
+   '<div class="hstats">'+ring(e)+'<span class="hs"><b>'+(r.n?r.n+' / 10':'—')+'</b><small>'+(r.n?'דירוג · 1 = הגבוה ביותר':'אין די נתונים')+'</small></span><span class="hs"><b>'+r.c+'%</b><small>עקביות</small></span><span class="hs"><b>'+pct(e.ev,e.total)+'%</b><small>כיסוי</small></span>'+spark(e.sp,'#fff',150,44)+dtxt(e)+'</div></div>'+
    '<div class="pin">📌 הדירוג מבוסס על '+e.ev+' מתוך '+e.total+' הצהרות שניתן היה לבדוק. הוא מודד עקביות בין טקסטים, לא יושרה. <a href="#about">פרטים</a></div>'+
-   '<div class="fchips" id="fc" role="group" aria-label="סינון"><button type="button" aria-pressed="'+(f==='all')+'" data-f="all">הכול</button><button type="button" aria-pressed="'+(f==='diff')+'" data-f="diff">אי־התאמה</button><button type="button" aria-pressed="'+(f==='ok')+'" data-f="ok">עקביות</button><button type="button" aria-pressed="'+(f==='off')+'" data-f="off">לא ניתנות להערכה</button></div>'+
+   '<div class="fchips" id="fc" role="group" aria-label="סינון"><button type="button" aria-pressed="'+(f==='all')+'" data-f="all">הכול</button><button type="button" aria-pressed="'+(f==='diff')+'" data-f="diff">◆ אי־התאמה</button><button type="button" aria-pressed="'+(f==='ok')+'" data-f="ok">✓ עקביות</button><button type="button" aria-pressed="'+(f==='off')+'" data-f="off">○ לא ניתנות להערכה</button></div>'+
    '<div class="feed" id="feed">'+(out||'<div class="empty">אין הצהרות בסינון הזה.</div>')+'</div>';
 }
 function detailView(id){
@@ -239,7 +281,7 @@ function detailView(id){
   var names=['נקרא מהטקסט','הוצע כטענה','עבר בדיקה','הושווה לתיעוד'];
   var steps='<div class="steps">'+names.map(function(n,i){return '<div class="stp '+(s.steps[i]?'y':'n')+'"><b>'+(s.steps[i]?'✓ ':'· ')+n+'</b>'+(s.steps[i]?'':'לא בוצע')+'</div>'}).join('')+'</div>';
   return '<div class="mh"><a class="ib back" href="#entity-'+e.id+'">‹ חזרה</a>'+av(e,true)+'<div class="who"><b>הצהרה · '+e.name+'</b><span class="tk">'+s.date+' · '+B(s.src)+'</span></div></div>'+
-   '<div class="detail"><section class="card"><div class="bf">'+chip(s.k)+(s.as?'<span class="chip flag">⚑ מותנית</span>':'')+'<span class="tag">'+s.m+'</span><span class="tag">'+s.p+'</span>'+(s.tg||[]).map(function(t){return '<span class="tag">'+t+'</span>'}).join('')+'</div>'+
+   '<div class="detail"><section class="card"><div class="banner '+ST[s.k][1]+'"><span class="ic">'+({ok:'✓',diff:'◆',off:'○'})[s.k]+'</span><span>'+ST[s.k][0]+(s.as?' · מותנית':'')+'</span></div><div class="bf">'+chip(s.k)+(s.as?'<span class="chip flag">⚑ מותנית</span>':'')+'<span class="tag">'+s.m+'</span><span class="tag">'+s.p+'</span>'+(s.tg||[]).map(function(t){return '<span class="tag">'+t+'</span>'}).join('')+'</div>'+
    '<div class="reply" style="margin-top:10px"><span class="src">'+B(s.src)+' · '+s.date+'</span><span class="q" lang="en" style="font-size:1.1rem">'+s.q+'</span></div>'+
    '<p class="big">'+s.read+'</p><p>'+s.verdict+'</p>'+(s.note?'<p class="sub">'+s.note+'</p>':'')+rec+
    '<h2>איך הגענו לזה</h2>'+steps+
@@ -247,8 +289,8 @@ function detailView(id){
 }
 function aboutView(){
   return '<div class="mh"><a class="ib back" href="#list">‹ חזרה</a><div class="who"><b>על הדירוג והאמון</b></div></div><div class="detail">'+
-   '<section class="card"><h2>איך מחושב דירוג העקביות</h2><ul class="plain"><li><b>עקביות</b> = ההצהרות העקביות מתוך ההצהרות שניתן היה לבדוק. הצהרה שלא ניתן לבדוק אינה נספרת לא לטובה ולא לרעה.</li><li><b>כיסוי</b> = כמה מההצהרות של הגוף ניתנות לבדיקה בכלל. הוא מוצג תמיד ליד הדירוג.</li><li>פחות מ־10 הצהרות שנבדקו: «אין די נתונים», בלי אחוז.</li><li>המגמה מראה את הדירוג לאורך רבעונים. החץ משווה לרבעון הקודם.</li><li>הדירוג מעיד על התאמה בין טקסטים, לא על יושרה, כוונה או אמת, והוא לא קובע איזה טקסט נכון.</li></ul></section>'+
-   '<section class="card"><h2>עד כמה אפשר לסמוך על המערכת</h2><div class="tw"><table><thead><tr><th>שלב</th><th>מה נמדד</th><th>תוצאה</th><th>סף</th></tr></thead><tbody><tr><td>קליטה</td><td>גבולות משפטים</td><td class="num">241 / 241</td><td class="num">≥ 98%</td></tr><tr><td>שער אימות</td><td>טענות מושחתות שנתפסו</td><td class="num">84 / 84</td><td class="num">100%</td></tr><tr><td>שער אימות</td><td>טענות נכונות שעברו</td><td class="num">115 / 115</td><td class="num">≥ 98%</td></tr><tr><td>פרשנות</td><td>דיוק וכיסוי</td><td><span class="chip off">טרם נמדד</span></td><td class="num">98% · 70%</td></tr></tbody></table></div><p class="sub">כל המדידות עד כה הן על נתוני הפיתוח. הדוחות הנפרדים טרם נמדדו.</p></section></div>';
+   '<section class="card"><h2>איך מחושב דירוג העקביות</h2><ul class="plain"><li><b>עקביות</b> = ההצהרות העקביות מתוך ההצהרות שניתן היה לבדוק. הצהרה שלא ניתן לבדוק אינה נספרת לא לטובה ולא לרעה.</li><li><b>כיסוי</b> = כמה מההצהרות של הגוף ניתנות לבדיקה בכלל. הוא מוצג תמיד ליד הדירוג.</li><li><b>הדירוג החיצוני</b> הוא מספר מ־1 עד 10, ו־1 הוא הגבוה ביותר. כרגע הוא נגזר מהעקביות (91% ומעלה = 1; כל 10 נקודות אחוז = דרגה). הטבלה היא הצעה ראשונית.</li><li>פחות מ־10 הצהרות שנבדקו: «אין די נתונים», בלי דירוג.</li><li>המגמה מראה את הדירוג לאורך רבעונים. החץ משווה לרבעון הקודם.</li><li>הדירוג מעיד על התאמה בין טקסטים, לא על יושרה, כוונה או אמת, והוא לא קובע איזה טקסט נכון.</li></ul></section>'+
+   '<section class="card"><h2>שאלה פתוחה</h2><div class="open">האחוזים והדירוג יחושבו בעתיד <b>לפי מדד</b> (הכנסות, רווח, תזרים ועוד) ולפי הפרמטרים שנוסיף להערכת כל גוף, ולא כמספר אחד כולל. המבנה, המשקלים ואופן הצירוף לדירוג אחד נדונים בהמשך.</div></section><section class="card"><h2>עד כמה אפשר לסמוך על המערכת</h2><div class="tw"><table><thead><tr><th>שלב</th><th>מה נמדד</th><th>תוצאה</th><th>סף</th></tr></thead><tbody><tr><td>קליטה</td><td>גבולות משפטים</td><td class="num">241 / 241</td><td class="num">≥ 98%</td></tr><tr><td>שער אימות</td><td>טענות מושחתות שנתפסו</td><td class="num">84 / 84</td><td class="num">100%</td></tr><tr><td>שער אימות</td><td>טענות נכונות שעברו</td><td class="num">115 / 115</td><td class="num">≥ 98%</td></tr><tr><td>פרשנות</td><td>דיוק וכיסוי</td><td><span class="chip off">טרם נמדד</span></td><td class="num">98% · 70%</td></tr></tbody></table></div><p class="sub">כל המדידות עד כה הן על נתוני הפיתוח. הדוחות הנפרדים טרם נמדדו.</p></section></div>';
 }
 var fil='all';
 function route(){
@@ -273,6 +315,7 @@ function bind(id){
   if(fc)fc.onclick=function(ev){var b=ev.target.closest('button');if(!b)return;fil=b.getAttribute('data-f');
     var m=document.getElementById('main');m.innerHTML=feedView(id,fil);bind(id);var fd=document.getElementById('feed');if(fd)fd.scrollTop=fd.scrollHeight};
 }
+(function(){var h=ENT.map(function(e){var r=rate(e),d=delta(e);return '<span><b class="mono">'+e.tk+'</b> <span class="mono">'+(r.n?r.n+'/10':'—')+'</span> <span class="mono '+(d>0?'u':d<0?'d':'')+'">'+(d>0?'▲ +':d<0?'▼ −':'• ')+Math.abs(d)+'</span></span>'}).join('');document.getElementById('tt').innerHTML=h+h})();
 window.addEventListener('hashchange',route);route();
 </script>
 </body>
