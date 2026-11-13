@@ -43,3 +43,8 @@ directory of its tag file.
   (`tagged_not_visible`) and are not part of the coverage denominator.
 - Errors: `not_found` (a filing of the split is not in the store, or has no
   interpretation run under the current instructions and model).
+
+With `--prose-sample N` the command instead draws about N passed claims from
+running prose by a fixed rule (every n-th, in the order of the split file and
+of the text) and returns each with its sentence, its quote, how it was read
+and its assumptions, for a person to answer yes or no.

@@ -280,3 +280,18 @@ def test_report_states_precision_coverage_and_pass_rate_with_their_thresholds(fi
     with pytest.raises(AxiomateError) as raised:
         build(filings, "development", splits_path=splits, instruction_version="other", model=MODEL)
     assert raised.value.code == "not_found"
+
+
+def test_prose_sample_takes_passed_sentence_claims_by_a_fixed_step(filings, tmp_path):
+    from axiomate.evaluate.sample import prose_sample
+    run(filings, write_replies(filings, tmp_path / "replies", {
+        "Total revenues decreased by approximately $11.1 million": [PROSE, CHANGE], "Total revenues\t189,346": [ROW]}))
+    splits = tmp_path / "eval" / "splits.json"
+    splits.parent.mkdir()
+    entry = {"file": "everi_2024q1_10q.html", "filings": str(support.DOCS), "facts": str(support.FIXTURES / "facts")}
+    splits.write_text(json.dumps({"held_out": [entry]}), encoding="utf-8")
+    drawn = prose_sample(filings, "held_out", size=1, splits_path=splits, instruction_version=VERSION, model=MODEL)
+    assert (drawn["population"], drawn["step"], len(drawn["sample"])) == (2, 2, 1)
+    assert drawn["sample"][0]["quote"] in (PROSE["quote"], CHANGE["quote"])
+    assert drawn["sample"][0]["quote"] in drawn["sample"][0]["sentence"]
+    assert prose_sample(filings, "held_out", size=30, splits_path=splits, instruction_version=VERSION, model=MODEL)["step"] == 1

@@ -14,6 +14,7 @@ from axiomate.interpret import run as interpret_run
 from axiomate.interpret.client import make_client
 from axiomate.interpret.replies import ReplyStore
 from axiomate.evaluate import report as evaluation
+from axiomate.evaluate.sample import prose_sample
 from axiomate.documents.ingest import get_document, get_segment, ingest
 from axiomate.errors import AxiomateError
 from axiomate.store import db
@@ -66,6 +67,7 @@ def _parser() -> argparse.ArgumentParser:
     evaluate = commands.add_parser("evaluate", help="compare stored claims with the figures tagged in the filings")
     evaluate.add_argument("--split", required=True, choices=["development", "held_out"])
     evaluate.add_argument("--splits", default="eval/splits.json", help="the split file (default: eval/splits.json)")
+    evaluate.add_argument("--prose-sample", type=int, metavar="N", help="draw about N passed prose claims for a person to judge")
 
     commands.add_parser("export", help="canonical dump of the whole store")
     return parser
@@ -102,6 +104,8 @@ def _run(args: argparse.Namespace) -> object:
     if args.command == "evaluate":
         conn = db.connect(args.db)
         try:
+            if args.prose_sample is not None:
+                return prose_sample(conn, args.split, size=args.prose_sample, splits_path=args.splits)
             return evaluation.build(conn, args.split, splits_path=args.splits)
         finally:
             conn.close()
