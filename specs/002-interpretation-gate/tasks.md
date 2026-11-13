@@ -56,7 +56,7 @@ instructions have not been tried on a model yet and will be tuned in phase 4.*
 ## Phase 4 – Live calls (needs the API key)
 
 - [x] T021 Write the instructions (`interpret/prompt.py`), version 1.
-- [ ] T022 Implement `interpret/client.py` and `--allow-calls`, with the call limit and the token counts.
+- [x] T022 Implement `interpret/client.py` and `--allow-calls`, with the call limit and the token counts. *Tested against a stand-in for the SDK; not yet run against the model.*
 - [ ] T023 Run one development filing; compare the measured cost with the estimate; stop if more than twice.
 - [ ] T024 Run the other development filings; tune instructions and context on development filings only, raising the instruction version on every change.
 - [ ] T025 Commit the stored replies of the development filings; test that the development run reproduces from them with no call.
@@ -65,8 +65,8 @@ instructions have not been tried on a model yet and will be tuned in phase 4.*
 
 ## Phase 5 – Evaluation (Story 3)
 
-- [ ] T026 [P] Tests for the tagged comparison on hand-built cases: citing, agreeing, wrong value, wrong period, uncited tag.
-- [ ] T027 Implement `evaluate/tagged.py`, `evaluate/report.py` and `axiomate evaluate`.
+- [x] T026 [P] Tests for the tagged comparison on hand-built cases: citing, agreeing, wrong value, wrong period, uncited tag.
+- [x] T027 Implement `evaluate/tagged.py`, `evaluate/report.py` and `axiomate evaluate`.
 - [ ] T028 Development report.
 - [ ] T029 Held-out run, once, with frozen instructions; commit its replies and its report.
 - [ ] T030 Draw the prose sample by the fixed rule; present it to the repository owner as yes/no questions; record the answers.

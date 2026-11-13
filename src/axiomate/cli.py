@@ -11,7 +11,9 @@ from axiomate.claims.query import claim_source, list_claims
 from axiomate.claims.submit import submit
 from axiomate.gate.check import check as gate_check
 from axiomate.interpret import run as interpret_run
+from axiomate.interpret.client import make_client
 from axiomate.interpret.replies import ReplyStore
+from axiomate.evaluate import report as evaluation
 from axiomate.documents.ingest import get_document, get_segment, ingest
 from axiomate.errors import AxiomateError
 from axiomate.store import db
@@ -58,6 +60,12 @@ def _parser() -> argparse.ArgumentParser:
     interpret = commands.add_parser("interpret", help="propose claims for a stored document from model replies")
     interpret.add_argument("document_id")
     interpret.add_argument("--replies", required=True, help="directory of stored model replies")
+    interpret.add_argument("--allow-calls", action="store_true", help="request missing replies from the model")
+    interpret.add_argument("--max-calls", type=int, help="stop before exceeding this number of calls")
+
+    evaluate = commands.add_parser("evaluate", help="compare stored claims with the figures tagged in the filings")
+    evaluate.add_argument("--split", required=True, choices=["development", "held_out"])
+    evaluate.add_argument("--splits", default="eval/splits.json", help="the split file (default: eval/splits.json)")
 
     commands.add_parser("export", help="canonical dump of the whole store")
     return parser
@@ -85,9 +93,16 @@ def _run(args: argparse.Namespace) -> object:
     if args.command == "interpret":
         conn = db.connect(args.db)
         try:
+            client = make_client(interpret_run.MODEL) if args.allow_calls else None
             return interpret_run.interpret(
-                conn, args.document_id, ReplyStore(args.replies),
+                conn, args.document_id, ReplyStore(args.replies), client=client, max_calls=args.max_calls,
                 instruction_version=interpret_run.INSTRUCTION_VERSION, model=interpret_run.MODEL)
+        finally:
+            conn.close()
+    if args.command == "evaluate":
+        conn = db.connect(args.db)
+        try:
+            return evaluation.build(conn, args.split, splits_path=args.splits)
         finally:
             conn.close()
     if args.command == "export":

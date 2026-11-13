@@ -16,7 +16,6 @@ Writes tests/fixtures/gate/from_facts.json. Deterministic.
 from __future__ import annotations
 
 import json
-import re
 import sys
 from datetime import date
 from pathlib import Path
@@ -24,8 +23,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "src"))
 
-from axiomate.documents.html_text import canonical_from_html  # noqa: E402
 from axiomate.documents.segment import segment  # noqa: E402
+from axiomate.evaluate.tagged import locate  # noqa: E402
 
 DOCS = ROOT / "tests" / "fixtures" / "documents"
 FACTS = ROOT / "tests" / "fixtures" / "facts"
@@ -37,45 +36,6 @@ KEYWORDS = {
     "earnings_per_share": ("per share",),
     "operating_cash_flow": ("operating activities",),
 }
-OPEN, CLOSE = "", ""
-
-
-def locate(html: str, fact_ids: list[str]) -> tuple[str, dict[str, tuple[int, int]]]:
-    """Canonical text and, for each tagged figure, its offsets in that text."""
-    marked = html
-    for number, fact_id in enumerate(fact_ids):
-        pattern = re.compile(
-            r"(<ix:nonFraction\b[^>]*\bid=[\"']" + re.escape(fact_id) + r"[\"'][^>]*>)(.*?)(</ix:nonFraction>)", re.DOTALL)
-        marked, count = pattern.subn(lambda m: f"{m.group(1)}{OPEN}{chr(0xE100 + number)}{m.group(2)}{CLOSE}{m.group(3)}", marked, count=1)
-        if count != 1:
-            raise SystemExit(f"tag {fact_id} not found exactly once")
-    text = canonical_from_html(marked)
-    spans: dict[str, tuple[int, int]] = {}
-    plain: list[str] = []
-    position = 0
-    open_at: dict[int, int] = {}
-    stack: list[int] = []
-    index = 0
-    while index < len(text):
-        char = text[index]
-        if char == OPEN:
-            number = ord(text[index + 1]) - 0xE100
-            open_at[number] = position
-            stack.append(number)
-            index += 2
-        elif char == CLOSE:
-            number = stack.pop()
-            spans[fact_ids[number]] = (open_at[number], position)
-            index += 1
-        else:
-            plain.append(char)
-            position += 1
-            index += 1
-    result = "".join(plain)
-    if result != canonical_from_html(html):
-        raise SystemExit("marking the figures changed the extracted text")
-    return result, spans
-
 
 def fiscal_label(start: date, end: date, year_end: str) -> tuple[int, str] | None:
     """Fiscal year and period of [start, end] for a fiscal year ending on MMDD `year_end`."""
