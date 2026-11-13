@@ -29,25 +29,39 @@ Options: `--publisher-cik`, `--type`, `--published-on`, `--fiscal-year`,
 
 ## `axiomate claim add <claim.json>`
 
-Input: one claim as defined in the data model, with optional `flags` and
-`assumptions`. To correct a claim, pass `--supersedes <claim_id>`.
+Input: one claim as a flat JSON object with the fields of the data model, plus
+optional `flags` and `assumptions` arrays. `status` and `segment_index` may be
+left out: the status is derived, and the segment is found from the span. If
+given, each must agree with what the store works out. Numbers may be written
+as JSON numbers or as text; they are read exactly. To correct a claim, pass
+`--supersedes <claim_id>`.
 
-- Success: `{"claim_id", "version", "status"}`.
-- Errors: `schema_invalid` (with the field), `unknown_metric`,
-  `document_not_found`, `span_mismatch`, `span_outside_segment`,
-  `said_on_mismatch`, `status_mismatch`, `empty_field_without_flag`.
+- Success: `{"claim_id", "version", "status", "created"}`. `created` is false
+  when the identical claim was already stored.
+- Errors: `schema_invalid` (with the field; also when the file is not JSON),
+  `unknown_metric`, `document_not_found`, `span_mismatch`,
+  `span_outside_segment`, `said_on_mismatch`, `status_mismatch`,
+  `empty_field_without_flag`, `claim_exists` (a different claim is stored for
+  the same span and metric and `--supersedes` was not given), `not_found` (the
+  claim named by `--supersedes` does not exist), `unreadable_file`.
 
 ## `axiomate claim list --company-cik --metric --fiscal-year [--fiscal-period]`
 
 Options: `--all-versions` (default returns only the latest version of each claim).
 
 - Success: an array of claims with flags and assumptions, in the stable order
-  defined in the plan.
+  defined in the plan. An empty array when nothing matches. The company key
+  may be given without leading zeros.
+- A claim is found through its latest version: one corrected to another
+  period no longer answers for the old period, unless `--all-versions` is set.
+- Errors: `schema_invalid` (company key, fiscal year or fiscal period absent
+  or malformed), `unknown_metric`.
 
 ## `axiomate claim source <claim_id> [--version N]`
 
-- Success: `{"document_id", "published_on", "segment_index", "segment_text",
-  "span_start", "span_end", "quote"}`.
+- Success: `{"claim_id", "version", "document_id", "published_on",
+  "segment_index", "segment_text", "span_start", "span_end", "quote"}`. The
+  latest version unless one is named.
 - Errors: `not_found`.
 
 ## `axiomate export`

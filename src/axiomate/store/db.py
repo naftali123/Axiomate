@@ -64,4 +64,9 @@ def export(conn: sqlite3.Connection) -> str:
                 record["original_sha256"] = hashlib.sha256(record.pop("original")).hexdigest()
             rows.append(record)
         dump[table] = rows
+    return export_text(dump)
+
+
+def export_text(dump: object) -> str:
+    """The canonical text form of an export."""
     return json.dumps(dump, ensure_ascii=False, sort_keys=True, indent=1) + "\n"

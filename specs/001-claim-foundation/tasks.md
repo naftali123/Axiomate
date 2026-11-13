@@ -42,32 +42,39 @@ implementation is written (constitution principle VIII).
 
 ## Phase 4 – Story 2: Record a grounded claim (P2)
 
-- [ ] T019 [P] [S2] Unit tests for the claim, flag and assumption models, including decimal handling and FR-017.
-- [ ] T020 [P] [S2] Unit tests for status derivation.
-- [ ] T021 [P] [S2] Integration tests for the five acceptance scenarios of Story 2 and every rejection code.
-- [ ] T022 [S2] Implement `claims/schema.py`.
-- [ ] T023 [S2] Implement `claims/status.py`.
-- [ ] T024 [S2] Implement `claims/submit.py`: schema check, span grounding, segment containment, versioning.
-- [ ] T025 [S2] Implement `axiomate claim add`.
-- [ ] T026 [S2] Measure the rejection rate on the malformed fixture set; it must be 100% (SC-004).
+- [x] T019 [P] [S2] Unit tests for the claim, flag and assumption models, including decimal handling and FR-017.
+- [x] T020 [P] [S2] Unit tests for status derivation.
+- [x] T021 [P] [S2] Integration tests for the five acceptance scenarios of Story 2 and every rejection code.
+- [x] T022 [S2] Implement `claims/schema.py`.
+- [x] T023 [S2] Implement `claims/status.py`.
+- [x] T024 [S2] Implement `claims/submit.py`: schema check, span grounding, segment containment, versioning.
+- [x] T025 [S2] Implement `axiomate claim add`.
+- [x] T026 [S2] Measure the rejection rate on the malformed fixture set; it must be 100% (SC-004).
 
-**Checkpoint**: Story 2 passes its independent test; quickstart step 3 works.
+**Checkpoint**: Story 2 passes its independent test; quickstart step 3 works. *Reached. Measured: 21 of 21 good claims accepted with the expected status; 40 of 40 corrupted claims rejected with the expected code and field, five per code.*
 
 ## Phase 5 – Story 3: Find and trace (P3)
 
-- [ ] T027 [P] [S3] Integration tests for the three acceptance scenarios of Story 3, including stable ordering and version handling.
-- [ ] T028 [S3] Implement `claims/query.py`.
-- [ ] T029 [S3] Implement `axiomate claim list` and `axiomate claim source`.
+- [x] T027 [P] [S3] Integration tests for the three acceptance scenarios of Story 3, including stable ordering and version handling.
+- [x] T028 [S3] Implement `claims/query.py`.
+- [x] T029 [S3] Implement `axiomate claim list` and `axiomate claim source`.
 
-**Checkpoint**: Story 3 passes its independent test; quickstart step 4 works.
+**Checkpoint**: Story 3 passes its independent test; quickstart step 4 works. *Reached.*
 
 ## Phase 6 – Polish
 
-- [ ] T030 Determinism test: two fresh runs over all fixtures produce identical exports (SC-005).
-- [ ] T031 Edge-case tests from the spec: duplicated figure, range and bound values, restated figure, non-calendar fiscal year.
-- [ ] T032 Run the quickstart end to end and correct any drift between it and the tool.
-- [ ] T033 Update `status.html`: stages 1 and 5 marked built and tested, spec table, date.
-- [ ] T034 Update `README.md` with installation and usage.
+- [x] T030 Determinism test: two fresh runs over all fixtures produce identical exports (SC-005).
+- [x] T031 Edge-case tests from the spec: duplicated figure, range and bound values, restated figure, non-calendar fiscal year.
+- [x] T032 Run the quickstart end to end and correct any drift between it and the tool.
+- [x] T033 Update `status.html`: stages 1 and 5 marked built and tested, spec table, date.
+- [x] T034 Update `README.md` with installation and usage.
+
+**Checkpoint**: all 34 tasks are done (2026-11-13). Two fresh runs give identical
+exports, also when the claims are submitted in the opposite order; the
+quickstart was run end to end with the installed command-line tool. The edge
+case "a company changes its name or is acquired" needs no code in this
+feature: a company is identified by its key, not its name; a change of key
+through an acquisition is left to the context stores.
 
 ## Dependencies
 

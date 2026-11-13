@@ -24,17 +24,20 @@ Expect the sentence text and its character offsets.
 ## 3. Record a claim (Story 2)
 
 ```bash
-axiomate claim add tests/fixtures/claims/acme_q3_revenue.json
+axiomate claim add my_claim.json
 ```
 
-Expect a claim id, version 1 and status `formal`. Then submit
-`tests/fixtures/claims/bad_span.json` and expect `span_mismatch`.
+`my_claim.json` is a flat JSON object with the fields of the data model, the
+`document_id` from step 1, the offsets of the quoted text and the quote itself
+(the files under `tests/fixtures/claims/good/` show the content; the tests fill
+in the offsets). Expect a claim id, version 1 and status `formal`. Change one
+character of the quote, submit again and expect `span_mismatch`.
 
 ## 4. Find and trace (Story 3)
 
 ```bash
-axiomate claim list --company-cik 0000000001 --metric revenue \
-  --fiscal-year 2025 --fiscal-period Q3
+axiomate claim list --company-cik 0001318568 --metric revenue \
+  --fiscal-year 2024 --fiscal-period Q1
 ```
 
 ```bash
@@ -45,5 +48,9 @@ Expect the claim, then the exact sentence and publication date it came from.
 
 ## 5. Check reproducibility
 
-Repeat steps 1–3 in a fresh store, run `axiomate export` in both, and expect the
-two outputs to be identical.
+Repeat steps 1–3 in a fresh store (`axiomate --db other.db ...`; the option
+goes before the command), run `axiomate export` in both, and expect the two
+outputs to be identical.
+
+*Last run end to end on 2026-11-13 with the installed tool: every step gave the
+expected result.*

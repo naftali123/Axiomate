@@ -37,8 +37,9 @@ Code is written only against an approved spec, plan and task list.
 
 ## Status
 
-Spec `001-claim-foundation` is in progress: the store foundation and document
-ingestion (stage 1) are built; claim submission and query are not yet written.
+Spec `001-claim-foundation` is implemented: document ingestion (stage 1) and
+the claim store (stage 5) are built and verified on the development data.
+The stages that interpret text and compare claims are not yet specified.
 See `status.html`.
 
 ## Trying it
@@ -58,6 +59,27 @@ axiomate ingest tests/fixtures/documents/everi_2024q1_10q.html --publisher-cik 0
 ```bash
 axiomate document show <document_id> --segment 3
 ```
+
+```bash
+axiomate claim add my_claim.json
+```
+
+```bash
+axiomate claim list --company-cik 0001318568 --metric revenue --fiscal-year 2024 --fiscal-period Q1
+```
+
+```bash
+axiomate claim source <claim_id>
+```
+
+```bash
+axiomate export
+```
+
+The store is the file `axiomate.db` in the current directory unless
+`--db <path>` is given before the command. The full walk-through is in
+`specs/001-claim-foundation/quickstart.md`, and every command and rejection
+code is listed in `specs/001-claim-foundation/contracts/cli.md`.
 
 ## Licence
 
