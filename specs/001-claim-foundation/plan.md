@@ -1,7 +1,7 @@
 # Implementation Plan: Disclosure Ingestion and Claim Foundation
 
 **Feature**: `001-claim-foundation` | **Date**: 2026-11-12 | **Spec**: [spec.md](spec.md)
-**Status**: Approved 2026-11-12
+**Status**: Approved 2026-11-12 · Implemented 2026-11-13
 
 ## Summary
 

@@ -36,8 +36,8 @@ character of the quote, submit again and expect `span_mismatch`.
 ## 4. Find and trace (Story 3)
 
 ```bash
-axiomate claim list --company-cik 0000000001 --metric revenue \
-  --fiscal-year 2025 --fiscal-period Q3
+axiomate claim list --company-cik 0001318568 --metric revenue \
+  --fiscal-year 2024 --fiscal-period Q1
 ```
 
 ```bash
@@ -48,5 +48,9 @@ Expect the claim, then the exact sentence and publication date it came from.
 
 ## 5. Check reproducibility
 
-Repeat steps 1–3 in a fresh store, run `axiomate export` in both, and expect the
-two outputs to be identical.
+Repeat steps 1–3 in a fresh store (`axiomate --db other.db ...`; the option
+goes before the command), run `axiomate export` in both, and expect the two
+outputs to be identical.
+
+*Last run end to end on 2026-11-13 with the installed tool: every step gave the
+expected result.*

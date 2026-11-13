@@ -50,12 +50,18 @@ as JSON numbers or as text; they are read exactly. To correct a claim, pass
 Options: `--all-versions` (default returns only the latest version of each claim).
 
 - Success: an array of claims with flags and assumptions, in the stable order
-  defined in the plan.
+  defined in the plan. An empty array when nothing matches. The company key
+  may be given without leading zeros.
+- A claim is found through its latest version: one corrected to another
+  period no longer answers for the old period, unless `--all-versions` is set.
+- Errors: `schema_invalid` (company key, fiscal year or fiscal period absent
+  or malformed), `unknown_metric`.
 
 ## `axiomate claim source <claim_id> [--version N]`
 
-- Success: `{"document_id", "published_on", "segment_index", "segment_text",
-  "span_start", "span_end", "quote"}`.
+- Success: `{"claim_id", "version", "document_id", "published_on",
+  "segment_index", "segment_text", "span_start", "span_end", "quote"}`. The
+  latest version unless one is named.
 - Errors: `not_found`.
 
 ## `axiomate export`

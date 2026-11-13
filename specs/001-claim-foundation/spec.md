@@ -2,7 +2,7 @@
 
 **Feature**: `001-claim-foundation`
 **Created**: 2026-11-11
-**Status**: Approved 2026-11-12
+**Status**: Approved 2026-11-12 · Implemented 2026-11-13 (all thresholds in the Verification section met on the development data)
 **Domain**: Corporate financial disclosures
 
 ## Purpose

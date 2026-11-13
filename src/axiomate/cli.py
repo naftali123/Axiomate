@@ -7,6 +7,7 @@ import sys
 from decimal import Decimal
 from pathlib import Path
 
+from axiomate.claims.query import claim_source, list_claims
 from axiomate.claims.submit import submit
 from axiomate.documents.ingest import get_document, get_segment, ingest
 from axiomate.errors import AxiomateError
@@ -39,6 +40,17 @@ def _parser() -> argparse.ArgumentParser:
     claim_add = claim_actions.add_parser("add", help="submit one claim from a JSON file")
     claim_add.add_argument("file")
     claim_add.add_argument("--supersedes", metavar="CLAIM_ID", help="store as a correction of this claim")
+    claim_list = claim_actions.add_parser("list", help="claims about a company, metric and fiscal period")
+    claim_list.add_argument("--company-cik")
+    claim_list.add_argument("--metric")
+    claim_list.add_argument("--fiscal-year")
+    claim_list.add_argument("--fiscal-period")
+    claim_list.add_argument("--all-versions", action="store_true")
+    source = claim_actions.add_parser("source", help="the sentence and document a claim comes from")
+    source.add_argument("claim_id")
+    source.add_argument("--version", type=int)
+
+    commands.add_parser("export", help="canonical dump of the whole store")
     return parser
 
 
@@ -61,6 +73,22 @@ def _run(args: argparse.Namespace) -> object:
         finally:
             conn.close()
         return {"document_id": result.document_id, "segments": result.segments, "created": result.created}
+    if args.command == "export":
+        conn = db.connect(args.db)
+        try:
+            return json.loads(db.export(conn))
+        finally:
+            conn.close()
+    if args.command == "claim" and args.action in ("list", "source"):
+        conn = db.connect(args.db)
+        try:
+            if args.action == "source":
+                return claim_source(conn, args.claim_id, args.version)
+            return list_claims(
+                conn, company_cik=args.company_cik, metric=args.metric, fiscal_year=args.fiscal_year,
+                fiscal_period=args.fiscal_period, all_versions=args.all_versions)
+        finally:
+            conn.close()
     if args.command == "claim":
         try:
             # JSON numbers are read as exact decimals, never as floats.
@@ -90,7 +118,10 @@ def main(argv: list[str] | None = None) -> int:
     except AxiomateError as error:
         print(json.dumps(error.to_dict(), ensure_ascii=False))
         return 1
-    print(json.dumps(output, ensure_ascii=False))
+    if args.command == "export":
+        sys.stdout.write(db.export_text(output))
+    else:
+        print(json.dumps(output, ensure_ascii=False))
     return 0
 
 
