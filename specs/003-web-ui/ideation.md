@@ -300,6 +300,15 @@ Changes to the flow, reflected in `mockup/mockup.html.txt`:
    a plain reading, the result, what it was compared with, four-step "how we got
    here", and details collapsed.
 
+**Visual direction (second round).** Messaging-app shell (Telegram/WhatsApp
+style: chat list on one side, conversation on the other, single pane on a
+phone) with investment-app cues (tickers, tabular numbers, a consistency
+sparkline and quarter-on-quarter delta). Each entity shows a profile image (a
+company logo; the mock-up uses placeholder monograms) with its rating directly
+beneath, and its latest statement beside it. Statements in the entity page are
+message bubbles; the comparison record on the statement page is shown as a
+"reply" quote.
+
 **Rating.** The rating is a *consistency rating*, not an honesty or credibility
 score: consistent statements divided by statements that could be checked,
 always shown with coverage (how many statements could be checked at all), and
