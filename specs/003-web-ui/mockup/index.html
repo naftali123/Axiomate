@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Axiomate – מודל ממשק</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+/* Layout: reading room. Top bar with three views; evidence (serif, LTR) is always visually distinct from interface (Heebo, RTL). */
+:root{
+  --bg:#f4f6f8; --surface:#ffffff; --fg:#17202b; --muted:#5b6877; --line:#d9e0e7;
+  --claim:#1f5fbf; --claim-bg:#e3edfb;
+  --flag:#a15c00; --flag-bg:#fdf0d5;
+  --ok:#0b7a6b; --ok-bg:#dcf3ee;
+  --diff:#6a3fb5; --diff-bg:#ebe3f8;
+  --err:#b3261e; --err-bg:#fbe3e1;
+  --off:#8a96a3; --off-bg:#e9edf1;
+  --ui:'Heebo',system-ui,sans-serif; --ev:'Source Serif 4',Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f151c; --surface:#17202a; --fg:#e6ecf2; --muted:#9aa8b6; --line:#2a3744;
+  --claim:#8db7f5; --claim-bg:#16294a; --flag:#f0b44c; --flag-bg:#3a2a0c;
+  --ok:#62d3bf; --ok-bg:#0d3a34; --diff:#bba2f0; --diff-bg:#2c2050;
+  --err:#f19a93; --err-bg:#4a1c19; --off:#8794a1; --off-bg:#222d38; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f151c; --surface:#17202a; --fg:#e6ecf2; --muted:#9aa8b6; --line:#2a3744;
+  --claim:#8db7f5; --claim-bg:#16294a; --flag:#f0b44c; --flag-bg:#3a2a0c;
+  --ok:#62d3bf; --ok-bg:#0d3a34; --diff:#bba2f0; --diff-bg:#2c2050;
+  --err:#f19a93; --err-bg:#4a1c19; --off:#8794a1; --off-bg:#222d38; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:15px/1.55 var(--ui);padding-block:0 48px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1080px;margin:0 auto}
+header.bar{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;padding:14px 0;border-bottom:1px solid var(--line)}
+.brand{font-weight:700;font-size:1.15rem;letter-spacing:.02em}
+nav{display:flex;gap:4px;flex-wrap:wrap}
+nav a{color:var(--muted);text-decoration:none;padding:6px 12px;border-radius:6px;font-weight:500}
+nav a[aria-current="page"]{background:var(--surface);color:var(--fg);box-shadow:0 0 0 1px var(--line)}
+nav a:focus-visible,button:focus-visible,.cl:focus-visible,.stage:focus-visible,.bar-f:focus-visible{outline:2px solid var(--claim);outline-offset:2px}
+.sp{flex:1}
+button.t{font:inherit;color:var(--muted);background:none;border:1px solid var(--line);border-radius:6px;padding:4px 10px;cursor:pointer}
+.example{background:var(--flag-bg);color:var(--flag);border-radius:6px;padding:8px 12px;margin:14px 0;font-size:.9rem}
+h1{font-size:1.4rem;margin:18px 0 2px}
+h2{font-size:1rem;margin:0 0 10px;color:var(--muted);font-weight:700;letter-spacing:.03em}
+.sub{color:var(--muted);margin:0 0 14px}
+section.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px;margin:14px 0}
+.view{display:none}.view.on{display:block}
+.chip{display:inline-flex;align-items:center;gap:5px;font-size:.78rem;font-weight:700;padding:2px 9px;border-radius:99px;white-space:nowrap}
+.chip.ok{background:var(--ok-bg);color:var(--ok)}.chip.flag{background:var(--flag-bg);color:var(--flag)}
+.chip.err{background:var(--err-bg);color:var(--err)}.chip.off{background:var(--off-bg);color:var(--off)}
+.chip.diff{background:var(--diff-bg);color:var(--diff)}.chip.claim{background:var(--claim-bg);color:var(--claim)}
+/* run strip */
+.strip{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:6px}
+.stage{font:inherit;text-align:center;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 4px;cursor:pointer;color:var(--fg);min-width:0}
+.stage b{display:block;font-size:.8rem}.stage small{display:block;color:var(--muted);font-size:.72rem;margin-top:2px}
+.stage .n{display:block;font-size:1.15rem;font-weight:700;font-variant-numeric:tabular-nums}
+.stage.done{border-color:var(--ok)}.stage.attn{border-color:var(--flag)}.stage.nb{border-style:dashed;color:var(--off)}
+.stage[aria-expanded="true"]{box-shadow:0 0 0 2px var(--claim)}
+#stagepanel{margin-top:10px;padding:12px;border-radius:8px;background:var(--bg);border:1px solid var(--line)}
+@media(max-width:640px){.strip{grid-template-columns:repeat(4,minmax(0,1fr))}}
+/* funnel */
+.funnel{display:grid;gap:6px}
+.bar-f{font:inherit;color:var(--fg);display:flex;align-items:center;gap:10px;background:none;border:0;padding:0;cursor:pointer;text-align:start}
+.bar-f .fill{height:28px;border-radius:5px;background:var(--claim-bg);border:1px solid var(--claim);min-width:6px}
+.bar-f .lbl{font-variant-numeric:tabular-nums}
+.bar-f .fill.ok{background:var(--ok-bg);border-color:var(--ok)}.bar-f .fill.flag{background:var(--flag-bg);border-color:var(--flag)}.bar-f .fill.err{background:var(--err-bg);border-color:var(--err)}
+.fw{display:grid;grid-template-columns:minmax(0,1fr);gap:4px}
+.row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center}
+/* reader */
+.reader{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:16px}
+@media(max-width:760px){.reader{grid-template-columns:minmax(0,1fr)}}
+.ev{direction:ltr;text-align:left;font:1.05rem/1.75 var(--ev);padding:14px 16px;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+.ev p{margin:0 0 12px}
+.ev mark{background:var(--claim-bg);color:inherit;border-bottom:2px solid var(--claim);padding:0 1px;border-radius:2px;cursor:pointer}
+.ev mark.flag{background:var(--flag-bg);border-color:var(--flag)}
+.ev mark.err{background:var(--err-bg);border-color:var(--err);text-decoration:line-through wavy var(--err) 1px}
+.ev .quiet{border-bottom:2px dotted var(--off);cursor:pointer}
+.ev mark.hot,.ev .quiet.hot{outline:2px solid var(--fg);outline-offset:1px}
+.cls{display:grid;gap:8px;align-content:start}
+.cl{font:inherit;color:var(--fg);text-align:start;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px;cursor:pointer;display:grid;gap:4px}
+.cl.hot{box-shadow:0 0 0 2px var(--fg)}
+.cl .t{display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap}
+.cl .m{font-weight:700}.cl .v{font-variant-numeric:tabular-nums}
+.cl .why{color:var(--muted);font-size:.86rem}
+.q{direction:ltr;text-align:left;font:1rem/1.6 var(--ev);border-inline-start:3px solid var(--line);padding:2px 12px;margin:6px 0;background:var(--bg)}
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+.filters button{font:inherit;font-size:.85rem;border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:99px;padding:3px 12px;cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
+/* finding */
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:640px){.two{grid-template-columns:minmax(0,1fr)}}
+.depth{display:flex;gap:6px;margin:8px 0 12px;flex-wrap:wrap}
+.depth button{font:inherit;border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:6px;padding:5px 12px;cursor:pointer}
+.depth button[aria-pressed="true"]{background:var(--claim-bg);border-color:var(--claim);color:var(--claim);font-weight:700}
+.layer{display:none}.layer.on{display:block}
+dl.kv{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:6px 14px;margin:0}
+dl.kv dt{color:var(--muted)}dl.kv dd{margin:0;font-variant-numeric:tabular-nums}
+pre{direction:ltr;text-align:left;margin:0;overflow-x:auto;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:10px;font-size:.82rem}
+.big{font-size:1.1rem}
+table{width:100%;border-collapse:collapse}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:start;vertical-align:top}
+th{color:var(--muted);font-weight:500;font-size:.85rem}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.tw{overflow-x:auto}
+ul.plain{margin:0;padding-inline-start:20px}
+@media(prefers-reduced-motion:no-preference){.cl,.stage{transition:box-shadow .12s}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="bar">
+  <span class="brand">Axiomate</span>
+  <nav aria-label="תצוגות">
+    <a href="#document" data-v="document">מסמך</a>
+    <a href="#finding" data-v="finding">ממצא</a>
+    <a href="#trust" data-v="trust">אמון</a>
+  </nav>
+  <span class="sp"></span>
+  <button class="t" id="theme" type="button">ערכת נושא</button>
+</header>
+<div class="example"><b>מודל להמחשה.</b> החברה «Example Corp» והמספרים כאן בדויים, כדי להראות את המראה והתחושה. הם אינם דוח אמיתי ואינם תוצאה של המערכת.</div>
+
+<!-- ============ DOCUMENT ============ -->
+<div class="view" id="v-document">
+  <h1>Example Corp · דוח רבעוני 10-Q · Q3 2025</h1>
+  <p class="sub">פורסם ב־28.10.2025 · מה המערכת עשתה עם הטקסט הזה?</p>
+
+  <section class="card">
+    <h2>מסלול העיבוד של המסמך</h2>
+    <div class="strip" id="strip"></div>
+    <div id="stagepanel" hidden></div>
+  </section>
+
+  <section class="card">
+    <h2>לאן הלך הטקסט</h2>
+    <div class="funnel" id="funnel"></div>
+    <p class="sub" style="margin:10px 0 0">כל פס לחיץ ומציג את המשפטים שבו. משפט שאינו בתוצאות נמצא באחד הפסים או נפל בשלב עם סיבה כתובה.</p>
+  </section>
+
+  <section class="card">
+    <h2>קורא המקור</h2>
+    <div class="filters" id="filters" role="group" aria-label="סינון">
+      <button type="button" aria-pressed="true" data-f="all">הכול</button>
+      <button type="button" aria-pressed="false" data-f="ok">עברו</button>
+      <button type="button" aria-pressed="false" data-f="assume">נשענים על הנחה</button>
+      <button type="button" aria-pressed="false" data-f="err">נדחו</button>
+      <button type="button" aria-pressed="false" data-f="off">לא ניתנים להערכה</button>
+    </div>
+    <div class="reader">
+      <div class="ev" lang="en" id="ev">
+        <p><mark data-c="c1">Total revenues were $4.2 billion for the third quarter of 2025</mark>, compared with <mark data-c="c2" class="flag">$4.0 billion in the same quarter last year</mark>.</p>
+        <p><span class="quiet" data-c="c3">Net income decreased due to weaker demand in our consumer segment.</span></p>
+        <p><mark data-c="c4">Net cash provided by operating activities was $610 million</mark> in the quarter.</p>
+        <p>Diluted earnings per share was <mark data-c="c5" class="err">$1.35</mark>.</p>
+      </div>
+      <div class="cls" id="cls">
+        <button class="cl" data-c="c1" data-k="ok" type="button">
+          <span class="t"><span class="m">הכנסות · Q3 2025</span><span class="chip ok">עבר</span></span>
+          <span class="v big">$4.2 מיליארד</span>
+          <span class="why">הציטוט תומך בערך, בסדר הגודל ובתקופה.</span>
+        </button>
+        <button class="cl" data-c="c2" data-k="ok assume" type="button">
+          <span class="t"><span class="m">הכנסות · Q3 2024</span><span class="chip flag">⚑ נשען על הנחה</span></span>
+          <span class="v big">$4.0 מיליארד</span>
+          <span class="why">הנחה: «אותו רבעון אשתקד» = Q3 2024 (נקבעה מתאריך הדוח).</span>
+        </button>
+        <button class="cl" data-c="c3" data-k="off" type="button">
+          <span class="t"><span class="m">רווח נקי</span><span class="chip off">לא ניתן להערכה</span></span>
+          <span class="why">המשפט מתאר כיוון בלי מספר, ולכן לא נוצרה טענה. אין כאן ניחוש.</span>
+        </button>
+        <button class="cl" data-c="c4" data-k="ok" type="button">
+          <span class="t"><span class="m">תזרים מפעילות שוטפת · Q3 2025</span><span class="chip ok">עבר</span></span>
+          <span class="v big">$610 מיליון</span>
+          <span class="why">הציטוט תומך בערך, בסדר הגודל ובתקופה.</span>
+        </button>
+        <button class="cl" data-c="c5" data-k="err" type="button">
+          <span class="t"><span class="m">רווח למניה (מדולל)</span><span class="chip err">מועמדת נדחתה</span></span>
+          <span class="why">המודל הציע 13.5; הציטוט אומר 1.35. אי־התאמה בערך, ולכן הטענה לא נשמרה. הקוד: <code>value_mismatch</code></span>
+        </button>
+      </div>
+    </div>
+    <p class="sub" style="margin:10px 0 0">מועמדות שהוצעו על ידי מודל מסומנות ככאלה ועברו בדיקה דטרמיניסטית. הציטוטים מוצגים באותיות המקור ובכיוון המקור.</p>
+  </section>
+</div>
+
+<!-- ============ FINDING ============ -->
+<div class="view" id="v-finding">
+  <h1>אי־התאמה · הכנסות · Q3 2025</h1>
+  <p class="sub">שלוש רמות פירוט. ברירת המחדל היא הראשונה.</p>
+  <div class="depth" role="group" aria-label="רמת פירוט">
+    <button type="button" aria-pressed="true" data-l="1">1 · במילים פשוטות</button>
+    <button type="button" aria-pressed="false" data-l="2">2 · הטענה המובנית</button>
+    <button type="button" aria-pressed="false" data-l="3">3 · עקבות ההוכחה</button>
+  </div>
+
+  <section class="card">
+    <div class="row"><span><span class="chip diff">◆ אי־התאמה</span> <span class="chip flag">מותנית</span></span><span class="sub" style="margin:0">הכנסות · Q3 2025</span></div>
+    <div class="two" style="margin-top:12px">
+      <div><h2>נאמר ב־10-Q · 28.10.2025</h2><div class="q">Total revenues were $4.2 billion for the third quarter of 2025</div></div>
+      <div><h2>בתיעוד הקודם · הודעת תוצאות · 23.10.2025</h2><div class="q">Revenues for the quarter totaled $4.1 billion</div></div>
+    </div>
+
+    <div class="layer on" id="l1">
+      <p class="big">ב־Q3 2025 החברה אמרה שההכנסות היו 4.2 מיליארד דולר. בהודעה הקודמת שלה על אותו רבעון נאמר 4.1 מיליארד דולר. ההפרש: 0.1 מיליארד (2.4%).</p>
+      <p>התוצאה <b>מותנית</b> כי היא נשענת על הנחה אחת: «הכנסות» פירושו «סך ההכנסות». המערכת מדווחת על אי־התאמה בין שני טקסטים. היא לא קובעת איזה מהם נכון.</p>
+    </div>
+    <div class="layer" id="l2">
+      <dl class="kv">
+        <dt>מדד</dt><dd>הכנסות (revenue)</dd>
+        <dt>ערך שנאמר</dt><dd>4.2 מיליארד USD</dd>
+        <dt>ערך בתיעוד</dt><dd>4.1 מיליארד USD</dd>
+        <dt>התקופה שהטענה עוסקת בה</dt><dd>Q3 2025 (1.7.2025 – 30.9.2025)</dd>
+        <dt>מתי נאמר</dt><dd>28.10.2025 (נאמר) · 23.10.2025 (תיעוד)</dd>
+        <dt>בסיס · אופי</dt><dd>מדווח · בפועל</dd>
+        <dt>הנחה</dt><dd><span class="chip flag">⚑</span> «הכנסות» = «סך ההכנסות» · מקור: מאגר הקשר</dd>
+      </dl>
+    </div>
+    <div class="layer" id="l3">
+      <pre>{
+  "finding": "disagreement",
+  "grade": "conditional",
+  "rests_on": [
+    {"claim": "c-8f2a…", "quote": "Total revenues were $4.2 billion…"},
+    {"claim": "c-31bd…", "quote": "Revenues for the quarter totaled $4.1 billion"}
+  ],
+  "rules": ["same-metric", "same-period", "values-differ"],
+  "assumptions": [{"statement": "revenue means total revenues", "origin": "context store"}]
+}</pre>
+      <p class="sub" style="margin-top:8px">נתוני הדוגמה מייצגים את המבנה בלבד.</p>
+    </div>
+  </section>
+</div>
+
+<!-- ============ TRUST ============ -->
+<div class="view" id="v-trust">
+  <h1>עד כמה אפשר לסמוך על המערכת</h1>
+  <p class="sub">המספרים כאן נקראים מדוחות ההערכה, כך שהם זהים לעמוד הסטטוס. הערכים בטבלה לקוחים מהמדידות שכבר בוצעו על נתוני הפיתוח.</p>
+  <section class="card">
+    <div class="tw"><table>
+      <thead><tr><th>שלב</th><th>מה נמדד</th><th>תוצאה</th><th>סף</th><th>על מה</th></tr></thead>
+      <tbody>
+        <tr><td>קליטה</td><td>גבולות משפטים</td><td class="num">241 / 241</td><td class="num">≥ 98%</td><td>דוחות פיתוח</td></tr>
+        <tr><td>שער אימות</td><td>טענות מושחתות שנתפסו</td><td class="num">84 / 84</td><td class="num">100%</td><td>נתוני פיתוח</td></tr>
+        <tr><td>שער אימות</td><td>טענות נכונות שעברו</td><td class="num">115 / 115</td><td class="num">≥ 98%</td><td>נתוני פיתוח</td></tr>
+        <tr><td>פרשנות</td><td>דיוק וכיסוי</td><td><span class="chip off">טרם נמדד</span></td><td class="num">98% · 70%</td><td>דוחות נפרדים (טרם הורצו)</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+  <section class="card">
+    <h2>מה זה לא מכסה</h2>
+    <ul class="plain">
+      <li>כל המדידות עד כה הן על נתוני הפיתוח. הדוחות הנפרדים טרם נמדדו.</li>
+      <li>הנחות שאינן בציטוט נבדקות רק בהערכה, לא בשער.</li>
+      <li>משפטים בלי מספר אינם הופכים לטענות.</li>
+      <li>דיוק על טקסט רציף יימדד על מדגם של כ־30 טענות בלבד.</li>
+    </ul>
+  </section>
+</div>
+</div>
+
+<script>
+var STAGES=[
+ {n:'קליטה',c:'412',u:'משפטים',s:'done',t:'שומר את המסמך, מפיק את הטקסט הנראה ומחלק למשפטים.',i:'קובץ HTML של הדוח',o:'412 משפטים עם מיקום מדויק בטקסט'},
+ {n:'פרשנות',c:'38',u:'מועמדות',s:'done',t:'מודל שפה מציע טענות מובנות. הוא מציע בלבד ואינו קובע דבר.',i:'52 משפטים שיש בהם מספר',o:'38 מועמדות, כל אחת עם ציטוט'},
+ {n:'שער',c:'27',u:'עברו',s:'done',t:'קוד דטרמיניסטי קורא את הציטוט שוב ומשווה לטענה: ערך, סדר גודל, סימן, תקופה, מדד.',i:'38 מועמדות',o:'27 עברו · 4 סומנו בדגל · 7 נדחו עם סיבה'},
+ {n:'הקשר',c:'·',u:'טרם נבנה',s:'nb',t:'משלים הנחות מתוך מאגרי הקשר (כינויים, ברירות מחדל).',i:'—',o:'—'},
+ {n:'מאגר',c:'27',u:'טענות',s:'done',t:'שומר טענות כגרסאות שאינן ניתנות לשינוי, כל אחת מעוגנת לציטוט.',i:'27 טענות',o:'27 טענות שניתן לשלוף לפי חברה, מדד ותקופה'},
+ {n:'התאמה',c:'·',u:'טרם נבנה',s:'nb',t:'מצמיד טענות על אותו מדד ואותה תקופה.',i:'—',o:'—'},
+ {n:'השוואה',c:'·',u:'טרם נבנה',s:'nb',t:'משווה טענות מותאמות ומפיק פסיקות עם עקבות הוכחה.',i:'—',o:'—'},
+ {n:'סקירה',c:'4',u:'פתוחים',s:'attn',t:'מציג לאדם דגלים פתוחים ואוסף את החלטותיו.',i:'4 דגלים',o:'החלטות שנשמרות כנתונים'}
+];
+var FUN=[['412 משפטים בדוח',412,''],['52 מכילים מספר',52,''],['38 מועמדות',38,''],['27 טענות שנשמרו',27,'ok'],['4 סומנו בדגל',4,'flag'],['7 נדחו',7,'err']];
+var strip=document.getElementById('strip'),sp=document.getElementById('stagepanel');
+STAGES.forEach(function(s,k){
+  var b=document.createElement('button');b.type='button';b.className='stage '+s.s;b.setAttribute('aria-expanded','false');
+  b.innerHTML='<b>'+(k+1)+'. '+s.n+'</b><span class="n">'+s.c+'</span><small>'+s.u+'</small>';
+  b.onclick=function(){
+    var open=b.getAttribute('aria-expanded')==='true';
+    strip.querySelectorAll('.stage').forEach(function(x){x.setAttribute('aria-expanded','false')});
+    if(open){sp.hidden=true;return}
+    b.setAttribute('aria-expanded','true');sp.hidden=false;
+    sp.innerHTML='<b>'+(k+1)+'. '+s.n+'</b>'+(s.s==='nb'?' <span class="chip off">טרם נבנה</span>':'')+'<p style="margin:6px 0">'+s.t+'</p><dl class="kv"><dt>נכנס</dt><dd>'+s.i+'</dd><dt>יצא</dt><dd>'+s.o+'</dd></dl>';
+  };
+  strip.appendChild(b);
+});
+var fn=document.getElementById('funnel');
+FUN.forEach(function(f){
+  var b=document.createElement('button');b.type='button';b.className='bar-f';
+  b.innerHTML='<span class="fill '+f[2]+'" style="width:'+Math.max(f[1]/412*60,1.5)+'%"></span><span class="lbl">'+f[0]+'</span>';
+  fn.appendChild(b);
+});
+/* reader linking + filters */
+var ev=document.getElementById('ev'),cl=document.getElementById('cls');
+function hot(id,on){
+  ev.querySelectorAll('[data-c="'+id+'"]').forEach(function(e){e.classList.toggle('hot',on)});
+  cl.querySelectorAll('[data-c="'+id+'"]').forEach(function(e){e.classList.toggle('hot',on)});
+}
+document.querySelectorAll('[data-c]').forEach(function(e){
+  var id=e.getAttribute('data-c');
+  e.addEventListener('mouseenter',function(){hot(id,true)});e.addEventListener('mouseleave',function(){hot(id,false)});
+  e.addEventListener('focus',function(){hot(id,true)});e.addEventListener('blur',function(){hot(id,false)});
+  e.addEventListener('click',function(){var o=e.tagName==='BUTTON'?ev.querySelector('[data-c="'+id+'"]'):cl.querySelector('[data-c="'+id+'"]');if(o&&o.scrollIntoView)o.scrollIntoView({block:'nearest'})});
+});
+document.getElementById('filters').addEventListener('click',function(e){
+  var b=e.target.closest('button');if(!b)return;
+  this.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
+  var f=b.getAttribute('data-f');
+  cl.querySelectorAll('.cl').forEach(function(c){c.hidden=!(f==='all'||c.getAttribute('data-k').split(' ').indexOf(f)>-1)});
+});
+/* depth */
+document.querySelector('.depth').addEventListener('click',function(e){
+  var b=e.target.closest('button');if(!b)return;
+  this.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
+  [1,2,3].forEach(function(n){document.getElementById('l'+n).classList.toggle('on',String(n)===b.getAttribute('data-l'))});
+});
+/* routing */
+var VIEWS=['document','finding','trust'];
+function route(){
+  var h=(location.hash||'').slice(1);if(VIEWS.indexOf(h)<0)h='document';
+  VIEWS.forEach(function(v){document.getElementById('v-'+v).classList.toggle('on',v===h)});
+  document.querySelectorAll('nav a').forEach(function(a){if(a.getAttribute('data-v')===h)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
+}
+window.addEventListener('hashchange',route);route();
+/* theme */
+document.getElementById('theme').onclick=function(){
+  var r=document.documentElement,dark=r.getAttribute('data-theme')==='dark'||(!r.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme:dark)').matches);
+  r.setAttribute('data-theme',dark?'light':'dark');
+};
+</script>
+</body>
+</html>
