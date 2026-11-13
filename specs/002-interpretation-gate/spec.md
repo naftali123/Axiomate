@@ -2,7 +2,7 @@
 
 **Feature**: `002-interpretation-gate`
 **Created**: 2026-11-13
-**Status**: Draft – awaiting approval
+**Status**: Approved 2026-11-13
 **Domain**: Corporate financial disclosures
 **Builds on**: [001-claim-foundation](../001-claim-foundation/spec.md)
 
@@ -297,10 +297,8 @@ Resolved on 2026-11-13:
 - **How prose is evaluated**: automatically where tags exist, plus one small
   yes/no sample for prose, instead of a full hand-labelled set.
 
-Open, to be settled before approval:
-
-- Whether the thresholds above (98% precision, 70% coverage, 90% on the prose
-  sample) are the ones to hold the feature to.
+- **Thresholds**: approved as proposed with the specification (98% precision,
+  70% coverage, 90% on the prose sample; 100% and 98% for the gate).
 
 ## Constitution check
 
