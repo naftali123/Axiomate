@@ -1,0 +1,4597 @@
+{
+ "claims": [
+  {
+   "name": "cpa18_2021q1_10q__000_net_income",
+   "document": "cpa18_2021q1_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOmY0YmFmZTY3MGMxOTRkODM5ZTdjNTE1NWFhMjNkMmZiL3NlYzpmNGJhZmU2NzBjMTk0ZDgzOWU3YzUxNTVhYTIzZDJmYl82Ny9mcmFnOmU2OGJmYzU4MGUxMDRjZmVhODUwMDQyYTE5N2QwN2M1L3RhYmxlOjQxNTllODc4NzBlZTRkYmVhMTA2NDc4Y2QzNjIzNjVmL3RhYmxlcmFuZ2U6NDE1OWU4Nzg3MGVlNGRiZWExMDY0NzhjZDM2MjM2NWZfNS05LTEtMS0w_4f2401b6-60d3-493a-9868-dc9dec40ffab",
+   "segment_text": "Net income (loss) attributable to CPA:18 – Global\t$\t511\t$\t(8,180)",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "-8180000",
+    "value_high": "-8180000",
+    "stated_value": "8180",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2020,
+    "fiscal_period": "Q1",
+    "period_start": "2020-01-01",
+    "period_end": "2020-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "a6af736eaa82dcb0c2f999decbb4007928cf94ee2adba384afb531fb3f87406f",
+    "segment_index": 692,
+    "span_start": 63845,
+    "span_end": 63850,
+    "quote": "8,180",
+    "said_on": "2021-05-10",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2020-01-01 to 2020-03-31, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2021q1_10q__001_net_income",
+   "document": "cpa18_2021q1_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOmY0YmFmZTY3MGMxOTRkODM5ZTdjNTE1NWFhMjNkMmZiL3NlYzpmNGJhZmU2NzBjMTk0ZDgzOWU3YzUxNTVhYTIzZDJmYl83My9mcmFnOjVkMWE4NDVhYmQ5MTRiZjNhZWM4MjZiMDE4ZTg5NGYyL3RhYmxlOjYzMzlmOTJlNTQ2NDQ4NjdhZmY5NTgzYWRkYTRhNjJkL3RhYmxlcmFuZ2U6NjMzOWY5MmU1NDY0NDg2N2FmZjk1ODNhZGRhNGE2MmRfNTMtMy0xLTEtMA_b5131dab-d1ea-4561-93bd-2050bf779b55",
+   "segment_text": "Net income (loss) attributable to CPA:18 – Global\t$\t511\t$\t(8,180)",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "-8180000",
+    "value_high": "-8180000",
+    "stated_value": "8180",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2020,
+    "fiscal_period": "Q1",
+    "period_start": "2020-01-01",
+    "period_end": "2020-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "a6af736eaa82dcb0c2f999decbb4007928cf94ee2adba384afb531fb3f87406f",
+    "segment_index": 771,
+    "span_start": 68959,
+    "span_end": 68964,
+    "quote": "8,180",
+    "said_on": "2021-05-10",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2020-01-01 to 2020-03-31, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2021q1_10q__002_net_income",
+   "document": "cpa18_2021q1_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOmY0YmFmZTY3MGMxOTRkODM5ZTdjNTE1NWFhMjNkMmZiL3NlYzpmNGJhZmU2NzBjMTk0ZDgzOWU3YzUxNTVhYTIzZDJmYl8yMi9mcmFnOjhiODUxN2RiNjJhMjQwOThhZGRhOGE5OTA5Yjc0MmY5L3RhYmxlOjhiYmUyNzZhZDNhYTQ1YTk4YWM5MDg2MGYxZTlhYmUwL3RhYmxlcmFuZ2U6OGJiZTI3NmFkM2FhNDVhOThhYzkwODYwZjFlOWFiZTBfMjYtMy0xLTEtMA_cb0bd517-7aee-475f-880d-9c1cc7b28393",
+   "segment_text": "Net Income (Loss) Attributable to CPA:18 – Global\t$\t511\t$\t(8,180)",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "-8180000",
+    "value_high": "-8180000",
+    "stated_value": "8180",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2020,
+    "fiscal_period": "Q1",
+    "period_start": "2020-01-01",
+    "period_end": "2020-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "a6af736eaa82dcb0c2f999decbb4007928cf94ee2adba384afb531fb3f87406f",
+    "segment_index": 132,
+    "span_start": 10465,
+    "span_end": 10470,
+    "quote": "8,180",
+    "said_on": "2021-05-10",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2020-01-01 to 2020-03-31, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2021q1_10q__003_net_income",
+   "document": "cpa18_2021q1_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOmY0YmFmZTY3MGMxOTRkODM5ZTdjNTE1NWFhMjNkMmZiL3NlYzpmNGJhZmU2NzBjMTk0ZDgzOWU3YzUxNTVhYTIzZDJmYl82Ny9mcmFnOmU2OGJmYzU4MGUxMDRjZmVhODUwMDQyYTE5N2QwN2M1L3RhYmxlOjQxNTllODc4NzBlZTRkYmVhMTA2NDc4Y2QzNjIzNjVmL3RhYmxlcmFuZ2U6NDE1OWU4Nzg3MGVlNGRiZWExMDY0NzhjZDM2MjM2NWZfNS0zLTEtMS0w_0ec7ee44-6d8d-4fc5-9d5d-b32628317642",
+   "segment_text": "Net income (loss) attributable to CPA:18 – Global\t$\t511\t$\t(8,180)",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "511000",
+    "value_high": "511000",
+    "stated_value": "511",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "Q1",
+    "period_start": "2021-01-01",
+    "period_end": "2021-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "a6af736eaa82dcb0c2f999decbb4007928cf94ee2adba384afb531fb3f87406f",
+    "segment_index": 692,
+    "span_start": 63838,
+    "span_end": 63841,
+    "quote": "511",
+    "said_on": "2021-05-10",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2021-01-01 to 2021-03-31, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2021q1_10q__004_net_income",
+   "document": "cpa18_2021q1_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOmY0YmFmZTY3MGMxOTRkODM5ZTdjNTE1NWFhMjNkMmZiL3NlYzpmNGJhZmU2NzBjMTk0ZDgzOWU3YzUxNTVhYTIzZDJmYl83My9mcmFnOjVkMWE4NDVhYmQ5MTRiZjNhZWM4MjZiMDE4ZTg5NGYyL3RhYmxlOjYzMzlmOTJlNTQ2NDQ4NjdhZmY5NTgzYWRkYTRhNjJkL3RhYmxlcmFuZ2U6NjMzOWY5MmU1NDY0NDg2N2FmZjk1ODNhZGRhNGE2MmRfNTMtMS0xLTEtMA_68535b33-5a3f-4210-ba88-8969965f54ba",
+   "segment_text": "Net income (loss) attributable to CPA:18 – Global\t$\t511\t$\t(8,180)",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "511000",
+    "value_high": "511000",
+    "stated_value": "511",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "Q1",
+    "period_start": "2021-01-01",
+    "period_end": "2021-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "a6af736eaa82dcb0c2f999decbb4007928cf94ee2adba384afb531fb3f87406f",
+    "segment_index": 771,
+    "span_start": 68952,
+    "span_end": 68955,
+    "quote": "511",
+    "said_on": "2021-05-10",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2021-01-01 to 2021-03-31, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2021q1_10q__005_net_income",
+   "document": "cpa18_2021q1_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOmY0YmFmZTY3MGMxOTRkODM5ZTdjNTE1NWFhMjNkMmZiL3NlYzpmNGJhZmU2NzBjMTk0ZDgzOWU3YzUxNTVhYTIzZDJmYl8yMi9mcmFnOjhiODUxN2RiNjJhMjQwOThhZGRhOGE5OTA5Yjc0MmY5L3RhYmxlOjhiYmUyNzZhZDNhYTQ1YTk4YWM5MDg2MGYxZTlhYmUwL3RhYmxlcmFuZ2U6OGJiZTI3NmFkM2FhNDVhOThhYzkwODYwZjFlOWFiZTBfMjYtMS0xLTEtMA_8bcb74c7-191a-4377-8d26-e690e1f5d7be",
+   "segment_text": "Net Income (Loss) Attributable to CPA:18 – Global\t$\t511\t$\t(8,180)",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "511000",
+    "value_high": "511000",
+    "stated_value": "511",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "Q1",
+    "period_start": "2021-01-01",
+    "period_end": "2021-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "a6af736eaa82dcb0c2f999decbb4007928cf94ee2adba384afb531fb3f87406f",
+    "segment_index": 132,
+    "span_start": 10458,
+    "span_end": 10461,
+    "quote": "511",
+    "said_on": "2021-05-10",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2021-01-01 to 2021-03-31, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2021q1_10q__006_operating_cash_flow",
+   "document": "cpa18_2021q1_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOmY0YmFmZTY3MGMxOTRkODM5ZTdjNTE1NWFhMjNkMmZiL3NlYzpmNGJhZmU2NzBjMTk0ZDgzOWU3YzUxNTVhYTIzZDJmYl8zMS9mcmFnOjY2ZTBlZDVjNWU5ZTQ1ZDVhOGQwMWYwNWVlZTQ3Yzk5L3RhYmxlOjk1MDkzYTYwMmFmOTQ4MzJiNjRmZGIyOWY4YmFmYTVmL3RhYmxlcmFuZ2U6OTUwOTNhNjAyYWY5NDgzMmI2NGZkYjI5ZjhiYWZhNWZfMTEtMy0xLTEtMA_6c8fa531-a5e4-482d-8671-6aa52565d881",
+   "segment_text": "Net Cash Provided by Operating Activities\t$\t16,652\t$\t22,808",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "operating_cash_flow",
+    "value_kind": "exact",
+    "value_low": "22808000",
+    "value_high": "22808000",
+    "stated_value": "22808",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2020,
+    "fiscal_period": "Q1",
+    "period_start": "2020-01-01",
+    "period_end": "2020-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "a6af736eaa82dcb0c2f999decbb4007928cf94ee2adba384afb531fb3f87406f",
+    "segment_index": 202,
+    "span_start": 14401,
+    "span_end": 14407,
+    "quote": "22,808",
+    "said_on": "2021-05-10",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2020-01-01 to 2020-03-31, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2021q1_10q__007_operating_cash_flow",
+   "document": "cpa18_2021q1_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOmY0YmFmZTY3MGMxOTRkODM5ZTdjNTE1NWFhMjNkMmZiL3NlYzpmNGJhZmU2NzBjMTk0ZDgzOWU3YzUxNTVhYTIzZDJmYl8zMS9mcmFnOjY2ZTBlZDVjNWU5ZTQ1ZDVhOGQwMWYwNWVlZTQ3Yzk5L3RhYmxlOjk1MDkzYTYwMmFmOTQ4MzJiNjRmZGIyOWY4YmFmYTVmL3RhYmxlcmFuZ2U6OTUwOTNhNjAyYWY5NDgzMmI2NGZkYjI5ZjhiYWZhNWZfMTEtMS0xLTEtMA_bab55e95-948d-4b40-9974-e3f9b5dc4133",
+   "segment_text": "Net Cash Provided by Operating Activities\t$\t16,652\t$\t22,808",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "operating_cash_flow",
+    "value_kind": "exact",
+    "value_low": "16652000",
+    "value_high": "16652000",
+    "stated_value": "16652",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "Q1",
+    "period_start": "2021-01-01",
+    "period_end": "2021-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "a6af736eaa82dcb0c2f999decbb4007928cf94ee2adba384afb531fb3f87406f",
+    "segment_index": 202,
+    "span_start": 14392,
+    "span_end": 14398,
+    "quote": "16,652",
+    "said_on": "2021-05-10",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2021-01-01 to 2021-03-31, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2021q1_10q__008_revenue",
+   "document": "cpa18_2021q1_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOmY0YmFmZTY3MGMxOTRkODM5ZTdjNTE1NWFhMjNkMmZiL3NlYzpmNGJhZmU2NzBjMTk0ZDgzOWU3YzUxNTVhYTIzZDJmYl83My9mcmFnOjVkMWE4NDVhYmQ5MTRiZjNhZWM4MjZiMDE4ZTg5NGYyL3RhYmxlOjYzMzlmOTJlNTQ2NDQ4NjdhZmY5NTgzYWRkYTRhNjJkL3RhYmxlcmFuZ2U6NjMzOWY5MmU1NDY0NDg2N2FmZjk1ODNhZGRhNGE2MmRfNDYtMy0xLTEtMA_218c42a1-c51c-49b2-9894-b20b4cbed1e8",
+   "segment_text": "Revenues (a) (d)\t$\t48,369\t$\t42,880",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "revenue",
+    "value_kind": "exact",
+    "value_low": "42880000",
+    "value_high": "42880000",
+    "stated_value": "42880",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2020,
+    "fiscal_period": "Q1",
+    "period_start": "2020-01-01",
+    "period_end": "2020-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "a6af736eaa82dcb0c2f999decbb4007928cf94ee2adba384afb531fb3f87406f",
+    "segment_index": 765,
+    "span_start": 68666,
+    "span_end": 68672,
+    "quote": "42,880",
+    "said_on": "2021-05-10",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2020-01-01 to 2020-03-31, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2021q1_10q__009_revenue",
+   "document": "cpa18_2021q1_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOmY0YmFmZTY3MGMxOTRkODM5ZTdjNTE1NWFhMjNkMmZiL3NlYzpmNGJhZmU2NzBjMTk0ZDgzOWU3YzUxNTVhYTIzZDJmYl8yMi9mcmFnOjhiODUxN2RiNjJhMjQwOThhZGRhOGE5OTA5Yjc0MmY5L3RhYmxlOjhiYmUyNzZhZDNhYTQ1YTk4YWM5MDg2MGYxZTlhYmUwL3RhYmxlcmFuZ2U6OGJiZTI3NmFkM2FhNDVhOThhYzkwODYwZjFlOWFiZTBfNi0zLTEtMS0w_7ac0e2ed-aee3-4c50-8dc5-f10f890a043f",
+   "segment_text": "48,369\t42,880",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "revenue",
+    "value_kind": "exact",
+    "value_low": "42880000",
+    "value_high": "42880000",
+    "stated_value": "42880",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2020,
+    "fiscal_period": "Q1",
+    "period_start": "2020-01-01",
+    "period_end": "2020-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "a6af736eaa82dcb0c2f999decbb4007928cf94ee2adba384afb531fb3f87406f",
+    "segment_index": 114,
+    "span_start": 9632,
+    "span_end": 9638,
+    "quote": "42,880",
+    "said_on": "2021-05-10",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2020-01-01 to 2020-03-31, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     },
+     {
+      "statement": "The metric is revenue, per the filing's embedded tag",
+      "field": "metric",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2021q1_10q__010_revenue",
+   "document": "cpa18_2021q1_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOmY0YmFmZTY3MGMxOTRkODM5ZTdjNTE1NWFhMjNkMmZiL3NlYzpmNGJhZmU2NzBjMTk0ZDgzOWU3YzUxNTVhYTIzZDJmYl83My9mcmFnOjVkMWE4NDVhYmQ5MTRiZjNhZWM4MjZiMDE4ZTg5NGYyL3RhYmxlOjYzMzlmOTJlNTQ2NDQ4NjdhZmY5NTgzYWRkYTRhNjJkL3RhYmxlcmFuZ2U6NjMzOWY5MmU1NDY0NDg2N2FmZjk1ODNhZGRhNGE2MmRfNDYtMS0xLTEtMA_c2bda619-b37f-4d15-98ac-b3c7123aa87d",
+   "segment_text": "Revenues (a) (d)\t$\t48,369\t$\t42,880",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "revenue",
+    "value_kind": "exact",
+    "value_low": "48369000",
+    "value_high": "48369000",
+    "stated_value": "48369",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "Q1",
+    "period_start": "2021-01-01",
+    "period_end": "2021-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "a6af736eaa82dcb0c2f999decbb4007928cf94ee2adba384afb531fb3f87406f",
+    "segment_index": 765,
+    "span_start": 68657,
+    "span_end": 68663,
+    "quote": "48,369",
+    "said_on": "2021-05-10",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2021-01-01 to 2021-03-31, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2021q1_10q__011_revenue",
+   "document": "cpa18_2021q1_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOmY0YmFmZTY3MGMxOTRkODM5ZTdjNTE1NWFhMjNkMmZiL3NlYzpmNGJhZmU2NzBjMTk0ZDgzOWU3YzUxNTVhYTIzZDJmYl8yMi9mcmFnOjhiODUxN2RiNjJhMjQwOThhZGRhOGE5OTA5Yjc0MmY5L3RhYmxlOjhiYmUyNzZhZDNhYTQ1YTk4YWM5MDg2MGYxZTlhYmUwL3RhYmxlcmFuZ2U6OGJiZTI3NmFkM2FhNDVhOThhYzkwODYwZjFlOWFiZTBfNi0xLTEtMS0w_bcbc812b-44ae-4b02-bd9c-f5d7237b8415",
+   "segment_text": "48,369\t42,880",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "revenue",
+    "value_kind": "exact",
+    "value_low": "48369000",
+    "value_high": "48369000",
+    "stated_value": "48369",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "Q1",
+    "period_start": "2021-01-01",
+    "period_end": "2021-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "a6af736eaa82dcb0c2f999decbb4007928cf94ee2adba384afb531fb3f87406f",
+    "segment_index": 114,
+    "span_start": 9625,
+    "span_end": 9631,
+    "quote": "48,369",
+    "said_on": "2021-05-10",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2021-01-01 to 2021-03-31, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     },
+     {
+      "statement": "The metric is revenue, per the filing's embedded tag",
+      "field": "metric",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2021q2_10q__000_net_income",
+   "document": "cpa18_2021q2_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOjg3YWU1NGJhNzcwYzQwNTY4MWU1ZjI3ZWYxZTRiNmJjL3NlYzo4N2FlNTRiYTc3MGM0MDU2ODFlNWYyN2VmMWU0YjZiY182Ny9mcmFnOjMxM2RmMDQ0NmZmNzRkZDQ5YzRiNzU3YTNkYzFhMmZiL3RhYmxlOjFlNzQ5YTVlOWQ3MDRjYTBiZmQ2ZTY3MDk3Yzk3MzhjL3RhYmxlcmFuZ2U6MWU3NDlhNWU5ZDcwNGNhMGJmZDZlNjcwOTdjOTczOGNfNS05LTEtMS0xMTg0_c5b690be-d679-45ef-8b02-e00bc742b1b5",
+   "segment_text": "Net income (loss) attributable to CPA:18 – Global\t$\t2,477\t$\t(9,371)",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "-9371000",
+    "value_high": "-9371000",
+    "stated_value": "9371",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2020,
+    "fiscal_period": "H1",
+    "period_start": "2020-01-01",
+    "period_end": "2020-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "04c2108bf8a7ed746342da51c43edd3f5c4ba26bb51d17cce1d39fae577f4b1a",
+    "segment_index": 738,
+    "span_start": 69087,
+    "span_end": 69092,
+    "quote": "9,371",
+    "said_on": "2021-08-09",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2020-01-01 to 2020-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2021q2_10q__001_net_income",
+   "document": "cpa18_2021q2_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOjg3YWU1NGJhNzcwYzQwNTY4MWU1ZjI3ZWYxZTRiNmJjL3NlYzo4N2FlNTRiYTc3MGM0MDU2ODFlNWYyN2VmMWU0YjZiY183My9mcmFnOmFjZTVmMzNhNDIxMTRhZDY5YWI3YTRmZTNhODA4Yjk1L3RhYmxlOmM3YTVkOTRkNDNiZTRjZGNiMjliY2YwZDgyZmU2MDk2L3RhYmxlcmFuZ2U6YzdhNWQ5NGQ0M2JlNGNkY2IyOWJjZjBkODJmZTYwOTZfNTMtNy0xLTEtMA_0d68ba32-a8c0-4388-83bd-1943b5fe82cf",
+   "segment_text": "Net income (loss) attributable to CPA:18 – Global\t$\t1,966\t$\t(1,191)\t$\t2,477\t$\t(9,371)",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "-9371000",
+    "value_high": "-9371000",
+    "stated_value": "9371",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2020,
+    "fiscal_period": "H1",
+    "period_start": "2020-01-01",
+    "period_end": "2020-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "04c2108bf8a7ed746342da51c43edd3f5c4ba26bb51d17cce1d39fae577f4b1a",
+    "segment_index": 839,
+    "span_start": 76030,
+    "span_end": 76035,
+    "quote": "9,371",
+    "said_on": "2021-08-09",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2020-01-01 to 2020-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2021q2_10q__002_net_income",
+   "document": "cpa18_2021q2_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOjg3YWU1NGJhNzcwYzQwNTY4MWU1ZjI3ZWYxZTRiNmJjL3NlYzo4N2FlNTRiYTc3MGM0MDU2ODFlNWYyN2VmMWU0YjZiY18yMi9mcmFnOjFiNjBhZGRiOGU2YjQxOTZhOGM1MmNiYTEwNWU4YjY1L3RhYmxlOmMzZWY2NDg3OGEzMzQ5ZDBiZmY3OGVlZTJkZTQyNDZkL3RhYmxlcmFuZ2U6YzNlZjY0ODc4YTMzNDlkMGJmZjc4ZWVlMmRlNDI0NmRfMjYtNy0xLTEtMA_154d2bef-bfd2-4abb-b6f6-4cd0aabe1a60",
+   "segment_text": "Net Income (Loss) Attributable to CPA:18 – Global\t$\t1,966\t$\t(1,191)\t$\t2,477\t$\t(9,371)",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "-9371000",
+    "value_high": "-9371000",
+    "stated_value": "9371",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2020,
+    "fiscal_period": "H1",
+    "period_start": "2020-01-01",
+    "period_end": "2020-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "04c2108bf8a7ed746342da51c43edd3f5c4ba26bb51d17cce1d39fae577f4b1a",
+    "segment_index": 132,
+    "span_start": 10796,
+    "span_end": 10801,
+    "quote": "9,371",
+    "said_on": "2021-08-09",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2020-01-01 to 2020-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2021q2_10q__003_net_income",
+   "document": "cpa18_2021q2_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOjg3YWU1NGJhNzcwYzQwNTY4MWU1ZjI3ZWYxZTRiNmJjL3NlYzo4N2FlNTRiYTc3MGM0MDU2ODFlNWYyN2VmMWU0YjZiY182Ny9mcmFnOjMxM2RmMDQ0NmZmNzRkZDQ5YzRiNzU3YTNkYzFhMmZiL3RhYmxlOjU2NTVmYTA2MDdkMjQzMTdhZmIwNzQ5M2RhNWI2MDI1L3RhYmxlcmFuZ2U6NTY1NWZhMDYwN2QyNDMxN2FmYjA3NDkzZGE1YjYwMjVfNS05LTEtMS0w_08e92039-1f63-4128-bee3-fa8203a86bc6",
+   "segment_text": "Net income (loss) attributable to CPA:18 – Global\t$\t1,966\t$\t(1,191)",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "-1191000",
+    "value_high": "-1191000",
+    "stated_value": "1191",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2020,
+    "fiscal_period": "Q2",
+    "period_start": "2020-04-01",
+    "period_end": "2020-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "04c2108bf8a7ed746342da51c43edd3f5c4ba26bb51d17cce1d39fae577f4b1a",
+    "segment_index": 732,
+    "span_start": 68611,
+    "span_end": 68616,
+    "quote": "1,191",
+    "said_on": "2021-08-09",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2020-04-01 to 2020-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2021q2_10q__004_net_income",
+   "document": "cpa18_2021q2_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOjg3YWU1NGJhNzcwYzQwNTY4MWU1ZjI3ZWYxZTRiNmJjL3NlYzo4N2FlNTRiYTc3MGM0MDU2ODFlNWYyN2VmMWU0YjZiY183My9mcmFnOmFjZTVmMzNhNDIxMTRhZDY5YWI3YTRmZTNhODA4Yjk1L3RhYmxlOmM3YTVkOTRkNDNiZTRjZGNiMjliY2YwZDgyZmU2MDk2L3RhYmxlcmFuZ2U6YzdhNWQ5NGQ0M2JlNGNkY2IyOWJjZjBkODJmZTYwOTZfNTMtMy0xLTEtMA_0f0f0bfe-7777-4318-94d7-ed68cee1c79f",
+   "segment_text": "Net income (loss) attributable to CPA:18 – Global\t$\t1,966\t$\t(1,191)\t$\t2,477\t$\t(9,371)",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "-1191000",
+    "value_high": "-1191000",
+    "stated_value": "1191",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2020,
+    "fiscal_period": "Q2",
+    "period_start": "2020-04-01",
+    "period_end": "2020-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "04c2108bf8a7ed746342da51c43edd3f5c4ba26bb51d17cce1d39fae577f4b1a",
+    "segment_index": 839,
+    "span_start": 76012,
+    "span_end": 76017,
+    "quote": "1,191",
+    "said_on": "2021-08-09",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2020-04-01 to 2020-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2021q2_10q__005_net_income",
+   "document": "cpa18_2021q2_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOjg3YWU1NGJhNzcwYzQwNTY4MWU1ZjI3ZWYxZTRiNmJjL3NlYzo4N2FlNTRiYTc3MGM0MDU2ODFlNWYyN2VmMWU0YjZiY18yMi9mcmFnOjFiNjBhZGRiOGU2YjQxOTZhOGM1MmNiYTEwNWU4YjY1L3RhYmxlOmMzZWY2NDg3OGEzMzQ5ZDBiZmY3OGVlZTJkZTQyNDZkL3RhYmxlcmFuZ2U6YzNlZjY0ODc4YTMzNDlkMGJmZjc4ZWVlMmRlNDI0NmRfMjYtMy0xLTEtMA_27e11893-1155-4ca1-bdbe-3cb5092203ed",
+   "segment_text": "Net Income (Loss) Attributable to CPA:18 – Global\t$\t1,966\t$\t(1,191)\t$\t2,477\t$\t(9,371)",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "-1191000",
+    "value_high": "-1191000",
+    "stated_value": "1191",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2020,
+    "fiscal_period": "Q2",
+    "period_start": "2020-04-01",
+    "period_end": "2020-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "04c2108bf8a7ed746342da51c43edd3f5c4ba26bb51d17cce1d39fae577f4b1a",
+    "segment_index": 132,
+    "span_start": 10778,
+    "span_end": 10783,
+    "quote": "1,191",
+    "said_on": "2021-08-09",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2020-04-01 to 2020-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2021q2_10q__006_net_income",
+   "document": "cpa18_2021q2_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOjg3YWU1NGJhNzcwYzQwNTY4MWU1ZjI3ZWYxZTRiNmJjL3NlYzo4N2FlNTRiYTc3MGM0MDU2ODFlNWYyN2VmMWU0YjZiY182Ny9mcmFnOjMxM2RmMDQ0NmZmNzRkZDQ5YzRiNzU3YTNkYzFhMmZiL3RhYmxlOjFlNzQ5YTVlOWQ3MDRjYTBiZmQ2ZTY3MDk3Yzk3MzhjL3RhYmxlcmFuZ2U6MWU3NDlhNWU5ZDcwNGNhMGJmZDZlNjcwOTdjOTczOGNfNS0zLTEtMS0xMTgy_c54d4a2a-35c1-4989-b5e5-aaac568130a2",
+   "segment_text": "Net income (loss) attributable to CPA:18 – Global\t$\t2,477\t$\t(9,371)",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "2477000",
+    "value_high": "2477000",
+    "stated_value": "2477",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "H1",
+    "period_start": "2021-01-01",
+    "period_end": "2021-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "04c2108bf8a7ed746342da51c43edd3f5c4ba26bb51d17cce1d39fae577f4b1a",
+    "segment_index": 738,
+    "span_start": 69078,
+    "span_end": 69083,
+    "quote": "2,477",
+    "said_on": "2021-08-09",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2021-01-01 to 2021-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2021q2_10q__007_net_income",
+   "document": "cpa18_2021q2_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOjg3YWU1NGJhNzcwYzQwNTY4MWU1ZjI3ZWYxZTRiNmJjL3NlYzo4N2FlNTRiYTc3MGM0MDU2ODFlNWYyN2VmMWU0YjZiY183My9mcmFnOmFjZTVmMzNhNDIxMTRhZDY5YWI3YTRmZTNhODA4Yjk1L3RhYmxlOmM3YTVkOTRkNDNiZTRjZGNiMjliY2YwZDgyZmU2MDk2L3RhYmxlcmFuZ2U6YzdhNWQ5NGQ0M2JlNGNkY2IyOWJjZjBkODJmZTYwOTZfNTMtNS0xLTEtMA_13a1820a-2b52-49d4-92ab-d4102bb480f4",
+   "segment_text": "Net income (loss) attributable to CPA:18 – Global\t$\t1,966\t$\t(1,191)\t$\t2,477\t$\t(9,371)",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "2477000",
+    "value_high": "2477000",
+    "stated_value": "2477",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "H1",
+    "period_start": "2021-01-01",
+    "period_end": "2021-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "04c2108bf8a7ed746342da51c43edd3f5c4ba26bb51d17cce1d39fae577f4b1a",
+    "segment_index": 839,
+    "span_start": 76021,
+    "span_end": 76026,
+    "quote": "2,477",
+    "said_on": "2021-08-09",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2021-01-01 to 2021-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2021q2_10q__008_net_income",
+   "document": "cpa18_2021q2_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOjg3YWU1NGJhNzcwYzQwNTY4MWU1ZjI3ZWYxZTRiNmJjL3NlYzo4N2FlNTRiYTc3MGM0MDU2ODFlNWYyN2VmMWU0YjZiY18yMi9mcmFnOjFiNjBhZGRiOGU2YjQxOTZhOGM1MmNiYTEwNWU4YjY1L3RhYmxlOmMzZWY2NDg3OGEzMzQ5ZDBiZmY3OGVlZTJkZTQyNDZkL3RhYmxlcmFuZ2U6YzNlZjY0ODc4YTMzNDlkMGJmZjc4ZWVlMmRlNDI0NmRfMjYtNS0xLTEtMA_b3c7463b-73eb-4b1d-82a9-a32a2db9a7aa",
+   "segment_text": "Net Income (Loss) Attributable to CPA:18 – Global\t$\t1,966\t$\t(1,191)\t$\t2,477\t$\t(9,371)",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "2477000",
+    "value_high": "2477000",
+    "stated_value": "2477",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "H1",
+    "period_start": "2021-01-01",
+    "period_end": "2021-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "04c2108bf8a7ed746342da51c43edd3f5c4ba26bb51d17cce1d39fae577f4b1a",
+    "segment_index": 132,
+    "span_start": 10787,
+    "span_end": 10792,
+    "quote": "2,477",
+    "said_on": "2021-08-09",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2021-01-01 to 2021-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2021q2_10q__009_net_income",
+   "document": "cpa18_2021q2_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOjg3YWU1NGJhNzcwYzQwNTY4MWU1ZjI3ZWYxZTRiNmJjL3NlYzo4N2FlNTRiYTc3MGM0MDU2ODFlNWYyN2VmMWU0YjZiY182Ny9mcmFnOjMxM2RmMDQ0NmZmNzRkZDQ5YzRiNzU3YTNkYzFhMmZiL3RhYmxlOjU2NTVmYTA2MDdkMjQzMTdhZmIwNzQ5M2RhNWI2MDI1L3RhYmxlcmFuZ2U6NTY1NWZhMDYwN2QyNDMxN2FmYjA3NDkzZGE1YjYwMjVfNS0zLTEtMS0w_697c1727-38e1-4040-8e6b-c3eb4f966baa",
+   "segment_text": "Net income (loss) attributable to CPA:18 – Global\t$\t1,966\t$\t(1,191)",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "1966000",
+    "value_high": "1966000",
+    "stated_value": "1966",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "Q2",
+    "period_start": "2021-04-01",
+    "period_end": "2021-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "04c2108bf8a7ed746342da51c43edd3f5c4ba26bb51d17cce1d39fae577f4b1a",
+    "segment_index": 732,
+    "span_start": 68602,
+    "span_end": 68607,
+    "quote": "1,966",
+    "said_on": "2021-08-09",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2021-04-01 to 2021-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2021q2_10q__010_net_income",
+   "document": "cpa18_2021q2_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOjg3YWU1NGJhNzcwYzQwNTY4MWU1ZjI3ZWYxZTRiNmJjL3NlYzo4N2FlNTRiYTc3MGM0MDU2ODFlNWYyN2VmMWU0YjZiY183My9mcmFnOmFjZTVmMzNhNDIxMTRhZDY5YWI3YTRmZTNhODA4Yjk1L3RhYmxlOmM3YTVkOTRkNDNiZTRjZGNiMjliY2YwZDgyZmU2MDk2L3RhYmxlcmFuZ2U6YzdhNWQ5NGQ0M2JlNGNkY2IyOWJjZjBkODJmZTYwOTZfNTMtMS0xLTEtMA_bc4f588d-6b25-44fd-86ef-6f6b838b765c",
+   "segment_text": "Net income (loss) attributable to CPA:18 – Global\t$\t1,966\t$\t(1,191)\t$\t2,477\t$\t(9,371)",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "1966000",
+    "value_high": "1966000",
+    "stated_value": "1966",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "Q2",
+    "period_start": "2021-04-01",
+    "period_end": "2021-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "04c2108bf8a7ed746342da51c43edd3f5c4ba26bb51d17cce1d39fae577f4b1a",
+    "segment_index": 839,
+    "span_start": 76003,
+    "span_end": 76008,
+    "quote": "1,966",
+    "said_on": "2021-08-09",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2021-04-01 to 2021-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2021q2_10q__011_net_income",
+   "document": "cpa18_2021q2_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOjg3YWU1NGJhNzcwYzQwNTY4MWU1ZjI3ZWYxZTRiNmJjL3NlYzo4N2FlNTRiYTc3MGM0MDU2ODFlNWYyN2VmMWU0YjZiY18yMi9mcmFnOjFiNjBhZGRiOGU2YjQxOTZhOGM1MmNiYTEwNWU4YjY1L3RhYmxlOmMzZWY2NDg3OGEzMzQ5ZDBiZmY3OGVlZTJkZTQyNDZkL3RhYmxlcmFuZ2U6YzNlZjY0ODc4YTMzNDlkMGJmZjc4ZWVlMmRlNDI0NmRfMjYtMS0xLTEtMA_29fa1042-dc82-479a-b16c-6e77846cc649",
+   "segment_text": "Net Income (Loss) Attributable to CPA:18 – Global\t$\t1,966\t$\t(1,191)\t$\t2,477\t$\t(9,371)",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "1966000",
+    "value_high": "1966000",
+    "stated_value": "1966",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "Q2",
+    "period_start": "2021-04-01",
+    "period_end": "2021-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "04c2108bf8a7ed746342da51c43edd3f5c4ba26bb51d17cce1d39fae577f4b1a",
+    "segment_index": 132,
+    "span_start": 10769,
+    "span_end": 10774,
+    "quote": "1,966",
+    "said_on": "2021-08-09",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2021-04-01 to 2021-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2021q2_10q__012_operating_cash_flow",
+   "document": "cpa18_2021q2_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOjg3YWU1NGJhNzcwYzQwNTY4MWU1ZjI3ZWYxZTRiNmJjL3NlYzo4N2FlNTRiYTc3MGM0MDU2ODFlNWYyN2VmMWU0YjZiY18zMS9mcmFnOjg5ODg4N2NjNTFjNDQ1NjZiMDgwZmNmM2YxNjJjNDdkL3RhYmxlOjU5ODFkYjRjNzA5OTRkODZhOWQyZWM4NTcwNTY5MmU5L3RhYmxlcmFuZ2U6NTk4MWRiNGM3MDk5NGQ4NmE5ZDJlYzg1NzA1NjkyZTlfMTEtMy0xLTEtMA_41294c75-c36d-414a-b904-41a868d3688e",
+   "segment_text": "Net Cash Provided by Operating Activities\t$\t37,104\t$\t38,924",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "operating_cash_flow",
+    "value_kind": "exact",
+    "value_low": "38924000",
+    "value_high": "38924000",
+    "stated_value": "38924",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2020,
+    "fiscal_period": "H1",
+    "period_start": "2020-01-01",
+    "period_end": "2020-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "04c2108bf8a7ed746342da51c43edd3f5c4ba26bb51d17cce1d39fae577f4b1a",
+    "segment_index": 237,
+    "span_start": 17195,
+    "span_end": 17201,
+    "quote": "38,924",
+    "said_on": "2021-08-09",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2020-01-01 to 2020-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2021q2_10q__013_operating_cash_flow",
+   "document": "cpa18_2021q2_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOjg3YWU1NGJhNzcwYzQwNTY4MWU1ZjI3ZWYxZTRiNmJjL3NlYzo4N2FlNTRiYTc3MGM0MDU2ODFlNWYyN2VmMWU0YjZiY18zMS9mcmFnOjg5ODg4N2NjNTFjNDQ1NjZiMDgwZmNmM2YxNjJjNDdkL3RhYmxlOjU5ODFkYjRjNzA5OTRkODZhOWQyZWM4NTcwNTY5MmU5L3RhYmxlcmFuZ2U6NTk4MWRiNGM3MDk5NGQ4NmE5ZDJlYzg1NzA1NjkyZTlfMTEtMS0xLTEtMA_7f7fec4d-12a5-4f24-8a79-24ee00a828e0",
+   "segment_text": "Net Cash Provided by Operating Activities\t$\t37,104\t$\t38,924",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "operating_cash_flow",
+    "value_kind": "exact",
+    "value_low": "37104000",
+    "value_high": "37104000",
+    "stated_value": "37104",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "H1",
+    "period_start": "2021-01-01",
+    "period_end": "2021-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "04c2108bf8a7ed746342da51c43edd3f5c4ba26bb51d17cce1d39fae577f4b1a",
+    "segment_index": 237,
+    "span_start": 17186,
+    "span_end": 17192,
+    "quote": "37,104",
+    "said_on": "2021-08-09",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2021-01-01 to 2021-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2021q2_10q__014_revenue",
+   "document": "cpa18_2021q2_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOjg3YWU1NGJhNzcwYzQwNTY4MWU1ZjI3ZWYxZTRiNmJjL3NlYzo4N2FlNTRiYTc3MGM0MDU2ODFlNWYyN2VmMWU0YjZiY183My9mcmFnOmFjZTVmMzNhNDIxMTRhZDY5YWI3YTRmZTNhODA4Yjk1L3RhYmxlOmM3YTVkOTRkNDNiZTRjZGNiMjliY2YwZDgyZmU2MDk2L3RhYmxlcmFuZ2U6YzdhNWQ5NGQ0M2JlNGNkY2IyOWJjZjBkODJmZTYwOTZfNDYtNy0xLTEtMA_db445bd1-fef2-420e-b7e7-b221b2c76882",
+   "segment_text": "Revenues (a) (d)\t$\t49,610\t$\t43,928\t$\t97,979\t$\t86,808",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "revenue",
+    "value_kind": "exact",
+    "value_low": "86808000",
+    "value_high": "86808000",
+    "stated_value": "86808",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2020,
+    "fiscal_period": "H1",
+    "period_start": "2020-01-01",
+    "period_end": "2020-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "04c2108bf8a7ed746342da51c43edd3f5c4ba26bb51d17cce1d39fae577f4b1a",
+    "segment_index": 833,
+    "span_start": 75626,
+    "span_end": 75632,
+    "quote": "86,808",
+    "said_on": "2021-08-09",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2020-01-01 to 2020-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2021q2_10q__015_revenue",
+   "document": "cpa18_2021q2_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOjg3YWU1NGJhNzcwYzQwNTY4MWU1ZjI3ZWYxZTRiNmJjL3NlYzo4N2FlNTRiYTc3MGM0MDU2ODFlNWYyN2VmMWU0YjZiY18yMi9mcmFnOjFiNjBhZGRiOGU2YjQxOTZhOGM1MmNiYTEwNWU4YjY1L3RhYmxlOmMzZWY2NDg3OGEzMzQ5ZDBiZmY3OGVlZTJkZTQyNDZkL3RhYmxlcmFuZ2U6YzNlZjY0ODc4YTMzNDlkMGJmZjc4ZWVlMmRlNDI0NmRfNi03LTEtMS0w_081c2a88-a61d-4d79-9e3c-0ae4cb89d295",
+   "segment_text": "49,610\t43,928\t97,979\t86,808",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "revenue",
+    "value_kind": "exact",
+    "value_low": "86808000",
+    "value_high": "86808000",
+    "stated_value": "86808",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2020,
+    "fiscal_period": "H1",
+    "period_start": "2020-01-01",
+    "period_end": "2020-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "04c2108bf8a7ed746342da51c43edd3f5c4ba26bb51d17cce1d39fae577f4b1a",
+    "segment_index": 114,
+    "span_start": 9727,
+    "span_end": 9733,
+    "quote": "86,808",
+    "said_on": "2021-08-09",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2020-01-01 to 2020-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     },
+     {
+      "statement": "The metric is revenue, per the filing's embedded tag",
+      "field": "metric",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2021q2_10q__016_revenue",
+   "document": "cpa18_2021q2_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOjg3YWU1NGJhNzcwYzQwNTY4MWU1ZjI3ZWYxZTRiNmJjL3NlYzo4N2FlNTRiYTc3MGM0MDU2ODFlNWYyN2VmMWU0YjZiY183My9mcmFnOmFjZTVmMzNhNDIxMTRhZDY5YWI3YTRmZTNhODA4Yjk1L3RhYmxlOmM3YTVkOTRkNDNiZTRjZGNiMjliY2YwZDgyZmU2MDk2L3RhYmxlcmFuZ2U6YzdhNWQ5NGQ0M2JlNGNkY2IyOWJjZjBkODJmZTYwOTZfNDYtMy0xLTEtMA_18c12876-9b12-4862-a06c-3ce623fe1c46",
+   "segment_text": "Revenues (a) (d)\t$\t49,610\t$\t43,928\t$\t97,979\t$\t86,808",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "revenue",
+    "value_kind": "exact",
+    "value_low": "43928000",
+    "value_high": "43928000",
+    "stated_value": "43928",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2020,
+    "fiscal_period": "Q2",
+    "period_start": "2020-04-01",
+    "period_end": "2020-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "04c2108bf8a7ed746342da51c43edd3f5c4ba26bb51d17cce1d39fae577f4b1a",
+    "segment_index": 833,
+    "span_start": 75608,
+    "span_end": 75614,
+    "quote": "43,928",
+    "said_on": "2021-08-09",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2020-04-01 to 2020-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2021q2_10q__017_revenue",
+   "document": "cpa18_2021q2_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOjg3YWU1NGJhNzcwYzQwNTY4MWU1ZjI3ZWYxZTRiNmJjL3NlYzo4N2FlNTRiYTc3MGM0MDU2ODFlNWYyN2VmMWU0YjZiY18yMi9mcmFnOjFiNjBhZGRiOGU2YjQxOTZhOGM1MmNiYTEwNWU4YjY1L3RhYmxlOmMzZWY2NDg3OGEzMzQ5ZDBiZmY3OGVlZTJkZTQyNDZkL3RhYmxlcmFuZ2U6YzNlZjY0ODc4YTMzNDlkMGJmZjc4ZWVlMmRlNDI0NmRfNi0zLTEtMS0w_4a1a4d0f-d154-4bbf-b215-e6e6cc59e465",
+   "segment_text": "49,610\t43,928\t97,979\t86,808",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "revenue",
+    "value_kind": "exact",
+    "value_low": "43928000",
+    "value_high": "43928000",
+    "stated_value": "43928",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2020,
+    "fiscal_period": "Q2",
+    "period_start": "2020-04-01",
+    "period_end": "2020-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "04c2108bf8a7ed746342da51c43edd3f5c4ba26bb51d17cce1d39fae577f4b1a",
+    "segment_index": 114,
+    "span_start": 9713,
+    "span_end": 9719,
+    "quote": "43,928",
+    "said_on": "2021-08-09",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2020-04-01 to 2020-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     },
+     {
+      "statement": "The metric is revenue, per the filing's embedded tag",
+      "field": "metric",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2021q2_10q__018_revenue",
+   "document": "cpa18_2021q2_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOjg3YWU1NGJhNzcwYzQwNTY4MWU1ZjI3ZWYxZTRiNmJjL3NlYzo4N2FlNTRiYTc3MGM0MDU2ODFlNWYyN2VmMWU0YjZiY183My9mcmFnOmFjZTVmMzNhNDIxMTRhZDY5YWI3YTRmZTNhODA4Yjk1L3RhYmxlOmM3YTVkOTRkNDNiZTRjZGNiMjliY2YwZDgyZmU2MDk2L3RhYmxlcmFuZ2U6YzdhNWQ5NGQ0M2JlNGNkY2IyOWJjZjBkODJmZTYwOTZfNDYtNS0xLTEtMA_2d5fdb32-ae6e-49c3-8376-f0fc74a3eb00",
+   "segment_text": "Revenues (a) (d)\t$\t49,610\t$\t43,928\t$\t97,979\t$\t86,808",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "revenue",
+    "value_kind": "exact",
+    "value_low": "97979000",
+    "value_high": "97979000",
+    "stated_value": "97979",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "H1",
+    "period_start": "2021-01-01",
+    "period_end": "2021-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "04c2108bf8a7ed746342da51c43edd3f5c4ba26bb51d17cce1d39fae577f4b1a",
+    "segment_index": 833,
+    "span_start": 75617,
+    "span_end": 75623,
+    "quote": "97,979",
+    "said_on": "2021-08-09",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2021-01-01 to 2021-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2021q2_10q__019_revenue",
+   "document": "cpa18_2021q2_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOjg3YWU1NGJhNzcwYzQwNTY4MWU1ZjI3ZWYxZTRiNmJjL3NlYzo4N2FlNTRiYTc3MGM0MDU2ODFlNWYyN2VmMWU0YjZiY18yMi9mcmFnOjFiNjBhZGRiOGU2YjQxOTZhOGM1MmNiYTEwNWU4YjY1L3RhYmxlOmMzZWY2NDg3OGEzMzQ5ZDBiZmY3OGVlZTJkZTQyNDZkL3RhYmxlcmFuZ2U6YzNlZjY0ODc4YTMzNDlkMGJmZjc4ZWVlMmRlNDI0NmRfNi01LTEtMS0w_c879ce45-aa6e-4428-b34e-6a230b157210",
+   "segment_text": "49,610\t43,928\t97,979\t86,808",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "revenue",
+    "value_kind": "exact",
+    "value_low": "97979000",
+    "value_high": "97979000",
+    "stated_value": "97979",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "H1",
+    "period_start": "2021-01-01",
+    "period_end": "2021-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "04c2108bf8a7ed746342da51c43edd3f5c4ba26bb51d17cce1d39fae577f4b1a",
+    "segment_index": 114,
+    "span_start": 9720,
+    "span_end": 9726,
+    "quote": "97,979",
+    "said_on": "2021-08-09",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2021-01-01 to 2021-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     },
+     {
+      "statement": "The metric is revenue, per the filing's embedded tag",
+      "field": "metric",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2021q2_10q__020_revenue",
+   "document": "cpa18_2021q2_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOjg3YWU1NGJhNzcwYzQwNTY4MWU1ZjI3ZWYxZTRiNmJjL3NlYzo4N2FlNTRiYTc3MGM0MDU2ODFlNWYyN2VmMWU0YjZiY183My9mcmFnOmFjZTVmMzNhNDIxMTRhZDY5YWI3YTRmZTNhODA4Yjk1L3RhYmxlOmM3YTVkOTRkNDNiZTRjZGNiMjliY2YwZDgyZmU2MDk2L3RhYmxlcmFuZ2U6YzdhNWQ5NGQ0M2JlNGNkY2IyOWJjZjBkODJmZTYwOTZfNDYtMS0xLTEtMA_8226bd99-3a05-4476-b52a-64779fc142d2",
+   "segment_text": "Revenues (a) (d)\t$\t49,610\t$\t43,928\t$\t97,979\t$\t86,808",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "revenue",
+    "value_kind": "exact",
+    "value_low": "49610000",
+    "value_high": "49610000",
+    "stated_value": "49610",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "Q2",
+    "period_start": "2021-04-01",
+    "period_end": "2021-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "04c2108bf8a7ed746342da51c43edd3f5c4ba26bb51d17cce1d39fae577f4b1a",
+    "segment_index": 833,
+    "span_start": 75599,
+    "span_end": 75605,
+    "quote": "49,610",
+    "said_on": "2021-08-09",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2021-04-01 to 2021-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2021q2_10q__021_revenue",
+   "document": "cpa18_2021q2_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOjg3YWU1NGJhNzcwYzQwNTY4MWU1ZjI3ZWYxZTRiNmJjL3NlYzo4N2FlNTRiYTc3MGM0MDU2ODFlNWYyN2VmMWU0YjZiY18yMi9mcmFnOjFiNjBhZGRiOGU2YjQxOTZhOGM1MmNiYTEwNWU4YjY1L3RhYmxlOmMzZWY2NDg3OGEzMzQ5ZDBiZmY3OGVlZTJkZTQyNDZkL3RhYmxlcmFuZ2U6YzNlZjY0ODc4YTMzNDlkMGJmZjc4ZWVlMmRlNDI0NmRfNi0xLTEtMS0w_57f204c9-4ed2-49f8-a123-bd1431d734be",
+   "segment_text": "49,610\t43,928\t97,979\t86,808",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "revenue",
+    "value_kind": "exact",
+    "value_low": "49610000",
+    "value_high": "49610000",
+    "stated_value": "49610",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "Q2",
+    "period_start": "2021-04-01",
+    "period_end": "2021-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "04c2108bf8a7ed746342da51c43edd3f5c4ba26bb51d17cce1d39fae577f4b1a",
+    "segment_index": 114,
+    "span_start": 9706,
+    "span_end": 9712,
+    "quote": "49,610",
+    "said_on": "2021-08-09",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2021-04-01 to 2021-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     },
+     {
+      "statement": "The metric is revenue, per the filing's embedded tag",
+      "field": "metric",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2022q1_10q__000_net_income",
+   "document": "cpa18_2022q1_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOjBiNzUyNjNjMzVkMjRmZDE5ZTc2ODQ1Mzc5ZmJjYTY0L3NlYzowYjc1MjYzYzM1ZDI0ZmQxOWU3Njg0NTM3OWZiY2E2NF82Ny9mcmFnOjYwYzExYThhYTRiNjRlYzVhOGRkNDljMjc2MWY3MjQzL3RhYmxlOmMyMjI1ZjQ0YzU0ZTQ1ZDFiZDY1ZmExZjdjMjM2NWRkL3RhYmxlcmFuZ2U6YzIyMjVmNDRjNTRlNDVkMWJkNjVmYTFmN2MyMzY1ZGRfNS05LTEtMS01MDA5MA_8afbc947-978e-4cb8-a9aa-51a3465f38a8",
+   "segment_text": "Net income attributable to CPA:18 – Global\t$\t68,968\t$\t511",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "511000",
+    "value_high": "511000",
+    "stated_value": "511",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "Q1",
+    "period_start": "2021-01-01",
+    "period_end": "2021-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "731b7e29b3590762de1ed59baca896677a949b46185c46d1fe11ef3772ee1fea",
+    "segment_index": 682,
+    "span_start": 64382,
+    "span_end": 64385,
+    "quote": "511",
+    "said_on": "2022-05-09",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2021-01-01 to 2021-03-31, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2022q1_10q__001_net_income",
+   "document": "cpa18_2022q1_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOjBiNzUyNjNjMzVkMjRmZDE5ZTc2ODQ1Mzc5ZmJjYTY0L3NlYzowYjc1MjYzYzM1ZDI0ZmQxOWU3Njg0NTM3OWZiY2E2NF83My9mcmFnOjJkM2Q1NWJjZTk0NDQ3YzdhNzNiZjI0MjhiNjk4MjZjL3RhYmxlOjNjNTgzNTU1OWJhZDQ5M2Y5NDAyNGJhNWJkNGNhNWE0L3RhYmxlcmFuZ2U6M2M1ODM1NTU5YmFkNDkzZjk0MDI0YmE1YmQ0Y2E1YTRfNTMtMy0xLTEtNTAwOTA_87f90597-70bb-4e21-aab8-ee611efbf68e",
+   "segment_text": "Net income attributable to CPA:18 – Global\t$\t68,968\t$\t511",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "511000",
+    "value_high": "511000",
+    "stated_value": "511",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "Q1",
+    "period_start": "2021-01-01",
+    "period_end": "2021-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "731b7e29b3590762de1ed59baca896677a949b46185c46d1fe11ef3772ee1fea",
+    "segment_index": 771,
+    "span_start": 70394,
+    "span_end": 70397,
+    "quote": "511",
+    "said_on": "2022-05-09",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2021-01-01 to 2021-03-31, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2022q1_10q__002_net_income",
+   "document": "cpa18_2022q1_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOjBiNzUyNjNjMzVkMjRmZDE5ZTc2ODQ1Mzc5ZmJjYTY0L3NlYzowYjc1MjYzYzM1ZDI0ZmQxOWU3Njg0NTM3OWZiY2E2NF8yMi9mcmFnOjMxMTZmODAxMmZlNzRhOTU4ZTZmMzI0ZmM0Mzk4MDYyL3RhYmxlOjMwMmY2YjFjZDM4YTRmOWRhMGQ2MmI5ZGRmM2FiZWYyL3RhYmxlcmFuZ2U6MzAyZjZiMWNkMzhhNGY5ZGEwZDYyYjlkZGYzYWJlZjJfMjUtMy0xLTEtNTAwOTA_50ef9fbd-69b2-41df-9334-c4d7e434ba4b",
+   "segment_text": "Net Income Attributable to CPA:18 – Global\t$\t68,968\t$\t511",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "511000",
+    "value_high": "511000",
+    "stated_value": "511",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "Q1",
+    "period_start": "2021-01-01",
+    "period_end": "2021-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "731b7e29b3590762de1ed59baca896677a949b46185c46d1fe11ef3772ee1fea",
+    "segment_index": 136,
+    "span_start": 10706,
+    "span_end": 10709,
+    "quote": "511",
+    "said_on": "2022-05-09",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2021-01-01 to 2021-03-31, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2022q1_10q__003_net_income",
+   "document": "cpa18_2022q1_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOjBiNzUyNjNjMzVkMjRmZDE5ZTc2ODQ1Mzc5ZmJjYTY0L3NlYzowYjc1MjYzYzM1ZDI0ZmQxOWU3Njg0NTM3OWZiY2E2NF82Ny9mcmFnOjYwYzExYThhYTRiNjRlYzVhOGRkNDljMjc2MWY3MjQzL3RhYmxlOmMyMjI1ZjQ0YzU0ZTQ1ZDFiZDY1ZmExZjdjMjM2NWRkL3RhYmxlcmFuZ2U6YzIyMjVmNDRjNTRlNDVkMWJkNjVmYTFmN2MyMzY1ZGRfNS0zLTEtMS01MDA5MA_f0060da0-24b4-4dde-a5f4-4e5b6f30e2b5",
+   "segment_text": "Net income attributable to CPA:18 – Global\t$\t68,968\t$\t511",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "68968000",
+    "value_high": "68968000",
+    "stated_value": "68968",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2022,
+    "fiscal_period": "Q1",
+    "period_start": "2022-01-01",
+    "period_end": "2022-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "731b7e29b3590762de1ed59baca896677a949b46185c46d1fe11ef3772ee1fea",
+    "segment_index": 682,
+    "span_start": 64373,
+    "span_end": 64379,
+    "quote": "68,968",
+    "said_on": "2022-05-09",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2022-01-01 to 2022-03-31, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2022q1_10q__004_net_income",
+   "document": "cpa18_2022q1_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOjBiNzUyNjNjMzVkMjRmZDE5ZTc2ODQ1Mzc5ZmJjYTY0L3NlYzowYjc1MjYzYzM1ZDI0ZmQxOWU3Njg0NTM3OWZiY2E2NF83My9mcmFnOjJkM2Q1NWJjZTk0NDQ3YzdhNzNiZjI0MjhiNjk4MjZjL3RhYmxlOjNjNTgzNTU1OWJhZDQ5M2Y5NDAyNGJhNWJkNGNhNWE0L3RhYmxlcmFuZ2U6M2M1ODM1NTU5YmFkNDkzZjk0MDI0YmE1YmQ0Y2E1YTRfNTMtMS0xLTEtNTAwOTA_1b0ee781-6430-4941-acae-4a6062390d2c",
+   "segment_text": "Net income attributable to CPA:18 – Global\t$\t68,968\t$\t511",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "68968000",
+    "value_high": "68968000",
+    "stated_value": "68968",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2022,
+    "fiscal_period": "Q1",
+    "period_start": "2022-01-01",
+    "period_end": "2022-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "731b7e29b3590762de1ed59baca896677a949b46185c46d1fe11ef3772ee1fea",
+    "segment_index": 771,
+    "span_start": 70385,
+    "span_end": 70391,
+    "quote": "68,968",
+    "said_on": "2022-05-09",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2022-01-01 to 2022-03-31, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2022q1_10q__005_net_income",
+   "document": "cpa18_2022q1_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOjBiNzUyNjNjMzVkMjRmZDE5ZTc2ODQ1Mzc5ZmJjYTY0L3NlYzowYjc1MjYzYzM1ZDI0ZmQxOWU3Njg0NTM3OWZiY2E2NF8yMi9mcmFnOjMxMTZmODAxMmZlNzRhOTU4ZTZmMzI0ZmM0Mzk4MDYyL3RhYmxlOjMwMmY2YjFjZDM4YTRmOWRhMGQ2MmI5ZGRmM2FiZWYyL3RhYmxlcmFuZ2U6MzAyZjZiMWNkMzhhNGY5ZGEwZDYyYjlkZGYzYWJlZjJfMjUtMS0xLTEtNTAwOTA_8439933b-a705-4e51-8d7d-dc6b81aa8673",
+   "segment_text": "Net Income Attributable to CPA:18 – Global\t$\t68,968\t$\t511",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "68968000",
+    "value_high": "68968000",
+    "stated_value": "68968",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2022,
+    "fiscal_period": "Q1",
+    "period_start": "2022-01-01",
+    "period_end": "2022-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "731b7e29b3590762de1ed59baca896677a949b46185c46d1fe11ef3772ee1fea",
+    "segment_index": 136,
+    "span_start": 10697,
+    "span_end": 10703,
+    "quote": "68,968",
+    "said_on": "2022-05-09",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2022-01-01 to 2022-03-31, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2022q1_10q__006_operating_cash_flow",
+   "document": "cpa18_2022q1_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOjBiNzUyNjNjMzVkMjRmZDE5ZTc2ODQ1Mzc5ZmJjYTY0L3NlYzowYjc1MjYzYzM1ZDI0ZmQxOWU3Njg0NTM3OWZiY2E2NF8zMS9mcmFnOmE1YzJjNzJmZjI4ODQ2NDRiMzBmYWI3Mzk5YTQ3ZjIxL3RhYmxlOjNkNmJmYTA2MTYxMTQ0NDQ4NDgwZDAzMTFmZjU1YTVlL3RhYmxlcmFuZ2U6M2Q2YmZhMDYxNjExNDQ0NDg0ODBkMDMxMWZmNTVhNWVfMTEtMy0xLTEtNTAwOTA_2fe1bb10-17dc-4219-be31-a0ea3dcc8338",
+   "segment_text": "Net Cash Provided by Operating Activities\t$\t30,047\t$\t16,652",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "operating_cash_flow",
+    "value_kind": "exact",
+    "value_low": "16652000",
+    "value_high": "16652000",
+    "stated_value": "16652",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "Q1",
+    "period_start": "2021-01-01",
+    "period_end": "2021-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "731b7e29b3590762de1ed59baca896677a949b46185c46d1fe11ef3772ee1fea",
+    "segment_index": 204,
+    "span_start": 14356,
+    "span_end": 14362,
+    "quote": "16,652",
+    "said_on": "2022-05-09",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2021-01-01 to 2021-03-31, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2022q1_10q__007_operating_cash_flow",
+   "document": "cpa18_2022q1_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOjBiNzUyNjNjMzVkMjRmZDE5ZTc2ODQ1Mzc5ZmJjYTY0L3NlYzowYjc1MjYzYzM1ZDI0ZmQxOWU3Njg0NTM3OWZiY2E2NF8zMS9mcmFnOmE1YzJjNzJmZjI4ODQ2NDRiMzBmYWI3Mzk5YTQ3ZjIxL3RhYmxlOjNkNmJmYTA2MTYxMTQ0NDQ4NDgwZDAzMTFmZjU1YTVlL3RhYmxlcmFuZ2U6M2Q2YmZhMDYxNjExNDQ0NDg0ODBkMDMxMWZmNTVhNWVfMTEtMS0xLTEtNTAwOTA_4cbee462-c8d0-4387-850b-fb5858682aaa",
+   "segment_text": "Net Cash Provided by Operating Activities\t$\t30,047\t$\t16,652",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "operating_cash_flow",
+    "value_kind": "exact",
+    "value_low": "30047000",
+    "value_high": "30047000",
+    "stated_value": "30047",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2022,
+    "fiscal_period": "Q1",
+    "period_start": "2022-01-01",
+    "period_end": "2022-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "731b7e29b3590762de1ed59baca896677a949b46185c46d1fe11ef3772ee1fea",
+    "segment_index": 204,
+    "span_start": 14347,
+    "span_end": 14353,
+    "quote": "30,047",
+    "said_on": "2022-05-09",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2022-01-01 to 2022-03-31, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2022q1_10q__008_revenue",
+   "document": "cpa18_2022q1_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOjBiNzUyNjNjMzVkMjRmZDE5ZTc2ODQ1Mzc5ZmJjYTY0L3NlYzowYjc1MjYzYzM1ZDI0ZmQxOWU3Njg0NTM3OWZiY2E2NF83My9mcmFnOjJkM2Q1NWJjZTk0NDQ3YzdhNzNiZjI0MjhiNjk4MjZjL3RhYmxlOjNjNTgzNTU1OWJhZDQ5M2Y5NDAyNGJhNWJkNGNhNWE0L3RhYmxlcmFuZ2U6M2M1ODM1NTU5YmFkNDkzZjk0MDI0YmE1YmQ0Y2E1YTRfNDYtMy0xLTEtNTAwOTA_f978c25c-5c89-4882-aeaf-28f463f5d69e",
+   "segment_text": "Revenues (a) (b)\t$\t52,698\t$\t48,369",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "revenue",
+    "value_kind": "exact",
+    "value_low": "48369000",
+    "value_high": "48369000",
+    "stated_value": "48369",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "Q1",
+    "period_start": "2021-01-01",
+    "period_end": "2021-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "731b7e29b3590762de1ed59baca896677a949b46185c46d1fe11ef3772ee1fea",
+    "segment_index": 764,
+    "span_start": 70054,
+    "span_end": 70060,
+    "quote": "48,369",
+    "said_on": "2022-05-09",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2021-01-01 to 2021-03-31, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2022q1_10q__009_revenue",
+   "document": "cpa18_2022q1_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOjBiNzUyNjNjMzVkMjRmZDE5ZTc2ODQ1Mzc5ZmJjYTY0L3NlYzowYjc1MjYzYzM1ZDI0ZmQxOWU3Njg0NTM3OWZiY2E2NF8yMi9mcmFnOjMxMTZmODAxMmZlNzRhOTU4ZTZmMzI0ZmM0Mzk4MDYyL3RhYmxlOjMwMmY2YjFjZDM4YTRmOWRhMGQ2MmI5ZGRmM2FiZWYyL3RhYmxlcmFuZ2U6MzAyZjZiMWNkMzhhNGY5ZGEwZDYyYjlkZGYzYWJlZjJfNi0zLTEtMS01MDA5MA_8d85530c-3caf-41a0-abaa-d6626d911f10",
+   "segment_text": "52,698\t48,369",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "revenue",
+    "value_kind": "exact",
+    "value_low": "48369000",
+    "value_high": "48369000",
+    "stated_value": "48369",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "Q1",
+    "period_start": "2021-01-01",
+    "period_end": "2021-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "731b7e29b3590762de1ed59baca896677a949b46185c46d1fe11ef3772ee1fea",
+    "segment_index": 117,
+    "span_start": 9878,
+    "span_end": 9884,
+    "quote": "48,369",
+    "said_on": "2022-05-09",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2021-01-01 to 2021-03-31, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     },
+     {
+      "statement": "The metric is revenue, per the filing's embedded tag",
+      "field": "metric",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2022q1_10q__010_revenue",
+   "document": "cpa18_2022q1_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOjBiNzUyNjNjMzVkMjRmZDE5ZTc2ODQ1Mzc5ZmJjYTY0L3NlYzowYjc1MjYzYzM1ZDI0ZmQxOWU3Njg0NTM3OWZiY2E2NF83My9mcmFnOjJkM2Q1NWJjZTk0NDQ3YzdhNzNiZjI0MjhiNjk4MjZjL3RhYmxlOjNjNTgzNTU1OWJhZDQ5M2Y5NDAyNGJhNWJkNGNhNWE0L3RhYmxlcmFuZ2U6M2M1ODM1NTU5YmFkNDkzZjk0MDI0YmE1YmQ0Y2E1YTRfNDYtMS0xLTEtNTAwOTA_fba5ba7d-6968-40ba-95e1-a6096387d7e7",
+   "segment_text": "Revenues (a) (b)\t$\t52,698\t$\t48,369",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "revenue",
+    "value_kind": "exact",
+    "value_low": "52698000",
+    "value_high": "52698000",
+    "stated_value": "52698",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2022,
+    "fiscal_period": "Q1",
+    "period_start": "2022-01-01",
+    "period_end": "2022-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "731b7e29b3590762de1ed59baca896677a949b46185c46d1fe11ef3772ee1fea",
+    "segment_index": 764,
+    "span_start": 70045,
+    "span_end": 70051,
+    "quote": "52,698",
+    "said_on": "2022-05-09",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2022-01-01 to 2022-03-31, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "cpa18_2022q1_10q__011_revenue",
+   "document": "cpa18_2022q1_10q.html",
+   "fact_id": "id3VybDovL2RvY3MudjEvZG9jOjBiNzUyNjNjMzVkMjRmZDE5ZTc2ODQ1Mzc5ZmJjYTY0L3NlYzowYjc1MjYzYzM1ZDI0ZmQxOWU3Njg0NTM3OWZiY2E2NF8yMi9mcmFnOjMxMTZmODAxMmZlNzRhOTU4ZTZmMzI0ZmM0Mzk4MDYyL3RhYmxlOjMwMmY2YjFjZDM4YTRmOWRhMGQ2MmI5ZGRmM2FiZWYyL3RhYmxlcmFuZ2U6MzAyZjZiMWNkMzhhNGY5ZGEwZDYyYjlkZGYzYWJlZjJfNi0xLTEtMS01MDA5MA_cf606e86-b16e-42d6-a7b9-bb223893b39c",
+   "segment_text": "52,698\t48,369",
+   "claim": {
+    "company_cik": "0001558235",
+    "metric": "revenue",
+    "value_kind": "exact",
+    "value_low": "52698000",
+    "value_high": "52698000",
+    "stated_value": "52698",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2022,
+    "fiscal_period": "Q1",
+    "period_start": "2022-01-01",
+    "period_end": "2022-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "731b7e29b3590762de1ed59baca896677a949b46185c46d1fe11ef3772ee1fea",
+    "segment_index": 117,
+    "span_start": 9871,
+    "span_end": 9877,
+    "quote": "52,698",
+    "said_on": "2022-05-09",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2022-01-01 to 2022-03-31, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     },
+     {
+      "statement": "The metric is revenue, per the filing's embedded tag",
+      "field": "metric",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "everi_2024q1_10q__000_earnings_per_share",
+   "document": "everi_2024q1_10q.html",
+   "fact_id": "f-90",
+   "segment_text": "Diluted\t$\t0.05\t$\t0.30",
+   "claim": {
+    "company_cik": "0001318568",
+    "metric": "earnings_per_share",
+    "value_kind": "exact",
+    "value_low": "0.3",
+    "value_high": "0.3",
+    "stated_value": "0.30",
+    "stated_scale": "units",
+    "unit": "currency_per_share",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2023,
+    "fiscal_period": "Q1",
+    "period_start": "2023-01-01",
+    "period_end": "2023-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "750d253624042aeade1c43d515d1bc8c7872a22b81b8985bee737ea481e46b93",
+    "segment_index": 110,
+    "span_start": 5440,
+    "span_end": 5444,
+    "quote": "0.30",
+    "said_on": "2024-05-08",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2023-01-01 to 2023-03-31, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "The metric is earnings_per_share, per the filing's embedded tag",
+      "field": "metric",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "everi_2024q1_10q__001_earnings_per_share",
+   "document": "everi_2024q1_10q.html",
+   "fact_id": "f-89",
+   "segment_text": "Diluted\t$\t0.05\t$\t0.30",
+   "claim": {
+    "company_cik": "0001318568",
+    "metric": "earnings_per_share",
+    "value_kind": "exact",
+    "value_low": "0.05",
+    "value_high": "0.05",
+    "stated_value": "0.05",
+    "stated_scale": "units",
+    "unit": "currency_per_share",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2024,
+    "fiscal_period": "Q1",
+    "period_start": "2024-01-01",
+    "period_end": "2024-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "750d253624042aeade1c43d515d1bc8c7872a22b81b8985bee737ea481e46b93",
+    "segment_index": 110,
+    "span_start": 5433,
+    "span_end": 5437,
+    "quote": "0.05",
+    "said_on": "2024-05-08",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2024-01-01 to 2024-03-31, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "The metric is earnings_per_share, per the filing's embedded tag",
+      "field": "metric",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "everi_2024q1_10q__002_net_income",
+   "document": "everi_2024q1_10q.html",
+   "fact_id": "f-279",
+   "segment_text": "Net income\t—\t—\t—\t28,066\t—\t—\t28,066",
+   "claim": {
+    "company_cik": "0001318568",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "28066000",
+    "value_high": "28066000",
+    "stated_value": "28066",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2023,
+    "fiscal_period": "Q1",
+    "period_start": "2023-01-01",
+    "period_end": "2023-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "750d253624042aeade1c43d515d1bc8c7872a22b81b8985bee737ea481e46b93",
+    "segment_index": 226,
+    "span_start": 10990,
+    "span_end": 10996,
+    "quote": "28,066",
+    "said_on": "2024-05-08",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2023-01-01 to 2023-03-31, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "everi_2024q1_10q__003_net_income",
+   "document": "everi_2024q1_10q.html",
+   "fact_id": "f-82",
+   "segment_text": "Net income\t4,554\t28,066",
+   "claim": {
+    "company_cik": "0001318568",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "28066000",
+    "value_high": "28066000",
+    "stated_value": "28066",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2023,
+    "fiscal_period": "Q1",
+    "period_start": "2023-01-01",
+    "period_end": "2023-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "750d253624042aeade1c43d515d1bc8c7872a22b81b8985bee737ea481e46b93",
+    "segment_index": 98,
+    "span_start": 5020,
+    "span_end": 5026,
+    "quote": "28,066",
+    "said_on": "2024-05-08",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2023-01-01 to 2023-03-31, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "everi_2024q1_10q__004_net_income",
+   "document": "everi_2024q1_10q.html",
+   "fact_id": "f-253",
+   "segment_text": "Net income\t—\t—\t—\t4,554\t—\t—\t4,554",
+   "claim": {
+    "company_cik": "0001318568",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "4554000",
+    "value_high": "4554000",
+    "stated_value": "4554",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2024,
+    "fiscal_period": "Q1",
+    "period_start": "2024-01-01",
+    "period_end": "2024-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "750d253624042aeade1c43d515d1bc8c7872a22b81b8985bee737ea481e46b93",
+    "segment_index": 217,
+    "span_start": 10362,
+    "span_end": 10367,
+    "quote": "4,554",
+    "said_on": "2024-05-08",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2024-01-01 to 2024-03-31, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "everi_2024q1_10q__005_net_income",
+   "document": "everi_2024q1_10q.html",
+   "fact_id": "f-81",
+   "segment_text": "Net income\t4,554\t28,066",
+   "claim": {
+    "company_cik": "0001318568",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "4554000",
+    "value_high": "4554000",
+    "stated_value": "4554",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2024,
+    "fiscal_period": "Q1",
+    "period_start": "2024-01-01",
+    "period_end": "2024-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "750d253624042aeade1c43d515d1bc8c7872a22b81b8985bee737ea481e46b93",
+    "segment_index": 98,
+    "span_start": 5014,
+    "span_end": 5019,
+    "quote": "4,554",
+    "said_on": "2024-05-08",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2024-01-01 to 2024-03-31, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "everi_2024q1_10q__006_operating_cash_flow",
+   "document": "everi_2024q1_10q.html",
+   "fact_id": "f-212",
+   "segment_text": "Net cash provided by operating activities\t55,126\t31,708",
+   "claim": {
+    "company_cik": "0001318568",
+    "metric": "operating_cash_flow",
+    "value_kind": "exact",
+    "value_low": "31708000",
+    "value_high": "31708000",
+    "stated_value": "31708",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2023,
+    "fiscal_period": "Q1",
+    "period_start": "2023-01-01",
+    "period_end": "2023-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "750d253624042aeade1c43d515d1bc8c7872a22b81b8985bee737ea481e46b93",
+    "segment_index": 187,
+    "span_start": 8863,
+    "span_end": 8869,
+    "quote": "31,708",
+    "said_on": "2024-05-08",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2023-01-01 to 2023-03-31, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "everi_2024q1_10q__007_operating_cash_flow",
+   "document": "everi_2024q1_10q.html",
+   "fact_id": "f-211",
+   "segment_text": "Net cash provided by operating activities\t55,126\t31,708",
+   "claim": {
+    "company_cik": "0001318568",
+    "metric": "operating_cash_flow",
+    "value_kind": "exact",
+    "value_low": "55126000",
+    "value_high": "55126000",
+    "stated_value": "55126",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2024,
+    "fiscal_period": "Q1",
+    "period_start": "2024-01-01",
+    "period_end": "2024-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "750d253624042aeade1c43d515d1bc8c7872a22b81b8985bee737ea481e46b93",
+    "segment_index": 187,
+    "span_start": 8856,
+    "span_end": 8862,
+    "quote": "55,126",
+    "said_on": "2024-05-08",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2024-01-01 to 2024-03-31, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "everi_2024q1_10q__008_revenue",
+   "document": "everi_2024q1_10q.html",
+   "fact_id": "f-46",
+   "segment_text": "Total revenues\t189,346\t200,472",
+   "claim": {
+    "company_cik": "0001318568",
+    "metric": "revenue",
+    "value_kind": "exact",
+    "value_low": "200472000",
+    "value_high": "200472000",
+    "stated_value": "200472",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2023,
+    "fiscal_period": "Q1",
+    "period_start": "2023-01-01",
+    "period_end": "2023-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "750d253624042aeade1c43d515d1bc8c7872a22b81b8985bee737ea481e46b93",
+    "segment_index": 76,
+    "span_start": 4297,
+    "span_end": 4304,
+    "quote": "200,472",
+    "said_on": "2024-05-08",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2023-01-01 to 2023-03-31, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "everi_2024q1_10q__009_revenue",
+   "document": "everi_2024q1_10q.html",
+   "fact_id": "f-45",
+   "segment_text": "Total revenues\t189,346\t200,472",
+   "claim": {
+    "company_cik": "0001318568",
+    "metric": "revenue",
+    "value_kind": "exact",
+    "value_low": "189346000",
+    "value_high": "189346000",
+    "stated_value": "189346",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2024,
+    "fiscal_period": "Q1",
+    "period_start": "2024-01-01",
+    "period_end": "2024-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "750d253624042aeade1c43d515d1bc8c7872a22b81b8985bee737ea481e46b93",
+    "segment_index": 76,
+    "span_start": 4289,
+    "span_end": 4296,
+    "quote": "189,346",
+    "said_on": "2024-05-08",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2024-01-01 to 2024-03-31, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__000_earnings_per_share",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000205",
+   "segment_text": "Diluted\t$\t(0.06\t)\t$\t(0.17\t)\t$\t(0.67\t)\t$\t(1.14\t)",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "earnings_per_share",
+    "value_kind": "exact",
+    "value_low": "-1.14",
+    "value_high": "-1.14",
+    "stated_value": "1.14",
+    "stated_scale": "units",
+    "unit": "currency_per_share",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2020,
+    "fiscal_period": "9M",
+    "period_start": "2019-10-01",
+    "period_end": "2020-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 129,
+    "span_start": 6505,
+    "span_end": 6509,
+    "quote": "1.14",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2019-10-01 to 2020-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "The metric is earnings_per_share, per the filing's embedded tag",
+      "field": "metric",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__001_earnings_per_share",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000739",
+   "segment_text": "Diluted\t$\t(0.06\t)\t$\t(0.17\t)\t$\t(0.67\t)\t$\t(1.14\t)",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "earnings_per_share",
+    "value_kind": "exact",
+    "value_low": "-1.14",
+    "value_high": "-1.14",
+    "stated_value": "1.14",
+    "stated_scale": "units",
+    "unit": "currency_per_share",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2020,
+    "fiscal_period": "9M",
+    "period_start": "2019-10-01",
+    "period_end": "2020-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 584,
+    "span_start": 44490,
+    "span_end": 44494,
+    "quote": "1.14",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2019-10-01 to 2020-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "The metric is earnings_per_share, per the filing's embedded tag",
+      "field": "metric",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__002_earnings_per_share",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000203",
+   "segment_text": "Diluted\t$\t(0.06\t)\t$\t(0.17\t)\t$\t(0.67\t)\t$\t(1.14\t)",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "earnings_per_share",
+    "value_kind": "exact",
+    "value_low": "-0.17",
+    "value_high": "-0.17",
+    "stated_value": "0.17",
+    "stated_scale": "units",
+    "unit": "currency_per_share",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2020,
+    "fiscal_period": "Q3",
+    "period_start": "2020-04-01",
+    "period_end": "2020-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 129,
+    "span_start": 6485,
+    "span_end": 6489,
+    "quote": "0.17",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2020-04-01 to 2020-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "The metric is earnings_per_share, per the filing's embedded tag",
+      "field": "metric",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__003_earnings_per_share",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000737",
+   "segment_text": "Diluted\t$\t(0.06\t)\t$\t(0.17\t)\t$\t(0.67\t)\t$\t(1.14\t)",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "earnings_per_share",
+    "value_kind": "exact",
+    "value_low": "-0.17",
+    "value_high": "-0.17",
+    "stated_value": "0.17",
+    "stated_scale": "units",
+    "unit": "currency_per_share",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2020,
+    "fiscal_period": "Q3",
+    "period_start": "2020-04-01",
+    "period_end": "2020-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 584,
+    "span_start": 44470,
+    "span_end": 44474,
+    "quote": "0.17",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2020-04-01 to 2020-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "The metric is earnings_per_share, per the filing's embedded tag",
+      "field": "metric",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__004_earnings_per_share",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000204",
+   "segment_text": "Diluted\t$\t(0.06\t)\t$\t(0.17\t)\t$\t(0.67\t)\t$\t(1.14\t)",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "earnings_per_share",
+    "value_kind": "exact",
+    "value_low": "-0.67",
+    "value_high": "-0.67",
+    "stated_value": "0.67",
+    "stated_scale": "units",
+    "unit": "currency_per_share",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "9M",
+    "period_start": "2020-10-01",
+    "period_end": "2021-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 129,
+    "span_start": 6495,
+    "span_end": 6499,
+    "quote": "0.67",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2020-10-01 to 2021-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "The metric is earnings_per_share, per the filing's embedded tag",
+      "field": "metric",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__005_earnings_per_share",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000738",
+   "segment_text": "Diluted\t$\t(0.06\t)\t$\t(0.17\t)\t$\t(0.67\t)\t$\t(1.14\t)",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "earnings_per_share",
+    "value_kind": "exact",
+    "value_low": "-0.67",
+    "value_high": "-0.67",
+    "stated_value": "0.67",
+    "stated_scale": "units",
+    "unit": "currency_per_share",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "9M",
+    "period_start": "2020-10-01",
+    "period_end": "2021-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 584,
+    "span_start": 44480,
+    "span_end": 44484,
+    "quote": "0.67",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2020-10-01 to 2021-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "The metric is earnings_per_share, per the filing's embedded tag",
+      "field": "metric",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__006_earnings_per_share",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000202",
+   "segment_text": "Diluted\t$\t(0.06\t)\t$\t(0.17\t)\t$\t(0.67\t)\t$\t(1.14\t)",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "earnings_per_share",
+    "value_kind": "exact",
+    "value_low": "-0.06",
+    "value_high": "-0.06",
+    "stated_value": "0.06",
+    "stated_scale": "units",
+    "unit": "currency_per_share",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "Q3",
+    "period_start": "2021-04-01",
+    "period_end": "2021-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 129,
+    "span_start": 6475,
+    "span_end": 6479,
+    "quote": "0.06",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2021-04-01 to 2021-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "The metric is earnings_per_share, per the filing's embedded tag",
+      "field": "metric",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__007_earnings_per_share",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000736",
+   "segment_text": "Diluted\t$\t(0.06\t)\t$\t(0.17\t)\t$\t(0.67\t)\t$\t(1.14\t)",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "earnings_per_share",
+    "value_kind": "exact",
+    "value_low": "-0.06",
+    "value_high": "-0.06",
+    "stated_value": "0.06",
+    "stated_scale": "units",
+    "unit": "currency_per_share",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "Q3",
+    "period_start": "2021-04-01",
+    "period_end": "2021-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 584,
+    "span_start": 44460,
+    "span_end": 44464,
+    "quote": "0.06",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2021-04-01 to 2021-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "The metric is earnings_per_share, per the filing's embedded tag",
+      "field": "metric",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__008_net_income",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000297",
+   "segment_text": "Net loss\t—\t—\t—\t(9,282\t)\t—\t—\t(9,282\t)",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "-9282000",
+    "value_high": "-9282000",
+    "stated_value": "9282",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2020,
+    "fiscal_period": "Q1",
+    "period_start": "2019-10-01",
+    "period_end": "2019-12-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 179,
+    "span_start": 9068,
+    "span_end": 9073,
+    "quote": "9,282",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2019-10-01 to 2019-12-31, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__009_net_income",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000312",
+   "segment_text": "Net loss\t—\t—\t—\t(3,811\t)\t—\t—\t(3,811\t)",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "-3811000",
+    "value_high": "-3811000",
+    "stated_value": "3811",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2020,
+    "fiscal_period": "Q2",
+    "period_start": "2020-01-01",
+    "period_end": "2020-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 184,
+    "span_start": 9365,
+    "span_end": 9370,
+    "quote": "3,811",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2020-01-01 to 2020-03-31, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__010_net_income",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000197",
+   "segment_text": "Net loss\t$\t(787\t)\t$\t(2,285\t)\t$\t(9,021\t)\t$\t(15,378\t)",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "-15378000",
+    "value_high": "-15378000",
+    "stated_value": "15378",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2020,
+    "fiscal_period": "9M",
+    "period_start": "2019-10-01",
+    "period_end": "2020-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 126,
+    "span_start": 6386,
+    "span_end": 6392,
+    "quote": "15,378",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2019-10-01 to 2020-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__011_net_income",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000217",
+   "segment_text": "Net loss\t$\t(787\t)\t$\t(2,285\t)\t$\t(9,021\t)\t$\t(15,378\t)",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "-15378000",
+    "value_high": "-15378000",
+    "stated_value": "15378",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2020,
+    "fiscal_period": "9M",
+    "period_start": "2019-10-01",
+    "period_end": "2020-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 141,
+    "span_start": 7006,
+    "span_end": 7012,
+    "quote": "15,378",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2019-10-01 to 2020-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__012_net_income",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000719",
+   "segment_text": "Net loss\t$\t(787\t)\t$\t(2,285\t)\t$\t(9,021\t)\t$\t(15,378\t)",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "-15378000",
+    "value_high": "-15378000",
+    "stated_value": "15378",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2020,
+    "fiscal_period": "9M",
+    "period_start": "2019-10-01",
+    "period_end": "2020-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 575,
+    "span_start": 43845,
+    "span_end": 43851,
+    "quote": "15,378",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2019-10-01 to 2020-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__013_net_income",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000195",
+   "segment_text": "Net loss\t$\t(787\t)\t$\t(2,285\t)\t$\t(9,021\t)\t$\t(15,378\t)",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "-2285000",
+    "value_high": "-2285000",
+    "stated_value": "2285",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2020,
+    "fiscal_period": "Q3",
+    "period_start": "2020-04-01",
+    "period_end": "2020-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 126,
+    "span_start": 6364,
+    "span_end": 6369,
+    "quote": "2,285",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2020-04-01 to 2020-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__014_net_income",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000215",
+   "segment_text": "Net loss\t$\t(787\t)\t$\t(2,285\t)\t$\t(9,021\t)\t$\t(15,378\t)",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "-2285000",
+    "value_high": "-2285000",
+    "stated_value": "2285",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2020,
+    "fiscal_period": "Q3",
+    "period_start": "2020-04-01",
+    "period_end": "2020-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 141,
+    "span_start": 6984,
+    "span_end": 6989,
+    "quote": "2,285",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2020-04-01 to 2020-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__015_net_income",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000325",
+   "segment_text": "Net loss\t—\t—\t—\t(2,285\t)\t—\t—\t(2,285\t)",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "-2285000",
+    "value_high": "-2285000",
+    "stated_value": "2285",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2020,
+    "fiscal_period": "Q3",
+    "period_start": "2020-04-01",
+    "period_end": "2020-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 190,
+    "span_start": 9711,
+    "span_end": 9716,
+    "quote": "2,285",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2020-04-01 to 2020-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__016_net_income",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000717",
+   "segment_text": "Net loss\t$\t(787\t)\t$\t(2,285\t)\t$\t(9,021\t)\t$\t(15,378\t)",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "-2285000",
+    "value_high": "-2285000",
+    "stated_value": "2285",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2020,
+    "fiscal_period": "Q3",
+    "period_start": "2020-04-01",
+    "period_end": "2020-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 575,
+    "span_start": 43823,
+    "span_end": 43828,
+    "quote": "2,285",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2020-04-01 to 2020-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__017_net_income",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000239",
+   "segment_text": "Net loss\t—\t—\t—\t(1,050\t)\t—\t—\t(1,050\t)",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "-1050000",
+    "value_high": "-1050000",
+    "stated_value": "1050",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "Q1",
+    "period_start": "2020-10-01",
+    "period_end": "2020-12-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 159,
+    "span_start": 7874,
+    "span_end": 7879,
+    "quote": "1,050",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2020-10-01 to 2020-12-31, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__018_net_income",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000256",
+   "segment_text": "Net loss\t—\t—\t—\t(7,184\t)\t—\t—\t(7,184\t)",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "-7184000",
+    "value_high": "-7184000",
+    "stated_value": "7184",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "Q2",
+    "period_start": "2021-01-01",
+    "period_end": "2021-03-31",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 165,
+    "span_start": 8236,
+    "span_end": 8241,
+    "quote": "7,184",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2021-01-01 to 2021-03-31, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__019_net_income",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000196",
+   "segment_text": "Net loss\t$\t(787\t)\t$\t(2,285\t)\t$\t(9,021\t)\t$\t(15,378\t)",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "-9021000",
+    "value_high": "-9021000",
+    "stated_value": "9021",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "9M",
+    "period_start": "2020-10-01",
+    "period_end": "2021-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 126,
+    "span_start": 6375,
+    "span_end": 6380,
+    "quote": "9,021",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2020-10-01 to 2021-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__020_net_income",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000216",
+   "segment_text": "Net loss\t$\t(787\t)\t$\t(2,285\t)\t$\t(9,021\t)\t$\t(15,378\t)",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "-9021000",
+    "value_high": "-9021000",
+    "stated_value": "9021",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "9M",
+    "period_start": "2020-10-01",
+    "period_end": "2021-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 141,
+    "span_start": 6995,
+    "span_end": 7000,
+    "quote": "9,021",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2020-10-01 to 2021-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__021_net_income",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000718",
+   "segment_text": "Net loss\t$\t(787\t)\t$\t(2,285\t)\t$\t(9,021\t)\t$\t(15,378\t)",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "-9021000",
+    "value_high": "-9021000",
+    "stated_value": "9021",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "9M",
+    "period_start": "2020-10-01",
+    "period_end": "2021-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 575,
+    "span_start": 43834,
+    "span_end": 43839,
+    "quote": "9,021",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2020-10-01 to 2021-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__022_net_income",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000194",
+   "segment_text": "Net loss\t$\t(787\t)\t$\t(2,285\t)\t$\t(9,021\t)\t$\t(15,378\t)",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "-787000",
+    "value_high": "-787000",
+    "stated_value": "787",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "Q3",
+    "period_start": "2021-04-01",
+    "period_end": "2021-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 126,
+    "span_start": 6355,
+    "span_end": 6358,
+    "quote": "787",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2021-04-01 to 2021-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__023_net_income",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000214",
+   "segment_text": "Net loss\t$\t(787\t)\t$\t(2,285\t)\t$\t(9,021\t)\t$\t(15,378\t)",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "-787000",
+    "value_high": "-787000",
+    "stated_value": "787",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "Q3",
+    "period_start": "2021-04-01",
+    "period_end": "2021-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 141,
+    "span_start": 6975,
+    "span_end": 6978,
+    "quote": "787",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2021-04-01 to 2021-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__024_net_income",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000274",
+   "segment_text": "Net loss\t—\t—\t—\t(787\t)\t—\t—\t(787\t)",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "-787000",
+    "value_high": "-787000",
+    "stated_value": "787",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "Q3",
+    "period_start": "2021-04-01",
+    "period_end": "2021-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 172,
+    "span_start": 8647,
+    "span_end": 8650,
+    "quote": "787",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2021-04-01 to 2021-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__025_net_income",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000716",
+   "segment_text": "Net loss\t$\t(787\t)\t$\t(2,285\t)\t$\t(9,021\t)\t$\t(15,378\t)",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "net_income",
+    "value_kind": "exact",
+    "value_low": "-787000",
+    "value_high": "-787000",
+    "stated_value": "787",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "Q3",
+    "period_start": "2021-04-01",
+    "period_end": "2021-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 575,
+    "span_start": 43814,
+    "span_end": 43817,
+    "quote": "787",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2021-04-01 to 2021-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__026_operating_cash_flow",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000374",
+   "segment_text": "Net cash provided by (used in) operating activities\t(7,515\t)\t12,443",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "operating_cash_flow",
+    "value_kind": "exact",
+    "value_low": "12443000",
+    "value_high": "12443000",
+    "stated_value": "12443",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2020,
+    "fiscal_period": "9M",
+    "period_start": "2019-10-01",
+    "period_end": "2020-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 226,
+    "span_start": 11426,
+    "span_end": 11432,
+    "quote": "12,443",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2019-10-01 to 2020-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__027_operating_cash_flow",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000373",
+   "segment_text": "Net cash provided by (used in) operating activities\t(7,515\t)\t12,443",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "operating_cash_flow",
+    "value_kind": "exact",
+    "value_low": "-7515000",
+    "value_high": "-7515000",
+    "stated_value": "7515",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "9M",
+    "period_start": "2020-10-01",
+    "period_end": "2021-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 226,
+    "span_start": 11418,
+    "span_end": 11423,
+    "quote": "7,515",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2020-10-01 to 2021-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__028_revenue",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000109",
+   "segment_text": "Products\t$\t17,679\t$\t6,975\t$\t66,005\t$\t25,575",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "revenue",
+    "value_kind": "exact",
+    "value_low": "25575000",
+    "value_high": "25575000",
+    "stated_value": "25575",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2020,
+    "fiscal_period": "9M",
+    "period_start": "2019-10-01",
+    "period_end": "2020-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 102,
+    "span_start": 5348,
+    "span_end": 5354,
+    "quote": "25,575",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2019-10-01 to 2020-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     },
+     {
+      "statement": "The metric is revenue, per the filing's embedded tag",
+      "field": "metric",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__029_revenue",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000121",
+   "segment_text": "Total revenue\t23,083\t22,703\t75,435\t66,315",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "revenue",
+    "value_kind": "exact",
+    "value_low": "66315000",
+    "value_high": "66315000",
+    "stated_value": "66315",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2020,
+    "fiscal_period": "9M",
+    "period_start": "2019-10-01",
+    "period_end": "2020-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 104,
+    "span_start": 5423,
+    "span_end": 5429,
+    "quote": "66,315",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2019-10-01 to 2020-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__030_revenue",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000783",
+   "segment_text": "Total\t$\t23,083\t$\t22,703\t$\t75,435\t$\t66,315",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "revenue",
+    "value_kind": "exact",
+    "value_low": "66315000",
+    "value_high": "66315000",
+    "stated_value": "66315",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2020,
+    "fiscal_period": "9M",
+    "period_start": "2019-10-01",
+    "period_end": "2020-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 629,
+    "span_start": 50028,
+    "span_end": 50034,
+    "quote": "66,315",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2019-10-01 to 2020-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     },
+     {
+      "statement": "The metric is revenue, per the filing's embedded tag",
+      "field": "metric",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__031_revenue",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000107",
+   "segment_text": "Products\t$\t17,679\t$\t6,975\t$\t66,005\t$\t25,575",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "revenue",
+    "value_kind": "exact",
+    "value_low": "6975000",
+    "value_high": "6975000",
+    "stated_value": "6975",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2020,
+    "fiscal_period": "Q3",
+    "period_start": "2020-04-01",
+    "period_end": "2020-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 102,
+    "span_start": 5331,
+    "span_end": 5336,
+    "quote": "6,975",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2020-04-01 to 2020-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     },
+     {
+      "statement": "The metric is revenue, per the filing's embedded tag",
+      "field": "metric",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__032_revenue",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000119",
+   "segment_text": "Total revenue\t23,083\t22,703\t75,435\t66,315",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "revenue",
+    "value_kind": "exact",
+    "value_low": "22703000",
+    "value_high": "22703000",
+    "stated_value": "22703",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2020,
+    "fiscal_period": "Q3",
+    "period_start": "2020-04-01",
+    "period_end": "2020-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 104,
+    "span_start": 5409,
+    "span_end": 5415,
+    "quote": "22,703",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2020-04-01 to 2020-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__033_revenue",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000781",
+   "segment_text": "Total\t$\t23,083\t$\t22,703\t$\t75,435\t$\t66,315",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "revenue",
+    "value_kind": "exact",
+    "value_low": "22703000",
+    "value_high": "22703000",
+    "stated_value": "22703",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2020,
+    "fiscal_period": "Q3",
+    "period_start": "2020-04-01",
+    "period_end": "2020-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 629,
+    "span_start": 50010,
+    "span_end": 50016,
+    "quote": "22,703",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2020-04-01 to 2020-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     },
+     {
+      "statement": "The metric is revenue, per the filing's embedded tag",
+      "field": "metric",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__034_revenue",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000108",
+   "segment_text": "Products\t$\t17,679\t$\t6,975\t$\t66,005\t$\t25,575",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "revenue",
+    "value_kind": "exact",
+    "value_low": "66005000",
+    "value_high": "66005000",
+    "stated_value": "66005",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "9M",
+    "period_start": "2020-10-01",
+    "period_end": "2021-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 102,
+    "span_start": 5339,
+    "span_end": 5345,
+    "quote": "66,005",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2020-10-01 to 2021-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     },
+     {
+      "statement": "The metric is revenue, per the filing's embedded tag",
+      "field": "metric",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__035_revenue",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000120",
+   "segment_text": "Total revenue\t23,083\t22,703\t75,435\t66,315",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "revenue",
+    "value_kind": "exact",
+    "value_low": "75435000",
+    "value_high": "75435000",
+    "stated_value": "75435",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "9M",
+    "period_start": "2020-10-01",
+    "period_end": "2021-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 104,
+    "span_start": 5416,
+    "span_end": 5422,
+    "quote": "75,435",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2020-10-01 to 2021-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__036_revenue",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000782",
+   "segment_text": "Total\t$\t23,083\t$\t22,703\t$\t75,435\t$\t66,315",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "revenue",
+    "value_kind": "exact",
+    "value_low": "75435000",
+    "value_high": "75435000",
+    "stated_value": "75435",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "9M",
+    "period_start": "2020-10-01",
+    "period_end": "2021-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 629,
+    "span_start": 50019,
+    "span_end": 50025,
+    "quote": "75,435",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2020-10-01 to 2021-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     },
+     {
+      "statement": "The metric is revenue, per the filing's embedded tag",
+      "field": "metric",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__037_revenue",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000106",
+   "segment_text": "Products\t$\t17,679\t$\t6,975\t$\t66,005\t$\t25,575",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "revenue",
+    "value_kind": "exact",
+    "value_low": "17679000",
+    "value_high": "17679000",
+    "stated_value": "17679",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "Q3",
+    "period_start": "2021-04-01",
+    "period_end": "2021-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 102,
+    "span_start": 5322,
+    "span_end": 5328,
+    "quote": "17,679",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2021-04-01 to 2021-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     },
+     {
+      "statement": "The metric is revenue, per the filing's embedded tag",
+      "field": "metric",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__038_revenue",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000118",
+   "segment_text": "Total revenue\t23,083\t22,703\t75,435\t66,315",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "revenue",
+    "value_kind": "exact",
+    "value_low": "23083000",
+    "value_high": "23083000",
+    "stated_value": "23083",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "Q3",
+    "period_start": "2021-04-01",
+    "period_end": "2021-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 104,
+    "span_start": 5402,
+    "span_end": 5408,
+    "quote": "23,083",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2021-04-01 to 2021-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     }
+    ]
+   }
+  },
+  {
+   "name": "geospace_fy2021q3_10q__039_revenue",
+   "document": "geospace_fy2021q3_10q.html",
+   "fact_id": "F_000780",
+   "segment_text": "Total\t$\t23,083\t$\t22,703\t$\t75,435\t$\t66,315",
+   "claim": {
+    "company_cik": "0001001115",
+    "metric": "revenue",
+    "value_kind": "exact",
+    "value_low": "23083000",
+    "value_high": "23083000",
+    "stated_value": "23083",
+    "stated_scale": "thousands",
+    "unit": "currency",
+    "currency": "USD",
+    "period_kind": "duration",
+    "fiscal_year": 2021,
+    "fiscal_period": "Q3",
+    "period_start": "2021-04-01",
+    "period_end": "2021-06-30",
+    "basis": "reported",
+    "nature": "actual",
+    "comparison": "absolute",
+    "baseline_start": null,
+    "baseline_end": null,
+    "polarity": "affirmed",
+    "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+    "segment_index": 629,
+    "span_start": 50001,
+    "span_end": 50007,
+    "quote": "23,083",
+    "said_on": "2021-08-06",
+    "flags": [],
+    "assumptions": [
+     {
+      "statement": "Period 2021-04-01 to 2021-06-30, per the filing's embedded tag",
+      "field": "period_start",
+      "origin": "context_store"
+     },
+     {
+      "statement": "Figures are in thousands, per the filing's embedded tag",
+      "field": "stated_scale",
+      "origin": "context_store"
+     },
+     {
+      "statement": "The metric is revenue, per the filing's embedded tag",
+      "field": "metric",
+      "origin": "context_store"
+     }
+    ]
+   }
+  }
+ ],
+ "skipped": []
+}

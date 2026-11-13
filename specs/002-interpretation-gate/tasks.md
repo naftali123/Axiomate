@@ -8,18 +8,24 @@ fail before the implementation is written (constitution principle VIII).
 
 ## Phase 1 – Validation gate (Story 1, no model)
 
-- [ ] T001 [P] Tests for reading figures, scale words and signs from quotes taken from the development filings.
-- [ ] T002 [P] Tests for reading dates and period phrases.
-- [ ] T003 [P] Tests for the term lists: metric terms, component terms, hedging and forward-looking words.
-- [ ] T004 Implement `gate/numbers.py`, `gate/periods.py`, `gate/lexicon.py`.
-- [ ] T005 Write `tools/claims_from_facts.py`: correct claims built mechanically from the tagged figures of the development filings.
-- [ ] T006 Write `tools/corrupt_for_gate.py`: at least 10 corrupted claims per kind (digit, scale, sign, period, metric, hedge removed, assumption removed), each with its expected outcome and check.
-- [ ] T007 Tests for the five acceptance scenarios of Story 1 and for both generated sets.
-- [ ] T008 Implement `gate/check.py`.
-- [ ] T009 Implement `axiomate claim check`.
-- [ ] T010 Measure: corrupted caught 100% (SC-003), correct pass ≥ 98% (SC-004). Update `status.html`.
+- [x] T001 [P] Tests for reading figures, scale words and signs from quotes taken from the development filings.
+- [x] T002 [P] Tests for reading dates and period phrases.
+- [x] T003 [P] Tests for the term lists: metric terms, component terms, hedging and forward-looking words.
+- [x] T004 Implement `gate/numbers.py`, `gate/periods.py`, `gate/lexicon.py`.
+- [x] T005 Write `tools/claims_from_facts.py`: correct claims built mechanically from the tagged figures of the development filings.
+- [x] T006 Write `tools/corrupt_for_gate.py`: at least 10 corrupted claims per kind (digit, scale, sign, period, metric, hedge removed, assumption removed), each with its expected outcome and check.
+- [x] T007 Tests for the five acceptance scenarios of Story 1 and for both generated sets.
+- [x] T008 Implement `gate/check.py`.
+- [x] T009 Implement `axiomate claim check`.
+- [x] T010 Measure: corrupted caught 100% (SC-003), correct pass ≥ 98% (SC-004). Update `status.html`.
 
-**Checkpoint**: the gate is verified without any model call.
+**Checkpoint**: the gate is verified without any model call. *Reached
+2026-11-13. Corrupted claims caught: 84 of 84, twelve of each kind, each by the
+expected check. Correct claims passing: 115 of 115 (19 hand-written, 96 built
+from tagged figures). On the first run it was 112 of 115: the gate flagged
+three hand-written claims of spec 001 whose period came from "the same period
+in 1995" with no assumption recorded. The claims were at fault, not the gate;
+the assumptions were added.*
 
 ## Phase 2 – Held-out data
 

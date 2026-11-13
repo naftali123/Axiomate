@@ -1,7 +1,7 @@
 # Implementation Plan: Claim Interpretation and Validation Gate
 
 **Feature**: `002-interpretation-gate` | **Date**: 2026-11-13 | **Spec**: [spec.md](spec.md)
-**Status**: Draft – awaiting approval
+**Status**: Approved 2026-11-13
 
 ## Summary
 
@@ -135,6 +135,30 @@ tools/
     to call is an error, never a silent skip.
 19. **No personal data.** The request holds the instructions and filing text
     only. The API key comes from the environment and is never written.
+
+## Changes found while building the gate
+
+- **The figure is read where it stands in its segment.** A quote may be only
+  the figure (`8,180`), while its parentheses, scale word or "approximately"
+  sit just outside it. Those count. The period must still be in the quote
+  itself, and the metric in the quote or the segment.
+- **A negative value needs something to show for it**: parentheses, a governing
+  decrease or loss phrase, a row label that says loss, or an assumption.
+  Otherwise the claim is flagged. A figure written as negative but claimed as
+  positive is rejected.
+- **Scale in tables.** A figure in a table row needs an assumption for its
+  scale even when the scale is units, unless it is a per-share amount or a
+  percentage: tables state their scale in the heading.
+- **Probes.** Hedge and scale checks need prose with "approximately $X
+  million". The generator builds such claims mechanically with a placeholder
+  metric and period; they test the reading of the figure and are not counted
+  as correct claims.
+- **Three hand-written claims of spec 001 were corrected.** See the checkpoint
+  in tasks.md.
+- **What the correct-claim set does and does not exercise.** Claims built from
+  tags carry assumptions for period and scale by construction, so on them the
+  gate's period and scale checks only confirm the assumption exists. They do
+  exercise the reading of displayed figures, signs and row labels.
 
 ## Cost
 

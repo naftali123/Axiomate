@@ -1,0 +1,882 @@
+[
+ {
+  "name": "probe__cpa18_2021q1_10q__253",
+  "claim": {
+   "company_cik": "0001558235",
+   "metric": "revenue",
+   "value_kind": "approximate",
+   "value_low": "1200000000",
+   "value_high": "1200000000",
+   "stated_value": "1.2",
+   "stated_scale": "billions",
+   "unit": "currency",
+   "currency": "USD",
+   "period_kind": "duration",
+   "fiscal_year": 2021,
+   "fiscal_period": "Q1",
+   "period_start": "2021-01-01",
+   "period_end": "2021-03-31",
+   "basis": "reported",
+   "nature": "actual",
+   "comparison": "absolute",
+   "baseline_start": null,
+   "baseline_end": null,
+   "polarity": "affirmed",
+   "document_id": "a6af736eaa82dcb0c2f999decbb4007928cf94ee2adba384afb531fb3f87406f",
+   "segment_index": 253,
+   "span_start": 19274,
+   "span_end": 19300,
+   "quote": "approximately $1.2 billion",
+   "said_on": "2021-05-10",
+   "flags": [],
+   "assumptions": [
+    {
+     "statement": "Probe: the metric is a placeholder",
+     "field": "metric",
+     "origin": "human"
+    },
+    {
+     "statement": "Probe: the period is a placeholder",
+     "field": "period_start",
+     "origin": "human"
+    }
+   ]
+  }
+ },
+ {
+  "name": "probe__cpa18_2021q1_10q__434",
+  "claim": {
+   "company_cik": "0001558235",
+   "metric": "revenue",
+   "value_kind": "approximate",
+   "value_low": "126200000",
+   "value_high": "126200000",
+   "stated_value": "126.2",
+   "stated_scale": "millions",
+   "unit": "currency",
+   "currency": "USD",
+   "period_kind": "duration",
+   "fiscal_year": 2021,
+   "fiscal_period": "Q1",
+   "period_start": "2021-01-01",
+   "period_end": "2021-03-31",
+   "basis": "reported",
+   "nature": "actual",
+   "comparison": "absolute",
+   "baseline_start": null,
+   "baseline_end": null,
+   "polarity": "affirmed",
+   "document_id": "a6af736eaa82dcb0c2f999decbb4007928cf94ee2adba384afb531fb3f87406f",
+   "segment_index": 434,
+   "span_start": 37171,
+   "span_end": 37199,
+   "quote": "approximately $126.2 million",
+   "said_on": "2021-05-10",
+   "flags": [],
+   "assumptions": [
+    {
+     "statement": "Probe: the metric is a placeholder",
+     "field": "metric",
+     "origin": "human"
+    },
+    {
+     "statement": "Probe: the period is a placeholder",
+     "field": "period_start",
+     "origin": "human"
+    }
+   ]
+  }
+ },
+ {
+  "name": "probe__cpa18_2021q1_10q__914",
+  "claim": {
+   "company_cik": "0001558235",
+   "metric": "revenue",
+   "value_kind": "approximate",
+   "value_low": "3500000",
+   "value_high": "3500000",
+   "stated_value": "3.5",
+   "stated_scale": "millions",
+   "unit": "currency",
+   "currency": "USD",
+   "period_kind": "duration",
+   "fiscal_year": 2021,
+   "fiscal_period": "Q1",
+   "period_start": "2021-01-01",
+   "period_end": "2021-03-31",
+   "basis": "reported",
+   "nature": "actual",
+   "comparison": "absolute",
+   "baseline_start": null,
+   "baseline_end": null,
+   "polarity": "affirmed",
+   "document_id": "a6af736eaa82dcb0c2f999decbb4007928cf94ee2adba384afb531fb3f87406f",
+   "segment_index": 914,
+   "span_start": 82531,
+   "span_end": 82557,
+   "quote": "approximately $3.5 million",
+   "said_on": "2021-05-10",
+   "flags": [],
+   "assumptions": [
+    {
+     "statement": "Probe: the metric is a placeholder",
+     "field": "metric",
+     "origin": "human"
+    },
+    {
+     "statement": "Probe: the period is a placeholder",
+     "field": "period_start",
+     "origin": "human"
+    }
+   ]
+  }
+ },
+ {
+  "name": "probe__cpa18_2021q1_10q__939",
+  "claim": {
+   "company_cik": "0001558235",
+   "metric": "revenue",
+   "value_kind": "approximate",
+   "value_low": "3500000",
+   "value_high": "3500000",
+   "stated_value": "3.5",
+   "stated_scale": "millions",
+   "unit": "currency",
+   "currency": "USD",
+   "period_kind": "duration",
+   "fiscal_year": 2021,
+   "fiscal_period": "Q1",
+   "period_start": "2021-01-01",
+   "period_end": "2021-03-31",
+   "basis": "reported",
+   "nature": "actual",
+   "comparison": "absolute",
+   "baseline_start": null,
+   "baseline_end": null,
+   "polarity": "affirmed",
+   "document_id": "a6af736eaa82dcb0c2f999decbb4007928cf94ee2adba384afb531fb3f87406f",
+   "segment_index": 939,
+   "span_start": 83283,
+   "span_end": 83309,
+   "quote": "approximately $3.5 million",
+   "said_on": "2021-05-10",
+   "flags": [],
+   "assumptions": [
+    {
+     "statement": "Probe: the metric is a placeholder",
+     "field": "metric",
+     "origin": "human"
+    },
+    {
+     "statement": "Probe: the period is a placeholder",
+     "field": "period_start",
+     "origin": "human"
+    }
+   ]
+  }
+ },
+ {
+  "name": "probe__cpa18_2021q2_10q__289",
+  "claim": {
+   "company_cik": "0001558235",
+   "metric": "revenue",
+   "value_kind": "approximate",
+   "value_low": "1200000000",
+   "value_high": "1200000000",
+   "stated_value": "1.2",
+   "stated_scale": "billions",
+   "unit": "currency",
+   "currency": "USD",
+   "period_kind": "duration",
+   "fiscal_year": 2021,
+   "fiscal_period": "Q2",
+   "period_start": "2021-04-01",
+   "period_end": "2021-06-30",
+   "basis": "reported",
+   "nature": "actual",
+   "comparison": "absolute",
+   "baseline_start": null,
+   "baseline_end": null,
+   "polarity": "affirmed",
+   "document_id": "04c2108bf8a7ed746342da51c43edd3f5c4ba26bb51d17cce1d39fae577f4b1a",
+   "segment_index": 289,
+   "span_start": 22125,
+   "span_end": 22151,
+   "quote": "approximately $1.2 billion",
+   "said_on": "2021-08-09",
+   "flags": [],
+   "assumptions": [
+    {
+     "statement": "Probe: the metric is a placeholder",
+     "field": "metric",
+     "origin": "human"
+    },
+    {
+     "statement": "Probe: the period is a placeholder",
+     "field": "period_start",
+     "origin": "human"
+    }
+   ]
+  }
+ },
+ {
+  "name": "probe__cpa18_2021q2_10q__470",
+  "claim": {
+   "company_cik": "0001558235",
+   "metric": "revenue",
+   "value_kind": "approximate",
+   "value_low": "92500000",
+   "value_high": "92500000",
+   "stated_value": "92.5",
+   "stated_scale": "millions",
+   "unit": "currency",
+   "currency": "USD",
+   "period_kind": "duration",
+   "fiscal_year": 2021,
+   "fiscal_period": "Q2",
+   "period_start": "2021-04-01",
+   "period_end": "2021-06-30",
+   "basis": "reported",
+   "nature": "actual",
+   "comparison": "absolute",
+   "baseline_start": null,
+   "baseline_end": null,
+   "polarity": "affirmed",
+   "document_id": "04c2108bf8a7ed746342da51c43edd3f5c4ba26bb51d17cce1d39fae577f4b1a",
+   "segment_index": 470,
+   "span_start": 40825,
+   "span_end": 40852,
+   "quote": "approximately $92.5 million",
+   "said_on": "2021-08-09",
+   "flags": [],
+   "assumptions": [
+    {
+     "statement": "Probe: the metric is a placeholder",
+     "field": "metric",
+     "origin": "human"
+    },
+    {
+     "statement": "Probe: the period is a placeholder",
+     "field": "period_start",
+     "origin": "human"
+    }
+   ]
+  }
+ },
+ {
+  "name": "probe__cpa18_2021q2_10q__690",
+  "claim": {
+   "company_cik": "0001558235",
+   "metric": "revenue",
+   "value_kind": "approximate",
+   "value_low": "39700000",
+   "value_high": "39700000",
+   "stated_value": "39.7",
+   "stated_scale": "millions",
+   "unit": "currency",
+   "currency": "USD",
+   "period_kind": "duration",
+   "fiscal_year": 2021,
+   "fiscal_period": "Q2",
+   "period_start": "2021-04-01",
+   "period_end": "2021-06-30",
+   "basis": "reported",
+   "nature": "actual",
+   "comparison": "absolute",
+   "baseline_start": null,
+   "baseline_end": null,
+   "polarity": "affirmed",
+   "document_id": "04c2108bf8a7ed746342da51c43edd3f5c4ba26bb51d17cce1d39fae577f4b1a",
+   "segment_index": 690,
+   "span_start": 64640,
+   "span_end": 64667,
+   "quote": "approximately $39.7 million",
+   "said_on": "2021-08-09",
+   "flags": [],
+   "assumptions": [
+    {
+     "statement": "Probe: the metric is a placeholder",
+     "field": "metric",
+     "origin": "human"
+    },
+    {
+     "statement": "Probe: the period is a placeholder",
+     "field": "period_start",
+     "origin": "human"
+    }
+   ]
+  }
+ },
+ {
+  "name": "probe__cpa18_2021q2_10q__908",
+  "claim": {
+   "company_cik": "0001558235",
+   "metric": "revenue",
+   "value_kind": "approximate",
+   "value_low": "39700000",
+   "value_high": "39700000",
+   "stated_value": "39.7",
+   "stated_scale": "millions",
+   "unit": "currency",
+   "currency": "USD",
+   "period_kind": "duration",
+   "fiscal_year": 2021,
+   "fiscal_period": "Q2",
+   "period_start": "2021-04-01",
+   "period_end": "2021-06-30",
+   "basis": "reported",
+   "nature": "actual",
+   "comparison": "absolute",
+   "baseline_start": null,
+   "baseline_end": null,
+   "polarity": "affirmed",
+   "document_id": "04c2108bf8a7ed746342da51c43edd3f5c4ba26bb51d17cce1d39fae577f4b1a",
+   "segment_index": 908,
+   "span_start": 85013,
+   "span_end": 85040,
+   "quote": "approximately $39.7 million",
+   "said_on": "2021-08-09",
+   "flags": [],
+   "assumptions": [
+    {
+     "statement": "Probe: the metric is a placeholder",
+     "field": "metric",
+     "origin": "human"
+    },
+    {
+     "statement": "Probe: the period is a placeholder",
+     "field": "period_start",
+     "origin": "human"
+    }
+   ]
+  }
+ },
+ {
+  "name": "probe__cpa18_2022q1_10q__254",
+  "claim": {
+   "company_cik": "0001558235",
+   "metric": "revenue",
+   "value_kind": "approximate",
+   "value_low": "2000000",
+   "value_high": "2000000",
+   "stated_value": "2.0",
+   "stated_scale": "millions",
+   "unit": "currency",
+   "currency": "USD",
+   "period_kind": "duration",
+   "fiscal_year": 2022,
+   "fiscal_period": "Q1",
+   "period_start": "2022-01-01",
+   "period_end": "2022-03-31",
+   "basis": "reported",
+   "nature": "actual",
+   "comparison": "absolute",
+   "baseline_start": null,
+   "baseline_end": null,
+   "polarity": "affirmed",
+   "document_id": "731b7e29b3590762de1ed59baca896677a949b46185c46d1fe11ef3772ee1fea",
+   "segment_index": 254,
+   "span_start": 20148,
+   "span_end": 20174,
+   "quote": "approximately $2.0 million",
+   "said_on": "2022-05-09",
+   "flags": [],
+   "assumptions": [
+    {
+     "statement": "Probe: the metric is a placeholder",
+     "field": "metric",
+     "origin": "human"
+    },
+    {
+     "statement": "Probe: the period is a placeholder",
+     "field": "period_start",
+     "origin": "human"
+    }
+   ]
+  }
+ },
+ {
+  "name": "probe__cpa18_2022q1_10q__264",
+  "claim": {
+   "company_cik": "0001558235",
+   "metric": "revenue",
+   "value_kind": "approximate",
+   "value_low": "1200000000",
+   "value_high": "1200000000",
+   "stated_value": "1.2",
+   "stated_scale": "billions",
+   "unit": "currency",
+   "currency": "USD",
+   "period_kind": "duration",
+   "fiscal_year": 2022,
+   "fiscal_period": "Q1",
+   "period_start": "2022-01-01",
+   "period_end": "2022-03-31",
+   "basis": "reported",
+   "nature": "actual",
+   "comparison": "absolute",
+   "baseline_start": null,
+   "baseline_end": null,
+   "polarity": "affirmed",
+   "document_id": "731b7e29b3590762de1ed59baca896677a949b46185c46d1fe11ef3772ee1fea",
+   "segment_index": 264,
+   "span_start": 21595,
+   "span_end": 21621,
+   "quote": "approximately $1.2 billion",
+   "said_on": "2022-05-09",
+   "flags": [],
+   "assumptions": [
+    {
+     "statement": "Probe: the metric is a placeholder",
+     "field": "metric",
+     "origin": "human"
+    },
+    {
+     "statement": "Probe: the period is a placeholder",
+     "field": "period_start",
+     "origin": "human"
+    }
+   ]
+  }
+ },
+ {
+  "name": "probe__cpa18_2022q1_10q__436",
+  "claim": {
+   "company_cik": "0001558235",
+   "metric": "revenue",
+   "value_kind": "approximate",
+   "value_low": "48000000",
+   "value_high": "48000000",
+   "stated_value": "48.0",
+   "stated_scale": "millions",
+   "unit": "currency",
+   "currency": "USD",
+   "period_kind": "duration",
+   "fiscal_year": 2022,
+   "fiscal_period": "Q1",
+   "period_start": "2022-01-01",
+   "period_end": "2022-03-31",
+   "basis": "reported",
+   "nature": "actual",
+   "comparison": "absolute",
+   "baseline_start": null,
+   "baseline_end": null,
+   "polarity": "affirmed",
+   "document_id": "731b7e29b3590762de1ed59baca896677a949b46185c46d1fe11ef3772ee1fea",
+   "segment_index": 436,
+   "span_start": 37897,
+   "span_end": 37924,
+   "quote": "approximately $48.0 million",
+   "said_on": "2022-05-09",
+   "flags": [],
+   "assumptions": [
+    {
+     "statement": "Probe: the metric is a placeholder",
+     "field": "metric",
+     "origin": "human"
+    },
+    {
+     "statement": "Probe: the period is a placeholder",
+     "field": "period_start",
+     "origin": "human"
+    }
+   ]
+  }
+ },
+ {
+  "name": "probe__cpa18_2022q1_10q__641",
+  "claim": {
+   "company_cik": "0001558235",
+   "metric": "revenue",
+   "value_kind": "approximate",
+   "value_low": "9300000",
+   "value_high": "9300000",
+   "stated_value": "9.3",
+   "stated_scale": "millions",
+   "unit": "currency",
+   "currency": "USD",
+   "period_kind": "duration",
+   "fiscal_year": 2022,
+   "fiscal_period": "Q1",
+   "period_start": "2022-01-01",
+   "period_end": "2022-03-31",
+   "basis": "reported",
+   "nature": "actual",
+   "comparison": "absolute",
+   "baseline_start": null,
+   "baseline_end": null,
+   "polarity": "affirmed",
+   "document_id": "731b7e29b3590762de1ed59baca896677a949b46185c46d1fe11ef3772ee1fea",
+   "segment_index": 641,
+   "span_start": 61103,
+   "span_end": 61129,
+   "quote": "approximately $9.3 million",
+   "said_on": "2022-05-09",
+   "flags": [],
+   "assumptions": [
+    {
+     "statement": "Probe: the metric is a placeholder",
+     "field": "metric",
+     "origin": "human"
+    },
+    {
+     "statement": "Probe: the period is a placeholder",
+     "field": "period_start",
+     "origin": "human"
+    }
+   ]
+  }
+ },
+ {
+  "name": "probe__everi_2024q1_10q__395",
+  "claim": {
+   "company_cik": "0001318568",
+   "metric": "revenue",
+   "value_kind": "approximate",
+   "value_low": "14400000",
+   "value_high": "14400000",
+   "stated_value": "14.4",
+   "stated_scale": "millions",
+   "unit": "currency",
+   "currency": "USD",
+   "period_kind": "duration",
+   "fiscal_year": 2024,
+   "fiscal_period": "Q1",
+   "period_start": "2024-01-01",
+   "period_end": "2024-03-31",
+   "basis": "reported",
+   "nature": "actual",
+   "comparison": "absolute",
+   "baseline_start": null,
+   "baseline_end": null,
+   "polarity": "affirmed",
+   "document_id": "750d253624042aeade1c43d515d1bc8c7872a22b81b8985bee737ea481e46b93",
+   "segment_index": 395,
+   "span_start": 29970,
+   "span_end": 29997,
+   "quote": "approximately $14.4 million",
+   "said_on": "2024-05-08",
+   "flags": [],
+   "assumptions": [
+    {
+     "statement": "Probe: the metric is a placeholder",
+     "field": "metric",
+     "origin": "human"
+    },
+    {
+     "statement": "Probe: the period is a placeholder",
+     "field": "period_start",
+     "origin": "human"
+    }
+   ]
+  }
+ },
+ {
+  "name": "probe__everi_2024q1_10q__402",
+  "claim": {
+   "company_cik": "0001318568",
+   "metric": "revenue",
+   "value_kind": "approximate",
+   "value_low": "2300000",
+   "value_high": "2300000",
+   "stated_value": "2.3",
+   "stated_scale": "millions",
+   "unit": "currency",
+   "currency": "USD",
+   "period_kind": "duration",
+   "fiscal_year": 2024,
+   "fiscal_period": "Q1",
+   "period_start": "2024-01-01",
+   "period_end": "2024-03-31",
+   "basis": "reported",
+   "nature": "actual",
+   "comparison": "absolute",
+   "baseline_start": null,
+   "baseline_end": null,
+   "polarity": "affirmed",
+   "document_id": "750d253624042aeade1c43d515d1bc8c7872a22b81b8985bee737ea481e46b93",
+   "segment_index": 402,
+   "span_start": 31783,
+   "span_end": 31809,
+   "quote": "approximately $2.3 million",
+   "said_on": "2024-05-08",
+   "flags": [],
+   "assumptions": [
+    {
+     "statement": "Probe: the metric is a placeholder",
+     "field": "metric",
+     "origin": "human"
+    },
+    {
+     "statement": "Probe: the period is a placeholder",
+     "field": "period_start",
+     "origin": "human"
+    }
+   ]
+  }
+ },
+ {
+  "name": "probe__everi_2024q1_10q__410",
+  "claim": {
+   "company_cik": "0001318568",
+   "metric": "revenue",
+   "value_kind": "approximate",
+   "value_low": "1300000",
+   "value_high": "1300000",
+   "stated_value": "1.3",
+   "stated_scale": "millions",
+   "unit": "currency",
+   "currency": "USD",
+   "period_kind": "duration",
+   "fiscal_year": 2024,
+   "fiscal_period": "Q1",
+   "period_start": "2024-01-01",
+   "period_end": "2024-03-31",
+   "basis": "reported",
+   "nature": "actual",
+   "comparison": "absolute",
+   "baseline_start": null,
+   "baseline_end": null,
+   "polarity": "affirmed",
+   "document_id": "750d253624042aeade1c43d515d1bc8c7872a22b81b8985bee737ea481e46b93",
+   "segment_index": 410,
+   "span_start": 32789,
+   "span_end": 32815,
+   "quote": "approximately $1.3 million",
+   "said_on": "2024-05-08",
+   "flags": [],
+   "assumptions": [
+    {
+     "statement": "Probe: the metric is a placeholder",
+     "field": "metric",
+     "origin": "human"
+    },
+    {
+     "statement": "Probe: the period is a placeholder",
+     "field": "period_start",
+     "origin": "human"
+    }
+   ]
+  }
+ },
+ {
+  "name": "probe__everi_2024q1_10q__417",
+  "claim": {
+   "company_cik": "0001318568",
+   "metric": "revenue",
+   "value_kind": "approximate",
+   "value_low": "1000000",
+   "value_high": "1000000",
+   "stated_value": "1.0",
+   "stated_scale": "millions",
+   "unit": "currency",
+   "currency": "USD",
+   "period_kind": "duration",
+   "fiscal_year": 2024,
+   "fiscal_period": "Q1",
+   "period_start": "2024-01-01",
+   "period_end": "2024-03-31",
+   "basis": "reported",
+   "nature": "actual",
+   "comparison": "absolute",
+   "baseline_start": null,
+   "baseline_end": null,
+   "polarity": "affirmed",
+   "document_id": "750d253624042aeade1c43d515d1bc8c7872a22b81b8985bee737ea481e46b93",
+   "segment_index": 417,
+   "span_start": 34027,
+   "span_end": 34053,
+   "quote": "approximately $1.0 million",
+   "said_on": "2024-05-08",
+   "flags": [],
+   "assumptions": [
+    {
+     "statement": "Probe: the metric is a placeholder",
+     "field": "metric",
+     "origin": "human"
+    },
+    {
+     "statement": "Probe: the period is a placeholder",
+     "field": "period_start",
+     "origin": "human"
+    }
+   ]
+  }
+ },
+ {
+  "name": "probe__geospace_fy2021q3_10q__470",
+  "claim": {
+   "company_cik": "0001001115",
+   "metric": "revenue",
+   "value_kind": "approximate",
+   "value_low": "22700000",
+   "value_high": "22700000",
+   "stated_value": "22.7",
+   "stated_scale": "millions",
+   "unit": "currency",
+   "currency": "USD",
+   "period_kind": "duration",
+   "fiscal_year": 2021,
+   "fiscal_period": "Q3",
+   "period_start": "2021-04-01",
+   "period_end": "2021-06-30",
+   "basis": "reported",
+   "nature": "actual",
+   "comparison": "absolute",
+   "baseline_start": null,
+   "baseline_end": null,
+   "polarity": "affirmed",
+   "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+   "segment_index": 470,
+   "span_start": 35898,
+   "span_end": 35925,
+   "quote": "approximately $22.7 million",
+   "said_on": "2021-08-06",
+   "flags": [],
+   "assumptions": [
+    {
+     "statement": "Probe: the metric is a placeholder",
+     "field": "metric",
+     "origin": "human"
+    },
+    {
+     "statement": "Probe: the period is a placeholder",
+     "field": "period_start",
+     "origin": "human"
+    }
+   ]
+  }
+ },
+ {
+  "name": "probe__geospace_fy2021q3_10q__602",
+  "claim": {
+   "company_cik": "0001001115",
+   "metric": "revenue",
+   "value_kind": "approximate",
+   "value_low": "2300000",
+   "value_high": "2300000",
+   "stated_value": "2.3",
+   "stated_scale": "millions",
+   "unit": "currency",
+   "currency": "USD",
+   "period_kind": "duration",
+   "fiscal_year": 2021,
+   "fiscal_period": "Q3",
+   "period_start": "2021-04-01",
+   "period_end": "2021-06-30",
+   "basis": "reported",
+   "nature": "actual",
+   "comparison": "absolute",
+   "baseline_start": null,
+   "baseline_end": null,
+   "polarity": "affirmed",
+   "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+   "segment_index": 602,
+   "span_start": 47230,
+   "span_end": 47256,
+   "quote": "approximately $2.3 million",
+   "said_on": "2021-08-06",
+   "flags": [],
+   "assumptions": [
+    {
+     "statement": "Probe: the metric is a placeholder",
+     "field": "metric",
+     "origin": "human"
+    },
+    {
+     "statement": "Probe: the period is a placeholder",
+     "field": "period_start",
+     "origin": "human"
+    }
+   ]
+  }
+ },
+ {
+  "name": "probe__geospace_fy2021q3_10q__674",
+  "claim": {
+   "company_cik": "0001001115",
+   "metric": "revenue",
+   "value_kind": "approximate",
+   "value_low": "1400000",
+   "value_high": "1400000",
+   "stated_value": "1.4",
+   "stated_scale": "millions",
+   "unit": "currency",
+   "currency": "USD",
+   "period_kind": "duration",
+   "fiscal_year": 2021,
+   "fiscal_period": "Q3",
+   "period_start": "2021-04-01",
+   "period_end": "2021-06-30",
+   "basis": "reported",
+   "nature": "actual",
+   "comparison": "absolute",
+   "baseline_start": null,
+   "baseline_end": null,
+   "polarity": "affirmed",
+   "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+   "segment_index": 674,
+   "span_start": 57642,
+   "span_end": 57668,
+   "quote": "approximately $1.4 million",
+   "said_on": "2021-08-06",
+   "flags": [],
+   "assumptions": [
+    {
+     "statement": "Probe: the metric is a placeholder",
+     "field": "metric",
+     "origin": "human"
+    },
+    {
+     "statement": "Probe: the period is a placeholder",
+     "field": "period_start",
+     "origin": "human"
+    }
+   ]
+  }
+ },
+ {
+  "name": "probe__geospace_fy2021q3_10q__828",
+  "claim": {
+   "company_cik": "0001001115",
+   "metric": "revenue",
+   "value_kind": "approximate",
+   "value_low": "2000000",
+   "value_high": "2000000",
+   "stated_value": "2.0",
+   "stated_scale": "millions",
+   "unit": "currency",
+   "currency": "USD",
+   "period_kind": "duration",
+   "fiscal_year": 2021,
+   "fiscal_period": "Q3",
+   "period_start": "2021-04-01",
+   "period_end": "2021-06-30",
+   "basis": "reported",
+   "nature": "actual",
+   "comparison": "absolute",
+   "baseline_start": null,
+   "baseline_end": null,
+   "polarity": "affirmed",
+   "document_id": "9c3d7b86951e39f64d2253ab81b7422bb9516c92f2751d0d93e1f558801623ca",
+   "segment_index": 828,
+   "span_start": 79663,
+   "span_end": 79689,
+   "quote": "approximately $2.0 million",
+   "said_on": "2021-08-06",
+   "flags": [],
+   "assumptions": [
+    {
+     "statement": "Probe: the metric is a placeholder",
+     "field": "metric",
+     "origin": "human"
+    },
+    {
+     "statement": "Probe: the period is a placeholder",
+     "field": "period_start",
+     "origin": "human"
+    }
+   ]
+  }
+ }
+]
