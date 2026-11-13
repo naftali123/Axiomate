@@ -208,9 +208,18 @@ def test_call_limit_stops_before_exceeding_and_keeps_what_was_paid_for(filings, 
 
 def test_failing_client_counts_as_a_failed_reply(filings, tmp_path):
     def client(text):
-        raise AxiomateError("model_unavailable", "no service", None)
+        raise AxiomateError("reply_failed", "the model declined", None)
     result = run(filings, ReplyStore(tmp_path / "down"), client=client)
     assert result["replies_failed"] == result["segments_selected"] and result["candidates"] == 0
+
+
+def test_an_unavailable_service_stops_the_run_and_records_nothing(filings, tmp_path):
+    def client(text):
+        raise AxiomateError("model_unavailable", "no service", None)
+    with pytest.raises(AxiomateError) as raised:
+        run(filings, ReplyStore(tmp_path / "down"), client=client)
+    assert raised.value.code == "model_unavailable"
+    assert filings.execute("SELECT count(*) FROM interpretation_run").fetchone()[0] == 0
 
 
 def test_unknown_document_is_not_found(filings, tmp_path):
@@ -252,3 +261,37 @@ def test_command_line_interpret_from_stored_replies(filings, tmp_path, capsys, m
     assert main(["--db", store_path, "interpret", DOC, "--replies", str(tmp_path / "replies")]) == 0
     out = json.loads(capsys.readouterr().out)
     assert out["passed"] == 1 and out["calls_made"] == 0 and len(out["run_id"]) == 64
+
+
+# Evaluation against tagged figures (task T027).
+def test_report_states_precision_coverage_and_pass_rate_with_their_thresholds(filings, tmp_path):
+    from axiomate.evaluate.report import build
+    wrong_period = ROW | {"quote": "200,472", "value_low": "200472000", "value_high": "200472000", "stated_value": "200472"}
+    run(filings, write_replies(filings, tmp_path / "replies", {"Total revenues\t189,346": [ROW, wrong_period, COMPONENT]}))
+    splits = tmp_path / "eval" / "splits.json"
+    splits.parent.mkdir()
+    entry = {"file": "everi_2024q1_10q.html", "filings": str(support.DOCS), "facts": str(support.FIXTURES / "facts")}
+    splits.write_text(json.dumps({"development": [entry], "held_out": []}), encoding="utf-8")
+    report = build(filings, "development", splits_path=splits, instruction_version=VERSION, model=MODEL)
+    assert report["precision"] == {"numerator": 1, "denominator": 2, "value": "0.5000", "threshold": "0.98", "met": False}
+    assert report["coverage"]["numerator"] == 1 and report["coverage"]["denominator"] == report["tagged_figures"] > 5
+    assert report["pass_rate"]["numerator"] == 2 and report["pass_rate"]["denominator"] == 3
+    assert [d["fields"] for d in report["disagreements"]] == [["period"]] and report["thresholds_met"] is False
+    with pytest.raises(AxiomateError) as raised:
+        build(filings, "development", splits_path=splits, instruction_version="other", model=MODEL)
+    assert raised.value.code == "not_found"
+
+
+def test_prose_sample_takes_passed_sentence_claims_by_a_fixed_step(filings, tmp_path):
+    from axiomate.evaluate.sample import prose_sample
+    run(filings, write_replies(filings, tmp_path / "replies", {
+        "Total revenues decreased by approximately $11.1 million": [PROSE, CHANGE], "Total revenues\t189,346": [ROW]}))
+    splits = tmp_path / "eval" / "splits.json"
+    splits.parent.mkdir()
+    entry = {"file": "everi_2024q1_10q.html", "filings": str(support.DOCS), "facts": str(support.FIXTURES / "facts")}
+    splits.write_text(json.dumps({"held_out": [entry]}), encoding="utf-8")
+    drawn = prose_sample(filings, "held_out", size=1, splits_path=splits, instruction_version=VERSION, model=MODEL)
+    assert (drawn["population"], drawn["step"], len(drawn["sample"])) == (2, 2, 1)
+    assert drawn["sample"][0]["quote"] in (PROSE["quote"], CHANGE["quote"])
+    assert drawn["sample"][0]["quote"] in drawn["sample"][0]["sentence"]
+    assert prose_sample(filings, "held_out", size=30, splits_path=splits, instruction_version=VERSION, model=MODEL)["step"] == 1

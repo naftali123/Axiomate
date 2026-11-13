@@ -8,6 +8,10 @@ outcome. Nothing a model returns is stored as a claim without passing the gate.
 
 A run is identified by document, instruction version and model. Running it
 again returns the recorded result and changes nothing.
+
+A reply that fails on its own (`reply_failed`) is counted and the run goes on.
+Any other error from the client stops the run before anything is recorded;
+replies already paid for stay in the reply store.
 """
 from __future__ import annotations
 
@@ -129,13 +133,18 @@ def interpret(conn: sqlite3.Connection, document_id: str, replies: ReplyStore, *
             calls += 1
             try:
                 answer = client(request)  # type: ignore[misc]
-            except AxiomateError:
+            except AxiomateError as error:
+                if error.code != "reply_failed":
+                    raise
                 failed += 1
                 records.append(None)
                 continue
             record = {"key": key, "instruction_version": instruction_version, "model": model,
                       "served_model": answer["served_model"], "request_text": request, "reply": answer["reply"],
                       "input_tokens": answer["input_tokens"], "output_tokens": answer["output_tokens"]}
+            for extra in ("cache_read_input_tokens", "cache_creation_input_tokens"):
+                if extra in answer:
+                    record[extra] = answer[extra]
             replies.write(record)
         records.append(record)
 
