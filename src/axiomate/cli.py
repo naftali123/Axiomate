@@ -9,6 +9,7 @@ from pathlib import Path
 
 from axiomate.claims.query import claim_source, list_claims
 from axiomate.claims.submit import submit
+from axiomate.gate.check import check as gate_check
 from axiomate.documents.ingest import get_document, get_segment, ingest
 from axiomate.errors import AxiomateError
 from axiomate.store import db
@@ -40,6 +41,8 @@ def _parser() -> argparse.ArgumentParser:
     claim_add = claim_actions.add_parser("add", help="submit one claim from a JSON file")
     claim_add.add_argument("file")
     claim_add.add_argument("--supersedes", metavar="CLAIM_ID", help="store as a correction of this claim")
+    claim_check = claim_actions.add_parser("check", help="run the validation gate on a claim without storing it")
+    claim_check.add_argument("file")
     claim_list = claim_actions.add_parser("list", help="claims about a company, metric and fiscal period")
     claim_list.add_argument("--company-cik")
     claim_list.add_argument("--metric")
@@ -97,6 +100,8 @@ def _run(args: argparse.Namespace) -> object:
             raise AxiomateError("schema_invalid", f"{args.file} is not valid JSON: {error}", None) from None
         conn = db.connect(args.db)
         try:
+            if args.action == "check":
+                return gate_check(conn, claim).to_dict()
             result = submit(conn, claim, supersedes=args.supersedes)
         finally:
             conn.close()

@@ -32,6 +32,11 @@
       "statement": "The metric is net after tax income, named at the start of the same sentence",
       "field": "metric",
       "origin": "human"
+    },
+    {
+      "statement": "\"The same period in 1995\" is the first nine months of 1995, the period named earlier in the sentence",
+      "field": "period_start",
+      "origin": "human"
     }
   ],
   "expected_status": "formal-with-assumptions",

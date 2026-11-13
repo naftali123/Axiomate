@@ -1,0 +1,1670 @@
+[
+ {
+  "name": "digit__cpa18_2021q1_10q__000_net_income__00",
+  "kind": "digit",
+  "base_set": "facts",
+  "base": "cpa18_2021q1_10q__000_net_income",
+  "expected_check": "value",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "stated_value",
+    "value": "9180"
+   },
+   {
+    "op": "set",
+    "field": "value_low",
+    "value": "-9180000"
+   },
+   {
+    "op": "set",
+    "field": "value_high",
+    "value": "-9180000"
+   }
+  ]
+ },
+ {
+  "name": "digit__cpa18_2021q1_10q__004_net_income__01",
+  "kind": "digit",
+  "base_set": "facts",
+  "base": "cpa18_2021q1_10q__004_net_income",
+  "expected_check": "value",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "stated_value",
+    "value": "611"
+   },
+   {
+    "op": "set",
+    "field": "value_low",
+    "value": "611000"
+   },
+   {
+    "op": "set",
+    "field": "value_high",
+    "value": "611000"
+   }
+  ]
+ },
+ {
+  "name": "digit__cpa18_2021q1_10q__008_revenue__02",
+  "kind": "digit",
+  "base_set": "facts",
+  "base": "cpa18_2021q1_10q__008_revenue",
+  "expected_check": "value",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "stated_value",
+    "value": "52880"
+   },
+   {
+    "op": "set",
+    "field": "value_low",
+    "value": "52880000"
+   },
+   {
+    "op": "set",
+    "field": "value_high",
+    "value": "52880000"
+   }
+  ]
+ },
+ {
+  "name": "digit__cpa18_2021q2_10q__000_net_income__03",
+  "kind": "digit",
+  "base_set": "facts",
+  "base": "cpa18_2021q2_10q__000_net_income",
+  "expected_check": "value",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "stated_value",
+    "value": "1371"
+   },
+   {
+    "op": "set",
+    "field": "value_low",
+    "value": "-1371000"
+   },
+   {
+    "op": "set",
+    "field": "value_high",
+    "value": "-1371000"
+   }
+  ]
+ },
+ {
+  "name": "digit__cpa18_2021q2_10q__004_net_income__04",
+  "kind": "digit",
+  "base_set": "facts",
+  "base": "cpa18_2021q2_10q__004_net_income",
+  "expected_check": "value",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "stated_value",
+    "value": "2191"
+   },
+   {
+    "op": "set",
+    "field": "value_low",
+    "value": "-2191000"
+   },
+   {
+    "op": "set",
+    "field": "value_high",
+    "value": "-2191000"
+   }
+  ]
+ },
+ {
+  "name": "digit__cpa18_2021q2_10q__008_net_income__05",
+  "kind": "digit",
+  "base_set": "facts",
+  "base": "cpa18_2021q2_10q__008_net_income",
+  "expected_check": "value",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "stated_value",
+    "value": "3477"
+   },
+   {
+    "op": "set",
+    "field": "value_low",
+    "value": "3477000"
+   },
+   {
+    "op": "set",
+    "field": "value_high",
+    "value": "3477000"
+   }
+  ]
+ },
+ {
+  "name": "digit__cpa18_2021q2_10q__012_operating_cash_flow__06",
+  "kind": "digit",
+  "base_set": "facts",
+  "base": "cpa18_2021q2_10q__012_operating_cash_flow",
+  "expected_check": "value",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "stated_value",
+    "value": "48924"
+   },
+   {
+    "op": "set",
+    "field": "value_low",
+    "value": "48924000"
+   },
+   {
+    "op": "set",
+    "field": "value_high",
+    "value": "48924000"
+   }
+  ]
+ },
+ {
+  "name": "digit__cpa18_2021q2_10q__016_revenue__07",
+  "kind": "digit",
+  "base_set": "facts",
+  "base": "cpa18_2021q2_10q__016_revenue",
+  "expected_check": "value",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "stated_value",
+    "value": "53928"
+   },
+   {
+    "op": "set",
+    "field": "value_low",
+    "value": "53928000"
+   },
+   {
+    "op": "set",
+    "field": "value_high",
+    "value": "53928000"
+   }
+  ]
+ },
+ {
+  "name": "digit__cpa18_2021q2_10q__020_revenue__08",
+  "kind": "digit",
+  "base_set": "facts",
+  "base": "cpa18_2021q2_10q__020_revenue",
+  "expected_check": "value",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "stated_value",
+    "value": "59610"
+   },
+   {
+    "op": "set",
+    "field": "value_low",
+    "value": "59610000"
+   },
+   {
+    "op": "set",
+    "field": "value_high",
+    "value": "59610000"
+   }
+  ]
+ },
+ {
+  "name": "digit__cpa18_2022q1_10q__002_net_income__09",
+  "kind": "digit",
+  "base_set": "facts",
+  "base": "cpa18_2022q1_10q__002_net_income",
+  "expected_check": "value",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "stated_value",
+    "value": "611"
+   },
+   {
+    "op": "set",
+    "field": "value_low",
+    "value": "611000"
+   },
+   {
+    "op": "set",
+    "field": "value_high",
+    "value": "611000"
+   }
+  ]
+ },
+ {
+  "name": "digit__cpa18_2022q1_10q__006_operating_cash_flow__10",
+  "kind": "digit",
+  "base_set": "facts",
+  "base": "cpa18_2022q1_10q__006_operating_cash_flow",
+  "expected_check": "value",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "stated_value",
+    "value": "26652"
+   },
+   {
+    "op": "set",
+    "field": "value_low",
+    "value": "26652000"
+   },
+   {
+    "op": "set",
+    "field": "value_high",
+    "value": "26652000"
+   }
+  ]
+ },
+ {
+  "name": "digit__cpa18_2022q1_10q__010_revenue__11",
+  "kind": "digit",
+  "base_set": "facts",
+  "base": "cpa18_2022q1_10q__010_revenue",
+  "expected_check": "value",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "stated_value",
+    "value": "62698"
+   },
+   {
+    "op": "set",
+    "field": "value_low",
+    "value": "62698000"
+   },
+   {
+    "op": "set",
+    "field": "value_high",
+    "value": "62698000"
+   }
+  ]
+ },
+ {
+  "name": "scale__cpa18_2021h1_ocf_change__00",
+  "kind": "scale",
+  "base_set": "hand",
+  "base": "cpa18_2021h1_ocf_change",
+  "expected_check": "scale",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "stated_scale",
+    "value": "thousands"
+   },
+   {
+    "op": "set",
+    "field": "value_low",
+    "value": "-1800"
+   },
+   {
+    "op": "set",
+    "field": "value_high",
+    "value": "-1800"
+   }
+  ]
+ },
+ {
+  "name": "scale__cpa18_2021q1_ocf_change__01",
+  "kind": "scale",
+  "base_set": "hand",
+  "base": "cpa18_2021q1_ocf_change",
+  "expected_check": "scale",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "stated_scale",
+    "value": "thousands"
+   },
+   {
+    "op": "set",
+    "field": "value_low",
+    "value": "-6200"
+   },
+   {
+    "op": "set",
+    "field": "value_high",
+    "value": "-6200"
+   }
+  ]
+ },
+ {
+  "name": "scale__cpa18_2022q1_ocf_change__02",
+  "kind": "scale",
+  "base_set": "hand",
+  "base": "cpa18_2022q1_ocf_change",
+  "expected_check": "scale",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "stated_scale",
+    "value": "thousands"
+   },
+   {
+    "op": "set",
+    "field": "value_low",
+    "value": "13400"
+   },
+   {
+    "op": "set",
+    "field": "value_high",
+    "value": "13400"
+   }
+  ]
+ },
+ {
+  "name": "scale__everi_2023q1_net_income__03",
+  "kind": "scale",
+  "base_set": "hand",
+  "base": "everi_2023q1_net_income",
+  "expected_check": "scale",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "stated_scale",
+    "value": "thousands"
+   },
+   {
+    "op": "set",
+    "field": "value_low",
+    "value": "28100"
+   },
+   {
+    "op": "set",
+    "field": "value_high",
+    "value": "28100"
+   }
+  ]
+ },
+ {
+  "name": "scale__everi_2024q1_net_income__04",
+  "kind": "scale",
+  "base_set": "hand",
+  "base": "everi_2024q1_net_income",
+  "expected_check": "scale",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "stated_scale",
+    "value": "thousands"
+   },
+   {
+    "op": "set",
+    "field": "value_low",
+    "value": "4600"
+   },
+   {
+    "op": "set",
+    "field": "value_high",
+    "value": "4600"
+   }
+  ]
+ },
+ {
+  "name": "scale__everi_2024q1_revenue__05",
+  "kind": "scale",
+  "base_set": "hand",
+  "base": "everi_2024q1_revenue",
+  "expected_check": "scale",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "stated_scale",
+    "value": "thousands"
+   },
+   {
+    "op": "set",
+    "field": "value_low",
+    "value": "189300"
+   },
+   {
+    "op": "set",
+    "field": "value_high",
+    "value": "189300"
+   }
+  ]
+ },
+ {
+  "name": "scale__everi_2024q1_revenue_change__06",
+  "kind": "scale",
+  "base_set": "hand",
+  "base": "everi_2024q1_revenue_change",
+  "expected_check": "scale",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "stated_scale",
+    "value": "thousands"
+   },
+   {
+    "op": "set",
+    "field": "value_low",
+    "value": "-11100"
+   },
+   {
+    "op": "set",
+    "field": "value_high",
+    "value": "-11100"
+   }
+  ]
+ },
+ {
+  "name": "scale__geospace_fy2021q3_rental_revenue__07",
+  "kind": "scale",
+  "base_set": "hand",
+  "base": "geospace_fy2021q3_rental_revenue",
+  "expected_check": "scale",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "stated_scale",
+    "value": "thousands"
+   },
+   {
+    "op": "set",
+    "field": "value_low",
+    "value": "5400"
+   },
+   {
+    "op": "set",
+    "field": "value_high",
+    "value": "5400"
+   }
+  ]
+ },
+ {
+  "name": "scale__probe__cpa18_2021q1_10q__434__08",
+  "kind": "scale",
+  "base_set": "probe",
+  "base": "probe__cpa18_2021q1_10q__434",
+  "expected_check": "scale",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "stated_scale",
+    "value": "thousands"
+   },
+   {
+    "op": "set",
+    "field": "value_low",
+    "value": "126200"
+   },
+   {
+    "op": "set",
+    "field": "value_high",
+    "value": "126200"
+   }
+  ]
+ },
+ {
+  "name": "scale__probe__cpa18_2021q1_10q__914__09",
+  "kind": "scale",
+  "base_set": "probe",
+  "base": "probe__cpa18_2021q1_10q__914",
+  "expected_check": "scale",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "stated_scale",
+    "value": "thousands"
+   },
+   {
+    "op": "set",
+    "field": "value_low",
+    "value": "3500"
+   },
+   {
+    "op": "set",
+    "field": "value_high",
+    "value": "3500"
+   }
+  ]
+ },
+ {
+  "name": "scale__probe__cpa18_2021q1_10q__939__10",
+  "kind": "scale",
+  "base_set": "probe",
+  "base": "probe__cpa18_2021q1_10q__939",
+  "expected_check": "scale",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "stated_scale",
+    "value": "thousands"
+   },
+   {
+    "op": "set",
+    "field": "value_low",
+    "value": "3500"
+   },
+   {
+    "op": "set",
+    "field": "value_high",
+    "value": "3500"
+   }
+  ]
+ },
+ {
+  "name": "scale__probe__cpa18_2021q2_10q__470__11",
+  "kind": "scale",
+  "base_set": "probe",
+  "base": "probe__cpa18_2021q2_10q__470",
+  "expected_check": "scale",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "stated_scale",
+    "value": "thousands"
+   },
+   {
+    "op": "set",
+    "field": "value_low",
+    "value": "92500"
+   },
+   {
+    "op": "set",
+    "field": "value_high",
+    "value": "92500"
+   }
+  ]
+ },
+ {
+  "name": "sign__cpa18_2021q1_10q__000_net_income__00",
+  "kind": "sign",
+  "base_set": "facts",
+  "base": "cpa18_2021q1_10q__000_net_income",
+  "expected_check": "sign",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "value_low",
+    "value": "8180000"
+   },
+   {
+    "op": "set",
+    "field": "value_high",
+    "value": "8180000"
+   }
+  ]
+ },
+ {
+  "name": "sign__cpa18_2021q2_10q__000_net_income__01",
+  "kind": "sign",
+  "base_set": "facts",
+  "base": "cpa18_2021q2_10q__000_net_income",
+  "expected_check": "sign",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "value_low",
+    "value": "9371000"
+   },
+   {
+    "op": "set",
+    "field": "value_high",
+    "value": "9371000"
+   }
+  ]
+ },
+ {
+  "name": "sign__cpa18_2021q2_10q__003_net_income__02",
+  "kind": "sign",
+  "base_set": "facts",
+  "base": "cpa18_2021q2_10q__003_net_income",
+  "expected_check": "sign",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "value_low",
+    "value": "1191000"
+   },
+   {
+    "op": "set",
+    "field": "value_high",
+    "value": "1191000"
+   }
+  ]
+ },
+ {
+  "name": "sign__geospace_fy2021q3_10q__000_earnings_per_share__03",
+  "kind": "sign",
+  "base_set": "facts",
+  "base": "geospace_fy2021q3_10q__000_earnings_per_share",
+  "expected_check": "sign",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "value_low",
+    "value": "1.14"
+   },
+   {
+    "op": "set",
+    "field": "value_high",
+    "value": "1.14"
+   }
+  ]
+ },
+ {
+  "name": "sign__geospace_fy2021q3_10q__003_earnings_per_share__04",
+  "kind": "sign",
+  "base_set": "facts",
+  "base": "geospace_fy2021q3_10q__003_earnings_per_share",
+  "expected_check": "sign",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "value_low",
+    "value": "0.17"
+   },
+   {
+    "op": "set",
+    "field": "value_high",
+    "value": "0.17"
+   }
+  ]
+ },
+ {
+  "name": "sign__geospace_fy2021q3_10q__006_earnings_per_share__05",
+  "kind": "sign",
+  "base_set": "facts",
+  "base": "geospace_fy2021q3_10q__006_earnings_per_share",
+  "expected_check": "sign",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "value_low",
+    "value": "0.06"
+   },
+   {
+    "op": "set",
+    "field": "value_high",
+    "value": "0.06"
+   }
+  ]
+ },
+ {
+  "name": "sign__cpa18_2021q1_10q__003_net_income__06",
+  "kind": "sign",
+  "base_set": "facts",
+  "base": "cpa18_2021q1_10q__003_net_income",
+  "expected_check": "sign",
+  "expected_outcome": null,
+  "operations": [
+   {
+    "op": "set",
+    "field": "value_low",
+    "value": "-511000"
+   },
+   {
+    "op": "set",
+    "field": "value_high",
+    "value": "-511000"
+   }
+  ]
+ },
+ {
+  "name": "sign__cpa18_2021q1_10q__008_revenue__07",
+  "kind": "sign",
+  "base_set": "facts",
+  "base": "cpa18_2021q1_10q__008_revenue",
+  "expected_check": "sign",
+  "expected_outcome": null,
+  "operations": [
+   {
+    "op": "set",
+    "field": "value_low",
+    "value": "-42880000"
+   },
+   {
+    "op": "set",
+    "field": "value_high",
+    "value": "-42880000"
+   }
+  ]
+ },
+ {
+  "name": "sign__cpa18_2021q2_10q__007_net_income__08",
+  "kind": "sign",
+  "base_set": "facts",
+  "base": "cpa18_2021q2_10q__007_net_income",
+  "expected_check": "sign",
+  "expected_outcome": null,
+  "operations": [
+   {
+    "op": "set",
+    "field": "value_low",
+    "value": "-2477000"
+   },
+   {
+    "op": "set",
+    "field": "value_high",
+    "value": "-2477000"
+   }
+  ]
+ },
+ {
+  "name": "sign__cpa18_2021q2_10q__012_operating_cash_flow__09",
+  "kind": "sign",
+  "base_set": "facts",
+  "base": "cpa18_2021q2_10q__012_operating_cash_flow",
+  "expected_check": "sign",
+  "expected_outcome": null,
+  "operations": [
+   {
+    "op": "set",
+    "field": "value_low",
+    "value": "-38924000"
+   },
+   {
+    "op": "set",
+    "field": "value_high",
+    "value": "-38924000"
+   }
+  ]
+ },
+ {
+  "name": "sign__cpa18_2021q2_10q__017_revenue__10",
+  "kind": "sign",
+  "base_set": "facts",
+  "base": "cpa18_2021q2_10q__017_revenue",
+  "expected_check": "sign",
+  "expected_outcome": null,
+  "operations": [
+   {
+    "op": "set",
+    "field": "value_low",
+    "value": "-43928000"
+   },
+   {
+    "op": "set",
+    "field": "value_high",
+    "value": "-43928000"
+   }
+  ]
+ },
+ {
+  "name": "sign__cpa18_2022q1_10q__000_net_income__11",
+  "kind": "sign",
+  "base_set": "facts",
+  "base": "cpa18_2022q1_10q__000_net_income",
+  "expected_check": "sign",
+  "expected_outcome": null,
+  "operations": [
+   {
+    "op": "set",
+    "field": "value_low",
+    "value": "-511000"
+   },
+   {
+    "op": "set",
+    "field": "value_high",
+    "value": "-511000"
+   }
+  ]
+ },
+ {
+  "name": "period__cpa18_2021h1_ocf_change__00",
+  "kind": "period",
+  "base_set": "hand",
+  "base": "cpa18_2021h1_ocf_change",
+  "expected_check": "period",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "period_start",
+    "value": "2020-01-01"
+   },
+   {
+    "op": "set",
+    "field": "period_end",
+    "value": "2020-06-30"
+   },
+   {
+    "op": "set",
+    "field": "fiscal_year",
+    "value": 2020
+   }
+  ]
+ },
+ {
+  "name": "period__cpa18_2021q1_ocf_change__01",
+  "kind": "period",
+  "base_set": "hand",
+  "base": "cpa18_2021q1_ocf_change",
+  "expected_check": "period",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "period_start",
+    "value": "2020-01-01"
+   },
+   {
+    "op": "set",
+    "field": "period_end",
+    "value": "2020-03-31"
+   },
+   {
+    "op": "set",
+    "field": "fiscal_year",
+    "value": 2020
+   }
+  ]
+ },
+ {
+  "name": "period__cpa18_2022q1_ocf_change__02",
+  "kind": "period",
+  "base_set": "hand",
+  "base": "cpa18_2022q1_ocf_change",
+  "expected_check": "period",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "period_start",
+    "value": "2021-01-01"
+   },
+   {
+    "op": "set",
+    "field": "period_end",
+    "value": "2021-03-31"
+   },
+   {
+    "op": "set",
+    "field": "fiscal_year",
+    "value": 2021
+   }
+  ]
+ },
+ {
+  "name": "period__everi_2024q1_net_income__03",
+  "kind": "period",
+  "base_set": "hand",
+  "base": "everi_2024q1_net_income",
+  "expected_check": "period",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "period_start",
+    "value": "2023-01-01"
+   },
+   {
+    "op": "set",
+    "field": "period_end",
+    "value": "2023-03-31"
+   },
+   {
+    "op": "set",
+    "field": "fiscal_year",
+    "value": 2023
+   }
+  ]
+ },
+ {
+  "name": "period__everi_2024q1_revenue__04",
+  "kind": "period",
+  "base_set": "hand",
+  "base": "everi_2024q1_revenue",
+  "expected_check": "period",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "period_start",
+    "value": "2023-01-01"
+   },
+   {
+    "op": "set",
+    "field": "period_end",
+    "value": "2023-03-31"
+   },
+   {
+    "op": "set",
+    "field": "fiscal_year",
+    "value": 2023
+   }
+  ]
+ },
+ {
+  "name": "period__orrstown_1996_9m_eps_restated__05",
+  "kind": "period",
+  "base_set": "hand",
+  "base": "orrstown_1996_9m_eps_restated",
+  "expected_check": "period",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "period_start",
+    "value": "1995-01-01"
+   },
+   {
+    "op": "set",
+    "field": "period_end",
+    "value": "1995-09-30"
+   },
+   {
+    "op": "set",
+    "field": "fiscal_year",
+    "value": 1995
+   }
+  ]
+ },
+ {
+  "name": "period__orrstown_1996_9m_net_income__06",
+  "kind": "period",
+  "base_set": "hand",
+  "base": "orrstown_1996_9m_net_income",
+  "expected_check": "period",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "period_start",
+    "value": "1995-01-01"
+   },
+   {
+    "op": "set",
+    "field": "period_end",
+    "value": "1995-09-30"
+   },
+   {
+    "op": "set",
+    "field": "fiscal_year",
+    "value": 1995
+   }
+  ]
+ },
+ {
+  "name": "period__orrstown_1997_9m_net_income__07",
+  "kind": "period",
+  "base_set": "hand",
+  "base": "orrstown_1997_9m_net_income",
+  "expected_check": "period",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "period_start",
+    "value": "1996-01-01"
+   },
+   {
+    "op": "set",
+    "field": "period_end",
+    "value": "1996-09-30"
+   },
+   {
+    "op": "set",
+    "field": "fiscal_year",
+    "value": 1996
+   }
+  ]
+ },
+ {
+  "name": "period__orrstown_1997q3_eps__08",
+  "kind": "period",
+  "base_set": "hand",
+  "base": "orrstown_1997q3_eps",
+  "expected_check": "period",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "period_start",
+    "value": "1996-07-01"
+   },
+   {
+    "op": "set",
+    "field": "period_end",
+    "value": "1996-09-30"
+   },
+   {
+    "op": "set",
+    "field": "fiscal_year",
+    "value": 1996
+   }
+  ]
+ },
+ {
+  "name": "period__orrstown_1997q3_net_income__09",
+  "kind": "period",
+  "base_set": "hand",
+  "base": "orrstown_1997q3_net_income",
+  "expected_check": "period",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "period_start",
+    "value": "1996-07-01"
+   },
+   {
+    "op": "set",
+    "field": "period_end",
+    "value": "1996-09-30"
+   },
+   {
+    "op": "set",
+    "field": "fiscal_year",
+    "value": 1996
+   }
+  ]
+ },
+ {
+  "name": "period__cpa18_2021h1_ocf_change__10",
+  "kind": "period",
+  "base_set": "hand",
+  "base": "cpa18_2021h1_ocf_change",
+  "expected_check": "period",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "period_start",
+    "value": "2022-01-01"
+   },
+   {
+    "op": "set",
+    "field": "period_end",
+    "value": "2022-06-30"
+   },
+   {
+    "op": "set",
+    "field": "fiscal_year",
+    "value": 2022
+   }
+  ]
+ },
+ {
+  "name": "period__cpa18_2021q1_ocf_change__11",
+  "kind": "period",
+  "base_set": "hand",
+  "base": "cpa18_2021q1_ocf_change",
+  "expected_check": "period",
+  "expected_outcome": "rejected",
+  "operations": [
+   {
+    "op": "set",
+    "field": "period_start",
+    "value": "2022-01-01"
+   },
+   {
+    "op": "set",
+    "field": "period_end",
+    "value": "2022-03-31"
+   },
+   {
+    "op": "set",
+    "field": "fiscal_year",
+    "value": 2022
+   }
+  ]
+ },
+ {
+  "name": "metric__cpa18_2021q1_10q__000_net_income__00",
+  "kind": "metric",
+  "base_set": "facts",
+  "base": "cpa18_2021q1_10q__000_net_income",
+  "expected_check": "metric",
+  "expected_outcome": null,
+  "operations": [
+   {
+    "op": "set",
+    "field": "metric",
+    "value": "revenue"
+   }
+  ]
+ },
+ {
+  "name": "metric__cpa18_2021q1_10q__003_net_income__01",
+  "kind": "metric",
+  "base_set": "facts",
+  "base": "cpa18_2021q1_10q__003_net_income",
+  "expected_check": "metric",
+  "expected_outcome": null,
+  "operations": [
+   {
+    "op": "set",
+    "field": "metric",
+    "value": "revenue"
+   }
+  ]
+ },
+ {
+  "name": "metric__cpa18_2021q1_10q__006_operating_cash_flow__02",
+  "kind": "metric",
+  "base_set": "facts",
+  "base": "cpa18_2021q1_10q__006_operating_cash_flow",
+  "expected_check": "metric",
+  "expected_outcome": null,
+  "operations": [
+   {
+    "op": "set",
+    "field": "metric",
+    "value": "revenue"
+   }
+  ]
+ },
+ {
+  "name": "metric__cpa18_2021q2_10q__000_net_income__03",
+  "kind": "metric",
+  "base_set": "facts",
+  "base": "cpa18_2021q2_10q__000_net_income",
+  "expected_check": "metric",
+  "expected_outcome": null,
+  "operations": [
+   {
+    "op": "set",
+    "field": "metric",
+    "value": "revenue"
+   }
+  ]
+ },
+ {
+  "name": "metric__cpa18_2021q2_10q__003_net_income__04",
+  "kind": "metric",
+  "base_set": "facts",
+  "base": "cpa18_2021q2_10q__003_net_income",
+  "expected_check": "metric",
+  "expected_outcome": null,
+  "operations": [
+   {
+    "op": "set",
+    "field": "metric",
+    "value": "revenue"
+   }
+  ]
+ },
+ {
+  "name": "metric__cpa18_2021q2_10q__006_net_income__05",
+  "kind": "metric",
+  "base_set": "facts",
+  "base": "cpa18_2021q2_10q__006_net_income",
+  "expected_check": "metric",
+  "expected_outcome": null,
+  "operations": [
+   {
+    "op": "set",
+    "field": "metric",
+    "value": "revenue"
+   }
+  ]
+ },
+ {
+  "name": "metric__cpa18_2021q2_10q__009_net_income__06",
+  "kind": "metric",
+  "base_set": "facts",
+  "base": "cpa18_2021q2_10q__009_net_income",
+  "expected_check": "metric",
+  "expected_outcome": null,
+  "operations": [
+   {
+    "op": "set",
+    "field": "metric",
+    "value": "revenue"
+   }
+  ]
+ },
+ {
+  "name": "metric__cpa18_2021q2_10q__012_operating_cash_flow__07",
+  "kind": "metric",
+  "base_set": "facts",
+  "base": "cpa18_2021q2_10q__012_operating_cash_flow",
+  "expected_check": "metric",
+  "expected_outcome": null,
+  "operations": [
+   {
+    "op": "set",
+    "field": "metric",
+    "value": "revenue"
+   }
+  ]
+ },
+ {
+  "name": "metric__cpa18_2021q2_10q__018_revenue__08",
+  "kind": "metric",
+  "base_set": "facts",
+  "base": "cpa18_2021q2_10q__018_revenue",
+  "expected_check": "metric",
+  "expected_outcome": null,
+  "operations": [
+   {
+    "op": "set",
+    "field": "metric",
+    "value": "net_income"
+   }
+  ]
+ },
+ {
+  "name": "metric__cpa18_2022q1_10q__002_net_income__09",
+  "kind": "metric",
+  "base_set": "facts",
+  "base": "cpa18_2022q1_10q__002_net_income",
+  "expected_check": "metric",
+  "expected_outcome": null,
+  "operations": [
+   {
+    "op": "set",
+    "field": "metric",
+    "value": "revenue"
+   }
+  ]
+ },
+ {
+  "name": "metric__cpa18_2022q1_10q__005_net_income__10",
+  "kind": "metric",
+  "base_set": "facts",
+  "base": "cpa18_2022q1_10q__005_net_income",
+  "expected_check": "metric",
+  "expected_outcome": null,
+  "operations": [
+   {
+    "op": "set",
+    "field": "metric",
+    "value": "revenue"
+   }
+  ]
+ },
+ {
+  "name": "metric__cpa18_2022q1_10q__008_revenue__11",
+  "kind": "metric",
+  "base_set": "facts",
+  "base": "cpa18_2022q1_10q__008_revenue",
+  "expected_check": "metric",
+  "expected_outcome": null,
+  "operations": [
+   {
+    "op": "set",
+    "field": "metric",
+    "value": "net_income"
+   }
+  ]
+ },
+ {
+  "name": "hedge__probe__cpa18_2021q1_10q__253__00",
+  "kind": "hedge",
+  "base_set": "probe",
+  "base": "probe__cpa18_2021q1_10q__253",
+  "expected_check": "hedge",
+  "expected_outcome": "flagged",
+  "operations": [
+   {
+    "op": "set",
+    "field": "value_kind",
+    "value": "exact"
+   }
+  ]
+ },
+ {
+  "name": "hedge__probe__cpa18_2021q1_10q__434__01",
+  "kind": "hedge",
+  "base_set": "probe",
+  "base": "probe__cpa18_2021q1_10q__434",
+  "expected_check": "hedge",
+  "expected_outcome": "flagged",
+  "operations": [
+   {
+    "op": "set",
+    "field": "value_kind",
+    "value": "exact"
+   }
+  ]
+ },
+ {
+  "name": "hedge__probe__cpa18_2021q1_10q__914__02",
+  "kind": "hedge",
+  "base_set": "probe",
+  "base": "probe__cpa18_2021q1_10q__914",
+  "expected_check": "hedge",
+  "expected_outcome": "flagged",
+  "operations": [
+   {
+    "op": "set",
+    "field": "value_kind",
+    "value": "exact"
+   }
+  ]
+ },
+ {
+  "name": "hedge__probe__cpa18_2021q1_10q__939__03",
+  "kind": "hedge",
+  "base_set": "probe",
+  "base": "probe__cpa18_2021q1_10q__939",
+  "expected_check": "hedge",
+  "expected_outcome": "flagged",
+  "operations": [
+   {
+    "op": "set",
+    "field": "value_kind",
+    "value": "exact"
+   }
+  ]
+ },
+ {
+  "name": "hedge__probe__cpa18_2021q2_10q__289__04",
+  "kind": "hedge",
+  "base_set": "probe",
+  "base": "probe__cpa18_2021q2_10q__289",
+  "expected_check": "hedge",
+  "expected_outcome": "flagged",
+  "operations": [
+   {
+    "op": "set",
+    "field": "value_kind",
+    "value": "exact"
+   }
+  ]
+ },
+ {
+  "name": "hedge__probe__cpa18_2021q2_10q__470__05",
+  "kind": "hedge",
+  "base_set": "probe",
+  "base": "probe__cpa18_2021q2_10q__470",
+  "expected_check": "hedge",
+  "expected_outcome": "flagged",
+  "operations": [
+   {
+    "op": "set",
+    "field": "value_kind",
+    "value": "exact"
+   }
+  ]
+ },
+ {
+  "name": "hedge__probe__cpa18_2021q2_10q__690__06",
+  "kind": "hedge",
+  "base_set": "probe",
+  "base": "probe__cpa18_2021q2_10q__690",
+  "expected_check": "hedge",
+  "expected_outcome": "flagged",
+  "operations": [
+   {
+    "op": "set",
+    "field": "value_kind",
+    "value": "exact"
+   }
+  ]
+ },
+ {
+  "name": "hedge__probe__cpa18_2021q2_10q__908__07",
+  "kind": "hedge",
+  "base_set": "probe",
+  "base": "probe__cpa18_2021q2_10q__908",
+  "expected_check": "hedge",
+  "expected_outcome": "flagged",
+  "operations": [
+   {
+    "op": "set",
+    "field": "value_kind",
+    "value": "exact"
+   }
+  ]
+ },
+ {
+  "name": "hedge__probe__cpa18_2022q1_10q__254__08",
+  "kind": "hedge",
+  "base_set": "probe",
+  "base": "probe__cpa18_2022q1_10q__254",
+  "expected_check": "hedge",
+  "expected_outcome": "flagged",
+  "operations": [
+   {
+    "op": "set",
+    "field": "value_kind",
+    "value": "exact"
+   }
+  ]
+ },
+ {
+  "name": "hedge__probe__cpa18_2022q1_10q__264__09",
+  "kind": "hedge",
+  "base_set": "probe",
+  "base": "probe__cpa18_2022q1_10q__264",
+  "expected_check": "hedge",
+  "expected_outcome": "flagged",
+  "operations": [
+   {
+    "op": "set",
+    "field": "value_kind",
+    "value": "exact"
+   }
+  ]
+ },
+ {
+  "name": "hedge__probe__cpa18_2022q1_10q__436__10",
+  "kind": "hedge",
+  "base_set": "probe",
+  "base": "probe__cpa18_2022q1_10q__436",
+  "expected_check": "hedge",
+  "expected_outcome": "flagged",
+  "operations": [
+   {
+    "op": "set",
+    "field": "value_kind",
+    "value": "exact"
+   }
+  ]
+ },
+ {
+  "name": "hedge__probe__cpa18_2022q1_10q__641__11",
+  "kind": "hedge",
+  "base_set": "probe",
+  "base": "probe__cpa18_2022q1_10q__641",
+  "expected_check": "hedge",
+  "expected_outcome": "flagged",
+  "operations": [
+   {
+    "op": "set",
+    "field": "value_kind",
+    "value": "exact"
+   }
+  ]
+ },
+ {
+  "name": "assumption__cpa18_2021q1_10q__000_net_income__00",
+  "kind": "assumption",
+  "base_set": "facts",
+  "base": "cpa18_2021q1_10q__000_net_income",
+  "expected_check": "scale",
+  "expected_outcome": "flagged",
+  "operations": [
+   {
+    "op": "remove_assumption",
+    "field": "stated_scale"
+   }
+  ]
+ },
+ {
+  "name": "assumption__cpa18_2021q1_10q__006_operating_cash_flow__01",
+  "kind": "assumption",
+  "base_set": "facts",
+  "base": "cpa18_2021q1_10q__006_operating_cash_flow",
+  "expected_check": "period",
+  "expected_outcome": "flagged",
+  "operations": [
+   {
+    "op": "remove_assumption",
+    "field": "period_start"
+   }
+  ]
+ },
+ {
+  "name": "assumption__cpa18_2021q2_10q__000_net_income__02",
+  "kind": "assumption",
+  "base_set": "facts",
+  "base": "cpa18_2021q2_10q__000_net_income",
+  "expected_check": "scale",
+  "expected_outcome": "flagged",
+  "operations": [
+   {
+    "op": "remove_assumption",
+    "field": "stated_scale"
+   }
+  ]
+ },
+ {
+  "name": "assumption__cpa18_2021q2_10q__006_net_income__03",
+  "kind": "assumption",
+  "base_set": "facts",
+  "base": "cpa18_2021q2_10q__006_net_income",
+  "expected_check": "period",
+  "expected_outcome": "flagged",
+  "operations": [
+   {
+    "op": "remove_assumption",
+    "field": "period_start"
+   }
+  ]
+ },
+ {
+  "name": "assumption__cpa18_2021q2_10q__012_operating_cash_flow__04",
+  "kind": "assumption",
+  "base_set": "facts",
+  "base": "cpa18_2021q2_10q__012_operating_cash_flow",
+  "expected_check": "scale",
+  "expected_outcome": "flagged",
+  "operations": [
+   {
+    "op": "remove_assumption",
+    "field": "stated_scale"
+   }
+  ]
+ },
+ {
+  "name": "assumption__cpa18_2021q2_10q__018_revenue__05",
+  "kind": "assumption",
+  "base_set": "facts",
+  "base": "cpa18_2021q2_10q__018_revenue",
+  "expected_check": "period",
+  "expected_outcome": "flagged",
+  "operations": [
+   {
+    "op": "remove_assumption",
+    "field": "period_start"
+   }
+  ]
+ },
+ {
+  "name": "assumption__cpa18_2022q1_10q__002_net_income__06",
+  "kind": "assumption",
+  "base_set": "facts",
+  "base": "cpa18_2022q1_10q__002_net_income",
+  "expected_check": "scale",
+  "expected_outcome": "flagged",
+  "operations": [
+   {
+    "op": "remove_assumption",
+    "field": "stated_scale"
+   }
+  ]
+ },
+ {
+  "name": "assumption__cpa18_2022q1_10q__008_revenue__07",
+  "kind": "assumption",
+  "base_set": "facts",
+  "base": "cpa18_2022q1_10q__008_revenue",
+  "expected_check": "period",
+  "expected_outcome": "flagged",
+  "operations": [
+   {
+    "op": "remove_assumption",
+    "field": "period_start"
+   }
+  ]
+ },
+ {
+  "name": "assumption__everi_2024q1_10q__004_net_income__08",
+  "kind": "assumption",
+  "base_set": "facts",
+  "base": "everi_2024q1_10q__004_net_income",
+  "expected_check": "scale",
+  "expected_outcome": "flagged",
+  "operations": [
+   {
+    "op": "remove_assumption",
+    "field": "stated_scale"
+   }
+  ]
+ },
+ {
+  "name": "assumption__geospace_fy2021q3_10q__008_net_income__09",
+  "kind": "assumption",
+  "base_set": "facts",
+  "base": "geospace_fy2021q3_10q__008_net_income",
+  "expected_check": "period",
+  "expected_outcome": "flagged",
+  "operations": [
+   {
+    "op": "remove_assumption",
+    "field": "period_start"
+   }
+  ]
+ },
+ {
+  "name": "assumption__geospace_fy2021q3_10q__014_net_income__10",
+  "kind": "assumption",
+  "base_set": "facts",
+  "base": "geospace_fy2021q3_10q__014_net_income",
+  "expected_check": "scale",
+  "expected_outcome": "flagged",
+  "operations": [
+   {
+    "op": "remove_assumption",
+    "field": "stated_scale"
+   }
+  ]
+ },
+ {
+  "name": "assumption__geospace_fy2021q3_10q__020_net_income__11",
+  "kind": "assumption",
+  "base_set": "facts",
+  "base": "geospace_fy2021q3_10q__020_net_income",
+  "expected_check": "period",
+  "expected_outcome": "flagged",
+  "operations": [
+   {
+    "op": "remove_assumption",
+    "field": "period_start"
+   }
+  ]
+ }
+]
