@@ -10,6 +10,8 @@ from pathlib import Path
 from axiomate.claims.query import claim_source, list_claims
 from axiomate.claims.submit import submit
 from axiomate.gate.check import check as gate_check
+from axiomate.interpret import run as interpret_run
+from axiomate.interpret.replies import ReplyStore
 from axiomate.documents.ingest import get_document, get_segment, ingest
 from axiomate.errors import AxiomateError
 from axiomate.store import db
@@ -53,6 +55,10 @@ def _parser() -> argparse.ArgumentParser:
     source.add_argument("claim_id")
     source.add_argument("--version", type=int)
 
+    interpret = commands.add_parser("interpret", help="propose claims for a stored document from model replies")
+    interpret.add_argument("document_id")
+    interpret.add_argument("--replies", required=True, help="directory of stored model replies")
+
     commands.add_parser("export", help="canonical dump of the whole store")
     return parser
 
@@ -76,6 +82,14 @@ def _run(args: argparse.Namespace) -> object:
         finally:
             conn.close()
         return {"document_id": result.document_id, "segments": result.segments, "created": result.created}
+    if args.command == "interpret":
+        conn = db.connect(args.db)
+        try:
+            return interpret_run.interpret(
+                conn, args.document_id, ReplyStore(args.replies),
+                instruction_version=interpret_run.INSTRUCTION_VERSION, model=interpret_run.MODEL)
+        finally:
+            conn.close()
     if args.command == "export":
         conn = db.connect(args.db)
         try:

@@ -41,7 +41,8 @@ Spec `001-claim-foundation` is implemented: document ingestion (stage 1) and
 the claim store (stage 5) are built and verified on the development data.
 Spec `002-interpretation-gate` (a language model proposes claims; a
 deterministic gate checks them) is in progress: the gate is built and
-verified; interpretation is not yet written.
+verified, and interpretation works from stored replies; the model itself has
+not been called yet.
 See `status.html`.
 
 ## Trying it

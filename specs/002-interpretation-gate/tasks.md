@@ -29,27 +29,33 @@ the assumptions were added.*
 
 ## Phase 2 – Held-out data
 
-- [ ] T011 Choose at least eight HTML filings with tagged figures from at least four companies not in the development set, including one annual report; record them in `eval/filings/` with manifest and hashes.
-- [ ] T012 Extract their tagged figures into `eval/facts/` without reading the filings' text.
-- [ ] T013 Write `eval/splits.json` and a test that no filing is on both sides and that held-out files are not referenced by any test of phases 1, 3 or 4.
+- [x] T011 Choose at least eight HTML filings with tagged figures from at least four companies not in the development set, including one annual report; record them in `eval/filings/` with manifest and hashes.
+- [x] T012 Extract their tagged figures into `eval/facts/` without reading the filings' text.
+- [x] T013 Write `eval/splits.json` and a test that no filing is on both sides and that held-out files are not referenced by any test of phases 1, 3 or 4.
 
-**Checkpoint**: the held-out set exists and is sealed.
+**Checkpoint**: the held-out set exists and is sealed. *Reached 2026-11-13:
+eight filings from eight companies (seven quarterly reports, one annual
+report), 213 tagged figures for the four metrics. Chosen by a recorded rule
+from metadata and tag counts; the text was not read.*
 
 ## Phase 3 – Interpretation from stored replies (Story 2, no model)
 
-- [ ] T014 [P] Tests for segment selection and context, on development filings.
-- [ ] T015 [P] Tests for the reply model and for turning a reply into candidates: quote found, quote not found, duplicate, null fields, another company.
-- [ ] T016 [P] Tests for the reply store: key, write once, read, missing.
-- [ ] T017 Schema version 2: tables for runs and candidate outcomes, with immutability triggers and tests; stores of version 1 are upgraded in place.
-- [ ] T018 Implement `interpret/select.py`, `interpret/reply.py`, `interpret/replies.py`.
-- [ ] T019 Tests for a run from hand-written replies: acceptance scenarios 1–5 of Story 2, counts add up, second run changes nothing.
-- [ ] T020 Implement `interpret/run.py` and `axiomate interpret` without calls.
+- [x] T014 [P] Tests for segment selection and context, on development filings.
+- [x] T015 [P] Tests for the reply model and for turning a reply into candidates: quote found, quote not found, duplicate, null fields, another company.
+- [x] T016 [P] Tests for the reply store: key, write once, read, missing.
+- [x] T017 Schema version 2: tables for runs and candidate outcomes, with immutability triggers and tests; stores of version 1 are upgraded in place.
+- [x] T018 Implement `interpret/select.py`, `interpret/reply.py`, `interpret/replies.py`.
+- [x] T019 Tests for a run from hand-written replies: acceptance scenarios 1–5 of Story 2, counts add up, second run changes nothing.
+- [x] T020 Implement `interpret/run.py` and `axiomate interpret` without calls.
 
 **Checkpoint**: the whole path works from stored replies; still no model call.
+*Reached 2026-11-13. T021 (the instructions, version 1) was written here as
+well, because the instruction version is part of every reply key; the
+instructions have not been tried on a model yet and will be tuned in phase 4.*
 
 ## Phase 4 – Live calls (needs the API key)
 
-- [ ] T021 Write the instructions (`interpret/prompt.py`), version 1.
+- [x] T021 Write the instructions (`interpret/prompt.py`), version 1.
 - [ ] T022 Implement `interpret/client.py` and `--allow-calls`, with the call limit and the token counts.
 - [ ] T023 Run one development filing; compare the measured cost with the estimate; stop if more than twice.
 - [ ] T024 Run the other development filings; tune instructions and context on development filings only, raising the instruction version on every change.

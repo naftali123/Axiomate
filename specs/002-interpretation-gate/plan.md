@@ -160,6 +160,30 @@ tools/
   gate's period and scale checks only confirm the assumption exists. They do
   exercise the reading of displayed figures, signs and row labels.
 
+## Changes found while building interpretation
+
+- **Statements with no figure are not read.** Selection requires a digit, so a
+  sentence such as "revenue declined because of weaker demand" is never sent
+  to the model. This keeps cost down and loses nothing the comparison stage
+  could use, but it means such statements leave no trace in the store.
+- **Rows under a sub-heading.** "Basic" and "Diluted" rows name no metric; they
+  are selected through the nearest digit-less line above them in the table
+  ("Earnings per share:"), which is also sent as context.
+- **Table heading rows** are the leading rows of a table up to the first row
+  with a worded label and figures.
+- **`quote_occurrence`.** A row can hold the same figure twice; the model says
+  which occurrence it means.
+- **Duplicates within a run** are rejected with the check `duplicate`, whether
+  identical or different in content.
+- **A crashed run** leaves stored claims but no run record; running again
+  stores nothing twice and writes the record.
+- **Client as a function.** The run takes any function from request text to
+  reply; the module that calls the real service is the only one that imports
+  the SDK.
+- **Held-out choice.** The dataset files scanned first held too few suitable
+  filings, so more were scanned. The rule and the files are recorded in
+  `eval/filings/selection.json`.
+
 ## Cost
 
 Estimated before any call, to be replaced by a measurement on the first filing:

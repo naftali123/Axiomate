@@ -9,7 +9,9 @@ from importlib import resources
 from pathlib import Path
 from typing import Iterator
 
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 2
+# The script that brings a store from the version before to each version.
+_UPGRADES = {1: "schema.sql", 2: "schema_v2.sql"}
 
 # Tables in export order, each with the columns that order its rows.
 TABLES: dict[str, tuple[str, ...]] = {
@@ -18,21 +20,24 @@ TABLES: dict[str, tuple[str, ...]] = {
     "claim": ("id", "version"),
     "flag": ("claim_id", "claim_version", "seq"),
     "assumption": ("claim_id", "claim_version", "seq"),
+    "interpretation_run": ("id",),
+    "candidate_outcome": ("run_id", "segment_index", "seq"),
 }
 
 
 def connect(path: str | Path) -> sqlite3.Connection:
-    """Open the store at `path`, creating its schema if the file is new."""
+    """Open the store at `path`, creating its schema or upgrading it in place if needed."""
     conn = sqlite3.connect(str(path), isolation_level=None)
     conn.row_factory = sqlite3.Row
     conn.execute("PRAGMA foreign_keys = ON")
     version = conn.execute("PRAGMA user_version").fetchone()[0]
-    if version == 0:
-        schema = resources.files("axiomate.store").joinpath("schema.sql").read_text(encoding="utf-8")
-        conn.executescript(f"BEGIN;\n{schema}\nPRAGMA user_version = {SCHEMA_VERSION};\nCOMMIT;")
-    elif version != SCHEMA_VERSION:
+    if version > SCHEMA_VERSION:
         conn.close()
-        raise RuntimeError(f"store has schema version {version}, expected {SCHEMA_VERSION}")
+        raise RuntimeError(f"store has schema version {version}, newer than this program's {SCHEMA_VERSION}")
+    # A new store gets every script; an older store gets the ones it lacks. Additions only.
+    for target in range(version + 1, SCHEMA_VERSION + 1):
+        script = resources.files("axiomate.store").joinpath(_UPGRADES[target]).read_text(encoding="utf-8")
+        conn.executescript(f"BEGIN;\n{script}\nPRAGMA user_version = {target};\nCOMMIT;")
     return conn
 
 

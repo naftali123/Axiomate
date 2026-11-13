@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import html
 import json
+import sys
 import re
 from decimal import Decimal
 from pathlib import Path
@@ -102,11 +103,13 @@ def figures(source: str) -> tuple[list[dict], list[dict]]:
 
 
 def main() -> int:
-    FACTS.mkdir(parents=True, exist_ok=True)
-    for path in sorted(DOCS.glob("*.html")):
+    """With two arguments, read filings from the first directory and write facts to the second."""
+    docs, facts_dir = (ROOT / sys.argv[1], ROOT / sys.argv[2]) if len(sys.argv) == 3 else (DOCS, FACTS)
+    facts_dir.mkdir(parents=True, exist_ok=True)
+    for path in sorted(docs.glob("*.html")):
         facts, skipped = figures(path.read_text(encoding="utf-8"))
         out = {"document": path.name, "facts": facts, "skipped": skipped}
-        (FACTS / f"{path.stem}.json").write_text(
+        (facts_dir / f"{path.stem}.json").write_text(
             json.dumps(out, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
         )
         counts = {}
