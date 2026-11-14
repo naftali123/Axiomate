@@ -407,10 +407,36 @@ Changes, reflected in `mockup/mockup.html.txt`:
    12.1).
 
 Questions closed by this round: a number or a band, the 1 = best scale, and how
-per-metric figures roll up into one rating. Remaining open question: whether
-counts are also shown per metric (revenue, net income, cash flow and so on). If
-they are, they are never combined into one figure.
+per-metric figures roll up into one rating. Whether counts are also shown per
+metric is decided in section 15.
 
 Still open for the spec, and sharper now: entity types beyond companies. Counts
 of differences attached to a named person carry the same risk a rating did, and
 need their own review of wording, sources and privacy before they are built.
+
+## 15. Sixth round: counts per metric
+
+The owner decided to show the counts per metric as well. Reflected in
+`mockup/mockup.html.txt`:
+
+1. **A "by metric" table** on the entity page, under the overall counts: one
+   row per metric (revenue, net income, earnings per share, operating cash
+   flow, other) with the same five counts as the header.
+2. **Fixed order.** Rows always appear in the same order. They are never sorted
+   by differences, and no row is highlighted for having more of them.
+3. **Never combined.** There is no total, average or weighting across metrics.
+   The header counts are plain sums of the rows, not a separate figure.
+4. **Minimum per metric.** A metric with fewer than 3 checked statements shows
+   "too few to count" (or "not checked" when none were) instead of matching and
+   differing counts; the number of statements and of not-checkable ones is
+   still shown.
+5. **The table is shown only when the entity meets the overall minimum** (10
+   checked). Below it, the header's "not enough data" stands alone.
+6. **A metric filters the feed.** Selecting a metric shows only its statements
+   and can be combined with the result filter. A bar names the active metric
+   and clears it. The table can be collapsed, so it does not crowd the feed on
+   a phone.
+
+Open for the spec: the list of metrics and who maintains it, what "other"
+includes, whether earnings per share is shown apart from net income, and the
+per-metric minimum (3 is a placeholder).

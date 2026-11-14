@@ -113,7 +113,15 @@ th{color:var(--muted);font-weight:500;font-size:.82rem}td.num{font-variant-numer
 @media(prefers-reduced-motion:no-preference){a.bub,.chat{transition:background .12s,border-color .12s}}
 
 .hs b{direction:ltr;text-align:start;unicode-bidi:isolate}.hs.lab b{font-family:var(--ui);font-size:1rem;direction:rtl}.dl{direction:ltr;unicode-bidi:isolate}
-/* v5: hero with counts, status edges */
+/* v5: hero with counts, per-metric table, status edges */
+.mtab{padding:6px 14px;background:var(--surface);border-bottom:1px solid var(--line)}
+.mtab summary{font-weight:700;font-size:.85rem;color:var(--muted);padding:2px 0 4px;cursor:pointer}
+.mtab th,.mtab td{padding:4px 8px;font-size:.85rem}
+.mtab td.num{font-family:'IBM Plex Mono',ui-monospace,monospace;font-variant-numeric:tabular-nums}
+.mtab td.few{color:var(--off);font-size:.8rem}
+.mt{border:0;background:none;padding:0;cursor:pointer;color:var(--claim);font:inherit;font-weight:600;text-decoration:underline dotted}
+.mt[aria-pressed="true"]{text-decoration:none;background:var(--claim-bg);border-radius:6px;padding:0 6px}
+.mfil{display:flex;gap:8px;align-items:center;padding:6px 14px;background:var(--claim-bg);font-size:.85rem;flex-wrap:wrap}
 .mono{font-family:'IBM Plex Mono',ui-monospace,monospace;font-variant-numeric:tabular-nums}
 .l3{direction:ltr}
 .l3 .chip,.l3 .tag{direction:rtl}
@@ -142,10 +150,10 @@ a.bub.k-ok{border-inline-start-color:var(--ok)}a.bub.k-diff{border-inline-start-
 </div>
 <script>
 var ENT=[
- {id:'example-corp',name:'Example Corp',type:'חברה ציבורית',tk:'EXC',ini:'EX',col:'#2b6cb0',total:29,ev:18,ok:16},
- {id:'northwind-demo',name:'Northwind Demo Ltd',type:'חברה ציבורית',tk:'NWD',ini:'NW',col:'#0f766e',total:41,ev:30,ok:30},
- {id:'harbor-analytics',name:'Harbor Analytics Inc',type:'חברה ציבורית',tk:'HBA',ini:'HA',col:'#b45309',total:22,ev:7,ok:6},
- {id:'meridian-foods',name:'Meridian Demo Foods',type:'חברה ציבורית',tk:'MDF',ini:'MD',col:'#7c3aed',total:35,ev:21,ok:15}
+ {id:'example-corp',name:'Example Corp',type:'חברה ציבורית',tk:'EXC',ini:'EX',col:'#2b6cb0',total:29,ev:18,ok:16,by:{'הכנסות':[11,7,5],'רווח נקי':[6,3,3],'רווח למניה':[4,4,4],'תזרים תפעולי':[5,4,4],'אחר':[3,0,0]}},
+ {id:'northwind-demo',name:'Northwind Demo Ltd',type:'חברה ציבורית',tk:'NWD',ini:'NW',col:'#0f766e',total:41,ev:30,ok:30,by:{'הכנסות':[14,11,11],'רווח נקי':[9,7,7],'רווח למניה':[6,5,5],'תזרים תפעולי':[8,7,7],'אחר':[4,0,0]}},
+ {id:'harbor-analytics',name:'Harbor Analytics Inc',type:'חברה ציבורית',tk:'HBA',ini:'HA',col:'#b45309',total:22,ev:7,ok:6,by:{'הכנסות':[8,2,2],'רווח נקי':[6,3,2],'רווח למניה':[3,1,1],'תזרים תפעולי':[2,1,1],'אחר':[3,0,0]}},
+ {id:'meridian-foods',name:'Meridian Demo Foods',type:'חברה ציבורית',tk:'MDF',ini:'MD',col:'#7c3aed',total:35,ev:21,ok:15,by:{'הכנסות':[12,8,4],'רווח נקי':[8,5,4],'רווח למניה':[5,3,3],'תזרים תפעולי':[6,5,4],'אחר':[4,0,0]}}
 ];
 var ST={ok:['תואמת לתיעוד','ok'],diff:['שונה מהתיעוד','diff'],off:['לא ניתנת לבדיקה','off']};
 var S=[
@@ -205,6 +213,15 @@ function stOf(id){return S.filter(function(x){return x.e===id}).sort(function(a,
 /* Counts only: what was found in the statements, never a summary of the entity (constitution XI). */
 var MIN=10;
 function cnt(e){return{total:e.total,ev:e.ev,ok:e.ok,diff:e.ev-e.ok,off:e.total-e.ev,enough:e.ev>=MIN}}
+/* Per-metric counts: fixed order, never sorted by differences, never combined into one figure. */
+var METRICS=['הכנסות','רווח נקי','רווח למניה','תזרים תפעולי','אחר'],MIN_M=3;
+function inMetric(s,m){return m==='all'||(m==='אחר'?METRICS.indexOf(s.m)<0||s.m==='אחר':s.m===m)}
+function metricTable(e,met){
+  var rows=METRICS.map(function(m){var v=e.by[m]||[0,0,0],t=v[0],ev=v[1],ok=v[2],few=ev<MIN_M;
+    return '<tr><th scope="row"><button type="button" class="mt" data-m="'+m+'" aria-pressed="'+(met===m)+'">'+m+'</button></th><td class="num">'+t+'</td><td class="num">'+ev+'</td>'+
+     (few?'<td colspan="2" class="few">'+(ev?'מעט מדי לספירה':'לא נבדקו')+'</td><td class="num">'+(t-ev)+'</td>':'<td class="num">'+ok+'</td><td class="num">'+(ev-ok)+'</td><td class="num">'+(t-ev)+'</td>')+'</tr>'}).join('');
+  return '<details class="mtab" open><summary>לפי מדד</summary><div class="tw"><table><thead><tr><th scope="col">מדד</th><th scope="col">הצהרות</th><th scope="col">נבדקו</th><th scope="col">תואמות</th><th scope="col">שונות</th><th scope="col">לא ניתנות לבדיקה</th></tr></thead><tbody>'+rows+'</tbody></table></div></details>';
+}
 function chip(k){var s=ST[k];return '<span class="chip '+s[1]+'">'+s[0]+'</span>'}
 function av(e,sm){return '<span class="av'+(sm?' sm':'')+'" style="background:'+e.col+';--c:'+e.col+'" role="img" aria-label="סמל '+e.name+'">'+e.ini+'</span>'}
 var tab='recent',query='',cur='',from='';
@@ -228,7 +245,7 @@ function side(){
 }
 function feedView(id,f){
   var e=ent(id),c=cnt(e),all=stOf(id);
-  var items=all.filter(function(s){return f==='all'||s.k===f});
+  var items=all.filter(function(s){return (f==='all'||s.k===f)&&inMetric(s,met)});
   var out='',last='',IC={ok:'✓',diff:'◆',off:'○'};
   items.forEach(function(s){
     if(s.date!==last){out+='<div class="ds">'+s.date+'</div>';last=s.date}
@@ -240,6 +257,8 @@ function feedView(id,f){
      '<span class="hs"><b>'+c.total+'</b><small>הצהרות</small></span><span class="hs"><b>'+c.ev+'</b><small>נבדקו</small></span><span class="hs"><b>'+c.ok+'</b><small>תואמות לתיעוד</small></span><span class="hs"><b>'+c.diff+'</b><small>שונות מהתיעוד</small></span><span class="hs"><b>'+c.off+'</b><small>לא ניתנות לבדיקה</small></span>':
      '<span class="hs"><b>'+c.total+'</b><small>הצהרות</small></span><span class="hs"><b>'+c.ev+'</b><small>נבדקו</small></span><span class="hs lab"><b>אין די נתונים לספירה</b><small>נדרשות לפחות '+MIN+' הצהרות שנבדקו</small></span>')+'</div></div>'+
    '<div class="pin">📌 הספירה מתארת מה נמצא בהצהרות שנבדקו, מול התיעוד שצוין בכל אחת. היא אינה סיכום של הגוף ואינה מעידה על יושרה או כוונה. <a href="#about-entity-'+e.id+'">פרטים</a></div>'+
+   (c.enough?metricTable(e,met):'')+
+   (met!=='all'?'<div class="mfil">מוצגות הצהרות על <b>'+met+'</b> <button type="button" class="ib" id="mclr">הצגת כל המדדים</button></div>':'')+
    '<div class="fchips" id="fc" role="group" aria-label="סינון"><button type="button" aria-pressed="'+(f==='all')+'" data-f="all">הכול</button><button type="button" aria-pressed="'+(f==='diff')+'" data-f="diff">◆ שונות מהתיעוד</button><button type="button" aria-pressed="'+(f==='ok')+'" data-f="ok">✓ תואמות לתיעוד</button><button type="button" aria-pressed="'+(f==='off')+'" data-f="off">○ לא ניתנות לבדיקה</button></div>'+
    '<div class="feed" id="feed">'+(out||'<div class="empty">אין הצהרות בסינון הזה.</div>')+'</div>';
 }
@@ -266,14 +285,14 @@ function target(h){
 }
 function aboutView(t){
   return '<div class="mh"><a class="ib back'+(t?' always':'')+'" href="#'+(t?t.hash:'list')+'">'+(t?t.label:'‹ חזרה')+'</a><div class="who"><b>על הספירה והאמון</b></div></div><div class="detail">'+
-   '<section class="card"><h2>מה מוצג ליד כל גוף</h2><ul class="plain"><li>ספירות בלבד: כמה הצהרות נמצאו, כמה מהן נבדקו, כמה תואמות לתיעוד, כמה שונות ממנו וכמה לא ניתנות לבדיקה.</li><li>אין דירוג, ציון או אחוז לגוף, ואין מיון של גופים לפי הבדלים. הרשימה ממוינת לפי פעילות אחרונה או לפי שם.</li><li>כל הבדל מוצג עם שני הציטוטים ועם התיעוד שמולו נבדק. הבדל יכול לנבוע מתיקון שפורסם, מהגדרה שונה, מעיגול או מתקופה אחרת.</li><li>פחות מ־10 הצהרות שנבדקו: «אין די נתונים לספירה». ההצהרות עצמן עדיין מוצגות.</li><li>הספירה מעידה על התאמה בין טקסטים, לא על יושרה, כוונה או אמת, והיא לא קובעת איזה טקסט נכון.</li></ul></section>'+
-   '<section class="card"><h2>שאלה פתוחה</h2><div class="open">ייתכן שבעתיד יוצגו הספירות <b>לפי מדד</b> (הכנסות, רווח, תזרים ועוד). גם אז הן לא יצורפו לציון אחד.</div></section><section class="card"><h2>עד כמה אפשר לסמוך על המערכת</h2><div class="tw"><table><thead><tr><th>שלב</th><th>מה נמדד</th><th>תוצאה</th><th>סף</th></tr></thead><tbody><tr><td>קליטה</td><td>גבולות משפטים</td><td class="num">241 / 241</td><td class="num">≥ 98%</td></tr><tr><td>שער אימות</td><td>טענות מושחתות שנתפסו</td><td class="num">84 / 84</td><td class="num">100%</td></tr><tr><td>שער אימות</td><td>טענות נכונות שעברו</td><td class="num">115 / 115</td><td class="num">≥ 98%</td></tr><tr><td>פרשנות</td><td>דיוק וכיסוי</td><td><span class="chip off">טרם נמדד</span></td><td class="num">98% · 70%</td></tr></tbody></table></div><p class="sub">כל המדידות עד כה הן על נתוני הפיתוח. הדוחות הנפרדים טרם נמדדו.</p></section></div>';
+   '<section class="card"><h2>מה מוצג ליד כל גוף</h2><ul class="plain"><li>ספירות בלבד: כמה הצהרות נמצאו, כמה מהן נבדקו, כמה תואמות לתיעוד, כמה שונות ממנו וכמה לא ניתנות לבדיקה.</li><li>אין דירוג, ציון או אחוז לגוף, ואין מיון של גופים לפי הבדלים. הרשימה ממוינת לפי פעילות אחרונה או לפי שם.</li><li>כל הבדל מוצג עם שני הציטוטים ועם התיעוד שמולו נבדק. הבדל יכול לנבוע מתיקון שפורסם, מהגדרה שונה, מעיגול או מתקופה אחרת.</li><li>פחות מ־10 הצהרות שנבדקו: «אין די נתונים לספירה». ההצהרות עצמן עדיין מוצגות.</li><li><b>לפי מדד</b>: אותן ספירות לכל מדד (הכנסות, רווח נקי, רווח למניה, תזרים תפעולי, אחר), בסדר קבוע ולא לפי מספר ההבדלים. מדד שנבדקו בו פחות מ־3 הצהרות מסומן «מעט מדי לספירה». המדדים אינם מצורפים למספר אחד. לחיצה על מדד מסננת את ההצהרות.</li><li>הספירה מעידה על התאמה בין טקסטים, לא על יושרה, כוונה או אמת, והיא לא קובעת איזה טקסט נכון.</li></ul></section>'+
+   '<section class="card"><h2>שאלה פתוחה</h2><div class="open">הסף לכל מדד (3 הצהרות שנבדקו) הוא הצעה ראשונית, וכך גם רשימת המדדים ומה נכלל ב«אחר».</div></section><section class="card"><h2>עד כמה אפשר לסמוך על המערכת</h2><div class="tw"><table><thead><tr><th>שלב</th><th>מה נמדד</th><th>תוצאה</th><th>סף</th></tr></thead><tbody><tr><td>קליטה</td><td>גבולות משפטים</td><td class="num">241 / 241</td><td class="num">≥ 98%</td></tr><tr><td>שער אימות</td><td>טענות מושחתות שנתפסו</td><td class="num">84 / 84</td><td class="num">100%</td></tr><tr><td>שער אימות</td><td>טענות נכונות שעברו</td><td class="num">115 / 115</td><td class="num">≥ 98%</td></tr><tr><td>פרשנות</td><td>דיוק וכיסוי</td><td><span class="chip off">טרם נמדד</span></td><td class="num">98% · 70%</td></tr></tbody></table></div><p class="sub">כל המדידות עד כה הן על נתוני הפיתוח. הדוחות הנפרדים טרם נמדדו.</p></section></div>';
 }
-var fil='all';
+var fil='all',met='all';
 function route(){
   var h=(location.hash||'#list').slice(1),p=parse(h),k=p.k,rest=p.rest,pane='list',main='';
   cur='';from='';
-  if(k==='entity'&&ent(rest)){cur=rest;from=h;pane='feed';fil='all';main=feedView(rest,fil)}
+  if(k==='entity'&&ent(rest)){cur=rest;from=h;pane='feed';fil='all';met='all';main=feedView(rest,fil)}
   else if(k==='statement'){var s=S.filter(function(x){return x.id===rest})[0];if(s){cur=s.e;from=h;pane='detail';main=detailView(rest)}}
   else if(k==='about'){pane='detail';var t=target(rest);if(t){cur=t.e;from=rest}main=aboutView(t)}
   if(!main)main='<div class="empty"><b>בחרו גוף מהרשימה</b><br>ההצהרות האחרונות שלו יופיעו כאן.</div>';
@@ -288,6 +307,9 @@ function bind(id){
   document.getElementById('theme').onclick=function(){
     var r=document.documentElement,dark=r.getAttribute('data-theme')==='dark'||(!r.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme:dark)').matches);
     r.setAttribute('data-theme',dark?'light':'dark')};
+  var redraw=function(){var m=document.getElementById('main');m.innerHTML=feedView(id,fil);bind(id);var fd=document.getElementById('feed');if(fd)fd.scrollTop=fd.scrollHeight};
+  document.querySelectorAll('button.mt').forEach(function(b){b.onclick=function(){var m=b.getAttribute('data-m');met=(met===m?'all':m);redraw()}});
+  var mc=document.getElementById('mclr');if(mc)mc.onclick=function(){met='all';redraw()};
   var fc=document.getElementById('fc');
   if(fc)fc.onclick=function(ev){var b=ev.target.closest('button');if(!b)return;fil=b.getAttribute('data-f');
     var m=document.getElementById('main');m.innerHTML=feedView(id,fil);bind(id);var fd=document.getElementById('feed');if(fd)fd.scrollTop=fd.scrollHeight};
