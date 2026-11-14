@@ -416,6 +416,8 @@ need their own review of wording, sources and privacy before they are built.
 
 ## 15. Sixth round: counts per metric
 
+*Layout simplified in section 16; the decisions on counts per metric stand.*
+
 The owner decided to show the counts per metric as well. Reflected in
 `mockup/mockup.html.txt`:
 
@@ -440,3 +442,23 @@ The owner decided to show the counts per metric as well. Reflected in
 Open for the spec: the list of metrics and who maintains it, what "other"
 includes, whether earnings per share is shown apart from net income, and the
 per-metric minimum (3 is a placeholder).
+
+## 16. Seventh round: a very simple layout
+
+The owner found the entity page too heavy. Rule: **one line on the surface,
+everything else behind one expansion.** Reflected in `mockup/mockup.html.txt`:
+
+1. **One line under the entity's name:** "checked 18 of 29 statements · 2
+   differ from the record", or "too few to count" below the minimum. No row of
+   numbers, no table on the surface.
+2. **One "details" expansion, closed by default.** It holds the full counts
+   (matching, differing, not checkable), the per-metric table and the note on
+   what the counts do and do not mean. It stays open while the user filters.
+3. **The per-metric table has three columns:** metric, "checked x of y" and
+   "differ from the record". Matching counts follow from these and are not
+   repeated. A metric under the minimum shows "too few".
+4. **Two result filters instead of four:** "all" and "only differing". The
+   label on each statement still shows its result.
+
+General rule for the spec: a data set that is not needed to read the page is
+behind an expansion, never on the surface.

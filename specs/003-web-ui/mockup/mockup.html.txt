@@ -74,8 +74,6 @@ button,select,input{font:inherit;color:inherit}
 .mk{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
 .kv1{display:grid;font-variant-numeric:tabular-nums;line-height:1.2}.kv1 b{font-size:1.1rem}.kv1 small{color:var(--muted);font-size:.72rem}
 .dl{font-weight:700;font-size:.82rem;font-variant-numeric:tabular-nums}.dl.up{color:var(--ok)}.dl.dn{color:var(--diff)}
-.pin{display:flex;gap:8px;align-items:center;padding:6px 14px;background:var(--surface);border-bottom:1px solid var(--line);font-size:.85rem;color:var(--muted);flex-wrap:wrap}
-.pin a{color:var(--claim)}
 .fchips{display:flex;gap:6px;padding:8px 14px;overflow-x:auto;background:var(--surface);border-bottom:1px solid var(--line)}
 .fchips button{border:0;background:var(--panel);border-radius:99px;padding:3px 12px;cursor:pointer;white-space:nowrap;color:var(--muted);font-size:.85rem}
 .fchips button[aria-pressed="true"]{background:var(--claim-bg);color:var(--claim);font-weight:700}
@@ -112,13 +110,13 @@ th{color:var(--muted);font-weight:500;font-size:.82rem}td.num{font-variant-numer
 }
 @media(prefers-reduced-motion:no-preference){a.bub,.chat{transition:background .12s,border-color .12s}}
 
-.hs b{direction:ltr;text-align:start;unicode-bidi:isolate}.hs.lab b{font-family:var(--ui);font-size:1rem;direction:rtl}.dl{direction:ltr;unicode-bidi:isolate}
 /* v5: hero with counts, per-metric table, status edges */
-.mtab{padding:6px 14px;background:var(--surface);border-bottom:1px solid var(--line)}
-.mtab summary{font-weight:700;font-size:.85rem;color:var(--muted);padding:2px 0 4px;cursor:pointer}
-.mtab th,.mtab td{padding:4px 8px;font-size:.85rem}
-.mtab td.num{font-family:'IBM Plex Mono',ui-monospace,monospace;font-variant-numeric:tabular-nums}
-.mtab td.few{color:var(--off);font-size:.8rem}
+.hero .line{margin:0;font-size:1rem;color:#e6eef8}.hero .line b{font-family:'IBM Plex Mono',monospace;color:#fff}
+.more{background:var(--surface);border-bottom:1px solid var(--line);padding:6px 14px;font-size:.9rem}
+.more summary{cursor:pointer;color:var(--claim);font-weight:600}
+.more .mbody{display:grid;gap:8px;padding:6px 0 4px}.more p{margin:0}.more a{color:var(--claim)}
+.more table.mtab{width:auto;max-width:100%}.mtab th,.mtab td{padding:3px 10px 3px 0;font-size:.88rem}
+.mtab .few{color:var(--off);font-size:.8rem}
 .mt{border:0;background:none;padding:0;cursor:pointer;color:var(--claim);font:inherit;font-weight:600;text-decoration:underline dotted}
 .mt[aria-pressed="true"]{text-decoration:none;background:var(--claim-bg);border-radius:6px;padding:0 6px}
 .mfil{display:flex;gap:8px;align-items:center;padding:6px 14px;background:var(--claim-bg);font-size:.85rem;flex-wrap:wrap}
@@ -133,8 +131,6 @@ th{color:var(--muted);font-weight:500;font-size:.82rem}td.num{font-variant-numer
 .hero .who{flex:1 1 150px;min-width:0}.hero .who b{font-size:1.2rem;display:block}.hero .tk{color:#c9d6e5}
 .hero .ib{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.3);color:#fff}
 .hero .av{box-shadow:0 0 0 3px rgba(255,255,255,.35)}
-.hstats{display:flex;gap:18px;align-items:center;flex-wrap:wrap;direction:rtl}
-.hs{display:grid;line-height:1.2;direction:rtl;text-align:start}.hs b{font-family:'IBM Plex Mono',monospace;font-size:1.15rem}.hs small{color:#c9d6e5;font-size:.72rem}
 .bub{border-inline-start-width:4px}
 a.bub.k-ok{border-inline-start-color:var(--ok)}a.bub.k-diff{border-inline-start-color:var(--diff)}a.bub.k-off{border-inline-start-color:var(--off)}
 .banner{display:flex;gap:10px;align-items:center;border-radius:10px;padding:10px 12px;margin-bottom:10px;font-weight:700}
@@ -217,10 +213,9 @@ function cnt(e){return{total:e.total,ev:e.ev,ok:e.ok,diff:e.ev-e.ok,off:e.total-
 var METRICS=['הכנסות','רווח נקי','רווח למניה','תזרים תפעולי','אחר'],MIN_M=3;
 function inMetric(s,m){return m==='all'||(m==='אחר'?METRICS.indexOf(s.m)<0||s.m==='אחר':s.m===m)}
 function metricTable(e,met){
-  var rows=METRICS.map(function(m){var v=e.by[m]||[0,0,0],t=v[0],ev=v[1],ok=v[2],few=ev<MIN_M;
-    return '<tr><th scope="row"><button type="button" class="mt" data-m="'+m+'" aria-pressed="'+(met===m)+'">'+m+'</button></th><td class="num">'+t+'</td><td class="num">'+ev+'</td>'+
-     (few?'<td colspan="2" class="few">'+(ev?'מעט מדי לספירה':'לא נבדקו')+'</td><td class="num">'+(t-ev)+'</td>':'<td class="num">'+ok+'</td><td class="num">'+(ev-ok)+'</td><td class="num">'+(t-ev)+'</td>')+'</tr>'}).join('');
-  return '<details class="mtab" open><summary>לפי מדד</summary><div class="tw"><table><thead><tr><th scope="col">מדד</th><th scope="col">הצהרות</th><th scope="col">נבדקו</th><th scope="col">תואמות</th><th scope="col">שונות</th><th scope="col">לא ניתנות לבדיקה</th></tr></thead><tbody>'+rows+'</tbody></table></div></details>';
+  var rows=METRICS.map(function(m){var v=e.by[m]||[0,0,0],t=v[0],ev=v[1],ok=v[2];
+    return '<tr><th scope="row"><button type="button" class="mt" data-m="'+m+'" aria-pressed="'+(met===m)+'">'+m+'</button></th><td>'+ev+' מתוך '+t+'</td><td>'+(ev<MIN_M?'<span class="few">'+(ev?'מעט מדי':'—')+'</span>':(ev-ok))+'</td></tr>'}).join('');
+  return '<table class="mtab"><thead><tr><th scope="col">מדד</th><th scope="col">נבדקו</th><th scope="col">שונות מהתיעוד</th></tr></thead><tbody>'+rows+'</tbody></table>';
 }
 function chip(k){var s=ST[k];return '<span class="chip '+s[1]+'">'+s[0]+'</span>'}
 function av(e,sm){return '<span class="av'+(sm?' sm':'')+'" style="background:'+e.col+';--c:'+e.col+'" role="img" aria-label="סמל '+e.name+'">'+e.ini+'</span>'}
@@ -240,7 +235,7 @@ function rows(){
 function side(){
   return '<aside class="side"><div class="sh"><span class="brand">Axiomate</span><a class="ib" href="#about'+(from?'-'+from:'')+'" style="text-decoration:none">על הספירה</a><button class="ib" id="theme" type="button">ערכה</button></div>'+
    '<label class="search"><input id="q" type="search" placeholder="חיפוש גוף או סימול" value="'+query+'" aria-label="חיפוש"></label>'+
-   '<div class="tabs" id="tabs"><button type="button" aria-pressed="'+(tab==='recent')+'" data-t="recent">אחרונים</button><button type="button" aria-pressed="'+(tab==='rate')+'" data-t="az">א–ת</button><button type="button" disabled>ארגונים ללא מטרת רווח · בקרוב</button><button type="button" disabled>אישי ציבור · בקרוב</button></div>'+
+   '<div class="tabs" id="tabs"><button type="button" aria-pressed="'+(tab==='recent')+'" data-t="recent">אחרונים</button><button type="button" aria-pressed="'+(tab==='az')+'" data-t="az">א–ת</button><button type="button" disabled>ארגונים ללא מטרת רווח · בקרוב</button><button type="button" disabled>אישי ציבור · בקרוב</button></div>'+
    '<nav class="chats" id="chats" aria-label="גופים">'+rows()+'</nav></aside>';
 }
 function feedView(id,f){
@@ -253,13 +248,13 @@ function feedView(id,f){
      '<span class="bf"><span class="chip '+ST[s.k][1]+'">'+IC[s.k]+' '+ST[s.k][0]+'</span>'+(s.as?'<span class="chip flag">⚑ נשענת על הנחה</span>':'')+'<span class="tag">'+s.m+'</span><span class="tag">'+s.p+'</span>'+(s.tg||[]).map(function(t){return '<span class="tag">'+t+'</span>'}).join('')+'</span></a>';
   });
   return '<div class="hero" style="--hc:'+e.col+'"><div class="top"><a class="ib back" href="#list">‹ חזרה</a>'+av(e)+'<div class="who"><b>'+e.name+'</b><span class="tk mono">'+e.tk+' · '+e.type+'</span></div></div>'+
-   '<div class="hstats">'+(c.enough?
-     '<span class="hs"><b>'+c.total+'</b><small>הצהרות</small></span><span class="hs"><b>'+c.ev+'</b><small>נבדקו</small></span><span class="hs"><b>'+c.ok+'</b><small>תואמות לתיעוד</small></span><span class="hs"><b>'+c.diff+'</b><small>שונות מהתיעוד</small></span><span class="hs"><b>'+c.off+'</b><small>לא ניתנות לבדיקה</small></span>':
-     '<span class="hs"><b>'+c.total+'</b><small>הצהרות</small></span><span class="hs"><b>'+c.ev+'</b><small>נבדקו</small></span><span class="hs lab"><b>אין די נתונים לספירה</b><small>נדרשות לפחות '+MIN+' הצהרות שנבדקו</small></span>')+'</div></div>'+
-   '<div class="pin">📌 הספירה מתארת מה נמצא בהצהרות שנבדקו, מול התיעוד שצוין בכל אחת. היא אינה סיכום של הגוף ואינה מעידה על יושרה או כוונה. <a href="#about-entity-'+e.id+'">פרטים</a></div>'+
-   (c.enough?metricTable(e,met):'')+
+   '<p class="line">נבדקו <b>'+c.ev+'</b> מתוך '+c.total+' הצהרות · '+(c.enough?'<b>'+c.diff+'</b> שונות מהתיעוד':'מעט מדי לספירה')+'</p></div>'+
+   '<details class="more" id="more"'+(moreOpen?' open':'')+'><summary>פירוט</summary><div class="mbody">'+
+     (c.enough?'<p>'+c.ok+' תואמות לתיעוד · '+c.diff+' שונות ממנו · '+c.off+' לא ניתנות לבדיקה.</p>'+metricTable(e,met):'<p>נדרשות לפחות '+MIN+' הצהרות שנבדקו כדי להציג ספירה. ההצהרות עצמן מוצגות למטה.</p>')+
+     '<p class="sub">הספירה מתארת מה נמצא בהצהרות שנבדקו, מול התיעוד שצוין בכל אחת. היא אינה סיכום של הגוף ואינה מעידה על יושרה או כוונה. <a href="#about-entity-'+e.id+'">עוד</a></p>'+
+   '</div></details>'+
    (met!=='all'?'<div class="mfil">מוצגות הצהרות על <b>'+met+'</b> <button type="button" class="ib" id="mclr">הצגת כל המדדים</button></div>':'')+
-   '<div class="fchips" id="fc" role="group" aria-label="סינון"><button type="button" aria-pressed="'+(f==='all')+'" data-f="all">הכול</button><button type="button" aria-pressed="'+(f==='diff')+'" data-f="diff">◆ שונות מהתיעוד</button><button type="button" aria-pressed="'+(f==='ok')+'" data-f="ok">✓ תואמות לתיעוד</button><button type="button" aria-pressed="'+(f==='off')+'" data-f="off">○ לא ניתנות לבדיקה</button></div>'+
+   '<div class="fchips" id="fc" role="group" aria-label="סינון"><button type="button" aria-pressed="'+(f==='all')+'" data-f="all">הכול</button><button type="button" aria-pressed="'+(f==='diff')+'" data-f="diff">◆ רק שונות מהתיעוד</button></div>'+
    '<div class="feed" id="feed">'+(out||'<div class="empty">אין הצהרות בסינון הזה.</div>')+'</div>';
 }
 function detailView(id){
@@ -288,11 +283,11 @@ function aboutView(t){
    '<section class="card"><h2>מה מוצג ליד כל גוף</h2><ul class="plain"><li>ספירות בלבד: כמה הצהרות נמצאו, כמה מהן נבדקו, כמה תואמות לתיעוד, כמה שונות ממנו וכמה לא ניתנות לבדיקה.</li><li>אין דירוג, ציון או אחוז לגוף, ואין מיון של גופים לפי הבדלים. הרשימה ממוינת לפי פעילות אחרונה או לפי שם.</li><li>כל הבדל מוצג עם שני הציטוטים ועם התיעוד שמולו נבדק. הבדל יכול לנבוע מתיקון שפורסם, מהגדרה שונה, מעיגול או מתקופה אחרת.</li><li>פחות מ־10 הצהרות שנבדקו: «אין די נתונים לספירה». ההצהרות עצמן עדיין מוצגות.</li><li><b>לפי מדד</b>: אותן ספירות לכל מדד (הכנסות, רווח נקי, רווח למניה, תזרים תפעולי, אחר), בסדר קבוע ולא לפי מספר ההבדלים. מדד שנבדקו בו פחות מ־3 הצהרות מסומן «מעט מדי לספירה». המדדים אינם מצורפים למספר אחד. לחיצה על מדד מסננת את ההצהרות.</li><li>הספירה מעידה על התאמה בין טקסטים, לא על יושרה, כוונה או אמת, והיא לא קובעת איזה טקסט נכון.</li></ul></section>'+
    '<section class="card"><h2>שאלה פתוחה</h2><div class="open">הסף לכל מדד (3 הצהרות שנבדקו) הוא הצעה ראשונית, וכך גם רשימת המדדים ומה נכלל ב«אחר».</div></section><section class="card"><h2>עד כמה אפשר לסמוך על המערכת</h2><div class="tw"><table><thead><tr><th>שלב</th><th>מה נמדד</th><th>תוצאה</th><th>סף</th></tr></thead><tbody><tr><td>קליטה</td><td>גבולות משפטים</td><td class="num">241 / 241</td><td class="num">≥ 98%</td></tr><tr><td>שער אימות</td><td>טענות מושחתות שנתפסו</td><td class="num">84 / 84</td><td class="num">100%</td></tr><tr><td>שער אימות</td><td>טענות נכונות שעברו</td><td class="num">115 / 115</td><td class="num">≥ 98%</td></tr><tr><td>פרשנות</td><td>דיוק וכיסוי</td><td><span class="chip off">טרם נמדד</span></td><td class="num">98% · 70%</td></tr></tbody></table></div><p class="sub">כל המדידות עד כה הן על נתוני הפיתוח. הדוחות הנפרדים טרם נמדדו.</p></section></div>';
 }
-var fil='all',met='all';
+var fil='all',met='all',moreOpen=false;
 function route(){
   var h=(location.hash||'#list').slice(1),p=parse(h),k=p.k,rest=p.rest,pane='list',main='';
   cur='';from='';
-  if(k==='entity'&&ent(rest)){cur=rest;from=h;pane='feed';fil='all';met='all';main=feedView(rest,fil)}
+  if(k==='entity'&&ent(rest)){cur=rest;from=h;pane='feed';fil='all';met='all';moreOpen=false;main=feedView(rest,fil)}
   else if(k==='statement'){var s=S.filter(function(x){return x.id===rest})[0];if(s){cur=s.e;from=h;pane='detail';main=detailView(rest)}}
   else if(k==='about'){pane='detail';var t=target(rest);if(t){cur=t.e;from=rest}main=aboutView(t)}
   if(!main)main='<div class="empty"><b>בחרו גוף מהרשימה</b><br>ההצהרות האחרונות שלו יופיעו כאן.</div>';
@@ -310,6 +305,7 @@ function bind(id){
   var redraw=function(){var m=document.getElementById('main');m.innerHTML=feedView(id,fil);bind(id);var fd=document.getElementById('feed');if(fd)fd.scrollTop=fd.scrollHeight};
   document.querySelectorAll('button.mt').forEach(function(b){b.onclick=function(){var m=b.getAttribute('data-m');met=(met===m?'all':m);redraw()}});
   var mc=document.getElementById('mclr');if(mc)mc.onclick=function(){met='all';redraw()};
+  var mo=document.getElementById('more');if(mo)mo.ontoggle=function(){moreOpen=mo.open};
   var fc=document.getElementById('fc');
   if(fc)fc.onclick=function(ev){var b=ev.target.closest('button');if(!b)return;fil=b.getAttribute('data-f');
     var m=document.getElementById('main');m.innerHTML=feedView(id,fil);bind(id);var fd=document.getElementById('feed');if(fd)fd.scrollTop=fd.scrollHeight};
