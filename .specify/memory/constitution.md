@@ -1,6 +1,6 @@
 # Axiomate Constitution
 
-Status: ratified 2026-11-11, version 1.2.0
+Status: ratified 2026-11-11, version 1.3.0
 
 ## Core principles
 
@@ -35,7 +35,14 @@ over time is not a contradiction.
 
 ### VII. Inconsistency is not falsehood
 Axiomate reports disagreement between a text and a record. It does not assert
-which side is true unless an external ground-truth source is explicitly supplied.
+which side is true.
+
+Every comparison is made against a declared reference. A reference is itself a
+claim with an origin, never a ground truth: no source, however reliable, makes a
+finding true. A finding states the relation ("consistent with R", "disagrees
+with R"), names R, and records reliance on R as an assumption (principle III).
+This principle governs the product's findings; the labels used to evaluate the
+system itself are set by principle VIII.
 
 ### VIII. Verified, test-first changes
 Rules and comparison logic are written test-first. Every change is run against a
@@ -77,6 +84,22 @@ Enforcement: `CLAUDE.md` instructs every AI session to follow this rule, and the
 change without `status.html` changing. The label `status-not-affected` skips the
 check for changes that truly do not alter the project's state.
 
+### X. Sources have declared standing
+Every source can be questioned, but sources are not all equal: an audited filing
+and an anonymous post do not carry the same weight. The standing of each kind of
+source, and the order in which references are preferred, is written down as part
+of the rule set, applied the same way to every case, and replaceable. A change of
+standing is a change of rule set (principle V). No standing is implied or
+assigned silently.
+
+### XI. Specific findings, never an overall score
+Axiomate reports specific results, each with its label (consistent,
+disagreement, conditional, not evaluable) and the reference it rests on. It
+does not combine them into a credibility or trust score for a company, a person
+or a document. Any summary of results is a set of counts that always states how
+much could be checked: how many claims were found, how many were evaluable, and
+against which references.
+
 ## Governance
 
 Specs, plans and tasks must comply with this constitution. Amending it requires a
@@ -91,3 +114,13 @@ documented rationale and a version bump.
 - **1.2.0 (2026-11-12)**: principle IX now refers to `specs/status-page.md`
   for the status page's detailed requirements. Rationale: the page gained
   per-component detail panels and needed its own focused specification.
+- **1.3.0 (2026-11-14)**: principle VII no longer allows any source to be
+  treated as ground truth: every comparison names a declared reference, which is
+  itself a claim, and reliance on it is an assumption. Principle X added: sources
+  differ in standing, and the standing is declared, uniform and replaceable.
+  Principle XI added: no overall credibility score, only labelled findings with
+  the amount of data checked. Rationale: refusing all references would give an
+  anonymous post the same weight as an audited filing, which is itself a hidden
+  choice; objectivity comes from declaring the references and letting them be
+  replaced, not from having none. A single score would hide what could not be
+  checked and would read as an accusation, which principle VII forbids.
