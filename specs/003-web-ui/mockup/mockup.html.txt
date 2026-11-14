@@ -63,14 +63,13 @@ button,select,input{font:inherit;color:inherit}
 .dt{margin-inline-start:auto;color:var(--muted);font-size:.78rem;white-space:nowrap}
 .pv{direction:ltr;text-align:left;font:.92rem/1.35 var(--ev);color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .l3{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
-.badge{background:var(--badge);color:var(--badgefg);border-radius:99px;font-size:.72rem;font-weight:700;min-width:20px;text-align:center;padding:0 6px;margin-inline-start:auto}
 .chip{display:inline-flex;align-items:center;gap:4px;font-size:.74rem;font-weight:700;padding:1px 8px;border-radius:99px;white-space:nowrap}
 .chip.ok{background:var(--ok-bg);color:var(--ok)}.chip.flag{background:var(--flag-bg);color:var(--flag)}
 .chip.off{background:var(--off-bg);color:var(--off)}.chip.diff{background:var(--diff-bg);color:var(--diff)}.chip.claim{background:var(--claim-bg);color:var(--claim)}
 .tag{font-size:.74rem;border:1px solid var(--line);border-radius:6px;padding:0 7px;color:var(--muted);background:var(--panel)}
 /* main */
 .mh{display:flex;align-items:center;gap:12px;padding:10px 14px;background:var(--surface);border-bottom:1px solid var(--line);flex-wrap:wrap}
-.back{display:none}
+.back{display:none}.back.always{display:inline-block}
 .mh .who{min-width:0;flex:1 1 160px}.mh .who b{display:block}
 .mk{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
 .kv1{display:grid;font-variant-numeric:tabular-nums;line-height:1.2}.kv1 b{font-size:1.1rem}.kv1 small{color:var(--muted);font-size:.72rem}
@@ -113,7 +112,7 @@ th{color:var(--muted);font-weight:500;font-size:.82rem}td.num{font-variant-numer
 }
 @media(prefers-reduced-motion:no-preference){a.bub,.chat{transition:background .12s,border-color .12s}}
 
-.hs b{direction:ltr;text-align:start;unicode-bidi:isolate}.dl{direction:ltr;unicode-bidi:isolate}
+.hs b{direction:ltr;text-align:start;unicode-bidi:isolate}.hs.lab b{font-family:var(--ui);font-size:1rem;direction:rtl}.dl{direction:ltr;unicode-bidi:isolate}
 /* v4: tape, hero, rating tile (1 = best), status edges */
 .mono{font-family:'IBM Plex Mono',ui-monospace,monospace;font-variant-numeric:tabular-nums}
 .tape{max-width:1180px;margin:0 auto 8px;background:#0e1a2b;color:#dbe6f3;border-radius:10px;overflow:hidden;direction:ltr;white-space:nowrap}
@@ -157,10 +156,10 @@ a.bub.k-ok{border-inline-start-color:var(--ok)}a.bub.k-diff{border-inline-start-
 </div>
 <script>
 var ENT=[
- {id:'example-corp',name:'Example Corp',type:'חברה ציבורית',tk:'EXC',ini:'EX',col:'#2b6cb0',total:29,ev:18,ok:16,sp:[76,79,81,80,84,85,88,89],news:3},
- {id:'northwind-demo',name:'Northwind Demo Ltd',type:'חברה ציבורית',tk:'NWD',ini:'NW',col:'#0f766e',total:41,ev:30,ok:30,sp:[96,97,100,98,100,100,99,100],news:1},
- {id:'harbor-analytics',name:'Harbor Analytics Inc',type:'חברה ציבורית',tk:'HBA',ini:'HA',col:'#b45309',total:22,ev:7,ok:6,sp:[100,83,86,86],news:0},
- {id:'meridian-foods',name:'Meridian Demo Foods',type:'חברה ציבורית',tk:'MDF',ini:'MD',col:'#7c3aed',total:35,ev:21,ok:15,sp:[84,81,79,76,75,73,72,71],news:2}
+ {id:'example-corp',name:'Example Corp',type:'חברה ציבורית',tk:'EXC',ini:'EX',col:'#2b6cb0',total:29,ev:18,ok:16,sp:[76,79,81,80,84,85,88,89]},
+ {id:'northwind-demo',name:'Northwind Demo Ltd',type:'חברה ציבורית',tk:'NWD',ini:'NW',col:'#0f766e',total:41,ev:30,ok:30,sp:[96,97,100,98,100,100,99,100]},
+ {id:'harbor-analytics',name:'Harbor Analytics Inc',type:'חברה ציבורית',tk:'HBA',ini:'HA',col:'#b45309',total:22,ev:7,ok:6,sp:[100,83,86,86]},
+ {id:'meridian-foods',name:'Meridian Demo Foods',type:'חברה ציבורית',tk:'MDF',ini:'MD',col:'#7c3aed',total:35,ev:21,ok:15,sp:[84,81,79,76,75,73,72,71]}
 ];
 var ST={ok:['עקבית','ok'],diff:['אי־התאמה','diff'],off:['לא ניתנת להערכה','off']};
 var S=[
@@ -236,7 +235,7 @@ function spark(a,col,w,h){
 }
 function chip(k){var s=ST[k];return '<span class="chip '+s[1]+'">'+s[0]+'</span>'}
 function av(e,sm){return '<span class="av'+(sm?' sm':'')+'" style="background:'+e.col+';--c:'+e.col+'" role="img" aria-label="סמל '+e.name+'">'+e.ini+'</span>'}
-var tab='recent',query='',cur='';
+var tab='recent',query='',cur='',from='';
 function rows(){
   var list=ENT.filter(function(e){return !query||(e.name+' '+e.tk).toLowerCase().indexOf(query.toLowerCase())>-1});
   list.sort(function(a,b){
@@ -247,10 +246,10 @@ function rows(){
     return '<a class="chat'+(e.id===cur?' act':'')+'" href="#entity-'+e.id+'">'+av(e)+
      '<span class="cb"><span class="l1"><span class="nm">'+e.name+'</span><span class="tk">'+e.tk+'</span><span class="dt">'+l.date.slice(0,5)+'</span></span>'+
      '<span class="pv" lang="en">'+l.q+'</span>'+
-     '<span class="l3">'+rk(e)+chip(l.k)+'<span class="tag">'+l.m+'</span>'+(e.news?'<span class="badge" aria-label="'+e.news+' חדשות">'+e.news+'</span>':'')+'</span></span></a>'}).join('')||'<div class="empty">לא נמצאו גופים.</div>';
+     '<span class="l3">'+rk(e)+chip(l.k)+'<span class="tag">'+l.m+'</span>'+'</span></span></a>'}).join('')||'<div class="empty">לא נמצאו גופים.</div>';
 }
 function side(){
-  return '<aside class="side"><div class="sh"><span class="brand">Axiomate</span><a class="ib" href="#about" style="text-decoration:none">על הדירוג</a><button class="ib" id="theme" type="button">ערכה</button></div>'+
+  return '<aside class="side"><div class="sh"><span class="brand">Axiomate</span><a class="ib" href="#about'+(from?'-'+from:'')+'" style="text-decoration:none">על הדירוג</a><button class="ib" id="theme" type="button">ערכה</button></div>'+
    '<label class="search"><input id="q" type="search" placeholder="חיפוש גוף או סימול" value="'+query+'" aria-label="חיפוש"></label>'+
    '<div class="tabs" id="tabs"><button type="button" aria-pressed="'+(tab==='recent')+'" data-t="recent">אחרונים</button><button type="button" aria-pressed="'+(tab==='rate')+'" data-t="rate">לפי דירוג</button><button type="button" disabled>ארגונים ללא מטרת רווח · בקרוב</button><button type="button" disabled>אישי ציבור · בקרוב</button></div>'+
    '<nav class="chats" id="chats" aria-label="גופים">'+rows()+'</nav></aside>';
@@ -269,8 +268,8 @@ function feedView(id,f){
      '<span class="bf"><span class="chip '+ST[s.k][1]+'">'+IC[s.k]+' '+ST[s.k][0]+'</span>'+(s.as?'<span class="chip flag">⚑ נשענת על הנחה</span>':'')+'<span class="tag">'+s.m+'</span><span class="tag">'+s.p+'</span>'+(s.tg||[]).map(function(t){return '<span class="tag">'+t+'</span>'}).join('')+'</span></a>';
   });
   return '<div class="hero" style="--hc:'+e.col+'"><div class="top"><a class="ib back" href="#list">‹ חזרה</a>'+av(e)+'<div class="who"><b>'+e.name+'</b><span class="tk mono">'+e.tk+' · '+e.type+'</span></div></div>'+
-   '<div class="hstats">'+ring(e)+'<span class="hs"><b>'+(r.n?r.n+' / 10':'—')+'</b><small>'+(r.n?'דירוג · 1 = הגבוה ביותר':'אין די נתונים')+'</small></span><span class="hs"><b>'+r.c+'%</b><small>עקביות</small></span><span class="hs"><b>'+pct(e.ev,e.total)+'%</b><small>כיסוי</small></span>'+spark(e.sp,'#fff',150,44)+dtxt(e)+'</div></div>'+
-   '<div class="pin">📌 הדירוג מבוסס על '+e.ev+' מתוך '+e.total+' הצהרות שניתן היה לבדוק. הוא מודד עקביות בין טקסטים, לא יושרה. <a href="#about">פרטים</a></div>'+
+   '<div class="hstats">'+ring(e)+'<span class="hs lab"><b>'+(r.n?'דירוג':'אין דירוג')+'</b><small>'+(r.n?'מתוך 10 · 1 = הגבוה ביותר':'אין די נתונים')+'</small></span><span class="hs"><b>'+r.c+'%</b><small>עקביות</small></span><span class="hs"><b>'+pct(e.ev,e.total)+'%</b><small>כיסוי</small></span>'+spark(e.sp,'#fff',150,44)+dtxt(e)+'</div></div>'+
+   '<div class="pin">📌 הדירוג מבוסס על '+e.ev+' מתוך '+e.total+' הצהרות שניתן היה לבדוק. הוא מודד עקביות בין טקסטים, לא יושרה. <a href="#about-entity-'+e.id+'">פרטים</a></div>'+
    '<div class="fchips" id="fc" role="group" aria-label="סינון"><button type="button" aria-pressed="'+(f==='all')+'" data-f="all">הכול</button><button type="button" aria-pressed="'+(f==='diff')+'" data-f="diff">◆ אי־התאמה</button><button type="button" aria-pressed="'+(f==='ok')+'" data-f="ok">✓ עקביות</button><button type="button" aria-pressed="'+(f==='off')+'" data-f="off">○ לא ניתנות להערכה</button></div>'+
    '<div class="feed" id="feed">'+(out||'<div class="empty">אין הצהרות בסינון הזה.</div>')+'</div>';
 }
@@ -287,18 +286,26 @@ function detailView(id){
    '<h2>איך הגענו לזה</h2>'+steps+
    '<details><summary>פרטים מלאים</summary><dl class="kv">'+s.det.map(function(d){return '<dt>'+d[0]+'</dt><dd>'+d[1]+'</dd>'}).join('')+'</dl><p class="sub">ההצהרה הוצעה על ידי מודל ונבדקה בקוד דטרמיניסטי. כל ערך נקרא מחדש מהציטוט.</p></details></section></div>';
 }
-function aboutView(){
-  return '<div class="mh"><a class="ib back" href="#list">‹ חזרה</a><div class="who"><b>על הדירוג והאמון</b></div></div><div class="detail">'+
+function parse(h){var i=h.indexOf('-');return {k:i<0?h:h.slice(0,i),rest:i<0?'':h.slice(i+1)}}
+/* A place the user can return to: an entity page or a statement page. */
+function target(h){
+  var p=parse(h);
+  if(p.k==='entity'&&ent(p.rest))return {hash:h,e:p.rest,label:'‹ חזרה ל־'+ent(p.rest).name};
+  if(p.k==='statement'){var st=S.filter(function(x){return x.id===p.rest})[0];if(st)return {hash:h,e:st.e,label:'‹ חזרה להצהרה'}}
+  return null;
+}
+function aboutView(t){
+  return '<div class="mh"><a class="ib back'+(t?' always':'')+'" href="#'+(t?t.hash:'list')+'">'+(t?t.label:'‹ חזרה')+'</a><div class="who"><b>על הדירוג והאמון</b></div></div><div class="detail">'+
    '<section class="card"><h2>איך מחושב דירוג העקביות</h2><ul class="plain"><li><b>עקביות</b> = ההצהרות העקביות מתוך ההצהרות שניתן היה לבדוק. הצהרה שלא ניתן לבדוק אינה נספרת לא לטובה ולא לרעה.</li><li><b>כיסוי</b> = כמה מההצהרות של הגוף ניתנות לבדיקה בכלל. הוא מוצג תמיד ליד הדירוג.</li><li><b>הדירוג החיצוני</b> הוא מספר מ־1 עד 10, ו־1 הוא הגבוה ביותר. כרגע הוא נגזר מהעקביות (91% ומעלה = 1; כל 10 נקודות אחוז = דרגה). הטבלה היא הצעה ראשונית.</li><li>פחות מ־10 הצהרות שנבדקו: «אין די נתונים», בלי דירוג.</li><li>המגמה מראה את הדירוג לאורך רבעונים. החץ משווה לרבעון הקודם.</li><li>הדירוג מעיד על התאמה בין טקסטים, לא על יושרה, כוונה או אמת, והוא לא קובע איזה טקסט נכון.</li></ul></section>'+
    '<section class="card"><h2>שאלה פתוחה</h2><div class="open">האחוזים והדירוג יחושבו בעתיד <b>לפי מדד</b> (הכנסות, רווח, תזרים ועוד) ולפי הפרמטרים שנוסיף להערכת כל גוף, ולא כמספר אחד כולל. המבנה, המשקלים ואופן הצירוף לדירוג אחד נדונים בהמשך.</div></section><section class="card"><h2>עד כמה אפשר לסמוך על המערכת</h2><div class="tw"><table><thead><tr><th>שלב</th><th>מה נמדד</th><th>תוצאה</th><th>סף</th></tr></thead><tbody><tr><td>קליטה</td><td>גבולות משפטים</td><td class="num">241 / 241</td><td class="num">≥ 98%</td></tr><tr><td>שער אימות</td><td>טענות מושחתות שנתפסו</td><td class="num">84 / 84</td><td class="num">100%</td></tr><tr><td>שער אימות</td><td>טענות נכונות שעברו</td><td class="num">115 / 115</td><td class="num">≥ 98%</td></tr><tr><td>פרשנות</td><td>דיוק וכיסוי</td><td><span class="chip off">טרם נמדד</span></td><td class="num">98% · 70%</td></tr></tbody></table></div><p class="sub">כל המדידות עד כה הן על נתוני הפיתוח. הדוחות הנפרדים טרם נמדדו.</p></section></div>';
 }
 var fil='all';
 function route(){
-  var h=(location.hash||'#list').slice(1),i=h.indexOf('-'),k=i<0?h:h.slice(0,i),rest=i<0?'':h.slice(i+1),pane='list',main='';
-  cur='';
-  if(k==='entity'&&ent(rest)){cur=rest;pane='feed';fil='all';main=feedView(rest,fil)}
-  else if(k==='statement'){var s=S.filter(function(x){return x.id===rest})[0];if(s){cur=s.e;pane='detail';main=detailView(rest)}}
-  else if(k==='about'){pane='detail';main=aboutView()}
+  var h=(location.hash||'#list').slice(1),p=parse(h),k=p.k,rest=p.rest,pane='list',main='';
+  cur='';from='';
+  if(k==='entity'&&ent(rest)){cur=rest;from=h;pane='feed';fil='all';main=feedView(rest,fil)}
+  else if(k==='statement'){var s=S.filter(function(x){return x.id===rest})[0];if(s){cur=s.e;from=h;pane='detail';main=detailView(rest)}}
+  else if(k==='about'){pane='detail';var t=target(rest);if(t){cur=t.e;from=rest}main=aboutView(t)}
   if(!main)main='<div class="empty"><b>בחרו גוף מהרשימה</b><br>ההצהרות האחרונות שלו יופיעו כאן.</div>';
   var app=document.getElementById('app');app.setAttribute('data-pane',pane);
   app.innerHTML=side()+'<main class="main" id="main">'+main+'</main>';

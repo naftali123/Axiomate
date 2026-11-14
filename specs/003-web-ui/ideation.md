@@ -304,8 +304,9 @@ Changes to the flow, reflected in `mockup/mockup.html.txt`:
 style: chat list on one side, conversation on the other, single pane on a
 phone) with investment-app cues (tickers, tabular numbers, a consistency
 sparkline and quarter-on-quarter delta). Each entity shows a profile image (a
-company logo; the mock-up uses placeholder monograms) with its rating directly
-beneath, and its latest statement beside it. Statements in the entity page are
+company logo; the mock-up uses placeholder monograms) and its latest statement
+beside it (the rating's final position is described in section 11). Statements
+in the entity page are
 message bubbles; the comparison record on the statement page is shown as a
 "reply" quote.
 
@@ -348,7 +349,26 @@ usual reading of "higher is better" and of the percentages shown next to it. The
 UI must always label it (for example "2 of 10, 1 = highest"). To decide whether
 that stays in the spec as is.
 
-## 12. Next step
+## 12. Fourth round: usability fixes
+
+Two defects found in the mock-up, both turned into requirements for the spec:
+
+1. **One rating, one place.** A number beside the profile image (a "new
+   statements" counter) was read as a second, contradictory rating. Rule: an
+   entity's rating appears once per place it is shown (list row, entity header),
+   and no other number competes with it next to the profile image. The counter
+   was removed. In the entity header the number appears once, in the ring.
+2. **Back goes back to where the user came from.** The explanation of the
+   rating returned to the main list even when it was opened from an entity page.
+   Rule: every drill-down page has a back control that returns to the page it
+   was opened from (an entity page, a statement page or the list), works from a
+   direct link or after a reload, and names its destination ("Back to Example
+   Corp"). In the mock-up the origin is carried in the address
+   (`#about-entity-<id>`), so it does not depend on browser history.
+
+Both rules will be checked by the automated browser tests named in section 10.
+
+## 13. Next step
 
 On your answers: write `specs/003-web-ui/spec.md` (stories, requirements,
 verification, thresholds), then plan and tasks, and update `status.html` at each
