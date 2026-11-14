@@ -292,7 +292,7 @@ Changes to the flow, reflected in `mockup/mockup.html.txt`:
 
 1. **Entities first.** The home screen is a list of entities (companies now;
    later non-profits, other organizations, public figures), each with an
-   overall rating.
+   overall rating. *(Replaced in section 14: counts, no rating.)*
 2. **Entity page.** The latest statements or publications of that entity, each
    tagged by the system (metric, period, source type, result, "rests on an
    assumption"), filterable.
@@ -310,7 +310,8 @@ in the entity page are
 message bubbles; the comparison record on the statement page is shown as a
 "reply" quote.
 
-**Rating.** The rating is a *consistency rating*, not an honesty or credibility
+**Rating** *(replaced in section 14 by counts; kept here as the record of the
+earlier proposal)*. The rating is a *consistency rating*, not an honesty or credibility
 score: consistent statements divided by statements that could be checked,
 always shown with coverage (how many statements could be checked at all), and
 "not enough data" below 10 checked statements. Not-evaluable statements count
@@ -324,6 +325,9 @@ sources and privacy before it is built. The first release supports companies
 only; other types appear in the UI as "coming soon".
 
 ## 11. Third round of feedback and open questions
+
+*The rating, ring, trend, ticker values and the two open questions on ratings
+in this section are replaced by section 14.*
 
 Changes in the mock-up: a more distinctive look (a market ticker tape, a hero
 header in the entity's colour with a rating ring and trend, mono-spaced figures,
@@ -353,7 +357,7 @@ that stays in the spec as is.
 
 Two defects found in the mock-up, both turned into requirements for the spec:
 
-1. **One rating, one place.** A number beside the profile image (a "new
+1. **One rating, one place** *(now one counts line, one place; see section 14)*. A number beside the profile image (a "new
    statements" counter) was read as a second, contradictory rating. Rule: an
    entity's rating appears once per place it is shown (list row, entity header),
    and no other number competes with it next to the profile image. The counter
@@ -373,3 +377,40 @@ Both rules will be checked by the automated browser tests named in section 10.
 On your answers: write `specs/003-web-ui/spec.md` (stories, requirements,
 verification, thresholds), then plan and tasks, and update `status.html` at each
 step.
+
+## 14. Fifth round: counts, not a rating (constitution 1.3.0)
+
+The owner decided that any single number attached to a named entity reads as a
+verdict on that entity, whatever it is called, and that a 1–10 scale invites
+ranking ("the least credible company"). Constitution principle XI now forbids
+an overall score, and principle VII requires every finding to name the
+reference it was checked against. This replaces the rating in sections 10–12.
+
+Changes, reflected in `mockup/mockup.html.txt`:
+
+1. **Counts, not a rating.** The entity header shows plain counts: statements
+   found, checked, matching the record, differing from the record, not
+   checkable. No percentage, ring, trend line, quarter-on-quarter delta or
+   ticker values.
+2. **The minimum sample stays.** Below 10 checked statements the header shows
+   "not enough data to count"; the statements themselves are still listed.
+3. **No ranking.** Entities are never sorted or filtered by differences. The
+   list is ordered by latest activity or by name.
+4. **Neutral wording.** "Matches the record", "differs from the record" and
+   "not checkable", not "consistent" and "inconsistent". Violet, never red.
+5. **A difference shows its harmless explanations.** Every differing
+   statement says that a difference may come from a published restatement, a
+   different definition of the metric, rounding or another period, and that the
+   system does not decide which text is right.
+6. **The list row carries no number**, only the latest statement and its
+   label, so nothing beside the profile image reads as a judgement (section
+   12.1).
+
+Questions closed by this round: a number or a band, the 1 = best scale, and how
+per-metric figures roll up into one rating. Remaining open question: whether
+counts are also shown per metric (revenue, net income, cash flow and so on). If
+they are, they are never combined into one figure.
+
+Still open for the spec, and sharper now: entity types beyond companies. Counts
+of differences attached to a named person carry the same risk a rating did, and
+need their own review of wording, sources and privacy before they are built.
