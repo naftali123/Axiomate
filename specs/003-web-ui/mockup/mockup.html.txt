@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Axiomate – מודל ממשק</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&family=Heebo:wght@400;500;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+/* Layout: messenger shell. Left = chat list of entities (avatar, latest statement beside). Main = feed of statements as bubbles. Tickers and tabular numbers. No rating, score or ranking of entities (constitution XI): the entity header shows counts only. */
+:root{
+  --bg:#e9eef3; --surface:#ffffff; --panel:#f6f8fa; --fg:#15202b; --muted:#5d6b7a; --line:#dbe2e9;
+  --claim:#1f5fbf; --claim-bg:#e3edfb;
+  --flag:#a15c00; --flag-bg:#fdf0d5;
+  --ok:#0b7a6b; --ok-bg:#dcf3ee;
+  --diff:#6a3fb5; --diff-bg:#ebe3f8;
+  --err:#b3261e; --err-bg:#fbe3e1;
+  --off:#7b8794; --off-bg:#e9edf1;
+  --bub:#ffffff; --bubline:#d5dde5; --badge:#1f5fbf; --badgefg:#ffffff;
+  --ui:'Heebo',system-ui,sans-serif; --ev:'Source Serif 4',Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0b1118; --surface:#121b25; --panel:#0f1720; --fg:#e6ecf2; --muted:#93a1b0; --line:#243241;
+  --claim:#8db7f5; --claim-bg:#16294a; --flag:#f0b44c; --flag-bg:#3a2a0c;
+  --ok:#62d3bf; --ok-bg:#0d3a34; --diff:#bba2f0; --diff-bg:#2c2050;
+  --err:#f19a93; --err-bg:#4a1c19; --off:#8794a1; --off-bg:#222d38;
+  --bub:#17222d; --bubline:#27384a; --badge:#4a8fe8; --badgefg:#06121f; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0b1118; --surface:#121b25; --panel:#0f1720; --fg:#e6ecf2; --muted:#93a1b0; --line:#243241;
+  --claim:#8db7f5; --claim-bg:#16294a; --flag:#f0b44c; --flag-bg:#3a2a0c;
+  --ok:#62d3bf; --ok-bg:#0d3a34; --diff:#bba2f0; --diff-bg:#2c2050;
+  --err:#f19a93; --err-bg:#4a1c19; --off:#8794a1; --off-bg:#222d38;
+  --bub:#17222d; --bubline:#27384a; --badge:#4a8fe8; --badgefg:#06121f; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:15px/1.5 var(--ui);padding-block:10px 20px;
+  padding-left:max(10px,env(safe-area-inset-left,0px));padding-right:max(10px,env(safe-area-inset-right,0px))}
+button,select,input{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--claim);outline-offset:2px}
+.example{background:var(--flag-bg);color:var(--flag);border-radius:8px;padding:6px 12px;margin:0 auto 8px;font-size:.85rem;max-width:1180px}
+.app{max-width:1180px;margin:0 auto;height:calc(100dvh - 90px);min-height:560px;display:grid;grid-template-columns:minmax(300px,380px) minmax(0,1fr);background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.side{display:flex;flex-direction:column;min-height:0;border-inline-end:1px solid var(--line);background:var(--surface)}
+.main{display:flex;flex-direction:column;min-height:0;min-width:0;background:var(--panel)}
+.sh{display:flex;align-items:center;gap:8px;padding:10px 12px}
+.brand{font-weight:700;font-size:1.1rem;flex:1}
+.ib{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:4px 10px;cursor:pointer;color:var(--muted);font-size:.85rem}
+.search{margin:0 12px 8px;display:block}
+.search input{width:100%;border:1px solid var(--line);background:var(--panel);border-radius:99px;padding:7px 14px}
+.tabs{display:flex;gap:6px;padding:0 12px 8px;overflow-x:auto;flex-wrap:nowrap}
+.tabs button{border:0;background:var(--panel);border-radius:99px;padding:4px 12px;cursor:pointer;white-space:nowrap;color:var(--muted);font-size:.85rem}
+.tabs button[aria-pressed="true"]{background:var(--claim-bg);color:var(--claim);font-weight:700}
+.tabs button:disabled{opacity:.55;cursor:not-allowed}
+.chats{overflow-y:auto;flex:1;min-height:0}
+.chat{display:grid;grid-template-columns:60px minmax(0,1fr);gap:10px;padding:10px 12px;text-decoration:none;color:var(--fg);border-bottom:1px solid var(--line)}
+.chat:hover{background:var(--panel)}.chat.act{background:var(--claim-bg)}
+.pf{display:grid;justify-items:center;gap:4px;align-content:start}
+.av{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:700;letter-spacing:.02em;flex:none}
+.av.sm{width:40px;height:40px;font-size:.85rem}
+.rp{font-variant-numeric:tabular-nums;font-weight:700;font-size:.78rem;border-radius:99px;padding:0 8px;line-height:1.5;border:1px solid var(--line);background:var(--panel);white-space:nowrap}
+.rp.hi{color:var(--claim);border-color:var(--claim)}.rp.lo{color:var(--diff);border-color:var(--diff)}.rp.few{color:var(--off)}
+.cb{min-width:0;display:grid;gap:2px;align-content:start}
+.l1{display:flex;align-items:baseline;gap:8px}.nm{font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tk{color:var(--muted);font-size:.78rem;font-variant-numeric:tabular-nums;letter-spacing:.04em}
+.dt{margin-inline-start:auto;color:var(--muted);font-size:.78rem;white-space:nowrap}
+.pv{direction:ltr;text-align:left;font:.92rem/1.35 var(--ev);color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.l3{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.chip{display:inline-flex;align-items:center;gap:4px;font-size:.74rem;font-weight:700;padding:1px 8px;border-radius:99px;white-space:nowrap}
+.chip.ok{background:var(--ok-bg);color:var(--ok)}.chip.flag{background:var(--flag-bg);color:var(--flag)}
+.chip.off{background:var(--off-bg);color:var(--off)}.chip.diff{background:var(--diff-bg);color:var(--diff)}.chip.claim{background:var(--claim-bg);color:var(--claim)}
+.tag{font-size:.74rem;border:1px solid var(--line);border-radius:6px;padding:0 7px;color:var(--muted);background:var(--panel)}
+/* main */
+.mh{display:flex;align-items:center;gap:12px;padding:10px 14px;background:var(--surface);border-bottom:1px solid var(--line);flex-wrap:wrap}
+.back{display:none}.back.always{display:inline-block}
+.mh .who{min-width:0;flex:1 1 160px}.mh .who b{display:block}
+.mk{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.kv1{display:grid;font-variant-numeric:tabular-nums;line-height:1.2}.kv1 b{font-size:1.1rem}.kv1 small{color:var(--muted);font-size:.72rem}
+.dl{font-weight:700;font-size:.82rem;font-variant-numeric:tabular-nums}.dl.up{color:var(--ok)}.dl.dn{color:var(--diff)}
+.fchips{display:flex;gap:6px;padding:8px 14px;overflow-x:auto;background:var(--surface);border-bottom:1px solid var(--line)}
+.fchips button{border:0;background:var(--panel);border-radius:99px;padding:3px 12px;cursor:pointer;white-space:nowrap;color:var(--muted);font-size:.85rem}
+.fchips button[aria-pressed="true"]{background:var(--claim-bg);color:var(--claim);font-weight:700}
+.feed{flex:1;min-height:0;overflow-y:auto;padding:12px 14px;display:flex;flex-direction:column;gap:8px}
+.ds{align-self:center;background:var(--surface);border:1px solid var(--line);border-radius:99px;padding:1px 12px;font-size:.78rem;color:var(--muted);margin:6px 0 2px}
+a.bub{align-self:flex-start;max-width:min(560px,92%);text-decoration:none;color:var(--fg);background:var(--bub);border:1px solid var(--bubline);border-radius:14px 14px 14px 4px;padding:8px 12px;display:grid;gap:6px}
+a.bub:hover{border-color:var(--claim)}
+.src{font-size:.78rem;font-weight:700;color:var(--claim)}
+.q{direction:ltr;text-align:left;font:1rem/1.55 var(--ev)}
+.bf{display:flex;gap:6px;flex-wrap:wrap;align-items:center}.bf .tm{margin-inline-start:auto;color:var(--muted);font-size:.74rem}
+.reply{border-inline-start:3px solid var(--claim);background:var(--claim-bg);border-radius:6px;padding:6px 10px;display:grid;gap:2px}
+.reply .src{color:var(--claim)}
+.detail{flex:1;min-height:0;overflow-y:auto;padding:14px;display:grid;gap:12px;align-content:start}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px;max-width:760px;width:100%;margin:0 auto}
+.card h2{font-size:.82rem;margin:14px 0 6px;color:var(--muted);letter-spacing:.03em}
+.card h2:first-child{margin-top:0}
+.big{font-size:1.1rem;margin:10px 0 4px}.sub{color:var(--muted);margin:4px 0}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+@media(max-width:560px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stp{border:1px solid var(--line);border-radius:8px;padding:6px 8px;font-size:.84rem;background:var(--panel)}
+.stp b{display:block}.stp.y{border-color:var(--ok)}.stp.n{border-style:dashed;color:var(--off)}
+details{margin-top:12px}summary{cursor:pointer;color:var(--claim);font-weight:500}
+dl.kv{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:4px 14px;margin:8px 0 0}
+dl.kv dt{color:var(--muted)}dl.kv dd{margin:0;font-variant-numeric:tabular-nums}
+.empty{margin:auto;text-align:center;color:var(--muted);padding:20px}
+table{width:100%;border-collapse:collapse}th,td{padding:7px 8px;border-bottom:1px solid var(--line);text-align:start;vertical-align:top}
+th{color:var(--muted);font-weight:500;font-size:.82rem}td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.tw{overflow-x:auto}ul.plain{margin:0;padding-inline-start:20px}
+@media(max-width:860px){
+  .app{grid-template-columns:minmax(0,1fr);height:calc(100dvh - 110px)}
+  .app[data-pane="list"] .main{display:none}
+  .app:not([data-pane="list"]) .side{display:none}
+  .back{display:inline-block}
+}
+@media(prefers-reduced-motion:no-preference){a.bub,.chat{transition:background .12s,border-color .12s}}
+
+/* v5: hero with counts, per-metric table, status edges */
+.hero .line{margin:0;font-size:1rem;color:#e6eef8}.hero .line b{font-family:'IBM Plex Mono',monospace;color:#fff}
+.more{background:var(--surface);border-bottom:1px solid var(--line);padding:6px 14px;font-size:.9rem}
+.more summary{cursor:pointer;color:var(--claim);font-weight:600}
+.more .mbody{display:grid;gap:8px;padding:6px 0 4px}.more p{margin:0}.more a{color:var(--claim)}
+.more table.mtab{width:auto;max-width:100%}.mtab th,.mtab td{padding:3px 10px 3px 0;font-size:.88rem}
+.mtab .few{color:var(--off);font-size:.8rem}
+.mt{border:0;background:none;padding:0;cursor:pointer;color:var(--claim);font:inherit;font-weight:600;text-decoration:underline dotted}
+.mt[aria-pressed="true"]{text-decoration:none;background:var(--claim-bg);border-radius:6px;padding:0 6px}
+.mfil{display:flex;gap:8px;align-items:center;padding:6px 14px;background:var(--claim-bg);font-size:.85rem;flex-wrap:wrap}
+.mono{font-family:'IBM Plex Mono',ui-monospace,monospace;font-variant-numeric:tabular-nums}
+.l3{direction:ltr}
+.l3 .chip,.l3 .tag{direction:rtl}
+.chat{grid-template-columns:52px minmax(0,1fr)}
+.chat.act{box-shadow:inset 3px 0 0 var(--claim)}
+.av{box-shadow:0 0 0 2px var(--surface),0 0 0 4px var(--c,transparent)}
+.hero{position:relative;color:#fff;padding:12px 16px 14px;background:linear-gradient(135deg,var(--hc) 0%,#0e1a2b 78%);display:grid;gap:10px}
+.hero .top{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.hero .who{flex:1 1 150px;min-width:0}.hero .who b{font-size:1.2rem;display:block}.hero .tk{color:#c9d6e5}
+.hero .ib{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.3);color:#fff}
+.hero .av{box-shadow:0 0 0 3px rgba(255,255,255,.35)}
+.bub{border-inline-start-width:4px}
+a.bub.k-ok{border-inline-start-color:var(--ok)}a.bub.k-diff{border-inline-start-color:var(--diff)}a.bub.k-off{border-inline-start-color:var(--off)}
+.banner{display:flex;gap:10px;align-items:center;border-radius:10px;padding:10px 12px;margin-bottom:10px;font-weight:700}
+.banner.ok{background:var(--ok-bg);color:var(--ok)}.banner.diff{background:var(--diff-bg);color:var(--diff)}.banner.off{background:var(--off-bg);color:var(--off)}
+.banner .ic{font-size:1.3rem}
+.open{border:1px dashed var(--flag);background:var(--flag-bg);color:var(--flag);border-radius:8px;padding:8px 12px;margin-top:8px;font-size:.9rem}
+</style>
+</head>
+<body>
+<div dir="rtl" lang="he">
+<div class="example"><b>מודל להמחשה.</b> כל הגופים, הסמלים, ההצהרות והמספרים כאן בדויים. הם אינם דוחות אמיתיים ואינם תוצאה של המערכת.</div>
+<div class="app" id="app" data-pane="list"></div>
+</div>
+<script>
+var ENT=[
+ {id:'example-corp',name:'Example Corp',type:'חברה ציבורית',tk:'EXC',ini:'EX',col:'#2b6cb0',total:29,ev:18,ok:16,by:{'הכנסות':[11,7,5],'רווח נקי':[6,3,3],'רווח למניה':[4,4,4],'תזרים תפעולי':[5,4,4],'אחר':[3,0,0]}},
+ {id:'northwind-demo',name:'Northwind Demo Ltd',type:'חברה ציבורית',tk:'NWD',ini:'NW',col:'#0f766e',total:41,ev:30,ok:30,by:{'הכנסות':[14,11,11],'רווח נקי':[9,7,7],'רווח למניה':[6,5,5],'תזרים תפעולי':[8,7,7],'אחר':[4,0,0]}},
+ {id:'harbor-analytics',name:'Harbor Analytics Inc',type:'חברה ציבורית',tk:'HBA',ini:'HA',col:'#b45309',total:22,ev:7,ok:6,by:{'הכנסות':[8,2,2],'רווח נקי':[6,3,2],'רווח למניה':[3,1,1],'תזרים תפעולי':[2,1,1],'אחר':[3,0,0]}},
+ {id:'meridian-foods',name:'Meridian Demo Foods',type:'חברה ציבורית',tk:'MDF',ini:'MD',col:'#7c3aed',total:35,ev:21,ok:15,by:{'הכנסות':[12,8,4],'רווח נקי':[8,5,4],'רווח למניה':[5,3,3],'תזרים תפעולי':[6,5,4],'אחר':[4,0,0]}}
+];
+var ST={ok:['תואמת לתיעוד','ok'],diff:['שונה מהתיעוד','diff'],off:['לא ניתנת לבדיקה','off']};
+var S=[
+ {id:'s1',e:'example-corp',iso:'2025-10-28',date:'28.10.2025',src:'דוח רבעוני 10-Q',m:'הכנסות',p:'Q3 2025',k:'diff',as:true,
+  q:'Total revenues were $4.2 billion for the third quarter of 2025',
+  read:'ההכנסות ברבעון השלישי של 2025 היו 4.2 מיליארד דולר.',
+  verdict:'בהודעה הקודמת של החברה על אותו רבעון נאמר 4.1 מיליארד דולר. ההפרש הוא 0.1 מיליארד (2.4%).',
+  rec:{q:'Revenues for the quarter totaled $4.1 billion',d:'23.10.2025',s:'הודעת תוצאות',link:'s5'},
+  note:'התוצאה מותנית: היא נשענת על ההנחה ש«הכנסות» פירושו «סך ההכנסות». המערכת מדווחת על אי־התאמה בין שני טקסטים ואינה קובעת איזה מהם נכון.',
+  steps:[1,1,1,1],det:[['מדד','הכנסות'],['ערך','4.2 מיליארד USD'],['תקופה','Q3 2025 (1.7.2025 – 30.9.2025)'],['הנחה','«הכנסות» = «סך ההכנסות» · מקור: מאגר הקשר']]},
+ {id:'s2',e:'example-corp',iso:'2025-10-28',date:'28.10.2025',src:'דוח רבעוני 10-Q',m:'תזרים תפעולי',p:'Q3 2025',k:'ok',as:false,
+  q:'Net cash provided by operating activities was $610 million',
+  read:'התזרים מפעילות שוטפת ברבעון היה 610 מיליון דולר.',verdict:'ההצהרה עקבית עם מה שהחברה אמרה קודם על אותה תקופה.',
+  rec:{q:'Operating cash flow was $610 million in the third quarter',d:'23.10.2025',s:'הודעת תוצאות'},note:'',steps:[1,1,1,1],
+  det:[['מדד','תזרים מזומנים תפעולי'],['ערך','610 מיליון USD'],['תקופה','Q3 2025']]},
+ {id:'s4',e:'example-corp',iso:'2025-10-28',date:'28.10.2025',src:'דוח רבעוני 10-Q',m:'רווח למניה',p:'Q3 2025',k:'ok',as:false,
+  q:'Diluted earnings per share was $1.35',
+  read:'הרווח למניה (מדולל) ברבעון היה 1.35 דולר.',verdict:'ההצהרה עקבית עם מה שהחברה אמרה קודם על אותה תקופה.',
+  rec:{q:'$1.35 per diluted share',d:'23.10.2025',s:'הודעת תוצאות'},note:'',steps:[1,1,1,1],
+  det:[['מדד','רווח למניה (מדולל)'],['ערך','1.35 USD'],['תקופה','Q3 2025']]},
+ {id:'s3',e:'example-corp',iso:'2025-10-28',date:'28.10.2025',src:'דוח רבעוני 10-Q',m:'רווח נקי',p:'Q3 2025',k:'off',as:false,
+  q:'Net income decreased due to weaker demand in our consumer segment.',
+  read:'הרווח הנקי ירד בגלל ביקוש חלש במגזר הצרכנים.',verdict:'לא ניתן להעריך: במשפט אין מספר, ולכן אין מה להשוות. לא נוצרה טענה והמערכת לא ניחשה.',
+  rec:null,note:'',steps:[1,0,0,0],det:[['סיבה','אין ערך מספרי בציטוט'],['קוד','no_figure']]},
+ {id:'s5',e:'example-corp',iso:'2025-10-23',date:'23.10.2025',src:'הודעת תוצאות',m:'הכנסות',p:'Q3 2025',k:'diff',as:true,
+  q:'Revenues for the quarter totaled $4.1 billion',
+  read:'ההכנסות ברבעון השלישי של 2025 היו 4.1 מיליארד דולר.',verdict:'הדוח הרבעוני שפורסם אחר כך אומר 4.2 מיליארד דולר על אותו רבעון.',
+  rec:{q:'Total revenues were $4.2 billion for the third quarter of 2025',d:'28.10.2025',s:'דוח רבעוני 10-Q',link:'s1'},
+  note:'התוצאה מותנית באותה הנחה על «סך ההכנסות».',steps:[1,1,1,1],det:[['מדד','הכנסות'],['ערך','4.1 מיליארד USD'],['תקופה','Q3 2025']]},
+ {id:'s6',e:'example-corp',iso:'2025-07-15',date:'15.07.2025',src:'דיווח מיידי 8-K',m:'הכנסות',p:'שנת 2025',k:'off',as:false,tg:['תחזית'],
+  q:'We expect full-year revenue of $16.5 billion to $17.0 billion',
+  read:'החברה מצפה להכנסות שנתיות של 16.5–17.0 מיליארד דולר.',verdict:'לא ניתן להעריך עדיין: זו תחזית (טווח). היא תושווה לדוח השנתי כשייקלט.',
+  rec:null,note:'',steps:[1,1,1,0],det:[['מדד','הכנסות'],['טווח','16.5–17.0 מיליארד USD'],['אופי','תחזית']]},
+ {id:'n1',e:'northwind-demo',iso:'2025-10-30',date:'30.10.2025',src:'דוח רבעוני 10-Q',m:'הכנסות',p:'Q3 2025',k:'ok',as:true,
+  q:'Net sales increased 8% to $2.31 billion compared with the same quarter last year',
+  read:'המכירות נטו עלו ב־8% ל־2.31 מיליארד דולר לעומת אותו רבעון אשתקד.',verdict:'עקבית עם הנתונים שהחברה פרסמה על שני הרבעונים.',
+  rec:null,note:'נשענת על ההנחה «אותו רבעון אשתקד» = Q3 2024.',steps:[1,1,1,1],det:[['מדד','הכנסות'],['ערך','2.31 מיליארד USD']]},
+ {id:'n2',e:'northwind-demo',iso:'2025-10-30',date:'30.10.2025',src:'דוח רבעוני 10-Q',m:'תזרים תפעולי',p:'Q3 2025',k:'ok',as:false,
+  q:'Operating cash flow was $415 million',read:'התזרים מפעילות שוטפת היה 415 מיליון דולר.',verdict:'עקבית עם הודעת התוצאות.',
+  rec:null,note:'',steps:[1,1,1,1],det:[['ערך','415 מיליון USD']]},
+ {id:'h1',e:'harbor-analytics',iso:'2025-11-05',date:'05.11.2025',src:'הודעת תוצאות',m:'רווח נקי',p:'Q3 2025',k:'ok',as:false,
+  q:'Net income for the quarter was $38 million',read:'הרווח הנקי ברבעון היה 38 מיליון דולר.',verdict:'עקבית עם הדיווח הקודם.',
+  rec:null,note:'',steps:[1,1,1,1],det:[['ערך','38 מיליון USD']]},
+ {id:'h2',e:'harbor-analytics',iso:'2025-11-05',date:'05.11.2025',src:'הודעת תוצאות',m:'הכנסות',p:'Q3 2025',k:'off',as:false,
+  q:'Revenue grew significantly during the period.',read:'ההכנסות צמחו משמעותית בתקופה.',verdict:'לא ניתן להעריך: אין מספר במשפט.',
+  rec:null,note:'',steps:[1,0,0,0],det:[['קוד','no_figure']]},
+ {id:'m1',e:'meridian-foods',iso:'2025-10-29',date:'29.10.2025',src:'דוח רבעוני 10-Q',m:'הכנסות',p:'Q3 2025',k:'diff',as:false,
+  q:'Revenue of $1.12 billion for the quarter',read:'ההכנסות ברבעון היו 1.12 מיליארד דולר.',verdict:'בהודעת התוצאות נאמר 1.18 מיליארד דולר על אותו רבעון.',
+  rec:{q:'Quarterly revenue reached $1.18 billion',d:'24.10.2025',s:'הודעת תוצאות'},note:'',steps:[1,1,1,1],det:[['ערך','1.12 מיליארד USD']]},
+ {id:'m2',e:'meridian-foods',iso:'2025-10-29',date:'29.10.2025',src:'דוח רבעוני 10-Q',m:'תזרים תפעולי',p:'Q3 2025',k:'ok',as:false,
+  q:'Operating cash flow was $96 million',read:'התזרים מפעילות שוטפת היה 96 מיליון דולר.',verdict:'עקבית עם הודעת התוצאות.',
+  rec:null,note:'',steps:[1,1,1,1],det:[['ערך','96 מיליון USD']]}
+];
+function B(x){return x.replace(/(10-Q|8-K)/,'<bdi>$1</bdi>')}
+function ent(id){return ENT.filter(function(x){return x.id===id})[0]}
+function stOf(id){return S.filter(function(x){return x.e===id}).sort(function(a,b){return a.iso<b.iso?-1:a.iso>b.iso?1:0})}
+/* Counts only: what was found in the statements, never a summary of the entity (constitution XI). */
+var MIN=10;
+function cnt(e){return{total:e.total,ev:e.ev,ok:e.ok,diff:e.ev-e.ok,off:e.total-e.ev,enough:e.ev>=MIN}}
+/* Per-metric counts: fixed order, never sorted by differences, never combined into one figure. */
+var METRICS=['הכנסות','רווח נקי','רווח למניה','תזרים תפעולי','אחר'],MIN_M=3;
+function inMetric(s,m){return m==='all'||(m==='אחר'?METRICS.indexOf(s.m)<0||s.m==='אחר':s.m===m)}
+function metricTable(e,met){
+  var rows=METRICS.map(function(m){var v=e.by[m]||[0,0,0],t=v[0],ev=v[1],ok=v[2];
+    return '<tr><th scope="row"><button type="button" class="mt" data-m="'+m+'" aria-pressed="'+(met===m)+'">'+m+'</button></th><td>'+ev+' מתוך '+t+'</td><td>'+(ev<MIN_M?'<span class="few">'+(ev?'מעט מדי':'—')+'</span>':(ev-ok))+'</td></tr>'}).join('');
+  return '<table class="mtab"><thead><tr><th scope="col">מדד</th><th scope="col">נבדקו</th><th scope="col">שונות מהתיעוד</th></tr></thead><tbody>'+rows+'</tbody></table>';
+}
+function chip(k){var s=ST[k];return '<span class="chip '+s[1]+'">'+s[0]+'</span>'}
+function av(e,sm){return '<span class="av'+(sm?' sm':'')+'" style="background:'+e.col+';--c:'+e.col+'" role="img" aria-label="סמל '+e.name+'">'+e.ini+'</span>'}
+var tab='recent',query='',cur='',from='';
+function rows(){
+  var list=ENT.filter(function(e){return !query||(e.name+' '+e.tk).toLowerCase().indexOf(query.toLowerCase())>-1});
+  list.sort(function(a,b){
+    if(tab==='az'){return a.name.localeCompare(b.name)}
+    var la=stOf(a.id).slice(-1)[0].iso,lb=stOf(b.id).slice(-1)[0].iso;return la<lb?1:la>lb?-1:0});
+  return list.map(function(e){
+    var l=stOf(e.id).slice(-1)[0];
+    return '<a class="chat'+(e.id===cur?' act':'')+'" href="#entity-'+e.id+'">'+av(e)+
+     '<span class="cb"><span class="l1"><span class="nm">'+e.name+'</span><span class="tk">'+e.tk+'</span><span class="dt">'+l.date.slice(0,5)+'</span></span>'+
+     '<span class="pv" lang="en">'+l.q+'</span>'+
+     '<span class="l3">'+chip(l.k)+'<span class="tag">'+l.m+'</span>'+'</span></span></a>'}).join('')||'<div class="empty">לא נמצאו גופים.</div>';
+}
+function side(){
+  return '<aside class="side"><div class="sh"><span class="brand">Axiomate</span><a class="ib" href="#about'+(from?'-'+from:'')+'" style="text-decoration:none">על הספירה</a><button class="ib" id="theme" type="button">ערכה</button></div>'+
+   '<label class="search"><input id="q" type="search" placeholder="חיפוש גוף או סימול" value="'+query+'" aria-label="חיפוש"></label>'+
+   '<div class="tabs" id="tabs"><button type="button" aria-pressed="'+(tab==='recent')+'" data-t="recent">אחרונים</button><button type="button" aria-pressed="'+(tab==='az')+'" data-t="az">א–ת</button><button type="button" disabled>ארגונים ללא מטרת רווח · בקרוב</button><button type="button" disabled>אישי ציבור · בקרוב</button></div>'+
+   '<nav class="chats" id="chats" aria-label="גופים">'+rows()+'</nav></aside>';
+}
+function feedView(id,f){
+  var e=ent(id),c=cnt(e),all=stOf(id);
+  var items=all.filter(function(s){return (f==='all'||s.k===f)&&inMetric(s,met)});
+  var out='',last='',IC={ok:'✓',diff:'◆',off:'○'};
+  items.forEach(function(s){
+    if(s.date!==last){out+='<div class="ds">'+s.date+'</div>';last=s.date}
+    out+='<a class="bub k-'+s.k+'" href="#statement-'+s.id+'"><span class="src">'+B(s.src)+'</span><span class="q" lang="en">'+s.q+'</span>'+
+     '<span class="bf"><span class="chip '+ST[s.k][1]+'">'+IC[s.k]+' '+ST[s.k][0]+'</span>'+(s.as?'<span class="chip flag">⚑ נשענת על הנחה</span>':'')+'<span class="tag">'+s.m+'</span><span class="tag">'+s.p+'</span>'+(s.tg||[]).map(function(t){return '<span class="tag">'+t+'</span>'}).join('')+'</span></a>';
+  });
+  return '<div class="hero" style="--hc:'+e.col+'"><div class="top"><a class="ib back" href="#list">‹ חזרה</a>'+av(e)+'<div class="who"><b>'+e.name+'</b><span class="tk mono">'+e.tk+' · '+e.type+'</span></div></div>'+
+   '<p class="line">נבדקו <b>'+c.ev+'</b> מתוך '+c.total+' הצהרות · '+(c.enough?'<b>'+c.diff+'</b> שונות מהתיעוד':'מעט מדי לספירה')+'</p></div>'+
+   '<details class="more" id="more"'+(moreOpen?' open':'')+'><summary>פירוט</summary><div class="mbody">'+
+     (c.enough?'<p>'+c.ok+' תואמות לתיעוד · '+c.diff+' שונות ממנו · '+c.off+' לא ניתנות לבדיקה.</p>'+metricTable(e,met):'<p>נדרשות לפחות '+MIN+' הצהרות שנבדקו כדי להציג ספירה. ההצהרות עצמן מוצגות למטה.</p>')+
+     '<p class="sub">הספירה מתארת מה נמצא בהצהרות שנבדקו, מול התיעוד שצוין בכל אחת. היא אינה סיכום של הגוף ואינה מעידה על יושרה או כוונה. <a href="#about-entity-'+e.id+'">עוד</a></p>'+
+   '</div></details>'+
+   (met!=='all'?'<div class="mfil">מוצגות הצהרות על <b>'+met+'</b> <button type="button" class="ib" id="mclr">הצגת כל המדדים</button></div>':'')+
+   '<div class="fchips" id="fc" role="group" aria-label="סינון"><button type="button" aria-pressed="'+(f==='all')+'" data-f="all">הכול</button><button type="button" aria-pressed="'+(f==='diff')+'" data-f="diff">◆ רק שונות מהתיעוד</button></div>'+
+   '<div class="feed" id="feed">'+(out||'<div class="empty">אין הצהרות בסינון הזה.</div>')+'</div>';
+}
+function detailView(id){
+  var s=S.filter(function(x){return x.id===id})[0];if(!s)return '';
+  var e=ent(s.e);
+  var rec=s.rec?'<h2>מול מה השוואנו</h2><div class="reply"><span class="src">'+s.rec.s+' · '+s.rec.d+'</span><span class="q" lang="en">'+s.rec.q+'</span></div>'+(s.rec.link?'<p class="sub"><a href="#statement-'+s.rec.link+'" style="color:var(--claim)">פתיחת ההצהרה ההיא ›</a></p>':''):'';
+  var names=['נקרא מהטקסט','הוצע כטענה','עבר בדיקה','הושווה לתיעוד'];
+  var steps='<div class="steps">'+names.map(function(n,i){return '<div class="stp '+(s.steps[i]?'y':'n')+'"><b>'+(s.steps[i]?'✓ ':'· ')+n+'</b>'+(s.steps[i]?'':'לא בוצע')+'</div>'}).join('')+'</div>';
+  return '<div class="mh"><a class="ib back" href="#entity-'+e.id+'">‹ חזרה</a>'+av(e,true)+'<div class="who"><b>הצהרה · '+e.name+'</b><span class="tk">'+s.date+' · '+B(s.src)+'</span></div></div>'+
+   '<div class="detail"><section class="card"><div class="banner '+ST[s.k][1]+'"><span class="ic">'+({ok:'✓',diff:'◆',off:'○'})[s.k]+'</span><span>'+ST[s.k][0]+(s.as?' · מותנית':'')+'</span></div><div class="bf">'+chip(s.k)+(s.as?'<span class="chip flag">⚑ מותנית</span>':'')+'<span class="tag">'+s.m+'</span><span class="tag">'+s.p+'</span>'+(s.tg||[]).map(function(t){return '<span class="tag">'+t+'</span>'}).join('')+'</div>'+
+   '<div class="reply" style="margin-top:10px"><span class="src">'+B(s.src)+' · '+s.date+'</span><span class="q" lang="en" style="font-size:1.1rem">'+s.q+'</span></div>'+
+   '<p class="big">'+s.read+'</p><p>'+s.verdict+'</p>'+(s.note?'<p class="sub">'+s.note+'</p>':'')+(s.k==='diff'?'<p class="sub">הבדל אינו בהכרח טעות: הוא יכול לנבוע מתיקון שפורסם, מהגדרה שונה של המדד, מעיגול או מתקופה אחרת. המערכת מדווחת על ההבדל ואינה קובעת איזה טקסט נכון.</p>':'')+rec+
+   '<h2>איך הגענו לזה</h2>'+steps+
+   '<details><summary>פרטים מלאים</summary><dl class="kv">'+s.det.map(function(d){return '<dt>'+d[0]+'</dt><dd>'+d[1]+'</dd>'}).join('')+'</dl><p class="sub">ההצהרה הוצעה על ידי מודל ונבדקה בקוד דטרמיניסטי. כל ערך נקרא מחדש מהציטוט.</p></details></section></div>';
+}
+function parse(h){var i=h.indexOf('-');return {k:i<0?h:h.slice(0,i),rest:i<0?'':h.slice(i+1)}}
+/* A place the user can return to: an entity page or a statement page. */
+function target(h){
+  var p=parse(h);
+  if(p.k==='entity'&&ent(p.rest))return {hash:h,e:p.rest,label:'‹ חזרה ל־'+ent(p.rest).name};
+  if(p.k==='statement'){var st=S.filter(function(x){return x.id===p.rest})[0];if(st)return {hash:h,e:st.e,label:'‹ חזרה להצהרה'}}
+  return null;
+}
+function aboutView(t){
+  return '<div class="mh"><a class="ib back'+(t?' always':'')+'" href="#'+(t?t.hash:'list')+'">'+(t?t.label:'‹ חזרה')+'</a><div class="who"><b>על הספירה והאמון</b></div></div><div class="detail">'+
+   '<section class="card"><h2>מה מוצג ליד כל גוף</h2><ul class="plain"><li>ספירות בלבד: כמה הצהרות נמצאו, כמה מהן נבדקו, כמה תואמות לתיעוד, כמה שונות ממנו וכמה לא ניתנות לבדיקה.</li><li>אין דירוג, ציון או אחוז לגוף, ואין מיון של גופים לפי הבדלים. הרשימה ממוינת לפי פעילות אחרונה או לפי שם.</li><li>כל הבדל מוצג עם שני הציטוטים ועם התיעוד שמולו נבדק. הבדל יכול לנבוע מתיקון שפורסם, מהגדרה שונה, מעיגול או מתקופה אחרת.</li><li>פחות מ־10 הצהרות שנבדקו: «אין די נתונים לספירה». ההצהרות עצמן עדיין מוצגות.</li><li><b>לפי מדד</b>: אותן ספירות לכל מדד (הכנסות, רווח נקי, רווח למניה, תזרים תפעולי, אחר), בסדר קבוע ולא לפי מספר ההבדלים. מדד שנבדקו בו פחות מ־3 הצהרות מסומן «מעט מדי לספירה». המדדים אינם מצורפים למספר אחד. לחיצה על מדד מסננת את ההצהרות.</li><li>הספירה מעידה על התאמה בין טקסטים, לא על יושרה, כוונה או אמת, והיא לא קובעת איזה טקסט נכון.</li></ul></section>'+
+   '<section class="card"><h2>שאלה פתוחה</h2><div class="open">הסף לכל מדד (3 הצהרות שנבדקו) הוא הצעה ראשונית, וכך גם רשימת המדדים ומה נכלל ב«אחר».</div></section><section class="card"><h2>עד כמה אפשר לסמוך על המערכת</h2><div class="tw"><table><thead><tr><th>שלב</th><th>מה נמדד</th><th>תוצאה</th><th>סף</th></tr></thead><tbody><tr><td>קליטה</td><td>גבולות משפטים</td><td class="num">241 / 241</td><td class="num">≥ 98%</td></tr><tr><td>שער אימות</td><td>טענות מושחתות שנתפסו</td><td class="num">84 / 84</td><td class="num">100%</td></tr><tr><td>שער אימות</td><td>טענות נכונות שעברו</td><td class="num">115 / 115</td><td class="num">≥ 98%</td></tr><tr><td>פרשנות</td><td>דיוק וכיסוי</td><td><span class="chip off">טרם נמדד</span></td><td class="num">98% · 70%</td></tr></tbody></table></div><p class="sub">כל המדידות עד כה הן על נתוני הפיתוח. הדוחות הנפרדים טרם נמדדו.</p></section></div>';
+}
+var fil='all',met='all',moreOpen=false;
+function route(){
+  var h=(location.hash||'#list').slice(1),p=parse(h),k=p.k,rest=p.rest,pane='list',main='';
+  cur='';from='';
+  if(k==='entity'&&ent(rest)){cur=rest;from=h;pane='feed';fil='all';met='all';moreOpen=false;main=feedView(rest,fil)}
+  else if(k==='statement'){var s=S.filter(function(x){return x.id===rest})[0];if(s){cur=s.e;from=h;pane='detail';main=detailView(rest)}}
+  else if(k==='about'){pane='detail';var t=target(rest);if(t){cur=t.e;from=rest}main=aboutView(t)}
+  if(!main)main='<div class="empty"><b>בחרו גוף מהרשימה</b><br>ההצהרות האחרונות שלו יופיעו כאן.</div>';
+  var app=document.getElementById('app');app.setAttribute('data-pane',pane);
+  app.innerHTML=side()+'<main class="main" id="main">'+main+'</main>';
+  bind(rest);
+  var fd=document.getElementById('feed');if(fd)fd.scrollTop=fd.scrollHeight;
+}
+function bind(id){
+  document.getElementById('q').oninput=function(){query=this.value;var c=document.getElementById('chats');c.innerHTML=rows()};
+  document.getElementById('tabs').onclick=function(ev){var b=ev.target.closest('button[data-t]');if(!b)return;tab=b.getAttribute('data-t');this.querySelectorAll('button[data-t]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});document.getElementById('chats').innerHTML=rows()};
+  document.getElementById('theme').onclick=function(){
+    var r=document.documentElement,dark=r.getAttribute('data-theme')==='dark'||(!r.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme:dark)').matches);
+    r.setAttribute('data-theme',dark?'light':'dark')};
+  var redraw=function(){var m=document.getElementById('main');m.innerHTML=feedView(id,fil);bind(id);var fd=document.getElementById('feed');if(fd)fd.scrollTop=fd.scrollHeight};
+  document.querySelectorAll('button.mt').forEach(function(b){b.onclick=function(){var m=b.getAttribute('data-m');met=(met===m?'all':m);redraw()}});
+  var mc=document.getElementById('mclr');if(mc)mc.onclick=function(){met='all';redraw()};
+  var mo=document.getElementById('more');if(mo)mo.ontoggle=function(){moreOpen=mo.open};
+  var fc=document.getElementById('fc');
+  if(fc)fc.onclick=function(ev){var b=ev.target.closest('button');if(!b)return;fil=b.getAttribute('data-f');
+    var m=document.getElementById('main');m.innerHTML=feedView(id,fil);bind(id);var fd=document.getElementById('feed');if(fd)fd.scrollTop=fd.scrollHeight};
+}
+window.addEventListener('hashchange',route);route();
+</script>
+</body>
+</html>

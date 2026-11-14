@@ -279,8 +279,186 @@ Each has a recommendation so you can answer "yes" to all of them.
    yes – it is the cheapest way to test the look and feel, and lets you react to
    something concrete.*
 
-## 10. Next step
+## 10. Owner feedback (2026-11-13)
+
+Answers: Q1–Q3 yes (Hebrew first and switchable; single owner; local first). Q4:
+agreed (public corpus only). Q6 yes (mock-up built). **Q5: no manual
+dependency**, so the comprehension check in section 8 is dropped; verification
+of the UI is automated only (stored values equal displayed values, highlighted
+spans equal stored quotes, a wording check that bans verdict-of-truth language,
+browser tests of the main flows, accessibility checks).
+
+Changes to the flow, reflected in `mockup/mockup.html.txt`:
+
+1. **Entities first.** The home screen is a list of entities (companies now;
+   later non-profits, other organizations, public figures), each with an
+   overall rating. *(Replaced in section 14: counts, no rating.)*
+2. **Entity page.** The latest statements or publications of that entity, each
+   tagged by the system (metric, period, source type, result, "rests on an
+   assumption"), filterable.
+3. **Statement page.** A simpler version of the earlier finding card: the quote,
+   a plain reading, the result, what it was compared with, four-step "how we got
+   here", and details collapsed.
+
+**Visual direction (second round).** Messaging-app shell (Telegram/WhatsApp
+style: chat list on one side, conversation on the other, single pane on a
+phone) with investment-app cues (tickers, tabular numbers, a consistency
+sparkline and quarter-on-quarter delta). Each entity shows a profile image (a
+company logo; the mock-up uses placeholder monograms) and its latest statement
+beside it (the rating's final position is described in section 11). Statements
+in the entity page are
+message bubbles; the comparison record on the statement page is shown as a
+"reply" quote.
+
+**Rating** *(replaced in section 14 by counts; kept here as the record of the
+earlier proposal)*. The rating is a *consistency rating*, not an honesty or credibility
+score: consistent statements divided by statements that could be checked,
+always shown with coverage (how many statements could be checked at all), and
+"not enough data" below 10 checked statements. Not-evaluable statements count
+neither for nor against. This keeps to principles IV (flag rather than guess)
+and VII (inconsistency is not falsehood). Open for the spec: whether the rating
+is shown as a number, a band or both, and the rule for the band thresholds.
+
+**Entity types beyond companies** (public figures in particular) change the
+risk: a rating attached to a named person needs its own review of wording,
+sources and privacy before it is built. The first release supports companies
+only; other types appear in the UI as "coming soon".
+
+## 11. Third round of feedback and open questions
+
+*The rating, ring, trend, ticker values and the two open questions on ratings
+in this section are replaced by section 14.*
+
+Changes in the mock-up: a more distinctive look (a market ticker tape, a hero
+header in the entity's colour with a rating ring and trend, mono-spaced figures,
+status edges and icons on message bubbles); the rating appears first in the row
+of tags, which runs from the left edge; and the external rating is a number
+from 1 to 10 where **1 is the highest**. The mock-up derives it from
+consistency (91% and above = 1, each 10 points lower = one step), a placeholder
+mapping. Entities with fewer than 10 checked statements show "no rating".
+
+**Open question – ratings and percentages per metric (to discuss later).**
+Percentages (and the rating) should probably be computed *per metric and per
+evaluation parameter* – revenue, net income, earnings per share, operating cash
+flow, and whatever parameters we add for judging each entity – rather than as
+one overall figure. To decide: which parameters exist and who defines them; the
+weights, or whether to avoid weights by showing a per-metric profile; how, or
+whether, the per-metric figures roll up into the single 1–10 rating; the
+minimum sample per metric before a figure is shown; and how a metric with no
+checked statements appears. Until this is decided the mock-up shows one overall
+figure and says so on the rating page.
+
+**Open question – the 1 = best scale.** A scale where 1 is best reverses the
+usual reading of "higher is better" and of the percentages shown next to it. The
+UI must always label it (for example "2 of 10, 1 = highest"). To decide whether
+that stays in the spec as is.
+
+## 12. Fourth round: usability fixes
+
+Two defects found in the mock-up, both turned into requirements for the spec:
+
+1. **One rating, one place** *(now one counts line, one place; see section 14)*. A number beside the profile image (a "new
+   statements" counter) was read as a second, contradictory rating. Rule: an
+   entity's rating appears once per place it is shown (list row, entity header),
+   and no other number competes with it next to the profile image. The counter
+   was removed. In the entity header the number appears once, in the ring.
+2. **Back goes back to where the user came from.** The explanation of the
+   rating returned to the main list even when it was opened from an entity page.
+   Rule: every drill-down page has a back control that returns to the page it
+   was opened from (an entity page, a statement page or the list), works from a
+   direct link or after a reload, and names its destination ("Back to Example
+   Corp"). In the mock-up the origin is carried in the address
+   (`#about-entity-<id>`), so it does not depend on browser history.
+
+Both rules will be checked by the automated browser tests named in section 10.
+
+## 13. Next step
 
 On your answers: write `specs/003-web-ui/spec.md` (stories, requirements,
 verification, thresholds), then plan and tasks, and update `status.html` at each
 step.
+
+## 14. Fifth round: counts, not a rating (constitution 1.3.0)
+
+The owner decided that any single number attached to a named entity reads as a
+verdict on that entity, whatever it is called, and that a 1–10 scale invites
+ranking ("the least credible company"). Constitution principle XI now forbids
+an overall score, and principle VII requires every finding to name the
+reference it was checked against. This replaces the rating in sections 10–12.
+
+Changes, reflected in `mockup/mockup.html.txt`:
+
+1. **Counts, not a rating.** The entity header shows plain counts: statements
+   found, checked, matching the record, differing from the record, not
+   checkable. No percentage, ring, trend line, quarter-on-quarter delta or
+   ticker values.
+2. **The minimum sample stays.** Below 10 checked statements the header shows
+   "not enough data to count"; the statements themselves are still listed.
+3. **No ranking.** Entities are never sorted or filtered by differences. The
+   list is ordered by latest activity or by name.
+4. **Neutral wording.** "Matches the record", "differs from the record" and
+   "not checkable", not "consistent" and "inconsistent". Violet, never red.
+5. **A difference shows its harmless explanations.** Every differing
+   statement says that a difference may come from a published restatement, a
+   different definition of the metric, rounding or another period, and that the
+   system does not decide which text is right.
+6. **The list row carries no number**, only the latest statement and its
+   label, so nothing beside the profile image reads as a judgement (section
+   12.1).
+
+Questions closed by this round: a number or a band, the 1 = best scale, and how
+per-metric figures roll up into one rating. Whether counts are also shown per
+metric is decided in section 15.
+
+Still open for the spec, and sharper now: entity types beyond companies. Counts
+of differences attached to a named person carry the same risk a rating did, and
+need their own review of wording, sources and privacy before they are built.
+
+## 15. Sixth round: counts per metric
+
+*Layout simplified in section 16; the decisions on counts per metric stand.*
+
+The owner decided to show the counts per metric as well. Reflected in
+`mockup/mockup.html.txt`:
+
+1. **A "by metric" table** on the entity page, under the overall counts: one
+   row per metric (revenue, net income, earnings per share, operating cash
+   flow, other) with the same five counts as the header.
+2. **Fixed order.** Rows always appear in the same order. They are never sorted
+   by differences, and no row is highlighted for having more of them.
+3. **Never combined.** There is no total, average or weighting across metrics.
+   The header counts are plain sums of the rows, not a separate figure.
+4. **Minimum per metric.** A metric with fewer than 3 checked statements shows
+   "too few to count" (or "not checked" when none were) instead of matching and
+   differing counts; the number of statements and of not-checkable ones is
+   still shown.
+5. **The table is shown only when the entity meets the overall minimum** (10
+   checked). Below it, the header's "not enough data" stands alone.
+6. **A metric filters the feed.** Selecting a metric shows only its statements
+   and can be combined with the result filter. A bar names the active metric
+   and clears it. The table can be collapsed, so it does not crowd the feed on
+   a phone.
+
+Open for the spec: the list of metrics and who maintains it, what "other"
+includes, whether earnings per share is shown apart from net income, and the
+per-metric minimum (3 is a placeholder).
+
+## 16. Seventh round: a very simple layout
+
+The owner found the entity page too heavy. Rule: **one line on the surface,
+everything else behind one expansion.** Reflected in `mockup/mockup.html.txt`:
+
+1. **One line under the entity's name:** "checked 18 of 29 statements · 2
+   differ from the record", or "too few to count" below the minimum. No row of
+   numbers, no table on the surface.
+2. **One "details" expansion, closed by default.** It holds the full counts
+   (matching, differing, not checkable), the per-metric table and the note on
+   what the counts do and do not mean. It stays open while the user filters.
+3. **The per-metric table has three columns:** metric, "checked x of y" and
+   "differ from the record". Matching counts follow from these and are not
+   repeated. A metric under the minimum shows "too few".
+4. **Two result filters instead of four:** "all" and "only differing". The
+   label on each statement still shows its result.
+
+General rule for the spec: a data set that is not needed to read the page is
+behind an expansion, never on the surface.
